@@ -1,0 +1,6 @@
+How does Avni handle data creation in modules?
+
+In any module, Avni works strictly within the predefined schema. 
+Data is created only when the user enters it.
+Each module may include a subject’s registration, programs, and program encounters (or general encounter forms),
+depending on how the subject type and programs are configured and what the user enters. Nothing is automatically generated.
