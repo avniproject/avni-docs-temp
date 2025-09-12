@@ -1,29 +1,29 @@
-1. How do I create a new subject type in Avni?  
-ANS - Subject Types can be created through the App Designer.
-1. Go to App Designer > Subject Types > Add New Subject Type
+**Q: How do I create a new subject type in Avni?**
+
+A:  Subject Types can be created through the App Designer.1. Go to App Designer > Subject Types > Add New Subject Type
+
 ---
-2. Can I restrict an encounter to be filled only once per subject?  
-ANS - 
----
-3. How do I add or remove a new field to an existing form?  
-ANS - Fields can be added to forms through the App Designer. You can reach the form through different means. 
+
+**Q: How do I add or remove a new field to an existing form?**
+
+A:  Fields can be added to forms through the App Designer. You can reach the form through different means.
 1. Go to App Designer > Forms > Select the form
 2. Go to App Designer > Subject Types, Programs or Encounter Types > Select the form you need to edit
-3. Navigate to the section/page you wish to add the field to. If required, add a new section/page As you hover over the left portion, you will see a + button. Click on it to add a new field. 
-
-Each Form field has a few components. 
+3. Navigate to the section/page you wish to add the field to. If required, add a new section/page As you hover over the left portion, you will see a + button. Click on it to add a new field.
+Each Form field has a few components.
 1. Question - This is what shows up in your form
-2. Concept - This is the internal name of the field. It is also shown in patient dashboards, reports etc. Normally, we keep the name of the concept to be the same as the question. Remember that there can only be one concept with a certain name in the entire system. Also, a concept can be used only once in a form. Based on the data type of the concept, you will have a few questions to answer to configure it correctly. 
-3. Rule - There are three rules that you can configure for a question - 
-    1. Show/Hide question - This is used to show or hide the question based on a certain condition. 
-    2. Validation Rule - Based on conditions, you might show an error to the user
-    3. Value Rule - Based on conditions, you might set an answer value
+2. Concept - This is the internal name of the field. It is also shown in patient dashboards, reports etc. Normally, we keep the name of the concept to be the same as the question. Remember that there can only be one concept with a certain name in the entire system. Also, a concept can be used only once in a form. Based on the data type of the concept, you will have a few questions to answer to configure it correctly.
+3. Rule - There are three rules that you can configure for a question -
+1. Show/Hide question - This is used to show or hide the question based on a certain condition.
+2. Validation Rule - Based on conditions, you might show an error to the user
+3. Value Rule - Based on conditions, you might set an answer value
 The rules section is available by clicking on "RULE" section on the left side of the question
 
 ---
-4. What types of data fields are supported in Avni?  
-ANS - Concept DataType - Description
 
+**Q: What types of data fields are supported in Avni?**
+
+A:  Concept DataType - Description
 Numeric concepts - Numeric concepts are used to capture numbers. When creating a numeric concept, you can define normal ranges and absolute ranges. In the field application, if an observation for a concept collected goes beyond the normal range, then it is highlighted in red. Values above the absolute range are not allowed. For instance for concept: Blood Pressure (Systolic), you can choose a Numeric concept with ranges.
 
 Coded concepts (and NA concepts) - Coded concepts are those that have a fixed set of answers. For instance for Blood Group you would choose a coded concept with values: A+, B+, AB+, etc.
@@ -37,10 +37,10 @@ Media concepts (Image, Video and Audio) - Images and videos can be captured usin
 Text (and Notes) concepts - The Text data type helps capture one-line text while the Notes datatype is used to capture longer form text.
 
 Date and time concepts - There are different datatypes that can be used to capture date and time.
-    *Date** - A simple date with no time
-    *Time** - Just the time of day, with no date
-    *DateTime** - To store both date and time in a single observation
-    *Duration** - To capture durations such as 4 weeks, 2 days etc.
+*Date** - A simple date with no time
+*Time** - Just the time of day, with no date
+*DateTime** - To store both date and time in a single observation
+*Duration** - To capture durations such as 4 weeks, 2 days etc.
 Location concepts - Location concepts can be used to capture locations based on the location types configured in your implementation.
 Location concepts have 3 attributes:
 - Within Catchment - Denotes whether the location to be captured would be within the catchment already assigned to your field workers. This attribute defaults to true and is mandatory.
@@ -48,596 +48,819 @@ Location concepts have 3 attributes:
 - Highest Level - Denotes the highest location type that you would like to capture via form elements using this concept. This attribute is optional.
 Subject concepts - Subject concepts can be used to link to other subjects. Each Subject concept can map to a single subject type. Any form element using this concept can capture one or multiple subjects of the specified subject type.
 Phone Number concepts - For capturing the phone number. It comes with a 10 digit validation. OTP verification can be enabled by turning on the "Switch on Verification" option. Avni uses msg91 for OTP messages, so msg91 Auth key and Template need to be step up using the admin app.
-Group Affiliation concepts - Whenever automatic addition of a subject to a group is required Group Affiliation concept can be used. It provides the list of all the group subjects in the form and choosing any group will add that subject to that group when the form is saved. 
+Group Affiliation concepts - Whenever automatic addition of a subject to a group is required Group Affiliation concept can be used. It provides the list of all the group subjects in the form and choosing any group will add that subject to that group when the form is saved.
 Encounter - Encounter concepts can be used to link an encounter to any form. Each Encounter concept can map to a single encounter type. It should also provide the scope to search that encounter. Also, name identifiers can be constructed by specifying the concepts used in the encounter form. Any form element using this concept can capture one or multiple encounters of the specified encounter type.
+
 ---
-5. How can I configure skip logic between form fields?  
-ANS - Skip logic is implemented through rules in Avni. Every field on the Form Designer has a "Rule" section. You can configure skip logic by adding the logic and then clicking on "Show/Hide question". 
+
+**Q: How can I configure skip logic between form fields?**
+
+A:  Skip logic is implemented through rules in Avni. Every field on the Form Designer has a "Rule" section. You can configure skip logic by adding the logic and then clicking on "Show/Hide question".
+
 ---
-6. Can I do regex validations in Avni?
-ANS - Yes. Regular expression validations are available for Text concepts in Avni. When you choose a text concept for a question, you get to fill in two other fields - "Validation Regex" and "Validation Description Key". These allow you to enter the regex, and a description of the error message to show when the text does not match the regular expression
+
+**Q: Can I do regex validations in Avni?**
+
+A:  Yes. Regular expression validations are available for Text concepts in Avni. When you choose a text concept for a question, you get to fill in two other fields - "Validation Regex" and "Validation Description Key". These allow you to enter the regex, and a description of the error message to show when the text does not match the regular expression
+
 ---
-7. Can I make a form available only to specific user groups?  
-ANS - Yes. You can make a form available only to specific user groups by adding the group(s) to the form's "User Group" section. The User Group section is available on the Admin section. 
+
+**Q: Can I make a form available only to specific user groups?**
+
+A:  Yes. You can make a form available only to specific user groups by adding the group(s) to the form's "User Group" section. The User Group section is available on the Admin section.
+
 ---
-8. How do I configure a program with multiple stages?  
-ANS - Consider what data you need to collect in each stage of the program. Every stage is a different encounter type, and ia associated with a form. Encounter Type rules can be configured to ensure that only forms that are relevant at any point are shown in the app
+
+**Q: How do I configure a program with multiple stages?**
+
+A:  Consider what data you need to collect in each stage of the program. Every stage is a different encounter type, and ia associated with a form. Encounter Type rules can be configured to ensure that only forms that are relevant at any point are shown in the app
+
 ---
-9. How do I make a question appear only if another answer is “Yes”?  
-ANS - 
+
+**Q: How do I make a question appear only if another answer is “Yes”?**
+
+A: This can be achieved by adding skip logic rule on the form fields
+
 ---
-10. Can Avni support multi-language forms?  
-ANS - Yes. Avni can be rolled out in multiple languages at once. To have your app in multiple languages, 
+
+**Q: Can Avni support multi-language forms?**
+
+A: Yes. Avni can be rolled out in multiple languages at once. To have your app in multiple languages,
 1. Set up your language in Admin -> Languages
 2. Go to Translations and download translations. Make changes in the zip file as appropriate and upload the translations back into the system
----
-11. How do I configure a default value in a form field?  
-ANS - 
----
-12. How do I mark a field as mandatory?  
-ANS - In the form designer, go to the field you want to mark as mandatory. Check the box, and it will be shown as mandatory. 
-Remember that a field is mandatory only if it is visible. If you have created a visibility rule through which your form field is not visible, then the mandatory field on it will not be respected. 
----
-13. How do I set up a subject registration form?  
-ANS - 
----
-14. Can I attach media (photos/audio) to a form in Avni?  
-ANS - Yes. Media concepts (image, video and audio) can be used to capture photos, videos, and audio in Avni. Choose the right data type to capture the media that you need
----
-15. How do I configure a follow-up encounter?  
-ANS - You can create a follow-up by creating a new encounter type. If you want it to be scheduled at a particular point in time, it can be done through the Visit Schedule Rule. You can find the Visit Schedule rule in the "Rules" section of a form. You can navigate to the form either through the "Forms" section of the App Designer or through the "Encounter Types"/"Programs"/"Subject Types" section of the Admin section.
----
-16. Can I edit a form after it has been deployed?  
-ANS - Yes. You can edit a form after it has been deployed by going to the form either through the "Forms" section of the App Designer or through the "Encounter Types"/"Programs"/"Subject Types" section of the Admin section. Any changes you make will be available to users once they sync the app. 
-Older filled forms will still have any questions you delete, but they cannot be modified anymore. 
----
-17. How do I duplicate an existing form configuration?  
-ANS - In the Forms section, a form has a "Clone form" option. This can be used to duplicate an existing form. 
----
-18. How can I make a numeric field accept only integers?  
-ANS - 
----
-19. How do I configure a calculated field in Avni?  
-ANS - 
----
-20. Can I limit form access based on user roles?  
-ANS - 
----
-21. What’s the difference between subject, program, and encounter?  
-ANS - 
----
-22. How do I design a workflow for maternal health tracking?  
-ANS - 
----
-23. How can I model household → individual relationships?  
-ANS - 
----
-24. How do I track recurring visits for a subject?  
-ANS - 
----
-25. How do I set up a longitudinal data collection workflow?  
-ANS - 
----
-26. What’s the best way to handle referrals between workers?  
-ANS - 
----
-27. How can I manage cases that get closed and reopened?  
-ANS - 
----
-28. How do I configure a multi-step service delivery workflow?  
-ANS - 
----
-29. Can I link a child record to a household subject?  
-ANS - 
----
-30. How do I manage subjects across multiple programs?  
-ANS - 
----
-31. How can I model seasonal data collection (e.g., crops)?  
-ANS - 
----
-32. How do I configure a one-time survey vs. ongoing case?  
-ANS - 
----
-33. How do I manage data across multiple locations?  
-ANS - 
----
-34. Can I assign subjects to specific users or teams?  
-ANS - 
----
-35. How do I record both baseline and follow-up data?  
-ANS - 
----
-36. What’s the best way to model school → student tracking?  
-ANS - 
----
-37. How do I manage multiple identifiers for the same subject?  
-ANS - 
----
-38. How can I record GPS location data with each encounter?  
-ANS - 
----
-39. How do I set up case closure criteria?  
-ANS - 
----
-40. Can I link data from one form into another?  
-ANS - 
----
-41. How do I write a rule to calculate BMI in Avni?  
-ANS - 
----
-42. Can I prevent form submission if a rule fails?  
-ANS - 
----
-43. How do I create a rule to send an alert for high blood pressure?  
-ANS - 
----
-44. How do I check if a subject is under 5 years old in a rule?  
-ANS - 
----
-45. Can rules trigger notifications for supervisors?  
-ANS - 
----
-46. How do I create a rule for conditional program enrollment?  
-ANS - 
----
-47. Can I use JavaScript libraries inside Avni rules?  
-ANS - 
----
-48. How do I write a rule to auto-populate a field?  
-ANS - 
----
-49. How do I validate a phone number with a regex rule?  
-ANS - 
----
-50. How do I enforce that visits happen within 30 days?  
-ANS - 
----
-51. How do I use rules to calculate household totals?  
-ANS - 
----
-52. Can I access previous encounter data in a rule?  
-ANS - 
----
-53. How do I check if a field value has changed in a rule?  
-ANS - 
----
-54. How do I create a rule that prevents duplicate registration?  
-ANS - 
----
-55. How can I trigger a follow-up form automatically?  
-ANS - 
----
-56. Can I write a rule to calculate gestational age?  
-ANS - 
----
-57. How do I enforce minimum and maximum age limits?  
-ANS - 
----
-58. How do I use rules for referral workflows?  
-ANS - 
----
-59. How do I debug a failing rule in Avni?  
-ANS - 
----
-60. Can I export all my rules for review?  
-ANS - 
----
-61. How do I sync my data when internet is slow?  
-ANS - 
----
-62. Can I use Avni offline for a whole week?  
-ANS - 
----
-63. How do I change the app language?  
-ANS - 
----
-64. How do I search for a subject in the field app?  
-ANS - 
----
-65. Can I update a subject’s information after registration?  
-ANS - 
----
-66. How do I record a missed visit?  
-ANS - 
----
-67. What happens if I accidentally delete a record?  
-ANS - 
----
-68. How do I know if my data is synced?  
-ANS - 
----
-69. Can I see my past encounters for a subject?  
-ANS - 
----
-70. How do I mark a subject as inactive?  
-ANS - 
----
-71. How do I transfer a subject to another worker?  
-ANS - 
----
-72. Can I edit a submitted form?  
-ANS - 
----
-73. How do I log out and log back in without losing data?  
-ANS - 
----
-74. How do I capture GPS when offline?  
-ANS - 
----
-75. What should I do if the app crashes?  
-ANS - 
----
-76. How do I handle duplicate subjects in the app?  
-ANS - 
----
-77. How do I record multiple services in a single visit?  
-ANS - 
----
-78. Can I use Avni on multiple devices?  
-ANS - 
----
-79. How do I install Avni updates?  
-ANS - 
----
-80. What should I check before starting field data collection?  
-ANS - 
----
-81. How do I export data from Avni to Excel?  
-ANS - 
----
-82. Can I schedule automatic data exports?  
-ANS - 
----
-83. How do I connect Avni to DHIS2?  
-ANS - 
----
-84. How do I use Avni APIs to fetch subject data?  
-ANS - 
----
-85. Can I integrate Avni with Power BI?  
-ANS - 
----
-86. How do I authenticate with Avni APIs?  
-ANS - 
----
-87. What’s the API endpoint for encounters?  
-ANS - 
----
-88. Can I import subjects from an external database?  
-ANS - 
----
-89. How do I set up data backups?  
-ANS - 
----
-90. Can I generate PDF reports from Avni?  
-ANS - 
----
-91. How do I get aggregated data by location?  
-ANS - 
----
-92. Can I query Avni directly with SQL?  
-ANS - 
----
-93. How do I filter data exports by date?  
-ANS - 
----
-94. Can Avni sync with ODK or Kobo data?  
-ANS - 
----
-95. How do I schedule custom reports?  
-ANS - 
----
-96. How do I connect Avni to a local dashboard?  
-ANS - 
----
-97. What is the structure of Avni’s database?  
-ANS - 
----
-98. How do I migrate data from another system into Avni?  
-ANS - 
----
-99. Can I integrate Avni with SMS or WhatsApp alerts?  
-ANS - 
----
-100. How do I monitor API usage and limits?  
-ANS - 
----
-101. How do I create a dropdown field with predefined options?  
-ANS - 
----
-102. Can I configure cascading dropdowns (state → district → village)?  
-ANS - 
----
-103. How do I copy a question from one form to another?  
-ANS - 
----
-104. Can I hide a field from data collectors but keep it for admins?  
-ANS - 
----
-105. How do I configure default language for a form?  
-ANS - 
----
-106. Can I restrict date fields to future dates only?  
-ANS - 
----
-107. How do I enable GPS capture in registration forms?  
-ANS - 
----
-108. Can I create a calculated field based on two numeric inputs?  
-ANS - 
----
-109. How do I make a field appear only during subject registration?  
-ANS - 
----
-110. How can I reorder questions in a form?  
-ANS - 
----
-111. Can I create a checkbox list where multiple options are allowed?  
-ANS - 
----
-112. How do I configure a lookup field from another form?  
-ANS - 
----
-113. Can I make a field read-only after first entry?  
-ANS - 
----
-114. How do I enforce that one field must be filled if another is empty?  
-ANS - 
----
-115. Can I configure a field to store multiple phone numbers?  
-ANS - 
----
-116. How do I configure a program with optional encounters?  
-ANS - 
----
-117. Can I use QR codes for subject IDs in Avni?  
-ANS - 
----
-118. How do I configure automatic case closure after 6 months?  
-ANS - 
----
-119. Can I configure a form to appear only once per program stage?  
-ANS - 
----
-120. How do I make a yes/no field mandatory?  
-ANS - 
----
-121. Can I pre-fill subject information from previous visits?  
-ANS - 
----
-122. How do I add an image upload field?  
-ANS - 
----
-123. Can I create dynamic labels based on other field values?  
-ANS - 
----
-124. How do I enable conditional skip logic across sections?  
-ANS - 
----
-125. Can I configure reminders for upcoming encounters?  
-ANS - 
----
-126. How do I configure a repeatable group of fields?  
-ANS - 
----
-127. Can I set a numeric field to allow decimals only?  
-ANS - 
----
-128. How do I configure a program where only supervisors can enroll subjects?  
-ANS - 
----
-129. Can I create a read-only dashboard for workers in Avni?  
-ANS - 
----
-130. How do I configure a field that stores household GPS plus notes?  
-ANS - 
----
-131. Can I configure gender-specific forms in Avni?  
-ANS - 
----
-132. How do I set default answers for checkboxes?  
-ANS - 
----
-133. How do I configure case assignment based on location?  
-ANS - 
----
-134. How do I model a program for chronic disease management?  
-ANS - 
----
-135. Can I design workflows for both subjects and facilities?  
-ANS - 
----
-136. How do I create a workflow for nutrition tracking?  
-ANS - 
----
-137. Can I model relationships like teacher → student → guardian?  
-ANS - 
----
-138. How do I configure parallel workflows in the same program?  
-ANS - 
----
-139. Can I assign a subject to multiple programs at once?  
-ANS - 
----
-140. How do I create a workflow for tracking immunizations?  
-ANS - 
----
-141. Can I design a program that ends after a specific milestone?  
-ANS - 
----
-142. How do I model referrals between organizations using Avni?  
-ANS - 
----
-143. Can I track household-level interventions as well as individuals?  
-ANS - 
----
-144. How do I configure seasonal visits (e.g., annual surveys)?  
-ANS - 
----
-145. Can I link subjects across different user groups?  
-ANS - 
----
-146. How do I model temporary migration of subjects?  
-ANS - 
----
-147. How do I configure encounter frequency based on subject category?  
-ANS - 
----
-148. Can I track dropout cases and reasons?  
-ANS - 
----
-149. How do I create workflows with flexible timelines?  
-ANS - 
----
-150. Can I design workflows that include supervisor approvals?  
-ANS - 
----
-151. How do I configure different visit schedules for children and adults?  
-ANS - 
----
-152. How can I model data for disaster relief beneficiaries?  
-ANS - 
----
-153. Can I set up workflows that branch based on eligibility?  
-ANS - 
----
-154. How do I manage subjects who belong to multiple households?  
-ANS - 
----
-155. Can I configure Avni to track both individuals and groups?  
-ANS - 
----
-156. How do I model a workflow for financial inclusion programs?  
-ANS - 
----
-157. Can I create a single program with multiple enrollment points?  
-ANS - 
----
-158. How do I manage subjects who transfer between facilities?  
-ANS - 
----
-159. Can I model a workflow where only some encounters are mandatory?  
-ANS - 
----
-160. How do I configure workflows for counseling services?  
-ANS - 
----
-161. Can I design a workflow where subjects graduate after training?  
-ANS - 
----
-162. How do I configure Avni for randomized trial workflows?  
-ANS - 
----
-163. Can I link program outcomes to subject closure rules?  
-ANS - 
----
-164. How do I configure workflows for child growth monitoring?  
-ANS - 
----
-165. Can I model a workflow where visits reduce over time?  
-ANS - 
----
-166. How do I track group sessions along with individual sessions?  
-ANS - 
----
-167. How do I check if my app has the latest forms?  
-ANS - 
----
-168. Can I work in two different programs at the same time?  
-ANS - 
----
-169. How do I find all subjects assigned to me?  
-ANS - 
----
-170. Can I register a new subject without network?  
-ANS - 
----
-171. How do I sync partially completed forms?  
-ANS - 
----
-172. What happens if two users register the same subject?  
-ANS - 
----
-173. How do I mark a subject as deceased?  
-ANS - 
----
-174. Can I view my assigned workload for the week?  
-ANS - 
----
-175. How do I reset my password in the field app?  
-ANS - 
----
-176. How do I identify subjects with overdue visits?  
-ANS - 
----
-177. Can I use voice input to fill forms in Avni?  
-ANS - 
----
-178. How do I update subject address information?  
-ANS - 
----
-179. Can I work offline for multiple programs simultaneously?  
-ANS - 
----
-180. How do I capture signatures in the Avni app?  
-ANS - 
----
-181. Can I search for subjects by multiple fields (name + phone)?  
-ANS - 
----
-182. How do I report an error from the field app?  
-ANS - 
----
-183. Can I update my app without losing offline data?  
-ANS - 
----
-184. How do I check which data has not yet synced?  
-ANS - 
----
-185. Can I pause form filling and return later?  
-ANS - 
----
-186. How do I use Avni with multiple languages at once?  
-ANS - 
----
-187. Can I hide sensitive information from field workers?  
-ANS - 
----
-188. How do I ensure GPS accuracy during data collection?  
-ANS - 
----
-189. Can I undo the last change in a filled form?  
-ANS - 
----
-190. How do I record multiple household members in one visit?  
-ANS - 
----
-191. Can I merge duplicate subjects from the app?  
-ANS - 
----
-192. How do I verify that sync was successful?  
-ANS - 
----
-193. Can I see upcoming visits in a calendar view?  
-ANS - 
----
-194. How do I log service delivery outside of scheduled visits?  
-ANS - 
----
-195. Can I use Avni on low-end Android phones?  
-ANS - 
----
-196. How do I check available storage before syncing?  
-ANS - 
----
-197. Can I filter my subject list by program status?  
-ANS - 
----
-198. How do I troubleshoot when sync fails?  
-ANS - 
----
-199. Can I capture both structured data and free text notes?  
-ANS - 
----
-200. How do I train new workers quickly to use Avni?  
+3. Usually an external tool like lokalise is used to add translations to the downloaded zip file
+
+---
+
+**Q: How do I mark a field as mandatory?**
+
+A: In the form designer, go to the field you want to mark as mandatory. Check the box, and it will be shown as mandatory.
+Remember that a field is mandatory only if it is visible. If you have created a visibility rule through which your form field is not visible, then the mandatory field on it will not be respected.
+
+---
+
+**Q: Can I attach media (photos/audio) to a form in Avni?**
+
+A: Yes. Media concepts (image, video and audio) can be used to capture photos, videos, and audio in Avni. Choose the right data type to capture the media that you need
+
+---
+
+**Q: How do I configure a follow-up encounter?**
+
+A:  You can create a follow-up by creating a new encounter type. If you want it to be scheduled at a particular point in time, it can be done through the Visit Schedule Rule. You can find the Visit Schedule rule in the "Rules" section of a form. You can navigate to the form either through the "Forms" section of the App Designer or through the "Encounter Types"/"Programs"/"Subject Types" section of the Admin section.
+
+---
+
+**Q: Can I edit a form after it has been deployed?**
+
+A:  Yes. You can edit a form after it has been deployed by going to the form either through the "Forms" section of the App Designer or through the "Encounter Types"/"Programs"/"Subject Types" section of the Admin section. Any changes you make will be available to users once they sync the app.
+Older filled forms will still have any questions you delete, but they cannot be modified anymore.
+
+---
+
+**Q: How do I duplicate an existing form configuration?**
+
+A:  In the Forms section, a form has a "Clone form" option. This can be used to duplicate an existing form.
+
+---
+
+**Q: How can I make a numeric field accept only integers?**
+
+A: By applying a validation rule on that particular numeric field
+
+---
+
+**Q: How do I configure a calculated field in Avni?**
+
+A: For a calculated field, a javacript snippet needs to written, sharing sample - 
+
+---
+
+**Q: Can I limit form access based on user roles?**
+
+A: Yes, form access can be configured on basis of the user's role. Under Webapp >> User groups >> Select the user group >> Permissions
+Under permissions tab there will be different permissions for each entity in Avni, based on requirement it can be configured 
+
+---
+
+**Q: What’s the difference between subject, program, and encounter?**
+
+A: A Subject is the base entity for which data is collected. A subject can be a person, a household, a class, or even non-human entities like a waterbody or a toilet.
+
+A Program is used to monitor a subject over a defined period.
+
+Every program has an enrolment form (entry point) and an exit form (exit point).
+
+Example: Pregnancy can be a program, with ANC and Delivery as program encounters. The enrolment form may capture one-time details like LMP and EDD.
+
+In addition, subjects can have general encounters that are not tied to a program.
+
+Example: Monitoring a waterbody daily without any enrolment or exit.
+
+---
+
+**Q: How do I design a workflow for maternal health tracking?**
+
+A: Maternal Health / Pregnancy Workflow in Avni
+1. Create the Subject
+
+Type: Person
+
+Purpose: Represents the pregnant woman whose health is being tracked.
+
+2. Registration Form
+
+Contains: Basic personal and demographic details.
+
+Captured once at the time of creating the subject.
+
+3. Configure the Program
+
+Program Name: Pregnancy / Maternal Health
+
+Program Components:
+
+Enrolment Form
+
+Captures one-time pregnancy details:
+
+Last Menstrual Period (LMP)
+
+Expected Delivery Date (EDD)
+
+Height, weight
+
+Previous pregnancy details
+
+ANC (Antenatal Care) Forms
+
+Scheduled automatically based on LMP date.
+
+Tracks visits, vitals, investigations, and interventions during pregnancy.
+
+Delivery Form
+
+Captures delivery details, mode of delivery, complications, birth outcomes.
+
+PNC (Postnatal Care) Forms
+
+Scheduled after delivery.
+
+Tracks maternal and newborn health.
+
+Exit Form
+
+Marks the completion of the program for that subject.
+
+4. Scheduling
+
+All ANC and PNC visits are scheduled based on the LMP or delivery date.
+
+Reminders and follow-ups can be set automatically.
+
+5. Data Flow
+
+Subject created → registration form filled
+
+Subject enrolled into Pregnancy Program → enrolment form captures one-time pregnancy details
+
+ANC visits tracked and scheduled automatically
+
+Delivery recorded → triggers PNC scheduling
+
+PNC visits tracked
+
+Exit form completes the program
+This structure ensures complete lifecycle tracking of maternal health, from registration to postnatal follow-up, with automated scheduling based on pregnancy dates.
+
+---
+
+**Q: How can I model household → individual relationships?**
+
+A: Modeling Household → Individual Relationships in Avni
+1. Define Relationships
+
+Navigate to: Webapp → App Designer → Relationships → Define
+
+Here you can define the types of relationships that exist between individuals in a household.
+
+Examples: Mother, Father, Daughter, Son
+
+You can also specify which gender each relationship applies to.
+
+2. Configure Relationship Types
+
+Go to: Webapp → App Designer → Relationship Types → Add New
+
+Create a relationship and its reverse.
+
+Example:
+
+Mother → Son → reverse is Son → Mother
+
+Mother → Daughter → reverse is Daughter → Mother
+
+Father → Son → reverse is Son → Father
+
+Father → Daughter → reverse is Daughter → Father
+
+3. Usage
+
+Once defined, these relationships can be assigned to individuals within a household.
+
+This enables tracking of household members, family hierarchies, and dependent relationships.
+
+---
+
+**Q: How do I track recurring visits for a subject?**
+
+A: Recurring visits for a subject can be tracked by configuring the Visit Schedule Rule under the subject registration form in Webapp → App Designer. You can use the drop-down rule designer to set fixed-frequency visits for any form. For more complex or custom scheduling, a JavaScript rule can be written. Sample rules are available in the README documentation
+
+---
+
+**Q: How do I set up a longitudinal data collection workflow?**
+
+A: Setting Up a Longitudinal Data Collection Workflow in Avni
+
+Understand Longitudinal Data Collection
+
+Avni is designed for longitudinal data collection, allowing you to capture data for a subject (the on-ground entity) over time, at predefined intervals and frequencies.
+
+This ensures structured, continuous tracking of any subject, such as a person, household, or facility.
+
+Configure Data Collection
+
+Define your subjects and forms in Webapp → App Designer.
+
+Set up visit schedules, program encounters, or recurring forms to capture data at the required frequency.
+
+Export Longitudinal Data
+
+Navigate to Webapp → Longitudinal Export.
+
+You can download the data in a format that maintains the chronological order of observations for each subject.
+
+This gives you a ready-to-analyze dataset showing how data for a subject changes over time.
+
+---
+
+**Q: What’s the best way to handle referrals between workers?**
+
+A: Handling Referrals Between Workers in Avni
+
+Set Up User Roles
+
+Navigate to Webapp → User Groups.
+
+Create different roles or user groups based on responsibilities.
+
+Assign appropriate permissions to each group and add the respective users.
+
+Schedule Referral Visits
+
+Using the scheduling feature, you can assign referral visits to the appropriate worker.
+
+These visits appear in the assigned user’s task list for follow-up.
+
+Use Offline Report Cards
+
+Configure offline report cards to highlight records that require referrals.
+
+The responsible user can track and act on these referrals even when offline.
+
+---
+
+**Q: How can I manage cases that get closed and reopened?**
+
+A: Managing Cases that Get Closed and Reopened in Avni
+
+Cases Configured as Programs
+
+When a subject is enrolled in a program, it can be exited (closed) using the Program Exit feature.
+
+Reopening Cases
+
+If a case needs to be reopened, you can undo the program exit.
+
+This makes the subject/case available again for data recording and collection.
+
+---
+
+**Q: How do I configure a multi-step service delivery workflow?**
+
+A: Configuring Multi-Step Service Delivery in Avni
+1. Independent Services
+
+If the services are independent of each other, Avni allows multiple program enrolments for a subject at the same time.
+
+Example: A person can be enrolled in both:
+
+Pregnancy Program
+
+Mental Health Program
+
+Each program runs independently, with its own forms, schedules, and follow-ups.
+
+2. Dependent Services / Multi-Step Workflow
+
+If the service delivery steps are dependent on each other, you can configure them within the same program:
+
+Use assessment forms scheduled at predefined intervals.
+
+Add logic rules to trigger specific forms based on previous data or conditions.
+
+Example:
+
+Step 1: Initial assessment
+
+Step 2: Trigger counseling form if certain risk indicators are recorded in Step 1
+
+Step 3: Follow-up visit forms automatically scheduled based on Step 2 outcomes
+
+---
+
+**Q: Can I link a child record to a household subject?**
+
+A: Linking a Child Record to a Household Subject in Avni
+
+Yes, you can link a child (or any individual) to a household subject in Avni.
+
+Avni provides a built-in feature to:
+
+Add members to a household
+
+Designate the head of the household
+
+Additionally, you can define relationships between household members to make the mapping clearer
+
+---
+
+**Q: How do I manage subjects across multiple programs?**
+
+A: Managing Subjects Across Multiple Programs in Avni
+
+Avni allows a single subject to be enrolled in multiple programs simultaneously.
+
+There is no extra setup required to manage this.
+
+Each program runs independently, with its own forms, schedules, and follow-ups, allowing flexible tracking of different services for the same subject.
+
+This makes it easy to monitor multiple aspects of a subject’s data without conflicts or additional management overhead.
+
+---
+
+**Q: How can I model seasonal data collection (e.g., crops)?**
+
+A: Modeling Seasonal Data Collection (e.g., Crops) in Avni
+
+1.Schedule Forms at Predefined Times
+
+In Avni, forms can be scheduled to appear at specific times of the year using predefined scheduling rules or logic.
+
+This allows you to capture seasonal crop information at the right time for each subject (e.g., farm, field).
+
+2. Use Conditional Logic for Fields
+
+If the same form is used across seasons, you can hide or show fields dynamically based on:
+
+Season
+
+Crop type
+
+Other user input or data logic
+
+This ensures that only relevant information is captured during each season.
+
+Multiple approaches in Avni allow flexible and accurate collection of seasonal data without creating separate forms for each season.
+
+---
+
+**Q: How do I configure a one-time survey vs. ongoing case?**
+
+A: 1. One-Time Survey
+
+Can be captured:
+
+Within the subject registration form itself
+
+Or as a general encounter outside any program
+
+Ideal for surveys or data collection that happens only once per subject.
+
+2. Ongoing Case
+
+Best managed using a program in Avni.
+
+Programs allow you to:
+
+Track the enrolment of the subject
+
+Capture multiple encounters over time (e.g., ANC visits, monitoring forms)
+
+Record exit of the case along with exit reasons (e.g., completed, migrated, dropped out)
+
+Suitable for scenarios requiring longitudinal tracking and multiple touchpoints.
+
+---
+
+**Q: How do I manage data across multiple locations?**
+
+A: In Avni, data can be collected against a specific location, and users (data entry personnel) can be assigned access to a predefined set of locations. This ensures that each user records data only for the locations they are responsible for. Additionally, MIS reports can be configured with location filters, allowing supervisors and managers to analyze and monitor data across multiple locations efficiently. This setup makes it easy to manage data collection, access control, and reporting for projects spread over different geographic areas.
+
+---
+
+**Q: Can I assign subjects to specific users or teams?**
+
+A: Yes, Avni allows you to assign subjects to specific users or teams using the subject assignment feature. This can be configured under Webapp → App Designer → Subject Types → Select Subject, where the toggle “Sync by direct assignment” enables syncing of subjects directly assigned to users. The actual assignment of subjects can then be easily performed from Webapp → Assignment, ensuring that users or teams only access the subjects they are responsible for.
+
+---
+
+**Q: How do I record both baseline and follow-up data?**
+
+A: Baseline data is typically collected at the start of a program, while follow-up data is recorded at subsequent visits. In Avni, both baseline and follow-up data collection can be easily configured using form visit scheduling, allowing you to define when each form should be filled for a subject, ensuring structured and timely data capture throughout the program.
+
+---
+
+**Q: What’s the best way to model school → student tracking?**
+
+A: In Avni, registering a school as a subject can be avoided if no specific information needs to be captured against it. Instead, the school can be configured as a location, and classes and students can be registered under the same school location. Classes can be set up as group subjects, and students as person subject types, assigned to their respective classes. Forms can then be configured for any subject or class where data needs to be captured—for example, classrooms can have daily attendance forms scheduled, which users can fill out directly from the app, enabling efficient tracking of students within the school.
+
+---
+
+**Q: How do I manage multiple identifiers for the same subject?**
+
+A: Avni does support identifiers, and multiple identifiers can be created and used for the same subject. However, since Avni is primarily an offline data collection tool, there are certain corner cases where duplicate identifiers may get assigned—for example, when the same user enters data on two devices or when the web-based data entry app is used. In such situations, it can become difficult to support and debug issues. Therefore, we generally do not recommend using multiple identifiers unless they are strictly distributed or tracked on the ground, where duplication risks are minimized.
+
+---
+
+**Q: How can I record GPS location data with each encounter?**
+
+A: Avni provides the ability to capture GPS location data with each form submission. This can be enabled for any user by going to Webapp → Admin → Users, selecting the desired user, and toggling “Track Location” to true. Once enabled, the GPS coordinates will automatically be recorded whenever that user fills out a form, ensuring location tracking for each encounter.
+
+---
+
+**Q: How do I set up case closure criteria?**
+
+A: If a case is managed as a program in Avni, users can decide when it should be closed based on their training and then complete the exit form with the correct exit information. Alternatively, closure criteria can be built into the workflow by assessing the data entered in each form and guiding the user to exit the program when predefined conditions are met. With some customization, the user flow within forms can also be structured to prompt or direct users toward program closure at the right time, ensuring consistency in case management.
+
+---
+
+**Q: Can I link data from one form into another?**
+
+A: Yes, in Avni you can link data from one form into another. This is done using form element rules with JavaScript, which allow you to fetch data from previous forms and use it within the current form. Once fetched, the data can also be processed further based on your requirements, enabling seamless continuity across different forms.
+
+---
+
+**Q: How do I write a rule to calculate BMI in Avni?**
+
+A: // SAMPLE RULE EXAMPLE: Calculate BMI from Height and Weight
+'use strict';
+({ params, imports }) => {
+  const programEnrolment = params.entity;        // Current program enrolment
+  const formElement = params.formElement;        // The form element this rule is linked to
+  
+  // Fetch observations for Height and Weight (update names as per your form)
+  let height = programEnrolment.findObservation("Height of women");
+  let weight = programEnrolment.findObservation("Weight of women");
+  
+  height = height && height.getValue();
+  weight = weight && weight.getValue();
+
+  let value = '';
+  
+  // If both height and weight are valid numbers, calculate BMI
+  if (_.isFinite(weight) && _.isFinite(height)) {
+    value = ruleServiceLibraryInterfaceForSharingModules
+              .common
+              .calculateBMI(weight, height);
+  }
+
+  // Return the BMI value into the current form element
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);  
+};
+
+Replace "Height of women" and "Weight of women" with the exact observation names in your form.
+
+calculateBMI is already available in the shared rule service library, so no need to manually code the math.
+
+This rule is from the Pregnancy Program Enrolment form 
+
+---
+
+**Q: Can I prevent form submission if a rule fails?**
+
+A: No, Avni does not allow you to block form submission if a rule fails. Instead, when a rule fails, it creates an entry in the rule failure table, which helps developers or implementors identify and debug the issue. This ensures that data collection is not disrupted in the field, while still allowing backend teams to track and resolve rule-related errors.
+
+---
+
+**Q: How do I create a rule to send an alert for high blood pressure?**
+
+A: Avni does not provide an in-app alert or notification feature. However, abnormal values like high blood pressure can still be highlighted during data entry. For example, while configuring a numeric field (such as BP Diastolic) in the App Designer, you can set thresholds (e.g., High Normal = 80). If a user enters a value above this, it will automatically be highlighted in red to indicate an abnormal condition. Additionally, these abnormal values can be included in decisions within the form, and the resulting decision outcomes can be displayed in the program summary of that individual, making it easier to track and review cases of high blood pressure. Furthermore, an offline report card can be configured to list and navigate to such cases, allowing field teams to easily identify and follow up on individuals with high BP.
+
+---
+
+**Q: How do I check if a subject is under 5 years old in a rule?**
+
+A: Within a rule it can be easily accessed from the drop down avaiable. Or else in case you want to customise the rule further it can written in javascript like this- individual.getAgeInYears() < 5
+
+---
+
+**Q: Can rules trigger notifications for supervisors?**
+
+A: No, Avni does not have a built-in notification or alert triggering system. However, this need can be addressed by configuring an offline report card on the supervisor’s app dashboard. The report card can be designed to display highlighted cases—such as abnormal conditions or referrals—that supervisors need to track. This way, instead of receiving notifications, supervisors can regularly review the dashboard to monitor the cases that require their attention.
+
+---
+
+**Q: How do I create a rule for conditional program enrollment?**
+
+A: In Avni, conditional program enrollment can be handled using the Enrolment Eligibility Check Rule available under program configuration. You can add a custom rule here to define the eligibility criteria for a subject. When an individual does not meet the defined conditions, the option to enroll them in that program will not appear on their profile.
+
+---
+
+**Q: Can I use JavaScript libraries inside Avni rules?**
+
+A: There are a few Javascript libraries that are present by default in the Avni rules. This include lodash and momentjs. 
+
+Security restrictions limit the addition of other Javascript libraries within the rules
+
+---
+
+**Q: How do I write a rule to auto-populate a field?**
+
+A: //Sample rule to autopopulate the height of child from his previously filled encounter - 
+'use strict';
+({params, imports}) => {
+  const programEncounter = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+
+  let obs = programEncounter.programEnrolment.findLatestObservationFromEncounters('Height', programEncounter);
+  
+   if(obs)
+  {
+  value=obs.getReadableValue();
+  }
+    
+    
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+};
+
+OR it can be easily achieved via rule designer
+
+---
+
+**Q: How do I validate a phone number with a regex rule?**
+
+A: A phone number is typically added as a Text concept with a validation rule. There are different regex rules that you can write. Some examples are
+
+^[0-9]{10}$ - 10 digits only
+((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6} - All different kinds of phone numbers
+
+
+---
+
+**Q: How do I enforce that visits happen within 30 days?**
+
+A: You can add two dates when you schedule a visit. 
+Due Date - The earliest date on which a visit is expected to happen
+Overdue Date - The latest date by when a visit is expected to happen
+
+Visits that are due and overdue can be shown on the app on the dashboard, and on reports. This allows users to understand which visits are due to be completed, and which ones have gone past the due date
+
+
+---
+
+**Q: Can I access previous encounter data in a rule?**
+
+A: Yes, sample rule to fetch height from a previous encounter is -
+'use strict';
+({params, imports}) => {
+  const programEncounter = params.entity;
+  const moment = imports.moment;
+  const formElement = params.formElement;
+  const _ = imports.lodash;
+  let visibility = true;
+  let value = null;
+  let answersToSkip = [];
+  let validationErrors = [];
+
+  let obs = programEncounter.programEnrolment.findLatestObservationFromEncounters('Height', programEncounter);
+  
+   if(obs)
+  {
+  value=obs.getReadableValue();
+  }
+    
+    
+  return new imports.rulesConfig.FormElementStatus(formElement.uuid, visibility, value, answersToSkip, validationErrors);
+}; OR it can be easily achieved via rule designer
+
+---
+
+**Q: How do I create a rule that prevents duplicate registration?**
+
+A: Under subject config on webapp there is a toggle for Unique names -  If active then user can't register a subject with duplicate names within their catchment
+
+---
+
+**Q: How can I trigger a follow-up form automatically?**
+
+A: This can achieved via a visit scheduling rule of the form from the form after which the next followup should be scheduled. It can be configured via webapp >> app designer >> form >> Visit scheduling rule
+
+---
+
+**Q: Can I write a rule to calculate gestational age?**
+
+A: Sample rule to calculate - "use strict";
+({params, imports}) => {
+    const programEncounter = params.entity;
+    const formElement = params.formElement;
+    
+ let edd = programEncounter.programEnrolment
+ .getObservationReadableValueInEntireEnrolment('Estimated Date of Delivery', programEncounter);
+let dateOfDelivery = programEncounter.getObservationReadableValue('Date of delivery');
+ 
+    
+ const value = imports.motherCalculations
+      .gestationalAgeForEDD(edd,dateOfDelivery);
+      
+ return new imports.rulesConfig.FormElementStatus(formElement.uuid, true, value);
+};
+
+---
+
+**Q: How do I enforce minimum and maximum age limits?**
+
+A: You can add a validation rule in the registration form to through a validation if the age limit is not matched. Until validation error is not resolved the registration couldn't be saved
+
+---
+
+**Q: How do I use rules for referral workflows?**
+
+A: For referral workflows, multiple rules can be used -- Decision rules, program Summary rules and Custom offline report cards 
+
+---
+
+**Q: How do I debug a failing rule in Avni?**
+
+A: If a rule fails in the avni app, its entry will be available on Web app >> App designer >> Rule failures >> Find the rule failure with individual uuid or the timestamp, it will have further details of the rule failure which can be used to debug the issue and fix it accordingly
+
+---
+
+**Q: Can I export all my rules for review?**
+
+A: No, only rules alone cant be exported. Reviewing code is easy on the webapp interface itself.
+
+---
+
+**Q: Can I use Avni offline for a whole week?**
+
+A: Yes, Avni can be used fully offline for a week or even longer, since data is stored locally on the device. The only thing to keep in mind is that offline use works reliably as long as another user is not using the app for the same set of individuals or doing data entry for the same records during that period. Once you reconnect to the internet, all pending data will sync back to the server.
+
+---
+
+**Q: How do I change the app language?**
+
+A: You can change the app language directly from the Avni mobile app. Just open the app, go to More, tap on your username at the top, and then select from the available languages. Once selected, the app will switch to the chosen language immediately.
+
+---
+
+**Q: How do I search for a subject in the field app?**
+
+A: On the field app home screen, you’ll see a search icon at the top right. Tap on it, select the subject type you want to look for, and then enter the subject details (like name, ID, or other identifiers). After clicking the submit button, the app will display a list of matching records.
+
+---
+
+**Q: Can I update a subject’s information after registration?**
+
+A: Yes, Avni allows to edit the registration information.
+
+---
+
+**Q: How do I record a missed visit?**
+
+A: Avni allows to do data entry for the back dates, just select the date on top of the visit while filling the form
+
+---
+
+**Q: What happens if I accidentally delete a record?**
+
+A: There is no feature to delete a record from the Avni mobile app. So a field user wont be able to do so. Avni allows to void the record which can be reverted by undo void
+
+---
+
+**Q: How do I know if my data is synced?**
+
+A: You can check sync status from the sync button on the home screen (top right corner). If your data is fully synced, there will be no numbers showing on the sync icon. If numbers are visible, it means there are pending activities waiting to be synced.
+
+---
+
+**Q: Can I see my past encounters for a subject?**
+
+A: Yes, you can. On the subject profile or the program profile, all completed encounters are displayed, allowing you to review past data entries.
+
+---
+
+**Q: How do I mark a subject as inactive?**
+
+A: You can simply void the subject
+
+---
+
+**Q: How do I transfer a subject to another worker?**
+
+A: Webapp >> Assignments >> Search the subject and update the user detail for assignment
+
+---
+
+**Q: Can I edit a submitted form?**
+
+A: Yes, until unless you have the permission, you can edit the forms easily in Avni
+
+---
+
+**Q: How do I log out and log back in without losing data?**
+
+A: Logging out wont loose data, once u login back without any other action on the app, the data will sync
+
+---
+
+**Q: What should I do if the app crashes?**
+
+A: Raise an urgent support ticket with proper details on the Freshdesk link provided by Avni team
+
+---
+
+**Q: How do I handle duplicate subjects in the app?**
+
+A: In case there are duplicate subjects registered then void one of them.
+
+---
+
+**Q: Can I use Avni on multiple devices?**
+
+A: Yes, but avoid using Avni app with same login details on different devices
+
+---
+
+**Q: How do I install Avni updates?**
+
+A: Similar to other apps, on Google play store>> Avni >> Install updates
+
+---
+
+**Q: What should I check before starting field data collection?**
+
+A: Make sure after login the sync was successfull 100%
+
+---
+
+**Q: How do I export data from Avni to Excel?**
+
+A: You can download data from Webapp >> Longitudinal export >> It will give you a csv file
+
+---
+
+**Q: Can I schedule automatic data exports?**
+
+A: No, currently there is no automatic data export. Avni has its won backups running so nothing to worry
+
+---
+
+**Q: How do I create a dropdown field with predefined options?**
+
+A: In Avni single select or mutliselect fields can be created from Webapp >> App Designer>> Form >> New form element >> New concept >> Select Coded datatype >> Add predefined options as answers. Then mark the field if can be single select or multi select 
+
+---
+
+**Q: How do I reset my password in the field app?**
+
+A: After login >> home dashboard>> More >> Change password
+
+---
+
+**Q: How do I identify subjects with overdue visits?**
+
+A: By default dashboard displays card to show overdue and due visits both for the subject selected
+
+---
+
+**Q: How do I update subject address information?**
+
+A: By editing subject registration form
+
+---
+
+**Q: Can I work offline for multiple programs simultaneously?**
+
+A: Yes, within same login you can do data entry for multiple programs
+
+---
+
+
+
