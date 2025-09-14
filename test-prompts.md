@@ -862,5 +862,12 @@ A: Yes, within same login you can do data entry for multiple programs
 
 ---
 
+**Q: Can I generate PDF reports from Avni?**
+
+A: The default export in Avni is longitudinal export which gives you a CSV. However, external tools that integrate with Avni, such as Metabase and Superset, allow you to create custom reports and download them in different file formats, including PDF.
+
+---
+
+
 
 
