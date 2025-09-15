@@ -868,6 +868,62 @@ A: The default export in Avni is longitudinal export which gives you a CSV. Howe
 
 ---
 
+**Q: How do I get aggregated data by location?**
 
+A: You have two options:
 
+1.From Avni Webapp
 
+Go to Reports → Longitudinal Export.
+
+Select the subject, its form, and the location.
+
+This will give you all the detailed data for that location.
+
+2.Using Custom Reports
+
+Create reports in tools like Metabase or Superset. Avni database is accessible on both of the reporting tools. Avni team can help with creating a login on any of them.
+
+These allow you to generate aggregated data (e.g., counts, averages) grouped by location.
+
+---
+
+**Q: Can I query Avni directly with SQL?**
+
+A: No, you cannot query Avni directly with SQL. To write queries, you need access to your Avni organisation’s database via Metabase or Superset, with a login provided for you. The Avni team can help set this up and guide you further.
+
+---
+
+**Q: How do I filter data exports by date?**
+
+A: In the Avni Webapp, go to Reports → Longitudinal Export. This export screen has a date selection filter that lets you choose the desired date range before downloading the data.
+
+---
+
+**Q: How do I schedule custom reports?**
+
+A: Avni uses external tools such as Metabase for custom reports. Metabase provides an email alert and scheduling option, which allows you to set up reports to be delivered automatically according to your needs.
+
+---
+
+**Q: What is the structure of Avni’s database?**
+
+A: Avni’s database schema is fairly straightforward. Each entity has its own table along with audit fields such as created date/time, created by, last modified by, and last modified date/time.
+
+The core tables include:
+
+- Organisation
+
+- Subjects
+
+- Program Enrolments
+
+- Encounters
+
+- Program Encounters
+
+- Rule Failures
+
+- Sync Telemetry
+
+In addition, there is a separate set of tables for metadata that define the configuration and rules of your Avni setup.
