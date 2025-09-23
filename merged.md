@@ -1763,10 +1763,6 @@ Dr Dhiren Modi is a Public Health Specialist working with SEWA Rural since last 
 
 
 
-# File: ./faqs/basic-setup.md
-
-What are the bare minimum steps to get started with Avni?
-
 # File: ./faqs/compare-with-commcare.md
 
 **Avni**
@@ -1882,14 +1878,6 @@ How does Avni compare with other tools?
 | **Best For**           | NGOs/Governments needing self-managed, customizable field data workflows                | Organizations needing highly secure, enterprise-grade survey solutions            |
 
 
-# File: ./faqs/development-options.md
-
-I want to install Avni. What are the different options I have to do so?
-
-# File: ./faqs/help-me-navigate-the-app.md
-
-
-
 # File: ./faqs/how-can-i-get-access-to-metabase.md
 
 
@@ -1901,14 +1889,6 @@ I want to install Avni. What are the different options I have to do so?
 # File: ./faqs/how-do-i-get-data-out.md
 
 
-
-# File: ./faqs/is-my-data-safe.md
-
-
-
-# File: ./faqs/use-cases.md
-
-What are the different use cases for which Avni has been used?
 
 # File: ./prompts.md
 
@@ -2066,86 +2046,67 @@ What are the different use cases for which Avni has been used?
 
 # File: ./readme/End User Guide/data-entry-app.md
 
+title: Data Entry App
+excerpt: ''
 The Data Entry App, as the name suggests, is used to view and enter data directly without relying on mobile syncing. It can be accessed by clicking on the 'Data Entry app' tile in the home page.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/be9c75e10c6f8e1eb905f84e0714b46475192e039bac88837f38b62c87cabf91-Screenshot_2025-08-25_at_7.10.40_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "10000px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="10000px" src="https://files.readme.io/be9c75e10c6f8e1eb905f84e0714b46475192e039bac88837f38b62c87cabf91-Screenshot_2025-08-25_at_7.10.40_PM.png" />
 
 ### Advantages:
 
-- **Instant access**: When you are on a computer with internet access, you can view and enter data without downloading or syncing data like in the mobile app.
-- **Larger data coverage**: On the mobile app, the maximum number of catchment locations that can be synced is 65,535. If you need to view data across more locations, the Data Entry App can be used.
+* **Instant access**: When you are on a computer with internet access, you can view and enter data without downloading or syncing data like in the mobile app.
+* **Larger data coverage**: On the mobile app, the maximum number of catchment locations that can be synced is 65,535. If you need to view data across more locations, the Data Entry App can be used.
 
 ### Features not supported in Data Entry App:
 
 **Rules related limitations:**
 
-- [Edit form rule](https://avni.readme.io/docs/writing-rules#17-edit-form-rule)
-- [Member addition eligibility check rule](https://avni.readme.io/docs/writing-rules#16-member-addition-eligibility-check-rule)
-- [Manual programs eligibility check rule](https://avni.readme.io/docs/writing-rules#15-manual-programs-eligibility-check-rule)
-- [Rules that use service methods to filter across subjects](https://avni.readme.io/docs/writing-rules#using-service-methods-in-the-rules)
+* [Edit form rule](https://avni.readme.io/docs/writing-rules#17-edit-form-rule)
+* [Member addition eligibility check rule](https://avni.readme.io/docs/writing-rules#16-member-addition-eligibility-check-rule)
+* [Manual programs eligibility check rule](https://avni.readme.io/docs/writing-rules#15-manual-programs-eligibility-check-rule)
+* [Rules that use service methods to filter across subjects](https://avni.readme.io/docs/writing-rules#using-service-methods-in-the-rules)
 
 <br />
 
 **Other unsupported features:**
 
-- [User subject type](https://avni.readme.io/docs/user-subject-types)
-- [Dashboards and report cards](https://avni.readme.io/docs/offline-reports)
-- [Drafts](https://avni.readme.io/docs/draft-save)
-- [Approval workflows](https://avni.readme.io/docs/approval-workflow)
-- [Vaccination checklist](https://avni.readme.io/docs/upload-checklist)
-- [Growth chart](https://avni.readme.io/docs/child-growth-charts)
-- Details on who performed a registration, enrolment or visit
-- Viewing of data outside of a user's catchment and configured sync attribute cannot be restricted. Only editing can be restricted.
+* [User subject type](https://avni.readme.io/docs/user-subject-types)
+* [Dashboards and report cards](https://avni.readme.io/docs/offline-reports)
+* [Drafts](https://avni.readme.io/docs/draft-save)
+* [Approval workflows](https://avni.readme.io/docs/approval-workflow)
+* [Vaccination checklist](https://avni.readme.io/docs/upload-checklist)
+* [Growth chart](https://avni.readme.io/docs/child-growth-charts)
+* Details on who performed a registration, enrolment or visit
+* Viewing of data outside of a user's catchment and configured sync attribute cannot be restricted. Only editing can be restricted.
 
 
 # File: ./readme/End User Guide/how-to-guide-setting-up-locations-via-csv-upload.md
 
----
-title: "How to guide: Setting up Locations via CSV Upload"
-slug: "how-to-guide-setting-up-locations-via-csv-upload"
-excerpt: "For bulk location upload after Release 10.0"
-hidden: false
-createdAt: "Tue Sep 17 2024 10:31:48 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Oct 03 2024 09:32:54 GMT+0000 (Coordinated Universal Time)"
----
+title: 'How to guide: Setting up Locations via CSV Upload'
+excerpt: For bulk location upload after Release 10.0
 ## Definitions
 
 Below is a list of definitions that are essential for understanding this document.
 
-- **Locations:** These can be names of Villages, Schools or Dams, or other such  places which correspond to Geographical locations in the real world.  
-- **Location Types:** As its name suggests, Location Types are used to classify Locations into different categories. Ex: Karnataka and Maharashtra are 2 locations that could be classified into a single Location Type called “State”. Additional caveats related to the Location Type are as follows:  
-  - You may associate a “Parent” Location Type for it, which would be instrumental in coming up with Location Type Hierarchy  
-  - Each location type also has an additional field called “Level” associated with it. This is a Floating point number used to indicate relative position of a Location type in-comparison to others.   
-  - There can be more than one location type with the same “Level” value in an organisation.  
-  - The value for “Level” should less than the “Parent” Location Type’s “Level” field value  
-- **Location Type Hierarchy:** Location types using the “Parent” field can construct a hierarchy of sorts. Ex:  State(3) \-\> District(2) \-\> City(1)  
+* **Locations:** These can be names of Villages, Schools or Dams, or other such  places which correspond to Geographical locations in the real world.  
+* **Location Types:** As its name suggests, Location Types are used to classify Locations into different categories. Ex: Karnataka and Maharashtra are 2 locations that could be classified into a single Location Type called “State”. Additional caveats related to the Location Type are as follows:  
+  * You may associate a “Parent” Location Type for it, which would be instrumental in coming up with Location Type Hierarchy  
+  * Each location type also has an additional field called “Level” associated with it. This is a Floating point number used to indicate relative position of a Location type in-comparison to others.   
+  * There can be more than one location type with the same “Level” value in an organisation.  
+  * The value for “Level” should less than the “Parent” Location Type’s “Level” field value  
+* **Location Type Hierarchy:** Location types using the “Parent” field can construct a hierarchy of sorts. Ex:  State(3) \-\> District(2) \-\> City(1)\
   A single organisation can have **any** number of Location Type Hierarchies within it. Note that the example is a single hierarchy.  
-- **Lineage:** Location Type hierarchy, are in-turn used to come up with Location lineage. Ex: Given a “Location Type Hierarchy” of State(3) \-\> District(2) \-\> City(1) being present, we could correspondingly create Location “Lineage” of the kind “Karnataka, Hassan, Girinagara”, where-in “Karnataka” corresponds to “State” Location-type, “Hassan” to “District” and “Girinagara” to “City”.
+* **Lineage:** Location Type hierarchy, are in-turn used to come up with Location lineage. Ex: Given a “Location Type Hierarchy” of State(3) \-\> District(2) \-\> City(1) being present, we could correspondingly create Location “Lineage” of the kind “Karnataka, Hassan, Girinagara”, where-in “Karnataka” corresponds to “State” Location-type, “Hassan” to “District” and “Girinagara” to “City”.
 
 ## Overview
 
 In Avni, Locations refer to geographical entities which could be a State, Village, Schools, Hospital, etc.. where an organisation provides services. It plays an important role in identifying the “Where” aspect of the data being captured / service that was provided. Locations are also used to group together Avni entities (Subjects, Encounters, GroupSubjects) based on their Geographical proximity, using the Catchments. This simplifies the assignment of Avni entities in the Geographical area of influence of a Field-Worker to him/her as a single composite entity rather than individually allocating each entity to the User.
 
-Avni **“Upload \- Locations”** functionality, allows Avni Admin Users to perform following actions in **bulk**
+Avni **“Upload\- Locations”** functionality, allows Avni Admin Users to perform following actions in **bulk**
 
-- Create new locations   
-- Update name, GPS coordinates and other properties for existing locations  
-- Modify the parent location for an existing location and there-after reflect the change in lineage for it and all its children
+* Create new locations   
+* Update name, GPS coordinates and other properties for existing locations  
+* Modify the parent location for an existing location and there-after reflect the change in lineage for it and all its children
 
 This is achieved by means of uploading a CSV(Comma-separated Values) file of a specific format. Please read through the rest of the document to learn more about initializing Location Types and setting up large amounts of Locations for each of those types for specific Location Type Hierarchy.
 
@@ -2153,15 +2114,15 @@ This is achieved by means of uploading a CSV(Comma-separated Values) file of a s
 
 ### Navigation to the Bulk Uploads screen
 
-- Login to Avni Web Console 
+* Login to Avni Web Console 
 
 ![](https://files.readme.io/35932d9141d5744753f1730b6b5a4aa04a4b755a9fd18c25586ca98b58639177-image.png)
 
-- Go to **Admin** app
+* Go to **Admin** app
 
 ![](https://files.readme.io/b51402bda3d8cf3a6aefd515b8e19cecc2c0200c5c557ae973cb38d3fa4e172e-image.png)
 
-- Click on the **“Location Types”** section
+* Click on the **“Location Types”** section
 
 ![](https://files.readme.io/b846e3e44e146727fc20ad58b6c881cb8d2a96ac3dcdac90ae90f84b1fc81d2f-image.png)
 
@@ -2203,14 +2164,14 @@ Do a quick review of the Location Types Hierarchy, to ensure that its created as
 
 For your organization, if there is a need to specify additional details as part of each Location, then Avni allows you to configure a “Location” type Form, which can be configured to store those additional details as Observations for each Location. This is an optional feature to be done only if such need arises.
 
-- Navigate to the App Designer app
+* Navigate to the App Designer app
 
   ![](https://files.readme.io/45b6cf059a148183cb5597b2e09a93dc6d705c9af4eb09f99df0c9cdbd246050-image.png)
-- Click on Forms in the left side tab, to open up the Forms section.  
-- Create a new Form of type “Locations” by clicking on the “CREATE” button on the Top-Right corner of the screen.  
+* Click on Forms in the left side tab, to open up the Forms section.  
+* Create a new Form of type “Locations” by clicking on the “CREATE” button on the Top-Right corner of the screen.  
 
   ![](https://files.readme.io/2ad5b18293dfb28f217f3a87bd633dccb766d962a56c68f2c3fdb4b1611e6237-image.png)
-- Setup the Locations type Form in the same way as you do for any other Avni Entity Data collection Forms. See below sample screenshot for reference.
+* Setup the Locations type Form in the same way as you do for any other Avni Entity Data collection Forms. See below sample screenshot for reference.
 
   ![](https://files.readme.io/b5c2e8c75e8660ff5eaa3fba63826e1b2898aab32cf942beeec47d8cba11dd19-image.png)
 
@@ -2218,22 +2179,22 @@ For your organization, if there is a need to specify additional details as part 
 
 ### Prerequisites
 
-- **Ensure Location Types Hierarchy already exists**  
+* **Ensure Location Types Hierarchy already exists**\
   In order to start with the locations upload in the Avni app, organisation needs to have Location Types created in the requisite hierarchical order.  
-- **Ensure Location Form if needed, has already been configured**  
+* **Ensure Location Form if needed, has already been configured**\
   If your organisation needs additional properties to be set during Location creation, then ensure that you have configured a form of type “Locations” in the aforementioned manner 
 
 ### Navigation to the Bulk Uploads screen
 
-- Login to Avni Web Console
+* Login to Avni Web Console
 
 ![](https://files.readme.io/93db597e0607f374895d82942c940eca42ff9954f008e28fb2933b459a2bc280-image.png)
 
-- Go to **Admin** app
+* Go to **Admin** app
 
 ![](https://files.readme.io/a0bfd4fcaa19d3275985307bdc624b89237c508ee94eb2a9f6a992c0f3d30348-image.png)
 
-- Click on the **“Upload”** section
+* Click on the **“Upload”** section
 
 ![](https://files.readme.io/81b9a7ec02dcba7ee588ceb2c4a6a508e9346610ef43e9b29c2c30ba0fb6b8fa-image.png)
 
@@ -2243,7 +2204,7 @@ In the Avni “Admin” app, “Upload” section, we provide the users with an 
 
 The locations upload file format is different for the “Create” and “Edit” modes, therefore choose the appropriate mode and apply the same, when uploading the file later as well.
 
-If your organization has multiple Location hierarchies, then you would have to select the specific location hierarchy for which you need the sample file. This is applicable only for “Create” mode.  
+If your organization has multiple Location hierarchies, then you would have to select the specific location hierarchy for which you need the sample file. This is applicable only for “Create” mode.\
 Finally, click on the “Download Sample” button, to get the sample file.
 
 ![](https://files.readme.io/31cbacad108b87cdd4a90ad196fbd4b879761676b333fe0cdfbd7baa6814f30c-image.png)
@@ -2252,8 +2213,8 @@ Finally, click on the “Download Sample” button, to get the sample file.
 
 As part of the sample Locations csv file downloaded, you’ll have following information available to you for quick reference:
 
-- All Headers configurable for the selected Mode and Location hierarchy  
-- Descriptor row with guidance and examples on what values should be specified for each of the columns
+* All Headers configurable for the selected Mode and Location hierarchy  
+* Descriptor row with guidance and examples on what values should be specified for each of the columns
 
 1. **Create** mode
 
@@ -2268,7 +2229,7 @@ As part of the sample Locations csv file downloaded, you’ll have following inf
 
 #### Headers Row
 
-The first row of your upload file should contain Location types, arranged in descending order of their Level, in the selected Location Hierarchy from Left to Right, as comma-separated values.  
+The first row of your upload file should contain Location types, arranged in descending order of their Level, in the selected Location Hierarchy from Left to Right, as comma-separated values.\
 Refer Sample Locations Upload documents available [here](https://docs.google.com/spreadsheets/d/1R3l_tRUKZ7_WoZa4QIRctecFqJZoB2jdltyKUPMSD0Q/edit?usp=sharing) for Location Hierarchy of: Block(3) \-\> GP(2) \-\> Village/Hamlet(1). This is followed by “GPS Coordinates” and other Location properties name as column names.
 
 ![](https://files.readme.io/1a1dff92a0cb11f31704ee8f6d87ac78013ae49e56e8b878dc8657bb96762ece-image.png)
@@ -2279,12 +2240,12 @@ The second row of your upload file can optionally be a descriptor row, retained 
 
 #### Data Rows
 
-Entries provided in each of the address-level-type columns would be created as individual locations. (For example, the “Jawhar” block, “Sarsun” GP, and “Dehere” village will be created as a unique location with the appropriate location lineage, as specified during upload.)  
+Entries provided in each of the address-level-type columns would be created as individual locations. (For example, the “Jawhar” block, “Sarsun” GP, and “Dehere” village will be created as a unique location with the appropriate location lineage, as specified during upload.)\
 If the Parent locations already exists during a new location creation, then they are not re-created and are just used as is to build the location lineage.
 
 #### GPS Coordinates
 
-In-case, user would like to set the GPS Coordinates for locations during upload, then they would need to additionally specify values in the "GPS coordinates" column. The value for this column should be of the Format “\<Decimal number\>,\<Decimal number\>”.  
+In-case, user would like to set the GPS Coordinates for locations during upload, then they would need to additionally specify values in the "GPS coordinates" column. The value for this column should be of the Format “\<Decimal number\>,\<Decimal number\>”.\
 Ex: “123.456789,234.567890”, “12.34,45.67”, “13,77”
 
 #### Additional Location Properties
@@ -2299,9 +2260,9 @@ In-order to configure Location properties, you would need to specify the Concept
 
 This mode is to be used to perform bulk updates to locations. The type of updates allowed are as follows:
 
-- Update name of existing locations  
-- Update GPS coordinates and other properties for existing locations  
-- Modify the parent location for an existing location and there-after reflect the change in lineage for it and all its children
+* Update name of existing locations  
+* Update GPS coordinates and other properties for existing locations  
+* Modify the parent location for an existing location and there-after reflect the change in lineage for it and all its children
 
 #### Headers Row
 
@@ -2321,31 +2282,31 @@ Refer Sample Locations Upload documents available [here](https://docs.google.com
 
 Entries provided for the columns listed below would be used as specified here:
 
-- Location with full hierarchy (Mandatory): Used to identify the specific location to be modified  
-- New location name (Optional):  Used to specify the new title value for a location  
-- Parent location with full hierarchy (Optional):  Used to identify the new parent location to move this location to. Ex: Move “Vil B” to “PHC C, Sub C” from “PHC B, Sub B”  
-- GPS coordinates (Optional):  Used to update the GPS coordinates. Format:  “\<Double\>,\<Double\>”. Ex: “123.456789,234.567890”  
-- Values for multiple Location Properties columns that are part of the Form of type “FormType.Location”. These again are optional.
+* Location with full hierarchy (Mandatory): Used to identify the specific location to be modified  
+* New location name (Optional):  Used to specify the new title value for a location  
+* Parent location with full hierarchy (Optional):  Used to identify the new parent location to move this location to. Ex: Move “Vil B” to “PHC C, Sub C” from “PHC B, Sub B”  
+* GPS coordinates (Optional):  Used to update the GPS coordinates. Format:  “\<Double\>,\<Double\>”. Ex: “123.456789,234.567890”  
+* Values for multiple Location Properties columns that are part of the Form of type “FormType.Location”. These again are optional.
 
 #### Edit Row validations
 
 1. If the “Location with full hierarchy” does not exist during location updation, then the update operation fails for that row.  
 2. Atleast one among the following columns should have a valid value for the updation operation to be performed successfully for that row:  
-   - New location name  
-   - Parent location with full hierarchy  
-   - GPS coordinates  
+   * New location name  
+   * Parent location with full hierarchy  
+   * GPS coordinates  
 
 ### Upload the CSV file
 
 Project team then downloads the sheet in the CSV format. Navigate to the “**Upload”** tab of the Admin section, and perform the following steps to upload the file:
 
-- Select the “Type” to be “Locations”   
-- Specify the file to be uploaded using the “CHOOSE FILE” option  
-- Select the appropriate “Mode**”** of CSV Upload  
-  - Create: For creating new locations  
-  - Edit: For updating existing location’s Name, Parent, GPS coordinates or other properties  
-- Choose appropriate “Location Hierarchy” (Applicable only for “Create” mode)  
-- Click on the “Upload” button
+* Select the “Type” to be “Locations”   
+* Specify the file to be uploaded using the “CHOOSE FILE” option  
+* Select the appropriate “Mod&#x65;**”** of CSV Upload  
+  * Create: For creating new locations  
+  * Edit: For updating existing location’s Name, Parent, GPS coordinates or other properties  
+* Choose appropriate “Location Hierarchy” (Applicable only for “Create” mode)  
+* Click on the “Upload” button
 
 ![](https://files.readme.io/225211b913de07fb56c6a7676b1b6c88a78aecc2c92f97833c646b304b8ce6c4-image.png)
 
@@ -2368,33 +2329,13 @@ On successful upload of a file, the Project team can verify from the Locations t
 
 # File: ./readme/End User Guide/media-viewer.md
 
----
-title: "Media Viewer"
-slug: "media-viewer"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jul 05 2023 11:16:37 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue May 14 2024 06:48:08 GMT+0000 (Coordinated Universal Time)"
----
+title: Media Viewer
+excerpt: ''
 If you collect media (images, video, files) as part of your workflow then Avni Media Viewer will help your users to browse through, search and bulk download such media files. Media Viewer is available as an web app on the home page.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/697f439-image.png",
-        null,
-        "Media Viewer app"
-      ],
-      "align": "center",
-      "border": true,
-      "caption": "Media Viewer app"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Media Viewer app" align="center" border={true} src="https://files.readme.io/697f439-image.png">
+  Media Viewer app
+</Image>
 
 Media can be filtered by
 
@@ -2420,10 +2361,10 @@ Other than the Media Viewer app, media can be accessed using the following mecha
 
 ### Thumbnails and original image
 
-- **Thumbnails** are shown in the search/filter results. Thumbnails are generated automatically by Avni.
-- When you click an image the preview of image is shown, this is the **original image** shown in a fixed size.
-- When you download the image the **original image** is downloaded.
-- When you click on the name the image **original image** is shown in the new tab.
+* **Thumbnails** are shown in the search/filter results. Thumbnails are generated automatically by Avni.
+* When you click an image the preview of image is shown, this is the **original image** shown in a fixed size.
+* When you download the image the **original image** is downloaded.
+* When you click on the name the image **original image** is shown in the new tab.
 
 ### Display of non-open formats of images
 
@@ -2433,60 +2374,43 @@ Due to this, the thumbnails are not visible in the media viewer web app. But you
 
 Currently the users can upload standard images by turning of this feature in Samsung. There are two settings that need to be changed as described in this short video.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F7MLuT-dVuf0%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7MLuT-dVuf0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F7MLuT-dVuf0%2Fhqdefault.jpg&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/embed/7MLuT-dVuf0?si=B3D3GwQK8_08nXX0",
-  "title": "How to Fix Android Phone Shooting Picture in HEIC/HEIF Format | Samsung Mobile",
-  "favicon": "https://www.youtube.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/7MLuT-dVuf0/hqdefault.jpg",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/embed/7MLuT-dVuf0?si=B3D3GwQK8_08nXX0",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/embed/7MLuT-dVuf0?si=B3D3GwQK8_08nXX0" title="How to Fix Android Phone Shooting Picture in HEIC/HEIF Format | Samsung Mobile" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/7MLuT-dVuf0/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/embed/7MLuT-dVuf0?si=B3D3GwQK8_08nXX0" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252F7MLuT-dVuf0%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D7MLuT-dVuf0%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252F7MLuT-dVuf0%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 
 # File: ./readme/End User Guide/translation-management.md
 
----
-title: "Translation Management"
-slug: "translation-management"
-excerpt: ""
-hidden: false
-createdAt: "Thu Aug 29 2024 11:55:29 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Aug 30 2024 12:46:48 GMT+0000 (Coordinated Universal Time)"
----
+title: Translation Management
+excerpt: ''
 ## Overview
 
-Since Avni is widely used for Data-collection by field workers, it is most likely to have a need for the Forms to be read and filled-up in their native language. For example, field workers providing health-care services in the remote villages of Gujarat would be most comfortable performing data-collection in Gujarathi, as opposed to English or Hindi.  
+Since Avni is widely used for Data-collection by field workers, it is most likely to have a need for the Forms to be read and filled-up in their native language. For example, field workers providing health-care services in the remote villages of Gujarat would be most comfortable performing data-collection in Gujarathi, as opposed to English or Hindi.\
 For this reason, Avni supports translation of data-collections forms to native language of the user(field worker) in the Avni "client" mobile application and "Data-Entry" Web application.
 
 ## Supported Languages
 
 Avni currently supports Translation capabilities from English to following languages:
 
-- Hindi  
-- Marathi  
-- Gujarathi  
-- Tamil  
-- Kannada  
-- Bengali  
-- Telugu  
-- Odia  
-- Malayalam  
-- Punjabi  
-- Sanskrit  
-- Urdu  
-- Assamese
+* Hindi  
+* Marathi  
+* Gujarathi  
+* Tamil  
+* Kannada  
+* Bengali  
+* Telugu  
+* Odia  
+* Malayalam  
+* Punjabi  
+* Sanskrit  
+* Urdu  
+* Assamese
 
 We additionally have some default translations already available for a few of the above languages, that would make it easier for an organisation to get started on its “Translations” journey. The languages that have some baked-in translations in Avni are as follows:
 
-- Hindi  
-- Marathi  
-- Gujarathi  
-- Tamil  
-- Kannada
+* Hindi  
+* Marathi  
+* Gujarathi  
+* Tamil  
+* Kannada
 
 ## Prerequisites
 
@@ -2516,26 +2440,26 @@ Login to Avni Web Console and go to the ‘Translations’ module.
 
 ### Downloading Translation Keys from Avni
 
-- From the “Translations Dashboard”,download the keys after choosing the desired platform. Platforms are:  
-  - Web  
-  - Android  
-- In general, most organisations need translations only for their field users who perform data-collection using their mobile devices. In such cases, the platform of interest is “Android” (Mobile).  
-- If additionally, your organisation also wants translations to be done for the Data-Entry App, then also download the keys for the “Web” platform. 
+* From the “Translations Dashboard”,download the keys after choosing the desired platform. Platforms are:  
+  * Web  
+  * Android  
+* In general, most organisations need translations only for their field users who perform data-collection using their mobile devices. In such cases, the platform of interest is “Android” (Mobile).  
+* If additionally, your organisation also wants translations to be done for the Data-Entry App, then also download the keys for the “Web” platform. 
 
 ![](https://files.readme.io/9a5030ec956f7983bf2edff00650c0a2d00367fee775375ecafb49957a8e4a6c-image.png)
 
 <br />
 
-- For each platform selection download, the app will download a zip file containing one JSON file per language available in the organisation config.   
-- The JSON file will contain keys for both the standard platform app as well as those specific to your implementation, covering all labels in the app, form fields, location names and any other concepts created in the implementation.  
-- The file will also contain existing translated values, if any. This is useful when you have to update the translations after a while, as you will already have all previously uploaded translations available for retention or modifications as needed  
-- IMPORTANT Note: When organisations do not want Locations to be part of translations, then they need to bundle export without locations, import those into a temporary org and export translations from that temporary organisation. This was required for one of our organisations since they had a very large number of locations (More than 100,000) and hence were in need to translate other things before locations.
+* For each platform selection download, the app will download a zip file containing one JSON file per language available in the organisation config.   
+* The JSON file will contain keys for both the standard platform app as well as those specific to your implementation, covering all labels in the app, form fields, location names and any other concepts created in the implementation.  
+* The file will also contain existing translated values, if any. This is useful when you have to update the translations after a while, as you will already have all previously uploaded translations available for retention or modifications as needed  
+* IMPORTANT Note: When organisations do not want Locations to be part of translations, then they need to bundle export without locations, import those into a temporary org and export translations from that temporary organisation. This was required for one of our organisations since they had a very large number of locations (More than 100,000) and hence were in need to translate other things before locations.
 
 ### Setting up a project in Translation Management System (TMS)
 
-- The JSON files can be edited with any tool that the implementer is comfortable with, to come up with translated values for the target language.  
-- But for most use cases, we would have multiple translators involved and/or a lot of keys are to be translated. In such cases, we highly recommend using an external translation management system (TMS) like [Lokalise](https://lokalise.com/) which provides a sophisticated editor for performing translations. The TMS provides the ability to import/export JSON files and supports a variety of use cases related to translations.  
-- Avni has an enterprise-free plan for Lokalise. If you would like to use Lokalise, please request the Avni team to create your account and project to get started.
+* The JSON files can be edited with any tool that the implementer is comfortable with, to come up with translated values for the target language.  
+* But for most use cases, we would have multiple translators involved and/or a lot of keys are to be translated. In such cases, we highly recommend using an external translation management system (TMS) like [Lokalise](https://lokalise.com/) which provides a sophisticated editor for performing translations. The TMS provides the ability to import/export JSON files and supports a variety of use cases related to translations.  
+* Avni has an enterprise-free plan for Lokalise. If you would like to use Lokalise, please request the Avni team to create your account and project to get started.
 
 #### Creating an implementation project in Lokalise
 
@@ -2557,23 +2481,23 @@ This is an optional step, required only if the implementation project does not a
 
 Once the project is ready in TMS and you have downloaded the translation ZIP file(s), log in to [Lokalise](https://app.lokalise.com/projects) with Samanvay's official email address, if not already done.
 
-- Unzip the downloaded translation zip file  
+* Unzip the downloaded translation zip file  
 
-- Before uploading the JSON, please make sure that null values are removed from the json files
+* Before uploading the JSON, please make sure that null values are removed from the json files
 
   ![](https://files.readme.io/db2521a87f4b27a65fbac3b98fdf384aaf6024f21dd04d864bb95df03bceff93-image.png)
 
-- In your project, navigate to the ‘Upload’ section and import the JSON file from the unzipped folder of the previously downloaded Translations zip file.
+* In your project, navigate to the ‘Upload’ section and import the JSON file from the unzipped folder of the previously downloaded Translations zip file.
 
   ![](https://files.readme.io/7d26a129395f40bc2e2bbca4a770a27cf61fa0258d5129fd75a95538a51536d6-image.png)
 
-- In the translation zip file that is downloaded, go to the local folder and select the English json file  
+* In the translation zip file that is downloaded, go to the local folder and select the English json file  
 
-- Once the JSON file has been uploaded successfully, you will see the ‘Ready for Import’ message.
+* Once the JSON file has been uploaded successfully, you will see the ‘Ready for Import’ message.
 
   ![](https://files.readme.io/6a0496a0ba800eb383d5b8f8978defe60bbaf01130868d8e2de18ab6f4324fbe-image.png)
 
-- Go to the ‘editor’ section and verify the keys available for the translation.
+* Go to the ‘editor’ section and verify the keys available for the translation.
 
   ![](https://files.readme.io/775e3003e6a87eade2045a7acf5b844ea1d1f60efac77cd4f74370fc3572c1b0-image.png)
 
@@ -2589,9 +2513,9 @@ Next, Navigate to the ‘Contributors’ section to send out invites to other pe
 
 Perform below mentioned tasks to invite users to collaborate on the project
 
-- Role should be selected as ‘Translator’   
-- “Reference language” should have the base language (Usually English) and  
-- “Contributable language” should have target language
+* Role should be selected as ‘Translator’   
+* “Reference language” should have the base language (Usually English) and  
+* “Contributable language” should have target language
 
 ![](https://files.readme.io/c3a2ff0b427c727aea29a09ff339a6c7a7219079cf034cd76a114b956f0c3ec8-image.png)
 
@@ -2599,64 +2523,64 @@ Perform below mentioned tasks to invite users to collaborate on the project
 
 ### Guide for translating keys using Lokalise
 
-- All invitees will receive an Email invite from Lokalise with instructions to login and access the project.
+* All invitees will receive an Email invite from Lokalise with instructions to login and access the project.
 
   ![](https://files.readme.io/0f9fcf8ad025f5dd50c754a3736618988e51eced350063df791a20145073c8fb-image.png)
 
-- Once logged in, available projects will be shown in the projects tab/ home screen. you can click on the project name to access the translation items.
+* Once logged in, available projects will be shown in the projects tab/ home screen. you can click on the project name to access the translation items.
 
   ![](https://files.readme.io/29a4f970e6de4969a115870182c25584f55b1fc1a65eaa09a46b2786fc9317f6-image.png)
 
-- The project would display the editor page by default, and the list of keys should be visible at the bottom.
+* The project would display the editor page by default, and the list of keys should be visible at the bottom.
 
   ![](https://files.readme.io/e0ab4bd3396825a5df93f6cd6f2e39997d51e8a82b9d33c9ff65d10c9f9e7e25-image.png)
 
-- You can select the Bilingual option shown in the screenshot below and search the question or required field names to be translated.
+* You can select the Bilingual option shown in the screenshot below and search the question or required field names to be translated.
 
   ![](https://files.readme.io/0de7bfccf120d85d1154466d2ae52a542f12b0ef10eddf0f133b228d3e6a49cf-image.png)
 
-- After giving the keywords in the search bar, you can see the results below which show questions and field names on the left side. against which you need to provide the Kannada translation and save the response.
+* After giving the keywords in the search bar, you can see the results below which show questions and field names on the left side. against which you need to provide the Kannada translation and save the response.
 
   ![](https://files.readme.io/914ab3acbc6c6d25788f872ceecca5160f1420ad85d29afc3ff45d3e240d5d16-image.png)
 
-- Additional notes  
-  - Keep the required forms handy while you start the translation process, you can refer to the questions from respective and update the values in Lokalise.  
-  - In case of questions, the box on the left side might show "empty" and the question would be visible above that in blue fonts. you can provide the appropriate translation against that on the right-hand side box.
+* Additional notes  
+  * Keep the required forms handy while you start the translation process, you can refer to the questions from respective and update the values in Lokalise.  
+  * In case of questions, the box on the left side might show "empty" and the question would be visible above that in blue fonts. you can provide the appropriate translation against that on the right-hand side box.
 
 #### Translating Keys with Dynamic string having placeholders
 
 Consider the following “Android” Platform keys, which are examples for Dynamic strings with placeholders:
 
-| numberAboveHiAbsolute | "Should be {{limit}}, or less than {{limit}}" |
-| :-------------------- | :-------------------------------------------- |
-| enrolmentSavedMsg     | "{{programName}} Enrolment Saved"             |
+| numberAboveHiAbsolute | "Should be \{\{limit}}, or less than \{\{limit}}" |
+| :-------------------- | :------------------------------------------------ |
+| enrolmentSavedMsg     | "\{\{programName}} Enrolment Saved"               |
 
 In-order to translate them to Hindi, you would have to specify following in the translated json file:
 
-| numberAboveHiAbsolute | "{{limit}} के बराबर या {{limit}} से कम" |
-| :-------------------- | :-------------------------------------- |
-| enrolmentSavedMsg     | "{{programName}} एनरोलमेण्ट सेव हुआ"    |
+| numberAboveHiAbsolute | "\{\{limit}} के बराबर या \{\{limit}} से कम" |
+| :-------------------- | :------------------------------------------ |
+| enrolmentSavedMsg     | "\{\{programName}} एनरोलमेण्ट सेव हुआ"      |
 
-As shown above, ensure that you retain the string placeholder content within “{{” and “}}” as is in native english. Ex: “{{limit}}”, "{{programName}}”
+As shown above, ensure that you retain the string placeholder content within “\{\{” and “}}” as is in native english. Ex: “\{\{limit}}”, "\{\{programName}}”
 
 ### Uploading Translations
 
 After completing translation for all the required keys, questions and forms you can download the translated values JSON file of the target language.
 
-- Go to the “Downloads” section of the project  
+* Go to the “Downloads” section of the project  
 
   ![](https://files.readme.io/934b5c2b87ce2127c6983e5f97739abd5aa4381c3c0c884f7d53a040f9c4d8a1-image.png)
-- As seen above, select the ‘Don’t Export’ option for the “Empty Translations” field, so as to export only the translated fields.  
-- Click on “Build and Download” option to download the Translated values ZIP file
+* As seen above, select the ‘Don’t Export’ option for the “Empty Translations” field, so as to export only the translated fields.  
+* Click on “Build and Download” option to download the Translated values ZIP file
 
   ![](https://files.readme.io/ae74952cda34852fe4c7d78933624066f83514681cf5fe52ec8d17b53e911303-image.png)
-- Please note that the downloaded ZIP file would contain the JSON file of the base language (English) and targeted language JSON.
+* Please note that the downloaded ZIP file would contain the JSON file of the base language (English) and targeted language JSON.
 
   ![](https://files.readme.io/f61d4ac05c7f32ff80ce10f556145a89b11b3ef9f0a43ee2509c4515d31c321c-image.png)
-- Now the JSON file of the translation language needs to be uploaded into the Avni. Navigate to the “Translations Dashboard“. Using its “Upload Translations” functionality, upload the JSON file, after choosing an appropriate language. Be careful about choosing the target language, it should be same as the language of the translated values.
+* Now the JSON file of the translation language needs to be uploaded into the Avni. Navigate to the “Translations Dashboard“. Using its “Upload Translations” functionality, upload the JSON file, after choosing an appropriate language. Be careful about choosing the target language, it should be same as the language of the translated values.
 
   ![](https://files.readme.io/1cc8a1416150da1c1961d5b82bb4508b387a4be7a71d4679ad68f4778ce47301-image.png)
-- On successful upload of the translated values, you should see a change in the value of the “Keys with translations” column for the corresponding Language, in the “Translations Dashboard”.
+* On successful upload of the translated values, you should see a change in the value of the “Keys with translations” column for the corresponding Language, in the “Translations Dashboard”.
 
 ## **Using the Avni client application in User’s native Language**
 
@@ -2664,64 +2588,29 @@ On the Avni client app, users would need to sync their devices in-order to get t
 
 If the default language for the User hasn’t been set to his/her desired native language, then the user should be able to switch to it, by navigating to the “More” menu and clicking on the “Edit Settings” button at the top, and selecting the language in which he/she wants to see the app content.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/28964f670ac61932780ce5d1a5d3c2553a005e392960a59852aacc0c130b57b9-image.png",
-        null,
-        ""
-      ],
-      "align": "right",
-      "sizing": "45% "
-    }
-  ]
-}
-[/block]
+<Image align="right" width="45% " src="https://files.readme.io/28964f670ac61932780ce5d1a5d3c2553a005e392960a59852aacc0c130b57b9-image.png" />
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aed7f494a90af456f84dc6caa5ec5c80c32e9f469b61ec7295d60a7deaa86503-image.png",
-        null,
-        ""
-      ],
-      "align": "left",
-      "sizing": "45% "
-    }
-  ]
-}
-[/block]
+<Image align="left" width="45% " src="https://files.readme.io/aed7f494a90af456f84dc6caa5ec5c80c32e9f469b61ec7295d60a7deaa86503-image.png" />
 
 
 # File: ./readme/End User Guide/use-of-media-in-forms.md
 
----
-title: "Use of media in forms"
-slug: "use-of-media-in-forms"
-excerpt: ""
-hidden: false
-createdAt: "Mon Apr 08 2024 08:18:19 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Apr 09 2024 06:43:08 GMT+0000 (Coordinated Universal Time)"
----
+title: Use of media in forms
+excerpt: ''
 Avni allows for adding media like data (image and video) in the forms. It can be in form of single or multiple media files in the same question. These can be added by the user using the camera and the file system. Multiple files can be added too in one go. Please see the following table for the capabilities.
 
 | Media Type  | Selection type | Android Version | Supported?    |
 | :---------- | :------------- | :-------------- | :------------ |
-| Image/Video | Single         | \< 13.0         | Supported     |
-| Image/Video | Multiple       | \< 13.0         | Not Supported |
-| Image/Video | Single         | \>= 13.0        | Supported     |
-| Image/Video | Multiple       | \>= 13.0        | Supported     |
+| Image/Video | Single         | &lt; 13.0       | Supported     |
+| Image/Video | Multiple       | &lt; 13.0       | Not Supported |
+| Image/Video | Single         | &gt;= 13.0      | Supported     |
+| Image/Video | Multiple       | &gt;= 13.0      | Supported     |
 
-<br>
+<br />
 
 ## Why multi-select is not supported in older versions of android
 
-This capability has been restricted by the react native (framework) library used by us. <https://www.npmjs.com/package/react-native-image-picker>
+This capability has been restricted by the react native (framework) library used by us. [https://www.npmjs.com/package/react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)
 
 ## My media is in a folder that is not showing in the albums when I am using Avni
 
@@ -2733,16 +2622,16 @@ Android displays only folders which are **considered** albums. A plain folder wi
 
 You can setup a folder you want to upload media in Avni by making it show up as albums. You can do that by setting it as Google Photos backup folder. You can do that by:
 
-- going to `Google Photos` app, then `Settings`, then `Choose backup device` folders option, then choose your folder.
-- going to `Google Photos` app, then `Library`, then `Utilities`, then choose `Backup Device Folders`, then choose your folder.
+* going to `Google Photos` app, then `Settings`, then `Choose backup device` folders option, then choose your folder.
+* going to `Google Photos` app, then `Library`, then `Utilities`, then choose `Backup Device Folders`, then choose your folder.
 
 ### Option 2
 
 Copy/move the folder which has the media to one of the folders which are picked by the Avni form.
 
-_Please note that Google Photos have storage limits._
+*Please note that Google Photos have storage limits.*
 
-We cannot find any means by which an album be added only locally, without it being backed up on Google Photos. <https://www.reddit.com/r/googlephotos/comments/x331q9/create_albums_that_dont_sync_with_the_cloud/>
+We cannot find any means by which an album be added only locally, without it being backed up on Google Photos. [https://www.reddit.com/r/googlephotos/comments/x331q9/create_albums_that_dont_sync_with_the_cloud/](https://www.reddit.com/r/googlephotos/comments/x331q9/create_albums_that_dont_sync_with_the_cloud/)
 
 ## How do apps like Dropbox, Facebook, etc support multi-select and have better album support
 
@@ -2753,28 +2642,21 @@ Since these are not open source projects we can only guess. But it is likely tha
 1. It is significant amount of work to develop this from scratch compared to use the android's media picker.
 2. About 50% and rapidly growing number of Avni users are already on android 13 or later.
 
-<br>
+<br />
 
 # Also see
 
-- [Media Viewer](doc:media-viewer)
-
+* [Media Viewer](doc:media-viewer)
 
 # File: ./readme/End User Guide/user-groups.md
 
----
-title: "How to guide: Creating User Groups"
-slug: "user-groups"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jun 19 2024 04:32:51 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Oct 08 2024 08:46:11 GMT+0000 (Coordinated Universal Time)"
----
+title: 'How to guide: Creating User Groups'
+excerpt: ''
 ### Why are User Groups needed?
 
 Avni users can be grouped into different Users Groups based on their roles and responsibilities and different permissions can be given to them. It ensures that users have the right access levels to perform their tasks effectively while maintaining data integrity:
 
-1. **Role-based Access Control: **User groups ensure each user gets permissions suited to their role. For example, field workers, supervisors, and administrators may need different access levels.
+1. **Role-based Access Control:** User groups ensure each user gets permissions suited to their role. For example, field workers, supervisors, and administrators may need different access levels.
 2. **Permission Management:**  Instead of setting permissions individually, administrators can manage them for entire groups, reducing errors and saving time.
 3. **Enhanced Security:** User groups help to  define which group can access certain data or perform certain activities in the Avni app like registration, enrolments, edits, and canceling the visit. This 
 4. **Customization and Flexibility:** User groups allow for tailored permissions based on specific user roles. A user can have multiple user groups assigned based on their area of work. 
@@ -2803,7 +2685,7 @@ Before creating Users & Catchment, the first step is to create User Groups. Diff
 
 ![](https://files.readme.io/6575689-image6.png)
 
-4. **Click on Create Group**  
+4. **Click on Create Group**\
    Enter the Group name and click on the CREATE NEW GROUP button
 
 ![](https://files.readme.io/bb4854b-image5.png)
@@ -2841,14 +2723,8 @@ Once the user groups are updated with the necessary details given above, it shou
 
 # File: ./readme/End User Guide/users-and-catchments.md
 
----
-title: "Users and Catchments"
-slug: "users-and-catchments"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jun 19 2024 06:33:32 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Jun 21 2024 11:32:01 GMT+0000 (Coordinated Universal Time)"
----
+title: Users and Catchments
+excerpt: ''
 ## How to guide: Creating Users and Catchments from the Avni web-app
 
 To access the features of the Avni app, users need to have a unique username and password to log in to the app and perform the activities as and when required. These login credentials can be created through Avni web-app where certain permission can be provided to each unique user as per the area of work and authority to access the data generated in the app.
@@ -2857,7 +2733,7 @@ To access the features of the Avni app, users need to have a unique username and
 
 The following items must be configured in the web app before proceeding with the user creation process.
 
-1. Location Hierarchy, Locations ([Refer to this guide \[TO BE ADDED\]](<>))
+1. Location Hierarchy, Locations ([Refer to this guide \[TO BE ADDED\]]())
 2. Languages
 3. User Groups ([Refer to this guide](https://avni.readme.io/docs/user-groups))
 4. Catchments
@@ -2868,7 +2744,7 @@ A catchment is a group of locations that are serviced by a user i.e. the locatio
 
 1. Navigate to the admin console
 
-![alt_text](https://files.readme.io/d32ed8d-image8.png "image_tooltip")
+![alt\_text](https://files.readme.io/d32ed8d-image8.png "image_tooltip")
 
 2. Click on the catchments and create a catchment
 
@@ -2904,7 +2780,7 @@ Once the above-provided prerequisites have been created successfully, we can pro
 
 <br />
 
-3. Provide a unique Login ID for each user. Login ID allows to have alphanumeric values which will be followed by @ProjectName. A Login ID that is already in use cannot be re-used to create another user. **Note: **The login name is a case-sensitive field. The user needs to provide the same login ID while logging in to the Avni app.
+3. Provide a unique Login ID for each user. Login ID allows to have alphanumeric values which will be followed by @ProjectName. A Login ID that is already in use cannot be re-used to create another user. **Note:** The login name is a case-sensitive field. The user needs to provide the same login ID while logging in to the Avni app.
 
 ![](https://files.readme.io/18b704a-image4.png)
 
@@ -2953,394 +2829,17 @@ Once the above-provided prerequisites have been created successfully, we can pro
    <br />
 
 
-# File: ./readme/General/architecture.md
-
----
-title: "Design"
-slug: "architecture"
-excerpt: ""
-hidden: false
-createdAt: "Thu Oct 24 2019 09:16:53 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-This section outlines the design of Avni.
-
-[Terminology](doc:terms-and-their-definitions)  
-[Component Architecture](doc:component-architecture)  
-[Multitenancy](doc:multitenancy-1)  
-[Offline operations and sync](doc:offline-operations-and-sync)  
-[Why is Avni multitenant?](doc:openchs-service-on-the-cloud)
-
-
-# File: ./readme/General/architecture/component-architecture.md
-
----
-title: "Component Architecture"
-slug: "component-architecture"
-excerpt: ""
-hidden: false
-createdAt: "Fri Oct 25 2019 09:16:01 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Jan 02 2024 07:18:14 GMT+0000 (Coordinated Universal Time)"
----
-## The Avni suite includes the following components:
-
-- Field app (Android)
-- Administration app and App Designer (Web)
-- Media app (Web)
-- Avni server
-- Rules server
-- ETL Server
-- Media Server
-- Integration Server
-- BI Tools
-
-## Avni components
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/601f4e4-Avni_Components.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
-
-### Field app (android)
-
-The **Field app** is the primary interface for field workers. It provides the ability to fill forms and record observations from the field. The app can work completely offline and allows for sync of data to a central server (Avni server) when the field-worker is at a place with good internet. 
-
-The login credentials of authorised users are maintained in AWS Cognito - a third-party identity server that is integrated with Avni.
-
-### Administration app and App Designer
-
-The **Administration app and App Designer** is a web-based interface that is used to configure organisations in Avni. Login is allowed to all organisation administrators. In this, you can configure and setup Avni server, for example configuring master data for Locations, Hierarchies, Users, design the Program Forms, etc. It can also be used for Data Imports, Exports and Data-Entry. It runs in a web browser.
-
-### Avni Server
-
-The **Avni server** exists for the following reasons
-
-- A centralized place to keep data persistent and to enable sharing of data between different devices.
-- Enable creation of organisation workflows and forms centrally through metadata.
-- Enable availability of aggregate data that can be accessed by the Reports server. 
-
-The Avni server is multitenant, which means that the same server can be used for multiple organisations/locations/programs. Multitenancy is achieved through _row-level security policies_ within the database. This is important for Avni to achieve operational efficiency. For further in-depth details on multi-tenancy please refer [Multitenancy](doc:multitenancy-1)
-
-### Rules Server
-
-Avni uses JavaScript-based rules to provide configurability for each implementation of the platform. For details please refer to [Rules concept guide](doc:rules-concept-guide). These rules are executed primarily on the android device when used in the field in offline mode. Since Avni also has data entry web application which is used in the online mode, for performance reasons these rules cannot be executed in the browser. To run these rules, closer to the database, Avni provides a node-based rule server which executes the same rules on the server-side.
-
-**Security** is handled through JWT tokens obtained from the Identity Server. More details are available here:  [Security](doc:security).
-
-### ETL Server
-
-Avni ETL server is a homegrown solution that creates and updates the data in an implementation specific schema (instead of generic forms data that is same for all implementation - as maintained in the main database). ETL Server keeps the data upto date at configured frequency. It works by connecting directly to the production database and uses generated SQL to create/update implementation data at a very high speed.
-
-### Media app (web)
-
-Media app allows the users to view the media and other type of files like Google Photos (with previews, download). These files are saved to Avni  using the field app. It also allows filtering of media files based on Avni metadata like program, subject types, dates, form fields etc.
-
-### Integration Server
-
-Integration server provides a platform for developer to write Java modules to integrate Avni with any implementation specific system - moving data in both directions. The platform has modules to support integration reusable products like Bahmni, Glific, Exotel. Apart from these products Avni is also integrated with customer specific systems using this platform.
-
-### BI Tools
-
-Avni team uses [Jasper Reports](https://www.jaspersoft.com/), [SuperSet](https://superset.apache.org/), & [Metabase](https://www.metabase.com/) as a reporting interface running on top of the ETL schema created using ETL Server. Avni allows for navigating from BI tool to Avni web app for zooming into the beneficiary/subject specific data. Other BI tools can be also used - as Avni uses Postgres database supported by most if not all BI tools.
-
-
-# File: ./readme/General/architecture/integration-architecture.md
-
----
-title: "Integration architecture"
-slug: "integration-architecture"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jun 15 2022 06:39:24 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni was first integrated with Bahmni and is now being integrated with multiple other systems. Since there is a lot of common work and code involved in integrating Avni with other systems, the Avni integration service, and its management application are also designed to be reusable, open-source, and multi-tenant. This means that this can be deployed in the cloud to service multiple implementations of Avni or it can be deployed in customer-specific infrastructure. In this document, some of the core/common concepts of avni integration service have been described.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/91732cc-Avni_Integration.jpg",
-        "Avni Integration.jpg",
-        960
-      ],
-      "sizing": "100",
-      "caption": "Avni Integration Architecture Diagram"
-    }
-  ]
-}
-[/block]
-
-
-### Multi-tenant
-
-Avni integration framework is multi-tenant. All the concepts described below are sandboxed for each tenant. A tenant can be considered on an instance of Avni's integration of implementation with another project system. The framework has been made multi-tenant so that they can reuse the same framework and can be hosted as a single service like Avni's main service can be hosted.
-
-### Metadata Data Mapping
-
-In Avni, the administrators (users) can define their own data model (via form element, coded answers) and master data (via location). There are scenarios in which Avni has to integrate with another system where the users may do the same. For example: in Bahmni there is a similar concept of forms and coded answers where the data model is managed by. Similarly, other EMR or data collection systems will have the same. Hence, for example, if an Avni Subject (or any other Avni entity) has to be saved as a Patient or a similar entity in another system (and vice-versa) then such data needs to be mapped.
-
-Due to this hardcoding of every field in the integration code will require manual mapping to be done and on changes, this mapping has to be maintained. Such maintenance will require code deployment every time such fields are introduced.
-
-Avni integration solution allows administrators (users) to manage this mapping themselves via a user interface instead of depending on a development cycle. A mapping has two main fields - avni_id and integrating_system_id. Avni id is the UUID of concept, location, etc and intergrating_system_id is either a string or number corresponding to another system's id.
-
-Avni integration framework allows one to organize this mapping using mapping group and mapping type. This data can be set up per integration and it is left to the developer of a specific integration to use it in the way it is useful.
-
-### Guaranteed to process
-
-Most Avni implementations require guaranteed processing of all records. Any failure in processing due to software availability issues needs to be retried to ensure that they are processed (the failures could be due to defects in source, destination, or integrator which needs to be rectified and the failures need to be reprocessed). Note that: approaches like webhooks but without the ability to retry do not work.
-
-Avni integrator uses [sync status records](https://github.com/avniproject/integration-service/blob/main/integration-data/src/main/java/org/avni_integration_service/integration_data/domain/IntegratingEntityStatus.java) for each process. In case of any unexpected failures, the integration process can use the readUpto information to proceed next time.
-
-Avni integration framework allows the developer to define their entity types and can maintain their sync information (watermark, or readUpto information) as they see fit.
-
-### Application error handling
-
-The integration processes can encounter errors that can be fixed only by the intervention of the end users/administrators. For some of these errors, you may not want to stop the processing of other records. Along with this, you may want to reprocess these records later in case the users have fixed the issue. In order to handle both of these, you can use [ErrorRecords](https://github.com/avniproject/integration-service/blob/bdbadf96c79096f746398b69d1faddadc50820e6/integration-data/src/main/java/org/avni_integration_service/integration_data/domain/error/ErrorRecord.java). Along with logging the record you will also have to define error processes which can reprocess them at regular intervals.
-
-For more detail on error handling please see [Error handling](doc:error-handling)]
-
-### Integration Schedule
-
-Since the time taken by different implementation integration processes can be variable, it is expected that each implementation can independently choose its schedule of running integration processes. Avni integration service allows for the running of multiple integrations in parallel at the same time.
-
-
-# File: ./readme/General/architecture/multitenancy-1.md
-
----
-title: "Multitenancy"
-slug: "multitenancy-1"
-excerpt: ""
-hidden: false
-createdAt: "Thu Oct 24 2019 09:24:40 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-The reason why Avni is multitenant is explained in [Avni service on the cloud](doc:openchs-service-on-the-cloud)  This section explains the implementation of multitenancy in Avni. 
-
-Multitenancy in Avni is built into the database using row-level multitenancy ([RLS](https://www.postgresql.org/docs/9.5/ddl-rowsecurity.html)). All data and metadata tables that are specific to organisations are secured using RLS policies. The Avni server and the Reporting Server are multitenant aware. 
-
-Every new organisation that is set up in Avni gets a database role. This database role is limited to access only those rows that belong that their organisation. The definition of an organisation and the database role corresponding to the organisation is in the organisation table. 
-
-### Avni server
-
-When an http request reaches Avni, the user is first authenticated. Based on the authenticated user's organisation, the database role of the user querying the database is set to a role that is built purely for that organisation. This limits access of data to just the organisation that the user belongs to. Below is a sample request-response cycle. 
-
-![](https://files.readme.io/2a03d9f-Avni_multitenancy.png "Avni multitenancy.png")
-
-### Reporting server
-
-\[Deprecated]In the reporting server, each organisation is defined as a new database, authenticated by their corresponding database role. This limits access to data to their organisation alone. Users are assigned to groups, one group per organisation. Each group is provided access to the database that they have access to.
-
-### Further Reading
-
-Read this excellent blog by Vinay, from the Avni Team, on Multi-tenancy: [Creating a cost-effective multi-tenant platform - Medium.com](https://medium.com/samanvay-on-tech/creating-a-cost-effective-multi-tenant-platform-24b2ed7d0bad)
-
-
-# File: ./readme/General/architecture/offline-operations-and-sync.md
-
----
-title: "Offline operations and sync"
-slug: "offline-operations-and-sync"
-excerpt: "How Avni Android app works in offline-mode while exchanging data with Avni server"
-hidden: false
-createdAt: "Thu Oct 24 2019 09:25:08 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Oct 08 2024 09:09:16 GMT+0000 (Coordinated Universal Time)"
----
-## Offline-first Avni Android App
-
-In most places where field work happens, there is usually no or quite poor internet connectivity. Therefore Avni has been designed group up to support robust offline capabilities, so that field work can easily happen offline, and data & photos, etc. can be synced whenever there is decent internet connectivity. Avni is already being used in production in this mode.
-
-This page provides some of the details on Avni's offline-mode support. 
-
-## Sync mechanism
-
-Data in Avni is broken down into transactional data, reference data and media. We first discuss sync of transactional and reference data. This is called a data server sync. Then we talk about media, and then telemetry around sync. 
-
-### Data server sync
-
-The sync mechanism involves both push of transactional data from the android app to the server, and pull of both reference and transactional data from the server. 
-
-First, transactional data in the android app is pushed to the server. Then the app pulls reference data from the server. Finally, transactional data is pulled from the server. 
-
-The EntityQueue table is used to track data that has been created or updated in the app, These are then ordered based on their relationships and then pushed to the server. The app also maintains the last updated entity of each entity type in the EntitySyncStatus table. This is used to pull all changes for each entity type after the last sync. 
-
-### Media sync
-
-Media in Avni is usually some image/video that is associated to an observation. Media upload happens directly to S3 from the android app. Once upload is complete, the observation is modified to store the S3 url. Since this means a change in the observation a data server sync is performed once again. 
-
-### Telemetry (for debugging issues)
-
-Telemetry around sync is also synced as an entity to the server so that they can be used for monitoring of sync issues of users.
-
-
-# File: ./readme/General/architecture/openchs-service-on-the-cloud.md
-
----
-title: "Why is Avni multi-tenant?"
-slug: "openchs-service-on-the-cloud"
-excerpt: "An explanation of why Avni is hosted on Cloud with multi-tenant setup."
-hidden: false
-createdAt: "Wed May 23 2018 09:38:00 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni is multi-tenant and cloud-ready because it helps both the software providers and the end-users, by using a common instance of Avni Server for multiple programs / locations / organisations / etc.  
-
-You can optionally easily deploy Avni Server on your own servers as Avni is OpenSource, but it is far economical, maintenance-free and future-proof if you choose to use Avni-on-Cloud.
-
-## Ability to support multiple implementations
-
-Many (not all surely) organisations that provide services on the field are often small. There are several organisations that have around 5 to 20 field workers (app users). Supporting Avni needs a sysadmin that can manage Linux, Java application, Postgres, Metabase,  networks, backups/restores, security that has significant ongoing costs associated to it. Larger organisations may already have servers and people handling them, but even for them, the cost of hosting Avni on the cloud is much lower than hosting themselves. Along with the costs, the system administrator needs to perform these activities well. Find such system administrators is not quite easy for organizations that do not have much of an IT department.
-
-## Availability of service by health-workers
-
-Most on-premise installations mean the server is available only in a central location over their local area network. Health workers usually come to this central location, which has internet, to sync at regular intervals. Whereas with the cloud this access is available from anywhere in the field. Of course, the in-premise deployment can also setup a VPN and acquire public IP. Both of these require maintenance and/or cost.
-
-## Software management and Upgrades
-
-Avni, like most products, will remain in active development for very long time. New features continuously get added, releases come out once or twice a month, patches for defects are fixed many times a month. If one runs it on-premise, the servers would need to be updated with the latest changes. As the product evolves the way it is installed also evolves. If one is not frequently updating the product, the cost of upgrade starts accumulating. On-premise deployment, also means that the app on Android PlayStore cannot be used and one needs build, host and version their own apk. 
-
-## Economy of scale because of shared common
-
-There are two types of economy of scale that one gets with cloud deployment.
-
-- Shared infrastructure - Most server infrastructures are poorly utilised, with servers running much below their capacity. With cloud infrastructure since the servers are shared.
-- Common services - All activities related to management of the infrastructure and the services, benefits everyone.  
-  While cost component is intuitively understood. The quality component is no so much. The shared common improves in its quality because it receives inputs from all the customers and all their users.
-
-## Benefiting from infrastructure service provides
-
-When servers are hosted on the cloud, many of the infrastructure services like backup, restore, data encryption, server, secure access, firewalls, monitoring are implemented is a high quality fashion for you, by the provider. Replicating this at each in-premise deployment is difficult.
-
-## Q&A
-
-Here are some common questions regarding cloud services that organisations ask. 
-
-- **_Who will own my data?_**  
-  A big reason for organisations to not use cloud services is the worry that they might lose ownership of data. The service automatically provides reports and a complete download of data on-demand. Ownership of data **always belongs to the subscribing organization (you!)**. The hosting organisation does not have privileges to use the actual data for their own purposes, enforceable legally and also technically. 
-
-- **_How safe is data in the cloud?_**  
-  Most organisations that run servers on their own are also aware of how their data is being backed up. Not knowing the mechanisms of backup causes that feeling of loss of control. 
-  - The cloud provider has redundancies to ensure disk failures do not cause loss of data or downtime. 
-  - Prior to software upgrade full database backup can be taken (or snapshotted) by the service provider.
-  - Additionally when the database is encrypted, the cloud provider cannot read data stored in their infrastructure. All transport of data is also encrypted uses the https protocol. So, nobody can read the data when it travels between the server and the client.
-
-- **_Who else can see my organization's data?_**  
-  The multi-tenant design of Avni **disallows** organizations from viewing data of other organizations. The separation of data is built into the software and the database access. Additionally when the database is encrypted, the cloud provider cannot read data stored in their infrastructure. All transport of data is encrypted uses the https protocol. So, nobody can read the data when it travels between the server and the client.
-
-**Technical support staff** - For resolving bugs or issues during production, a limited set of Technical support staff do require access to the data, with appropriate checks and audit control in place. The best (and probably only) way to handle this problem would be to ask the support staff to sign a non-disclosure agreement - and ensure access to systems is logged and auditable.
-
-
-# File: ./readme/General/architecture/reporting-in-avni.md
-
----
-title: "Reporting in Avni"
-slug: "reporting-in-avni"
-excerpt: ""
-hidden: false
-createdAt: "Tue Mar 02 2021 05:25:40 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue May 20 2025 13:52:08 GMT+0000 (Coordinated Universal Time)"
----
-Avni supports Data analytics in 2 different modes:
-
-1. Extract data using Longitudinal exports (Old and new) and analyze it using applications such as SAS/SPSS.
-2. Use Avni Platform Hosted Reporting Service instances of JasperReports, Superset or Metabase to analyze data in near real time.
-
-## Longitudinal exports
-
-Avni has a section to retrieve longitudinal exports of data that is analysis friendly with applications such as SAS/SPSS. This is also available in the browser if you login to the Avni web application.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/327a38b7ee76e06144331079639ab99b7e70f3fb9723509cc2af4f2fec1d8cbf-old_longitudinal_export.png",
-        null,
-        "Old Longitudinal exports"
-      ],
-      "align": "center",
-      "caption": "Old Longitudinal exports"
-    }
-  ]
-}
-[/block]
-
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/552ab3fac1f97a83dc533b3bb7c70d8dc406702c515f089bf93ef72e433256bf-new_longitudinal_export.png",
-        null,
-        "New Longitudinal exports"
-      ],
-      "align": "center",
-      "caption": "New Longitudinal exports"
-    }
-  ]
-}
-[/block]
-
-
-## Avni hosted Reporting services
-
-As part of [Avni Hosted Service](doc:avni-hosted-service) we provide three different reporting systems using open source tools Metabase, Superset and Jasper Reports. There are links to access these in the Avni Web-application [login page](https://app.avniproject.org). 
-
-Alternatively, you can directly go to the various reporting tools via following links:
-
-- Metabase - <https://reporting.avniproject.org/>
-- Jasper Reports - <https://reporting-jasper.avniproject.org/jasperserver/login.html>
-- Superset - <https://reporting-superset.avniproject.org/>
-
-### Self-Service Reports
-
-Avni provides a Self-Service Reports feature that allows users to create and manage reports without requiring technical expertise. We uses Metabase for this purpose. You can read up more about it [here](self-service-reports-guide-for-avni).
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0ffb57d71344858fd1f3fb5018f7af9425cc23fa9fb2ac517b741ea0322c7727-self_service_reports.png",
-        null,
-        "Self-Service Reports"
-      ],
-      "align": "center",
-      "caption": "Self-Service Reports"
-    }
-  ]
-}
-[/block]
-
-
 # File: ./readme/General/architecture/reporting-in-avni/getting-started-with-avni-reports.md
 
----
-title: "Getting Started with Avni Self-Service Reports 📊"
-slug: "getting-started-with-avni-reports"
-excerpt: ""
-hidden: false
-createdAt: "Mon May 26 2025 06:27:56 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon May 26 2025 07:05:21 GMT+0000 (Coordinated Universal Time)"
----
+title: Getting Started with Avni Self-Service Reports 📊
+excerpt: ''
 ## What This Guide Will Help You Do
 
 This guide will help you learn how to create reports and visualize your Avni data in Metabase, even if you've never worked with data tools before! We'll walk through real examples with step-by-step instructions.
 
-> 💡 **Quick Tip:** This guide focuses on practical everyday tasks. If you need information about setup or administration, please refer to the [Self-Service Reports Guide for Avni](self-service-reports-guide-for-avni). If needed, contact Avni support team for further guidance.
+<Callout icon="💡" theme="default">
+  ### **Quick Tip:** This guide focuses on practical everyday tasks. If you need information about setup or administration, please refer to the [Self-Service Reports Guide for Avni](self-service-reports-guide-for-avni). If needed, contact Avni support team for further guidance.
+</Callout>
 
 ## The Basics: Understanding Metabase
 
@@ -3348,34 +2847,20 @@ This guide will help you learn how to create reports and visualize your Avni dat
 
 Metabase is a simple tool that helps you look at your organisation's data in Avni, without needing technical skills. Think of it like a smart photo editor for your data - it helps you:
 
-- See overall Avni organisation data at a glance
-- Create charts and graphs easily
-- Share insights with your team
-- Make better decisions based on actual numbers
-- Identify trends and patterns in your data
+* See overall Avni organisation data at a glance
+* Create charts and graphs easily
+* Share insights with your team
+* Make better decisions based on actual numbers
+* Identify trends and patterns in your data
 
 ### How to Log In 🔑
 
-1. Open your web browser and go to <https://reporting.avniproject.org/>
+1. Open your web browser and go to [https://reporting.avniproject.org/](https://reporting.avniproject.org/)
 2. Enter your email address
 3. Enter your password
 4. Click the "Log in" button
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/95b3cfa20f75003a170accb2312b13b1ff51752a37ffbeb1130366d044e37d8f-Screenshot_2025-05-26_at_12.07.51_PM.png",
-        null,
-        "Login screen example"
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/95b3cfa20f75003a170accb2312b13b1ff51752a37ffbeb1130366d044e37d8f-Screenshot_2025-05-26_at_12.07.51_PM.png" />
 
 ### Help! I Can't Log In 🆘
 
@@ -3389,15 +2874,15 @@ Don't worry! Try these steps:
 
 Only people from your organization can see your data and reports:
 
-- Team members in your organization
-- System administrators who help manage the platform
+* Team members in your organization
+* System administrators who help manage the platform
 
 ### Where Does This Data Come From? 📱→💾
 
 All the data you see in reports comes from information collected by field workers using:
 
-- The Avni mobile app on phones and tablets
-- The Avni web application on computers
+* The Avni mobile app on phones and tablets
+* The Avni web application on computers
 
 This information is automatically organized into easy-to-use tables via the ETL service, that you can explore in Metabase.
 
@@ -3407,22 +2892,9 @@ This information is automatically organized into easy-to-use tables via the ETL 
 
 In Avni, your information is organized in **tables** - think of them like Excel spreadsheets or organized lists. Each table contains specific information about your program. The Avni ETL service creates special reporting-friendly tables that make it easy to build reports and visualizations.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/668dae0c3299f96b27bc34928466b31a2baff73ca24c4c9c38b98c7d9c3ad01e-metabase_database_tables.png",
-        null,
-        "Example of a data table"
-      ],
-      "align": "center",
-      "caption": "Example of organisation specific tables"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Example of a data table" align="center" src="https://files.readme.io/668dae0c3299f96b27bc34928466b31a2baff73ca24c4c9c38b98c7d9c3ad01e-metabase_database_tables.png">
+  Example of organisation specific tables
+</Image>
 
 ### Your Main Tables Explained
 
@@ -3432,68 +2904,68 @@ Here are all the important tables you'll work with in Metabase:
 
 These tables contain information about the main people or things you track:
 
-- **Example:** `Individual`, `Household`, `Facility`
-- Each row represents one person or entity in your program
-- Contains basic information like name, ID, registration date, address details
-- Table names follow the pattern: `<subjectType>`
+* **Example:** `Individual`, `Household`, `Facility`
+* Each row represents one person or entity in your program
+* Contains basic information like name, ID, registration date, address details
+* Table names follow the pattern: `<subjectType>`
 
 #### 2. Encounter Tables
 
 These tables show visits or interactions that happened outside any program:
 
-- **Example:** `Individual_Baseline`, `Household_Annual_Visit`
-- Each row represents one visit or interaction
-- Contains all the information collected during that encounter
-- Table names follow the pattern: `<subjectType>_<encounterType>`
-- Cancelled encounters are in separate tables named: `<subjectType>_<encounterType>_cancel`
+* **Example:** `Individual_Baseline`, `Household_Annual_Visit`
+* Each row represents one visit or interaction
+* Contains all the information collected during that encounter
+* Table names follow the pattern: `<subjectType>_<encounterType>`
+* Cancelled encounters are in separate tables named: `<subjectType>_<encounterType>_cancel`
 
 #### 3. Program Tables
 
 These tables show which people are enrolled in which programs:
 
-- **Example:** `Individual_Nutrition_Program`, `Individual_Pregnancy`
-- Each row represents one person's enrollment in a program
-- Contains enrollment details like date joined, date exited
-- Table names follow the pattern: `<subjectType>_<programName>`
-- Program exits are in separate tables named: `<subjectType>_<programName>_exit`
+* **Example:** `Individual_Nutrition_Program`, `Individual_Pregnancy`
+* Each row represents one person's enrollment in a program
+* Contains enrollment details like date joined, date exited
+* Table names follow the pattern: `<subjectType>_<programName>`
+* Program exits are in separate tables named: `<subjectType>_<programName>_exit`
 
 #### 4. Program Encounter Tables
 
 These tables show visits that happened within specific programs:
 
-- **Example:** `Individual_Nutrition_Program_Monthly_Visit`
-- Each row represents one program visit
-- Contains all information collected during that program visit
-- Table names follow the pattern: `<subjectType>_<programName>_<encounterType>`
-- Cancelled program encounters are in separate tables named: `<subjectType>_<programName>_<encounterType>_cancel`
+* **Example:** `Individual_Nutrition_Program_Monthly_Visit`
+* Each row represents one program visit
+* Contains all information collected during that program visit
+* Table names follow the pattern: `<subjectType>_<programName>_<encounterType>`
+* Cancelled program encounters are in separate tables named: `<subjectType>_<programName>_<encounterType>_cancel`
 
 #### 5. Supporting Tables
 
 Additional tables that help with specific data types:
 
-- **Address Table:** Contains detailed address information for all subjects
-- **Media Table:** Stores all media files (images, documents) in your system
-- **Repeatable Group Tables:** For information that can appear multiple times
-  - Table names follow the pattern: `<parentTable>_<question_group_concept_name>`
+* **Address Table:** Contains detailed address information for all subjects
+* **Media Table:** Stores all media files (images, documents) in your system
+* **Repeatable Group Tables:** For information that can appear multiple times
+  * Table names follow the pattern: `<parentTable>_<question_group_concept_name>`
 
 ### Try It Yourself: Exploring Tables
 
 Let's explore these tables together:
 
 1. **Open the Data Browser:**
-   - Click on "Browse Data" at the top of the screen
-   - Find and click on the folder labeled with your Organisation Name, Ex: "BI DEMO"
+   * Click on "Browse Data" at the top of the screen
+   * Find and click on the folder labeled with your Organisation Name, Ex: "BI DEMO"
 
 2. **Look at any of the Subject Type Table:**
-   - Click on any of the Subject Type Table, Ex: "beneficiary" table
-   - Notice each person has a unique ID number
-   - Browse through the information like names and addresses
+   * Click on any of the Subject Type Table, Ex: "beneficiary" table
+   * Notice each person has a unique ID number
+   * Browse through the information like names and addresses
 
 3. **Understand How Tables Connect:**
-   - Open any ProgramEnrolment / ProgramEncounter Table,"participation" table
-   - Find the "Individual ID" column
-   - This ID connects to the ID numbers in the "beneficiary" table
-   - Similarly, the "Program ID" connects to IDs in the program table
+   * Open any ProgramEnrolment / ProgramEncounter Table,"participation" table
+   * Find the "Individual ID" column
+   * This ID connects to the ID numbers in the "beneficiary" table
+   * Similarly, the "Program ID" connects to IDs in the program table
 
 > **Understanding Connections:** Tables connect through ID numbers. Think of it like this: if beneficiary #123 appears in the participation table with program #456, it means that person is enrolled in that specific program.
 
@@ -3503,22 +2975,9 @@ Let's explore these tables together:
 
 Filtering lets you focus on exactly the information you care about - like looking at beneficiaries from only certain states or programs started after a specific date.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/3d93f33b5a5a65a883c866755c4e25bf7928d30d28fa70ced336140c87aa5460-Screenshot_2025-05-26_at_12.20.49_PM.png",
-        null,
-        "Example of filtering"
-      ],
-      "align": "center",
-      "caption": "Example of Filters configuration screen for a table"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Example of filtering" align="center" src="https://files.readme.io/3d93f33b5a5a65a883c866755c4e25bf7928d30d28fa70ced336140c87aa5460-Screenshot_2025-05-26_at_12.20.49_PM.png">
+  Example of Filters configuration screen for a table
+</Image>
 
 ### Try It Yourself: Simple Filtering
 
@@ -3553,40 +3012,27 @@ When you create a useful report:
 
 Summarizing helps you count things by categories - like how many beneficiaries are in each state or how many people are in each program.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a2de7339d09d2e80d4e7bd3167c95b171df2c27033acc8848889fc995daa2e30-Screenshot_2025-05-26_at_12.22.33_PM.png",
-        null,
-        "Example of a summary"
-      ],
-      "align": "center",
-      "caption": "Example of Summarization of a table"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Example of a summary" align="center" src="https://files.readme.io/a2de7339d09d2e80d4e7bd3167c95b171df2c27033acc8848889fc995daa2e30-Screenshot_2025-05-26_at_12.22.33_PM.png">
+  Example of Summarization of a table
+</Image>
 
 **Try It: Create Your First Summary**
 
 1. **Start with filtering:**
-   - Open any of the ProgramEnrolment / ProgramEncounter Table, Ex: "participation" table
-   - Click "Filter" at the top
-   - Choose "Last Visit Date" and select "Last month"
-   - Click "Apply" to see only recent visits
+   * Open any of the ProgramEnrolment / ProgramEncounter Table, Ex: "participation" table
+   * Click "Filter" at the top
+   * Choose "Last Visit Date" and select "Last month"
+   * Click "Apply" to see only recent visits
 
 2. **Then create a summary:**
-   - Click the "Summarize" button
-   - Under "Group by" select "State"
-   - Watch how your data transforms into a count by state!
+   * Click the "Summarize" button
+   * Under "Group by" select "State"
+   * Watch how your data transforms into a count by state!
 
 3. **Create a visualization:**
-   - Look at the bottom left for "Visualization"
-   - Click and choose "Pie Chart"
-   - Click "Done" to see your beautiful chart
+   * Look at the bottom left for "Visualization"
+   * Click and choose "Pie Chart"
+   * Click "Done" to see your beautiful chart
 
 > **What Did We Just Do?** We created a report showing how many beneficiaries from each state had visits in the last month. This helps you see which states are most active!
 
@@ -3598,54 +3044,41 @@ A join lets you combine information from different tables. Think of it like putt
 
 For example, you might want to see beneficiary names alongside their program enrolments, even though this information is stored in separate tables.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/761b483d4b5dffb3867f47eed8e460645879b9819abf4572feb7032248cc4436-Screenshot_2025-05-26_at_12.24.02_PM.png",
-        null,
-        "Illustration of a join concept"
-      ],
-      "align": "center",
-      "caption": "Illustration of a join in Metabase"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Illustration of a join concept" align="center" src="https://files.readme.io/761b483d4b5dffb3867f47eed8e460645879b9819abf4572feb7032248cc4436-Screenshot_2025-05-26_at_12.24.02_PM.png">
+  Illustration of a join in Metabase
+</Image>
 
 **Try It: Joining Tables Step by Step**
 
 1. **Start with the basic table:**
-   - Open any of the ProgramEnrolment / ProgramEncounter Table, Ex: "participation" table
-   - Look for the button next to "Summarize" (it's labeled "View")
-   - Click it to enter editing mode
+   * Open any of the ProgramEnrolment / ProgramEncounter Table, Ex: "participation" table
+   * Look for the button next to "Summarize" (it's labeled "View")
+   * Click it to enter editing mode
 
 2. **Select which columns you want:**
-   - Keep only the columns you're interested in
-   - For example: keep "Role" and "Beneficiary ID"
+   * Keep only the columns you're interested in
+   * For example: keep "Role" and "Beneficiary ID"
 
 3. **Connect to another table:**
-   - Find and click "Join Data"
-   - Select the related Subject Type table, Ex: "beneficiary" table
-   - Click the join button
+   * Find and click "Join Data"
+   * Select the related Subject Type table, Ex: "beneficiary" table
+   * Click the join button
 
 4. **Tell Metabase how to connect the tables:**
-   - Choose ProgramEnrolment / ProgramEncounter Table -> Subject Type Table, Ex: "participation" -> "beneficiary"
-   - Match ProgramEnrolment / ProgramEncounter Table Reference ID column with Subject Type Table ID column, Ex: "beneficiary_id" with "ID"
-   - Click "Join these columns"
+   * Choose ProgramEnrolment / ProgramEncounter Table -> Subject Type Table, Ex: "participation" -> "beneficiary"
+   * Match ProgramEnrolment / ProgramEncounter Table Reference ID column with Subject Type Table ID column, Ex: "beneficiary\_id" with "ID"
+   * Click "Join these columns"
 
 5. **Clean up your view:**
-   - Remove any extra columns you don't need
-   - Click "Visualize" to see your combined data
+   * Remove any extra columns you don't need
+   * Click "Visualize" to see your combined data
 
 **Make It Look Nice:**
 
-- Go to the "Visualization" section
-- Click the gear icon above the table
-- Rename columns to make them easier to understand
-- For example, change "beneficiary_id" to "Person ID"
+* Go to the "Visualization" section
+* Click the gear icon above the table
+* Rename columns to make them easier to understand
+* For example, change "beneficiary\_id" to "Person ID"
 
 > **Why This Matters:** By joining tables, you can see complete information in one view. For instance, you can see a person's name and address along with which programs they're enrolled in, even though that information comes from different tables.
 
@@ -3654,21 +3087,21 @@ For example, you might want to see beneficiary names alongside their program enr
 Now that you've learned how to join tables, try these exercises to build your skills:
 
 1. **Create a Summary Chart by Category:**
-   - Use any joined data you've created
-   - Click "Summarize"
-   - Group by any category field of your choice (like Role, Gender, Age Group, etc.)
-   - Switch to a bar graph visualization
-   - See the distribution across your chosen category!
+   * Use any joined data you've created
+   * Click "Summarize"
+   * Group by any category field of your choice (like Role, Gender, Age Group, etc.)
+   * Switch to a bar graph visualization
+   * See the distribution across your chosen category!
 
 2. **Create a Program Enrolment Chart:**
-   - Join any Program Enrolment table with its related Program table
-   - Group by "Program Name" or another program attribute
-   - Create a bar graph showing counts by program
+   * Join any Program Enrolment table with its related Program table
+   * Group by "Program Name" or another program attribute
+   * Create a bar graph showing counts by program
 
 3. **Build a Complete Profile View:**
-   - Create a table with address fields (like "State", "District"), person details, program information, and other relevant attributes
-   - Use the Sort feature to organize your data logically (e.g., by location)
-   - This gives you a complete view of who is enrolled where!
+   * Create a table with address fields (like "State", "District"), person details, program information, and other relevant attributes
+   * Use the Sort feature to organize your data logically (e.g., by location)
+   * This gives you a complete view of who is enrolled where!
 
 ## Creating Your Own Calculations
 
@@ -3676,23 +3109,9 @@ Now that you've learned how to join tables, try these exercises to build your sk
 
 Sometimes you need information that isn't directly in your data. Metabase lets you create your own calculations!
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f51d52859d073fc002b91aa87b3a99332b880592c05e99963ebe302fc4b30c1e-Screenshot_2025-05-26_at_12.30.07_PM.png",
-        null,
-        "Example of a custom column"
-      ],
-      "align": "center",
-      "sizing": "250px",
-      "caption": "Example of a custom column"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Example of a custom column" align="center" width="250px" src="https://files.readme.io/f51d52859d073fc002b91aa87b3a99332b880592c05e99963ebe302fc4b30c1e-Screenshot_2025-05-26_at_12.30.07_PM.png">
+  Example of a custom column
+</Image>
 
 **Try It: Calculate Address Length**
 
@@ -3718,11 +3137,11 @@ This is where grouping comes in - it's like organizing your data into buckets an
 2. Click "Summarize"
 
 3. Set up your grouping:
-   - Group by "State" and "District"
-   - For the calculation, choose "Average of" → "Address length"
+   * Group by "State" and "District"
+   * For the calculation, choose "Average of" → "Address length"
 
 4. Add filters if needed:
-   - Maybe filter where "Address is not empty"
+   * Maybe filter where "Address is not empty"
 
 5. Use "Sort" to organize by state and district
 
@@ -3732,21 +3151,7 @@ This is where grouping comes in - it's like organizing your data into buckets an
 
 **Try creating different visualizations:**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1e7745387046fb5bbf15f45ad3d7524914fd92b6597c7e2725f9bd85ab7681e1-Screenshot_2025-05-26_at_12.32.38_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/1e7745387046fb5bbf15f45ad3d7524914fd92b6597c7e2725f9bd85ab7681e1-Screenshot_2025-05-26_at_12.32.38_PM.png" />
 
 1. Try a line graph for the address length data
 2. Try a bar chart comparing districts
@@ -3760,7 +3165,7 @@ This is where grouping comes in - it's like organizing your data into buckets an
 
 You might wonder why you're using special tables for reporting instead of the regular Avni database. Here's a simple explanation:
 
-**The Challenge:**  
+**The Challenge:**\
 The main Avni database is designed for collecting and storing data efficiently across organizations, not for creating reports. This creates several challenges:
 
 1. **Complex Data Structures:** Some information is stored in specialized formats that are hard to query
@@ -3780,46 +3185,42 @@ Avni uses a standard process (called ETL - Extract, Transform, Load) that:
 
 The ETL service creates several easy-to-use tables:
 
-- **Subject Tables:** One table for each type of person or thing you track (Ex: `Individual` or `Household`)
-- **Encounter Tables:** Tables that show visits or interactions (Ex: `Individual_Baseline` or `Individual_Annual_Visit`)
-- **Program Tables:** Information about program enrollment (Ex: `Individual_Nutrition_Program`)
-- **Program Encounter Tables:** Records of visits within programs (Ex: `Individual_Nutrition_Program_Monthly_Visit`)
-- **Supporting Tables:** Special tables for addresses, images, and repeated information
+* **Subject Tables:** One table for each type of person or thing you track (Ex: `Individual` or `Household`)
+* **Encounter Tables:** Tables that show visits or interactions (Ex: `Individual_Baseline` or `Individual_Annual_Visit`)
+* **Program Tables:** Information about program enrollment (Ex: `Individual_Nutrition_Program`)
+* **Program Encounter Tables:** Records of visits within programs (Ex: `Individual_Nutrition_Program_Monthly_Visit`)
+* **Supporting Tables:** Special tables for addresses, images, and repeated information
 
-> 💡 **Technical Note:** Table names follow patterns like `<subjectType>_<encounterType>` or `<subjectType>_<programName>_<encounterType>` to make them easy to identify.
+<Callout icon="💡" theme="default">
+  ### **Technical Note:** Table names follow patterns like `<subjectType>_<encounterType>` or `<subjectType>_<programName>_<encounterType>` to make them easy to identify.
+</Callout>
 
 ### What This Means For You
 
-- You get faster reports
-- You can easily create visualizations
-- Your data is organized in a way that makes sense for analysis
-- Everything updates automatically every hour or so
+* You get faster reports
+* You can easily create visualizations
+* Your data is organized in a way that makes sense for analysis
+* Everything updates automatically every hour or so
 
 All of this happens behind the scenes so you can focus on getting insights from your data rather than worrying about database structures!
 
 
 # File: ./readme/General/architecture/reporting-in-avni/self-service-reports-guide-for-avni.md
 
----
-title: "Self-Service Reports Guide for Avni"
-slug: "self-service-reports-guide-for-avni"
-excerpt: ""
-hidden: false
-createdAt: "Tue May 20 2025 12:19:48 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon May 26 2025 06:36:37 GMT+0000 (Coordinated Universal Time)"
----
+title: Self-Service Reports Guide for Avni
+excerpt: ''
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Setup Process](#setup-process)
-- [User Management](#user-management)
-- [Navigation](#navigation)
-- [Reporting Features](#reporting-features)
-- [Troubleshooting](#troubleshooting)
-- [Refresh Process](#refresh-process)
-- [Teardown Process](#teardown-process)
-- [Appendix](#appendix)
+* [Introduction](#introduction)
+* [Prerequisites](#prerequisites)
+* [Setup Process](#setup-process)
+* [User Management](#user-management)
+* [Navigation](#navigation)
+* [Reporting Features](#reporting-features)
+* [Troubleshooting](#troubleshooting)
+* [Refresh Process](#refresh-process)
+* [Teardown Process](#teardown-process)
+* [Appendix](#appendix)
 
 ## Introduction
 
@@ -3829,18 +3230,18 @@ Metabase is a powerful open-source analytics and visualization tool that Avni in
 
 ### Self-Service Reports in Avni
 
-Self-service Reports is a feature in Avni that allows users to create and manage reports without requiring technical expertise. It provides a user-friendly interface for creating and managing reports, and allows users to schedule and distribute reports via email.  
+Self-service Reports is a feature in Avni that allows users to create and manage reports without requiring technical expertise. It provides a user-friendly interface for creating and managing reports, and allows users to schedule and distribute reports via email.\
 In Avni, we make use of Metabase to power Self-Service Reports.
 
 > **Note:** This guide provides comprehensive documentation for setup, user management, and administration of Self-Service Reports. For hands-on training with practical exercises for using Metabase on your Avni Data, please refer to the [Getting started with Avni Metabase reports](getting-started-with-avni-reports) guide.
 
 ### Benefits of Metabase
 
-- **User-friendly interface**: Create visualizations with simple drag-and-drop operations
-- **Customizable dashboards**: Build tailored views for different stakeholders
-- **Automated reporting**: Schedule and distribute reports via email
-- **Data exploration**: Empower users to find insights without technical expertise
-- **Secure access control**: Manage permissions at granular levels
+* **User-friendly interface**: Create visualizations with simple drag-and-drop operations
+* **Customizable dashboards**: Build tailored views for different stakeholders
+* **Automated reporting**: Schedule and distribute reports via email
+* **Data exploration**: Empower users to find insights without technical expertise
+* **Secure access control**: Manage permissions at granular levels
 
 ### Inbuilt Capabilities of Self-Service Reports
 
@@ -3854,26 +3255,10 @@ Self-service Reports in Avni provides the following capabilities:
 
 ## Prerequisites
 
-- ETL has to be enabled for your organisation, contact Avni-support team for any help regarding this.
-- You need to be logged-in as a user, who belongs to a UserGroup with Analytics Privilege for your organization in Avni
+* ETL has to be enabled for your organisation, contact Avni-support team for any help regarding this.
+* You need to be logged-in as a user, who belongs to a UserGroup with Analytics Privilege for your organization in Avni
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/08e4962e2a1df9c5d3b5967ca92e0c5ac18acf0ee573971b547a4562f78e1c51-Screenshot_2025-05-20_at_7.25.43_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "420px",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="420px" border={true} src="https://files.readme.io/08e4962e2a1df9c5d3b5967ca92e0c5ac18acf0ee573971b547a4562f78e1c51-Screenshot_2025-05-20_at_7.25.43_PM.png" />
 
 ## Setup Process
 
@@ -3886,8 +3271,8 @@ Self-Service Reports is managed at the organization level in Avni:
 3. Click on "Self-service Reports" tab
 4. Click on "Setup Reports" button
 
-![Initial Setup State](https://files.readme.io/cdaa0376b8d1b7fbe8a1d776681b23a8f4643cbbc44c290888e5fcf356b23dd4-metabase_initial_state.png)  
-_Figure 2: Initial state before Self-Service Reports setup with "Setup Reports" button_
+![Initial Setup State](https://files.readme.io/cdaa0376b8d1b7fbe8a1d776681b23a8f4643cbbc44c290888e5fcf356b23dd4-metabase_initial_state.png)\
+*Figure 2: Initial state before Self-Service Reports setup with "Setup Reports" button*
 
 ### 2. Setup Process Stages
 
@@ -3901,28 +3286,28 @@ When you first enable Self-Service Reports, you'll see the "Setup Reports" butto
 
 During the setup process, you'll see a loading indicator:
 
-![Setup in Progress](https://files.readme.io/34792bee15afc7e3ddf4a88a31e62ba4c23a8131971377c52df7a81c624c599d-metabase_loading_state.png)  
-_Figure 3: Setup in progress with loading spinner_
+![Setup in Progress](https://files.readme.io/34792bee15afc7e3ddf4a88a31e62ba4c23a8131971377c52df7a81c624c599d-metabase_loading_state.png)\
+*Figure 3: Setup in progress with loading spinner*
 
 The setup process typically takes 15-30 minutes to complete and involves:
 
-- Database connection setup
-- Initial schema synchronization
-- Permission configuration
-- Default Collection and Dashboard creation
-- Default questions creation
+* Database connection setup
+* Initial schema synchronization
+* Permission configuration
+* Default Collection and Dashboard creation
+* Default questions creation
 
 #### Partial Setup
 
 Sometimes, the setup may complete partially with only some resources available:
 
-![Partial Setup](https://files.readme.io/61242bf6bcce5582259ac4ba46363b9cd90a102be6511728d18b6623e4417ada-metabase_partial_setup.png)  
-_Figure 4.a: Partial setup with only Database resource available_
+![Partial Setup](https://files.readme.io/61242bf6bcce5582259ac4ba46363b9cd90a102be6511728d18b6623e4417ada-metabase_partial_setup.png)\
+*Figure 4.a: Partial setup with only Database resource available*
 
 In this state, you can either:
 
-- Wait for the remaining resources to be created automatically
-- Click "Setup Reports" again to retry the setup process
+* Wait for the remaining resources to be created automatically
+* Click "Setup Reports" again to retry the setup process
 
 ### 3. Verifying Setup Completion
 
@@ -3931,24 +3316,10 @@ You can verify the setup was successful by:
 1. Confirming the "Explore Your Data" button is available
 2. Testing access with a user that has been added to the "Metabase Users" group in Avni
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f0c5a313f302629bfa838cfcbbc368aac06d42a079c016331de3295e7df915a0-metabase_refresh_reports.png",
-        "",
-        "Refresh Reports"
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/f0c5a313f302629bfa838cfcbbc368aac06d42a079c016331de3295e7df915a0-metabase_refresh_reports.png" />
 
-
-_Figure 4.b : Successfully completed setup  
-(Note: Delete button only available in development environments)_
+*Figure 4.b : Successfully completed setup\
+(Note: Delete button only available in development environments)*
 
 ## User Management
 
@@ -3968,13 +3339,13 @@ To grant users access to Metabase analytics:
 
 Note: Removing users from the "Metabase Users" group will remove their access to Metabase analytics.
 
-![Avni User Groups](https://files.readme.io/5c483f0cd5480029f298a23961dfb5248f633d13195022546bc8af4248cddac7-metabase_user_groups.png)_Figure 5: Avni user groups management interface showing Metabase Users group_
+![Avni User Groups](https://files.readme.io/5c483f0cd5480029f298a23961dfb5248f633d13195022546bc8af4248cddac7-metabase_user_groups.png)*Figure 5: Avni user groups management interface showing Metabase Users group*
 
 #### Verification in Metabase
 
 After adding users to the Metabase Users group in Avni, you can verify their synchronization in the Metabase admin interface:
 
-![Metabase Admin People](https://files.readme.io/cf18e6606710fc311495adec917571095ba46e793afadd92e731a17f192fdaf1-metabase_admin_people.png)_Figure 6: Metabase Admin interface showing synchronized users_
+![Metabase Admin People](https://files.readme.io/cf18e6606710fc311495adec917571095ba46e793afadd92e731a17f192fdaf1-metabase_admin_people.png)*Figure 6: Metabase Admin interface showing synchronized users*
 
 The synchronization process:
 
@@ -3985,8 +3356,8 @@ The synchronization process:
 
 You can navigate to Self-Service Reports from the Avni Sign-in screen, by clicking on the "METABASE REPORTS" button.
 
-![Self-Service Reports Navigation](https://files.readme.io/5ca645c93da6b8a024963b55c58b245cb12f9c628d5a5e43eafbdf542a520699-metabase_navigate_from_avni.png)  
-_Figure 7: Self-Service Reports Navigation via "Self-Service Reports" button available in Avni Sign-in screen_
+![Self-Service Reports Navigation](https://files.readme.io/5ca645c93da6b8a024963b55c58b245cb12f9c628d5a5e43eafbdf542a520699-metabase_navigate_from_avni.png)\
+*Figure 7: Self-Service Reports Navigation via "Self-Service Reports" button available in Avni Sign-in screen*
 
 ## Reporting Features
 
@@ -3994,75 +3365,61 @@ _Figure 7: Self-Service Reports Navigation via "Self-Service Reports" button ava
 
 The Metabase integration includes a pre-configured "Canned Reports" dashboard that provides immediate value without requiring users to build reports from scratch.
 
-![Canned Reports Dashboard](https://files.readme.io/7d99a2dae462bb202090ac6e4e6d73e21c47ce5a00c94c4eae4d2b09eb2ed74a-metabase_canned_reports.png)  
-_Figure 8: Overview dashboard with multiple report visualizations_
+![Canned Reports Dashboard](https://files.readme.io/7d99a2dae462bb202090ac6e4e6d73e21c47ce5a00c94c4eae4d2b09eb2ed74a-metabase_canned_reports.png)\
+*Figure 8: Overview dashboard with multiple report visualizations*
 
 Key features of the Canned Reports dashboard:
 
-- Filter controls at the top (Date Range, Location filters, etc.)
-- Multiple visualizations organized by subject area
-- Interactive charts that respond to filter selections
-- Donut charts showing distribution of key metrics
-- Empty states for sections with no data ("No results!")
-- Drill-down ability by clicking on section of Donut (or of any part of different type of vizualizations)
+* Filter controls at the top (Date Range, Location filters, etc.)
+* Multiple visualizations organized by subject area
+* Interactive charts that respond to filter selections
+* Donut charts showing distribution of key metrics
+* Empty states for sections with no data ("No results!")
+* Drill-down ability by clicking on section of Donut (or of any part of different type of vizualizations)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0ce0bacad8d607b479963694e94bcb13656b0f1068583aa0eaa2ed8cbe3b769b-Screenshot_2025-05-22_at_11.15.58_AM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/0ce0bacad8d607b479963694e94bcb13656b0f1068583aa0eaa2ed8cbe3b769b-Screenshot_2025-05-22_at_11.15.58_AM.png" />
 
-
-_Figure 9: Drill-down ability, by clicking on Donut chart section or on other visualizations_
+*Figure 9: Drill-down ability, by clicking on Donut chart section or on other visualizations*
 
 ### Collection Structure
 
 Metabase organizes reports and dashboards into collections. The default collection contains various pre-built reports:
 
-![Collection Structure](https://files.readme.io/c62b3bd102960c9bbe38b26d36cd02980dd901cec84c54bba40c96dee98e4adf-metabase_collection.png)  
-_Figure 10: Default collection structure showing dashboard and reports_
+![Collection Structure](https://files.readme.io/c62b3bd102960c9bbe38b26d36cd02980dd901cec84c54bba40c96dee98e4adf-metabase_collection.png)\
+*Figure 10: Default collection structure showing dashboard and reports*
 
 The collection includes:
 
-- Canned Reports dashboard
-- Individual report views (Completed Visits, Due Visits, etc.)
-- Other Fundamental Database tables and views that power the reports
+* Canned Reports dashboard
+* Individual report views (Completed Visits, Due Visits, etc.)
+* Other Fundamental Database tables and views that power the reports
 
 ### Report Visualizations
 
 Individual reports provide detailed visualizations of specific metrics:
 
-![Completed / Due Visits Report](https://files.readme.io/9af7f3494e2d9173f4d6b4e74acfc9fadca9e606f95684af1f788575c5beaf2b-metabase_completed_visits.png)  
-_Figure 11: Detailed visualization of Completed / Due Visits by type_
+![Completed / Due Visits Report](https://files.readme.io/9af7f3494e2d9173f4d6b4e74acfc9fadca9e606f95684af1f788575c5beaf2b-metabase_completed_visits.png)\
+*Figure 11: Detailed visualization of Completed / Due Visits by type*
 
 Visualization features include:
 
-- Interactive donut charts with percentage breakdowns
-- Clear labeling of data categories
-- Total count displayed in the center
-- Color-coded segments for easy differentiation
+* Interactive donut charts with percentage breakdowns
+* Clear labeling of data categories
+* Total count displayed in the center
+* Color-coded segments for easy differentiation
 
 ### Database Tables and Views
 
 Metabase connects to your Avni database and creates optimized views for reporting:
 
-![Database Tables and Views](https://files.readme.io/da4dc45abbb0f349603f03f05b2db26ed74f925793c729aa7199d464559ee17f-metabase_database_tables.png)  
-_Figure 12: Database tables and views available in Self-Service Reports_
+![Database Tables and Views](https://files.readme.io/da4dc45abbb0f349603f03f05b2db26ed74f925793c729aa7199d464559ee17f-metabase_database_tables.png)\
+*Figure 12: Database tables and views available in Self-Service Reports*
 
 The database structure includes:
 
-- Base tables (individual, household, address, etc.)
-- Derived views (completed_visits_view, due_visits_view, etc.)
-- Relationship tables (household_individual, etc.)
+* Base tables (individual, household, address, etc.)
+* Derived views (completed\_visits\_view, due\_visits\_view, etc.)
+* Relationship tables (household\_individual, etc.)
 
 These tables and views are automatically kept in sync with your Avni database.
 
@@ -4070,19 +3427,19 @@ These tables and views are automatically kept in sync with your Avni database.
 
 Metabase allows users to explore raw data through table views:
 
-![Individual Data Table](https://files.readme.io/cfbf4ea42ab9b037e39fc0fa1e23c7f4773c9c24bf0abd7ab598ac193815b637-metabase_individual_table.png)  
-_Figure 13: Individual data table showing subject records_
+![Individual Data Table](https://files.readme.io/cfbf4ea42ab9b037e39fc0fa1e23c7f4773c9c24bf0abd7ab598ac193815b637-metabase_individual_table.png)\
+*Figure 13: Individual data table showing subject records*
 
-![Child Data Table](https://files.readme.io/37921c0981d9e7914beaa68c5237b17baae544387131caef7ab1a4090476b09b-metabase_child_table.png)  
-_Figure 14: Child data table showing specific program records_
+![Child Data Table](https://files.readme.io/37921c0981d9e7914beaa68c5237b17baae544387131caef7ab1a4090476b09b-metabase_child_table.png)\
+*Figure 14: Child data table showing specific program records*
 
 Data exploration features include:
 
-- Sortable columns
-- Record counts and pagination
-- Search functionality
-- Filtering options
-- Direct access to raw data
+* Sortable columns
+* Record counts and pagination
+* Search functionality
+* Filtering options
+* Direct access to raw data
 
 ## Troubleshooting
 
@@ -4092,21 +3449,21 @@ When errors occur during the Self-Service Reports setup or synchronization proce
 
 ![Error Reporting Example](https://files.readme.io/e1e4f12702c93d949a5c05e685d120a159e2a42fee31ca6555dd4464312d883a-metabase_error_example.png)
 
-_Figure 15: Example of an error message during Self-Service Reports setup  
-(Note: Delete button only available in development environments)_
+*Figure 15: Example of an error message during Self-Service Reports setup\
+(Note: Delete button only available in development environments)*
 
 The error message includes:
 
-- A clear indication that the attempt failed
-- The specific Server error that occurred
-- Details about what caused the error (in this example, a missing database table)
-- A "Copy error to clipboard" button for easy sharing with support
+* A clear indication that the attempt failed
+* The specific Server error that occurred
+* Details about what caused the error (in this example, a missing database table)
+* A "Copy error to clipboard" button for easy sharing with support
 
 Common errors include:
 
-- Database connection issues
-- Missing tables or schemas due to ETL failure
-- ETL not enabled
+* Database connection issues
+* Missing tables or schemas due to ETL failure
+* ETL not enabled
 
 ### Common Issues and Solutions
 
@@ -4130,327 +3487,74 @@ To refresh Self-Service Reports integration:
 2. Click "Self-Service Reports" tab
 3. Click "Refresh Reports" button
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5b4264a93cd8614a6e0eb42c41a84420cb99372c773554667e95ad48d1bcb214-metabase_refresh_reports.png",
-        "",
-        "Refresh Reports"
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/5b4264a93cd8614a6e0eb42c41a84420cb99372c773554667e95ad48d1bcb214-metabase_refresh_reports.png" />
 
-
-_Figure 16: Refresh Self-Service Reports setup by clicking on "REFRESH REPORTS"  
-(Note: Delete button only available in development environments)_
+*Figure 16: Refresh Self-Service Reports setup by clicking on "REFRESH REPORTS"\
+(Note: Delete button only available in development environments)*
 
 Wait for the process to complete.
 
 The refresh process will:
 
-- Create missing dashboards, cards and questions
+* Create missing dashboards, cards and questions
 
 ## Appendix
 
 ### Glossary of Terms
 
-- **Collection**: A group of questions and dashboards in Metabase
-- **Dashboard**: A customizable display of multiple visualizations
-- **Question**: A saved query that produces a visualization or data table
-- **Sync**: The process of updating Metabase's understanding of your organization's database structure
-- **Card**: An individual visualization on a dashboard
+* **Collection**: A group of questions and dashboards in Metabase
+* **Dashboard**: A customizable display of multiple visualizations
+* **Question**: A saved query that produces a visualization or data table
+* **Sync**: The process of updating Metabase's understanding of your organization's database structure
+* **Card**: An individual visualization on a dashboard
 
 
 # File: ./readme/General/architecture/terms-and-their-definitions.md
 
----
-title: "Terminology"
-slug: "terms-and-their-definitions"
-excerpt: "Specific terminology used in Avni to help in quick understanding of the data model and underlying concepts."
-hidden: false
-createdAt: "Fri Oct 25 2019 03:56:32 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Terminology
+excerpt: >-
+  description: ''
 ---
 There is some terminology that has a specific meaning within Avni listed here. Understanding this will be useful to understand some of the documentation on this site. 
 
 ## SYSTEM-WIDE Terminology:
 
-- **Organisation ** - Avni has a multi-tenant architecture where multiple organisations can share the same server. A tenant in an Avni installation is called an organisation. Under an organisation one can have users, configuration (like programs, forms, settings, etc) and data (like subjects, visits, etc). 
-- **Implementation** - Technically, this means the implementation of an organisation within Avni. However, this term is usually used interchangeably with Organisation. 
-- **Subject** - Users in an organisation usually record data about one or more "subject types". A subject type could be a _person_, a _building_, a _dam_, or anything against which long-term data is to be recorded. 
-- **Individual** - In earlier versions of Avni, there could be only one subject type - an individual. _Subject types_ were introduced to the system later so that data can be recorded not just for people, but for any entity (or Subject). You might still find the term called individual in some places in Avni. All these will be replaced by the appropriate Subject term soon. Avni is already being used in places where the Subject being monitored is not a person, but an entity - like a "dam", etc. 
-- **Location** - In Avni, it is mandatory to associate a subject to a location. A location could be geographic (state, village, etc) or class-rooms, etc. Locations have hierarchy support. 
-- **Catchment** - A catchment is a group of locations that are monitored by a user. If there are multiple users assigned to a single catchment, they will all have access to the same data about subjects and their information under that catchment area. 
-- **Form** - All information captured during registration, encounter, program enrolment, program encounter, program encounter cancellation, program exit, etc are captured through forms defined through the admin app. 
-- **Concept** - This is the underlying meaning of a question asked in a form. It can be the same as the form question but can be different as well. For example, the question asked could be "_Please enter the height of a person_", while the underlying connected concept to this question could be "_Height_". Concepts provide a level of indirection between the visual form and the underlying data model and allow for validation and reporting or aggregation.
+* **Organisation** - Avni has a multi-tenant architecture where multiple organisations can share the same server. A tenant in an Avni installation is called an organisation. Under an organisation one can have users, configuration (like programs, forms, settings, etc) and data (like subjects, visits, etc). 
+* **Implementation** - Technically, this means the implementation of an organisation within Avni. However, this term is usually used interchangeably with Organisation. 
+* **Subject** - Users in an organisation usually record data about one or more "subject types". A subject type could be a *person*, a *building*, a *dam*, or anything against which long-term data is to be recorded. 
+* **Individual** - In earlier versions of Avni, there could be only one subject type - an individual. *Subject types* were introduced to the system later so that data can be recorded not just for people, but for any entity (or Subject). You might still find the term called individual in some places in Avni. All these will be replaced by the appropriate Subject term soon. Avni is already being used in places where the Subject being monitored is not a person, but an entity - like a "dam", etc. 
+* **Location** - In Avni, it is mandatory to associate a subject to a location. A location could be geographic (state, village, etc) or class-rooms, etc. Locations have hierarchy support. 
+* **Catchment** - A catchment is a group of locations that are monitored by a user. If there are multiple users assigned to a single catchment, they will all have access to the same data about subjects and their information under that catchment area. 
+* **Form** - All information captured during registration, encounter, program enrolment, program encounter, program encounter cancellation, program exit, etc are captured through forms defined through the admin app. 
+* **Concept** - This is the underlying meaning of a question asked in a form. It can be the same as the form question but can be different as well. For example, the question asked could be "*Please enter the height of a person*", while the underlying connected concept to this question could be "*Height*". Concepts provide a level of indirection between the visual form and the underlying data model and allow for validation and reporting or aggregation.
 
 ## USERS & ENCOUNTERS Terminology
 
-- **User** - A person who can log in to the Avni system is a user. 
-- **Organisation Admin** - A high-privilege User who can log in to the Avni Administration Web App for their organisation, and perform Admin functionality. 
-- **Registration** - The process of creating a new _Subject_ in the system is called Registration. A subject registration is usually associated with a form that can be customized to the subject type and the implementation. 
-- **Encounter** - All observations about a subject recorded at a specific point in time is called an encounter. The term is interchangeably used for visits as well. 
-- **Encounter Type** - Represents the type of encounter. This helps determine the set of questions that need to be asked during an encounter. For example, there might be a _monthly_ visit where some questions are asked, while different questions are asked during a _quarterly_ visit. 
-- **Visit** - Alias to encounter
+* **User** - A person who can log in to the Avni system is a user. 
+* **Organisation Admin** - A high-privilege User who can log in to the Avni Administration Web App for their organisation, and perform Admin functionality. 
+* **Registration** - The process of creating a new *Subject* in the system is called Registration. A subject registration is usually associated with a form that can be customized to the subject type and the implementation. 
+* **Encounter** - All observations about a subject recorded at a specific point in time is called an encounter. The term is interchangeably used for visits as well. 
+* **Encounter Type** - Represents the type of encounter. This helps determine the set of questions that need to be asked during an encounter. For example, there might be a *monthly* visit where some questions are asked, while different questions are asked during a *quarterly* visit. 
+* **Visit** - Alias to encounter
 
 ## PROGRAM Terminology
 
-- **Program** - Information about a subject can be structured into different programs that they can be enrolled in. eg: pregnancy program, vaccination program, etc. A program comprises a name, forms for program enrolment, encounter types and their related forms, and visits scheduling logic. 
-- **Program Enrolment** - is the process by which a subject enrolls into a program. Enrolment is usually associated with a form that is used for baseline information when starting a program. 
-- **Program Exit** - is the process by which a subject exits from a program. An exit is usually associated with a form. 
-- **Program Encounter** - is an encounter that is related to an enrolment. 
-- **Program Visit ** - is the same as program encounter
-- **Visit Schedule** - is usually defined for a program. It can be dynamically calculated after a program enrolment or a program encounter. Logic to define a visit schedule is usually specific to the implementation and is defined using the visit scheduling extension point. 
+* **Program** - Information about a subject can be structured into different programs that they can be enrolled in. eg: pregnancy program, vaccination program, etc. A program comprises a name, forms for program enrolment, encounter types and their related forms, and visits scheduling logic. 
+* **Program Enrolment** - is the process by which a subject enrolls into a program. Enrolment is usually associated with a form that is used for baseline information when starting a program. 
+* **Program Exit** - is the process by which a subject exits from a program. An exit is usually associated with a form. 
+* **Program Encounter** - is an encounter that is related to an enrolment. 
+* **Program Visit** - is the same as program encounter
+* **Visit Schedule** - is usually defined for a program. It can be dynamically calculated after a program enrolment or a program encounter. Logic to define a visit schedule is usually specific to the implementation and is defined using the visit scheduling extension point. 
 
 ## DOMAIN MODEL - DIAGRAM
 
 A nice view of the domain and usage is provided in the [Implementer's concept guide - Introduction](doc:implementers-concept-guide-introduction). Head over there for a more detailed view of the system in action.
 
 
-# File: ./readme/General/avni-code-of-conduct.md
-
----
-title: "Avni Code of Conduct"
-slug: "avni-code-of-conduct"
-excerpt: ""
-hidden: false
-createdAt: "Fri Dec 20 2019 02:25:41 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni team and community is made up of a mixture of professionals and volunteers, working on different aspects of the product.
-
-Team diversity can lead to communication issues and unhappiness. To that end, we have a few ground rules that we ask people to adhere to. This code applies equally to everyone involved.
-
-This isn’t an exhaustive list of things that you can’t do. Rather, take it in the spirit in which it’s intended - a guide to make it easier to enrich all of us and the communities in which we participate as Avni team member.
-
-This code of conduct applies to all spaces managed by the Avni project. This includes Gitter, the mailing lists, the issue tracker, documentation, website, and any other forums created by the project team which the community uses for communication. In addition, violations of this code outside these spaces may affect a person's ability to participate within them.
-
-If you believe someone is violating the code of conduct, we ask that you report it by emailing [avni-project-conduct@googlegroups.com](mailto:avni-project-conduct@googlegroups.com). For more details please see our Reporting Guidelines.
-
-- **Be friendly and patient.**
-- **Be welcoming.** We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, colour, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
-- **Be considerate.** Your work will be used by other people, and you, in turn, will depend on the work of others. Any decision you take will affect users and colleagues, and you should take those consequences into account when making decisions. Remember you might not be communicating in someone else's primary language.
-- **Be respectful.** Not all of us will agree all the time, but disagreement is no excuse for poor behaviour and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack. It’s important to remember that a community where people feel uncomfortable or threatened is not a productive one. Members of the Avni community should be respectful when dealing with other members as well as with people outside the Avni community.
-- **When we disagree, try to understand why.** Disagreements, both social and technical, happen all the time and Avni is no exception. It is important that we resolve disagreements and differing views constructively. Remember that we’re different. The strength of Avni comes from its varied community, people from a wide range of backgrounds. Different people have different perspectives on issues. Being unable to understand why someone holds a viewpoint doesn’t mean that they’re wrong. Don’t forget that it is human to err and blaming each other doesn’t get us anywhere. Instead, focus on helping to resolve issues and learning from mistakes.
-- **Be careful in the words that you choose.** We are a community of professionals, and we conduct ourselves professionally. Be kind to others. Do not insult or put down other participants. Harassment and other exclusionary behaviour aren't acceptable. This includes, but is not limited to:
-- Violent threats or language directed against another person.
-- Discriminatory jokes and language.
-- Posting sexually explicit or violent material.
-- Posting (or threatening to post) other people's personally identifying information ("doxing").
-- Personal insults, especially those using racist or sexist terms.
-- Unwelcome sexual attention.
-- Advocating for, or encouraging, any of the above behaviour.
-- Repeated harassment of others. In general, if someone asks you to stop, then stop.
-
-_Original text courtesy of the Django! project._
-
-**Questions?**  
-If you have questions, please see the FAQ. If that doesn't answer your questions, feel free to contact us at [avni-project-conduct@googlegroups.com](mailto:avni-project-conduct@googlegroups.com).
-
-[FAQ - Avni Code of conduct](doc:faq-avni-code-of-conduct)  
-[Avni Code of Conduct Committee](doc:avni-code-of-conduct-committee)  
-[Avni Code of Conduct Reporting Guide](doc:avni-code-of-conduct-reporting-guide)  
-[Avni Code of Conduct Enforcement Manual](doc:avni-code-of-conduct-enforcement-manual)
-
-
-# File: ./readme/General/avni-code-of-conduct/avni-code-of-conduct-committee.md
-
----
-title: "Avni Code of Conduct Committee"
-slug: "avni-code-of-conduct-committee"
-excerpt: ""
-hidden: false
-createdAt: "Fri Dec 20 2019 02:25:41 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-The Code of Conduct Committee deals with violations in the Avni Code of Conduct.
-
-**Committee Members**
-
-- Arjun Khandelwal
-- Hiren Thacker
-- Garima Dosar
-
-You can contact [avni-project-conduct@googlegroups.com](mailto:avni-project-conduct@googlegroups.com). For more details please see the [Reporting Guide](doc:avni-code-of-conduct-reporting-guide).
-
-
-# File: ./readme/General/avni-code-of-conduct/avni-code-of-conduct-enforcement-manual.md
-
----
-title: "Avni Code of Conduct Enforcement Manual"
-slug: "avni-code-of-conduct-enforcement-manual"
-excerpt: ""
-hidden: false
-createdAt: "Fri Dec 20 2019 08:08:45 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-This is the enforcement manual followed by Avni's Code of Conduct Committee. It's used when we respond to an issue to make sure we're consistent and fair. It should be considered an internal document, but we're publishing it publicly in the interests of transparency.
-
-## The Code of Conduct Committee
-
-All responses to reports of conduct violations will be managed by a Code of Conduct Committee ("the committee").
-
-## How the committee will respond to reports
-
-When a report is sent to the committee they will immediately reply to the report to confirm receipt. This reply must be sent within 24 hours, and the committee should strive to respond much quicker than that.
-
-See the reporting guidelines for details of what reports should contain. If a report doesn't contain enough information, the committee will obtain all relevant data before acting.
-
-The committee will then review the incident and determine, to the best of their ability:
-
-- what happened
-- whether this event constitutes a code of conduct violation
-- who, if anyone, was the bad actor
-- whether this is an ongoing situation, and there is a threat to anyone's physical safety
-
-This information will be collected in writing, and whenever possible the committee's deliberations will be recorded and retained (i.e. Gitter transcripts, email discussions, recorded voice conversations, etc).
-
-The committee should aim to have a resolution agreed upon within one week. In the event that a resolution can't be determined in that time, the committee will respond to the reporter(s) with an update and projected timeline for resolution.
-
-## Acting Unilaterally
-
-If the act is ongoing (such as someone engaging in harassment on Gitter), or involves a threat to anyone's safety (e.g. threats of violence), any committee member may act immediately (before reaching consensus) to end the situation. In ongoing situations, any member may at their discretion employ any of the tools available to the committee, including bans and blocks.
-
-If the incident involves physical danger, any member of the committee may -- and should -- act unilaterally to protect safety. This can include contacting law enforcement (or other local personnel).
-
-In situations where an individual committee member acts unilaterally, they must report their actions to the committee for review within 24 hours.
-
-## Resolutions
-
-The committee must agree on a resolution by consensus.
-
-## Possible responses may include
-
-- Taking no further action (if we determine no violation occurred).
-- A private reprimand from the committee to the individual(s) involved. In this case, a committee member will deliver that reprimand to the individual(s) over email, cc'ing the committee.
-- A public reprimand. In this case, a committee member will deliver that reprimand in the same venue that the violation occurred (i.e. in Gitter for a Gitter violation; email for an email violation, etc.). The committee may choose to publish this message elsewhere for posterity.
-- An imposed vacation (i.e. asking someone to "take a week off" from a mailing list or Gitter). A committee member will communicate this "vacation" to the individual(s). They'll be asked to take this vacation voluntarily, but if they don't agree then a temporary ban may be imposed to enforce this vacation.
-- A permanent or temporary ban from some or all Avni spaces (mailing lists, Gitter, etc.). The committee will maintain records of all such bans so that they may be reviewed in the future.
-- A request for a public or private apology. a committee member will deliver this request. The committee may, if it chooses, attach "strings" to this request: for example, the committee may ask a violator to apologize in order to retain his or her membership on a mailing list.  
-  Once a resolution is agreed upon, but before it is enacted, the committee will contact the original reporter and any other affected parties and explain the proposed resolution. The committee will ask if this resolution is acceptable, and must note feedback for the record. However, the committee is not required to act on this feedback.
-
-The committee will never publicly discuss the issue.
-
-## Conflicts of Interest
-
-In the event of any conflict of interest, a committee member must immediately notify the other members, and recuse themselves if necessary. If a report concerns a possible violation by a current committee member, this member should be excluded from the response process. For these cases, anyone can make a report directly to any of the committee chairs, as documented in the reporting guidelines.
-
-
-# File: ./readme/General/avni-code-of-conduct/avni-code-of-conduct-reporting-guide.md
-
----
-title: "Avni Code of Conduct Reporting Guide"
-slug: "avni-code-of-conduct-reporting-guide"
-excerpt: ""
-hidden: false
-createdAt: "Fri Dec 20 2019 02:25:42 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-If you believe someone is violating the code of conduct we ask that you report it to the Avni Community by emailing [avni-project-conduct@googlegroups.com](mailto:avni-project-conduct@googlegroups.com). All reports will be kept confidential. In some cases, we may determine that a public statement will need to be made. If that's the case, the identities of all victims and reporters will remain confidential unless those individuals instruct us otherwise.
-
-If you believe anyone is in physical danger, please notify appropriate law enforcement first. If you are unsure what law enforcement agency is appropriate, please include this in your report and we will attempt to notify them.
-
-If you are unsure whether the incident is a violation, or whether the space where it happened is covered by this Code of Conduct, we encourage you to still report it. We would much rather have a few extra reports where we decide to take no action, rather than miss a report of an actual violation. We do not look negatively on you if we find the incident is not a violation. And knowing about incidents that are not violations, or happen outside our spaces, can also help us to improve the Code of Conduct or the processes surrounding it.
-
-In your report please include:
-
-- Your contact info (so we can get in touch with you if we need to follow up)
-- Names (real, nicknames, or pseudonyms) of any individuals involved. If there were other witnesses besides you, please try to include them as well.
-- When and where the incident occurred. Please be as specific as possible.
-- Your account of what occurred. If there is a publicly available record (e.g. a mailing list archive or a public IRC logger) please include a link.
-- Any extra context you believe existed for the incident.
-- If you believe this incident is ongoing.
-- Any other information you believe we should have.
-
-## What happens after you file a report?
-
-You will receive an email from the Avni Code of Conduct Working Group acknowledging receipt immediately. We promise to acknowledge receipt within 24 hours (and will aim for much quicker than that).
-
-The working group will immediately meet to review the incident and determine:
-
-- What happened.
-- Whether this event constitutes a code of conduct violation.
-- Who the bad actor was.
-- Whether this is an ongoing situation, or if there is a threat to anyone's physical safety.
-
-If this is determined to be an ongoing incident or a threat to physical safety, the working groups' immediate priority will be to protect everyone involved. This means we may delay an "official" response until we believe that the situation has ended and that everyone is physically safe.
-
-Once the working group has a complete account of the events they will make a decision as to how to respond. Responses may include:
-
-- Nothing (if we determine no violation occurred).
-- A private reprimand from the working group to the individual(s) involved.
-- A public reprimand.
-- An imposed vacation (i.e. asking someone to "take a week off" from a mailing list or Gitter).
-- A permanent or temporary ban from some or all Avni spaces (mailing lists, Gitter, etc.)
-- A request for a public or private apology.
-
-We'll respond within one week to the person who filed the report with either a resolution or an explanation of why the situation is not yet resolved.
-
-Once we've determined our final action, we'll contact the original reporter to let them know what action (if any) we'll be taking. We'll take into account feedback from the reporter on the appropriateness of our response, but we don't guarantee we'll act on it.
-
-## What if your report concerns a possible violation by a committee member?
-
-If your report concerns a current member of the Code of Conduct committee, you may not feel comfortable sending your report to the committee, as all members will see the report.
-
-In that case, you can make a report directly to any or all of the current (vice/co) chairs of the Code of Conduct committee. Their e-mail addresses are listed on the Code of Conduct Committee page. The chairs will follow the usual enforcement process with the other members but will exclude the member(s) that the report concerns from any discussion or decision making.
-
-
-# File: ./readme/General/avni-code-of-conduct/faq-avni-code-of-conduct.md
-
----
-title: "FAQ - Avni Code of conduct"
-slug: "faq-avni-code-of-conduct"
-excerpt: ""
-hidden: false
-createdAt: "Fri Dec 20 2019 02:25:41 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-This FAQ attempts to address common questions and concerns around the Avni community's Code of Conduct. If you still have questions after reading it, please feel free to contact us at [avni-project-conduct@googlegroups.com](mailto:avni-project-conduct@googlegroups.com).
-
-## Why have you adopted a Code of Conduct?
-
-If you're familiar with the Avni community, you'll probably notice that the Code basically matches what we already do. Think of this as documentation: we're taking implicit expectations about behaviour and making them explicit.
-
-We're doing this because the Avni community is growing. This is on balance a very positive thing, but as we've grown past the point where it's possible to know the whole community we think it's very important to be clear about our values.
-
-We know that the Avni community is open, friendly, and welcoming. We want to make sure everyone else knows it too.
-
-## What does it mean to "adopt" a Code of Conduct?
-
-For the most part, we don't think it means large changes. We think that the text does a really good job describing the way the Avni community already conducts itself. We expect that most people will simply continue to behave in the awesome way they have for years.
-
-However, we do expect that people will abide by the spirit and words of the CoC when in "official" Avni spaces. That means that it'll apply both in community spaces and at Avni events.
-
-## What happens if someone violates the Code of Conduct?
-
-Our intent is that the anyone in the community can stand up for this code, and direct people who're unaware of this document. If that doesn't work, or if you need more help, you can contact [avni-project-conduct@googlegroups.com](mailto:avni-project-conduct@googlegroups.com). For more details please see our Reporting Guidelines.
-
-## Why do we need a Code of Conduct? Everyone knows how to behave well.
-
-Sadly, not everyone knows this.
-
-However, even if everyone was kind, everyone was compassionate, and everyone was familiar with codes of conduct it would still be incumbent upon our community to publish our own. Maintaining a code of conduct forces us to consider and articulate what kind of community we want to be, and serves as a constant reminder to put our best foot forward. But most importantly, it serves as a signpost to people looking to join our community that we feel these values are important.
-
-## This is censorship! I have the right to say whatever I want!
-
-You do -- in your space. If you'd like to hang out in our spaces (as clarified above), we have some simple guidelines to follow. If you want to, for example, form a group where Avni is discussed using language inappropriate for general channels then nobody's stopping you. We respect your right to establish whatever codes of conduct you want in the spaces that belong to you. Please honour this Code of Conduct in our spaces.
-
-
 # File: ./readme/General/avni-hosted-service.md
 
----
-title: "Avni Hosted Service"
-slug: "avni-hosted-service"
-excerpt: ""
-hidden: false
-createdAt: "Thu Mar 24 2022 10:29:37 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Avni Hosted Service
+excerpt: ''
 Avni is available as a hosted service provided by [Samanvay Foundation](https://www.samanvayfoundation.org/). More details are available at the [Avni Project website](https://avniproject.org/). 
 
 If you are an existing user of the Avni hosted services, you can
@@ -4458,355 +3562,27 @@ If you are an existing user of the Avni hosted services, you can
 1. Download the application from the Android Play Store [here](https://play.google.com/store/apps/details?id=com.openchsclient)
 2. Login to the web-based data entry app or app designer [here](https://app.avniproject.org/#/)
 
-If you have configured reports via Metabase, they will be available [here](https://reporting.avniproject.org/)  
+If you have configured reports via Metabase, they will be available [here](https://reporting.avniproject.org/)\
 If you have configured reports via Jasper Reports, they will be available [here](https://reporting-jasper.avniproject.org/jasperserver/login.html).
-
-
-# File: ./readme/General/contact.md
-
----
-title: "Contact"
-slug: "contact"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jun 29 2023 09:15:51 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Mar 28 2025 11:36:15 GMT+0000 (Coordinated Universal Time)"
----
-Website: <https://avniproject.org/>
-
-Chat: <https://discord.gg/JVEpdaMt>
-
-
-# File: ./readme/General/database-guide.md
-
----
-title: "Database Guide"
-slug: "database-guide"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jul 15 2020 09:57:39 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Jan 02 2024 12:17:44 GMT+0000 (Coordinated Universal Time)"
----
-Avni uses PostgreSQL as the database. It particularly depends on a couple of features quite heavily - JSONB data type and [row-level security](https://www.postgresql.org/docs/9.5/ddl-rowsecurity.html). [JSONB](https://www.postgresql.org/docs/9.5/functions-json.html) allows for user-defined schema and row-level security for achieving multi-tenancy. If you planning to do Avni server-side, product development then reading up on these two concepts is highly recommended. But if you plan to use Avni to implement for your organisation then these two concepts are not necessary reading.
-
-Avni's database schema documentation is available [here](https://dbdocs.io/petmongrels/Avni-with-description), but if you are here for the first time then do read the rest of the documentation here before browsing through the schema documentation. Please also note that since this schema definition is handwritten after generation some of the fields in the table may be absent. For full schema definition, but without description, you may see [this](https://dbdocs.io/petmongrels/Avni-database-schema-dump).
-
-Avni database can be logically broken down into a smaller-cohesive group of tables - which for our purposes of understanding could be called **modules** (to reiterate, this is only for understanding purposes - Avni database doesn't have these modules in the database in any form). The functions of the tables and key-columns are provided in dbdocs.
-
-**An explanation for a few columns which are repeated across the tables**
-
-- organisation_id: This column indicates the organisation to which a row belongs (since Avni uses row-level multi-tenancy.
-- is_voided or active: This is used to perform soft delete of data
-- id: the primary key of a table
-- uuid: identifier via which an externally integrating system can refer to records in Avni. id should not be used for this purpose.
-- version: although this column is present, please ignore it because this column is not used as the functionality around it has not been developed fully.
-
-# Foundational modules
-
-## Framework
-
-**audit**
-
-## Organisation
-
-Avni is multi-tenant with multiple organisation's data residing within the same schema - protected by row-level security. Avni also supports a group of organisations with one master organisation.
-
-**organisation, organisation_group, organisation_group_organisation**
-
-## Work area
-
-For more about work-area please refer to [this](https://avni.readme.io/docs/avnis-domain-model-of-field-based-work#1--architecture-of-the-service-delivery-organisation).
-
-**address_level_type, address_level, location_location_mapping, catchment, catchment_address_mapping**
-
-## Master data tables
-
-For few commonly required entities recognised, hence recognised by the platform.
-
-**gender, individual_relation, individual_relationship_type, individual_relation_gender_mapping**
-
-## User-defined data model
-
-These tables allow the user of the platform (aka implementer) to define their data model. These tables could be further sub-grouped into form_, concept_ and _types tables. Concept tables describe your data independent of how it has been captured. Form_ tables describe how the data should be captured. \*Types tables allow you to define the high-level relationship between your data entities, as explained in section 2 and 4 [here](doc:avnis-domain-model-of-field-based-work).
-
-**concept, concept_answer, subject_type, operational_subject_type, program, operational_program, encounter_type, group_role, operational_encounter_type, form, form_element_group, form_element, non_applicable_form_element, form_mapping**
-
-<hr/>
-
-# Transaction data
-
-## Transaction data
-
-**individual, program_enrolment, encounter, program_encounter, group_subject, individual_relationship**
-
-<hr/>
-
-# Functional modules
-
-Note that here tables for transaction and meta/master data are grouped together.
-
-## Identifiers
-
-Identifiers have been documented [here](doc:creating-identifiers).
-
-**identifier_assignment, identifier_source, identifier_user_assignment**
-
-## Checklist
-
-checklist, checklist_detail, checklist_item,  checklist_item_detail
-
-<hr/>
-
-# Application behaviour
-
-## Rules
-
-**deps_saved_ddl, rule, rule_dependency**
-
-## User
-
-**users, user_group, user_facility_mapping**
-
-## Application settings
-
-**organisation_config**
-
-## Access Control
-
-**privilege, group_privilege, groups**
-
-<hr/>
-
-# Others
-
-## Translations
-
-**platform_translation, translation**
-
-## Account
-
-**account, account_admin**
-
-## Telemetry and logs
-
-**rule_failure_log, rule_failure_telemetry, sync_telemetry, video_telemetric**
-
-## Task
-
-**Task, Task_Status, Task_Type, Task_Unassignment**
-
-## Messaging
-
-**Manual_Message, Message_Receiver, message_request_queue, message_rule, msg91_config, news**
-
-## Documentation
-
-documentation, documentation_item
-
-## Comment
-
-comment, comment_thread
-
-## Offline/mobile dashboard
-
-**dashboard, dashboard_card_mapping, dashboard_filter, dashboard_section, dashboard_section_card_mapping, standard_report_card_type, group_dashboard, report_card**
-
-## ETL
-
-**table_metadata, column_metadata, scheduled_job_run**
-
-# Media Viewer - Database
-
-- **download_jobs**
-  - Contains information about the downloads done by the user
-
-
-# File: ./readme/General/database-guide/form-mapping.md
-
----
-title: "Form Mapping"
-slug: "form-mapping"
-excerpt: ""
-hidden: false
-createdAt: "Fri Jan 05 2018 14:55:28 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-**What does form mapping do?**  
-Forms are an important part of Avni. Before trying to understand forms it is required to understand what are key entities which hold the transaction data in Avni.
-
-- Individual (or Subject)
-- Encounter
-- Program Enrolment
-- Program Encounter
-- Program Exit
-
-Each of these entities has some core data and configurable data. Configurable or dynamic data is modelled using forms.
-
-- **Individual** has one form (for Registration) for each subject type.
-- **Encounter** can be of multiple encounter types and for each encounter type, there is one form.
-- An individual can be enrolled in multiple programs hence for each **Program Enrolment** there will be a form. Corresponding to each enrolment there is usually exit data which is captured via forms.
-- An individual can be registered in different programs, and within each program, there can be multiple types of **Program Encounters** (hence forms).
-
-Form Mapping tries to model this relationship between Programs, ProgramEncounters or NonProgram Encounters and their Forms. Form Mapping has the following key fields. In the column header for Program and Encounter Type, we have the current name for the database columns and domain class fields in the brackets which will be renamed to more understandable names, soon.
-
-This is depicted in tabular form below (with an added Form Type dimension). 
-
-| Form Type         | entity_id  | observations_type_entity_id | subject_type_id |
-| :---------------- | :--------- | :-------------------------- | :-------------- |
-| Individual        | null       | null                        | subject_type.id |
-| Encounter         | null       | encounter_type.id           | subject_type.id |
-| Program Enrolment | program.id | null                        | subject_type.id |
-| Program Encounter | program.id | encounter_type.id           | subject_type.id |
-| Program Exit      | program.id | null                        | subject_type.id |
-
-
-# File: ./readme/General/database-guide/manual-database-update.md
-
----
-title: "Manual Database Update"
-slug: "manual-database-update"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jan 04 2024 11:04:09 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Nov 04 2024 07:18:16 GMT+0000 (Coordinated Universal Time)"
----
-> 🚧 Manually updating database to fix visit schedules is not recommended. See section below for why?
-
-Updating production database directly must be the last resort. Using support API, bulk uploads are better option. But if you are unlucky enough that you have to do database update directly then...
-
-- For everyone's sanity the SQL should be present in <https://github.com/avniproject/data-fixes> repository, so that we can checkout only one repo for all implementations to review.
-
-- Ensure that the database updates SQL is checked in another environment and end to end testing has been done after the update.
-  - For getting a dump of a specific organisation please follow the tunnel_, dump_, restore\* and create-local-db-impl-user targets from here - <https://github.com/avniproject/avni-server/blob/master/makefiles/externalDB.mk>
-
-- Ensure that code review has been done for the SQLs.
-
-- For transaction data last modified date time should be modified. Increment like the following (any data reported by database like number of rows updated can be put into comment when the queries are run).
-
-- ```sql
-  update individual set 
-  	last_modified_date_time = current_timestamp + (random() * 5000 * (interval '1 millisecond'))
-  where foo = bar;
-  ```
-  <br />
-
-- If the number of rows updated exceed 10000 records then we should ideally go for downtime.
-
-- In transaction tables a manual update history is maintained for troubleshooting. This column should not be updated directly rather use the  
-  _append_manual_update_history_  
-   function to update. This function maintain the previous history records and appends the new value, maintaining date of update.
-
-- ```sql
-  update program_enrolment 
-  	set manual_update_history = append_manual_update_history(program_enrolment.manual_update_history, 'avni-server#676')
-   where foo = bar;
-  ```
-  <br />
-
-- Use data-fixes Github project for SQL scripts.
-
-- If ETL is enabled for the org for which the updates are being run, disable it before executing the updates and re-enable it after the updates are committed to avoid issues with the ETL tables not being updated.
-
-- In the SQL script follow the following pattern. 
-
-- Avoid using specific ids in these SQLs as they may lead to errors - as the records may get updated between writing and final run. Better to include select in the update and other queries.
-
-- **When running in production:**
-
-  - **always run sql script within manual transaction**
-  - **verify counts**
-  - **only if changed count is as expected, do the commit**
-
-- ```sql
-  set role org;
-
-  begin transaction; -- so that you can rollback if something is goes wrong
-
-  -- Before queries
-  select count(*) from individual where observations->>'dfds' > 2; -- example. enter the data that you see here in test environment in comment
-
-  -- DML statements
-  -- insert/update etc
-
-  -- After queries
-  select count(*) from individual where observations->>'dfds' > 2; -- example. enter the data that you see here in test environment in comment
-
-
-  -- rollback;
-  commit;
-  ```
-
-  <br />
-
-- If your SQL script is likely to update a lot of rows in the database and the users may also be updating the data at the same time then the data update should be done in production by bringing down the server first. Note that this approach is not valid for API based update. How to handle the concurrent update, when updating via API - has to be figured out.
-  - For smaller number of rows but with concurrency `Select for update` or higher transaction isolation level can be used.
-
-## Fixing visit schedule
-
-Visit/encounter schedules work like state machine. e.g. cancelling one encounter schedules another encounter; performing enrolment is schedules another encounter. This behaviour is unlike other data behaviour in Avni - requiring us to look at how we should manage this data distinctly from other transaction and non-transaction data. For example - updating an observation value mostly has no impact on another data point. Sometimes updating weight requires updating the calculated value as well - but scope is often simple to understand and limited. But cancelling a visit from backend means also determining what else should happen as a side-effect of that change.
-
-There are major risks in "fixing" visit schedules by fixing the data, as it is quite complex to do it right and quite complex to test and verify. It is difficult to know when and whether you are done. **Hence this is not prudent strategy.**
-
-### How should we solve for this?
-
-The core idea is:
-
-- Empower users to manage the wrongly scheduled visits and be able to do the right visits.
-- Improve scheduling and encounter eligibility rules to cover new scenarios that are encountered. If required write unit tests to verify.
-- Provide offline reports if required to let users figure the cohort of subjects that have problematic state.
-- Fixing visit schedules via data fix is not a cost effective approach as well.
-
-
-# File: ./readme/General/database-guide/observation-data-model.md
-
----
-title: "Observation data model"
-slug: "observation-data-model"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jul 22 2020 12:30:38 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni is a platform that allows its user to define their own data model via forms. But Avni doesn't define table at runtime every time you define a new form. When the field user or data entry user create actual data using these forms - Avni stores data for entire in [JSONB](https://www.postgresql.org/docs/9.5/functions-json.html) column. The data is stored as **key values**.
-
-## Key
-
-Each form element is linked to a concept. The key is the UUID of the concept.
-
-## Value
-
-### Primitive value
-
-Primitive values as stored as is. e.g. {"09c852a1-56ae-431a-b0b8-3207cea15dfb": 10, "a9cb0768-1fd7-4f69-ad9b-53a0517c3ae9": "This is a string value"} where 10 and "This is a string value" are values. The keys are the UUID of corresponding concepts.
-
-### Coded value
-
-Since Avni supports multiple select for coded answers. It stores the answers in an array. e.g. {"4aacd6f8-7ee2-4df5-ad77-137b941c128b": ["e3b05c49-c0fa-4d8f-bc42-f2c291c59f4d", "baa65cfe-38fe-4116-96e7-8902ed6e9aef"]}. The UUIDs inside the array those of concepts which have been chosen as answers.
 
 
 # File: ./readme/General/getting-started.md
 
----
-title: "Introduction"
-slug: "getting-started"
-excerpt: "A quick overview of Avni software for field data collection and reporting."
-hidden: false
-createdAt: "Wed Jul 27 2016 07:35:12 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni is an open-source platform for on-field service delivery and data collection. Designed for the development sector, Avni strengthens field capacity for non-profits and governments across sectors - like health, water, education, and social welfare. 
+title: Introduction
+excerpt: A quick overview of Avni software for field data collection and reporting.
+Avni is an open-source platform for on-field service delivery and data collection. Designed for the development sector, Avni strengthens field capacity for non-profits and governments across sectors - like health, water, education, and social welfare.
 
 This documentation site is geared to introduce Avni to those who would like to implement their program workflows using this system.
 
-**Avni consists of 4 major components which perform various functions as explained below:** 
+**Avni consists of 4 major components which perform various functions as explained below:**
 
 1. **Avni Field App (Mobile)** : This is an Android app designed to be used in the field for data entry and collection. It can work in offline mode and can sync data whenever it has internet connectivity.  One can install the field app easily from the Google Play Store or from an APK file.
 
-2. **Avni Web App**: This is the **Administration** Interface where you can configure and set up the Avni server,  for example configuring master data for Locations, Hierarchies, Users, designing the Program Forms, etc. It can also be used for Data Imports, Exports, and Data-Entry. It runs in a web browser. 
+2. **Avni Web App**: This is the **Administration** Interface where you can configure and set up the Avni server,  for example configuring master data for Locations, Hierarchies, Users, designing the Program Forms, etc. It can also be used for Data Imports, Exports, and Data-Entry. It runs in a web browser.
 
-3. **Avni Reporting and Dashboard**: This connects to the Avni server to pull out custom reports and dashboards that can be viewed in the web browser, or exported as PDFs and emailed. 
+3. **Avni Reporting and Dashboard**: This connects to the Avni server to pull out custom reports and dashboards that can be viewed in the web browser, or exported as PDFs and emailed.
 
-4. **Avni Hosted Service**: The central instance of the Avni server running on the cloud, which stores all the master data, configuration, and field-entered data. If you don't want to use the cloud instance, then you can set up your own local instance of Avni in your data center/server. Avni is fully Open-Source. 
+4. **Avni Hosted Service**: The central instance of the Avni server running on the cloud, which stores all the master data, configuration, and field-entered data. If you don't want to use the cloud instance, then you can set up your own local instance of Avni in your data center/server. Avni is fully Open-Source.
 
 See [Avni Hosted Service](doc:avni-hosted-service) for details of the Avni hosted service
 
@@ -4824,46 +3600,15 @@ See [Avni Hosted Service](doc:avni-hosted-service) for details of the Avni hoste
 
 # File: ./readme/General/roadmap.md
 
----
-title: "Avni Roadmap"
-slug: "roadmap"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jun 29 2023 09:27:01 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Mar 28 2024 08:59:50 GMT+0000 (Coordinated Universal Time)"
----
+title: Avni Roadmap
+excerpt: ''
 An active roadmap for Avni is maintained in the [Project board](https://github.com/orgs/avniproject/projects/2/views/7).
-
-
-# File: ./readme/Home.md
-
-Welcome to the docs wiki!
-
-
-
-# File: ./readme/Implementers/advanced-feature-guide.md
-
----
-title: "Advanced Feature Guide"
-slug: "advanced-feature-guide"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jun 29 2023 04:46:30 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 24 2024 13:24:30 GMT+0000 (Coordinated Universal Time)"
----
-This section delves deeper into the purpose and ways to use features of Avni
 
 
 # File: ./readme/Implementers/advanced-feature-guide/about-audit-information.md
 
----
-title: "About Audit Information"
-slug: "about-audit-information"
-excerpt: ""
-hidden: false
-createdAt: "Wed Mar 06 2024 06:04:05 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Jun 12 2024 10:59:02 GMT+0000 (Coordinated Universal Time)"
----
+title: About Audit Information
+excerpt: ''
 In Avni mobile app the user can see certain audit information. The app displays:
 
 1. Created by user for subjects and program enrolments.
@@ -4877,22 +3622,16 @@ In Avni mobile app the user can see certain audit information. The app displays:
 
 # File: ./readme/Implementers/advanced-feature-guide/access-control.md
 
----
-title: "Access Control"
-slug: "access-control"
-excerpt: ""
-hidden: false
-createdAt: "Wed May 06 2020 23:49:23 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Access Control
+excerpt: ''
 Before the introduction of Access Control, organisation users with access to the field app could access all functions (i.e. registration, enrolments, search etc.) in the app. There was a need for some implementations to limit access to specific functions in order to reduce the number of options visible to end users and simplify the workflow for them while also providing a mechanism for access control.
 
 Access Control is implemented via User Groups to facilitate this need. This functionality is available to Organisation admins in the Admin section of the Web app under the User Groups menu.
 
 # Applicability
 
-- The access control rules are applicable in the field app, data entry app, and the web app.
-- Access control is not applicable to the reporting app.
+* The access control rules are applicable in the field app, data entry app, and the web app.
+* Access control is not applicable to the reporting app.
 
 # User Groups
 
@@ -4908,22 +3647,7 @@ If any of the groups that a user belongs to allows a particular privilege, the u
 
 By default, the system creates an `Everyone` and an `Administrators` group. `Everyone` group includes all the users in the organisation. `Administrators` group grants all the privileges to allow access to all the functionality.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9c003c1-Screenshot_2023-08-08_at_3.46.23_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="500px" src="https://files.readme.io/9c003c1-Screenshot_2023-08-08_at_3.46.23_PM.png" />
 
 Users cannot be removed from `Everyone` group but the privileges associated with this group can be modified. The has all privileges flag cannot be reset for `Administrators` group.
 
@@ -4931,85 +3655,298 @@ Users cannot be removed from `Everyone` group but the privileges associated with
 
 The following privileges are available in order to allow organisation admins to configure fine-grained access to functions for the org users. These privileges are configurable per entity type i.e. a group could have the 'View subject' privilege allowed for subject type 'abc' but disallowed for subject type 'xyz'.
 
-- The Subject level privileges are configurable for each Subject Type setup in your organisation.
-- The Enrolment level privileges are configurable for each program setup in your organisation.
-- The Encounter level privileges are configurable for each Encounter Type (General or Program) setup in your organisation.
-- The Checklist level privileges are configurable for each Program containing checklists for your organisation. 
+* The Subject level privileges are configurable for each Subject Type setup in your organisation.
+* The Enrolment level privileges are configurable for each program setup in your organisation.
+* The Encounter level privileges are configurable for each Encounter Type (General or Program) setup in your organisation.
+* The Checklist level privileges are configurable for each Program containing checklists for your organisation. 
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Entity Type",
-    "h-1": "Privilege",
-    "h-2": "Explanation",
-    "0-0": "Subject",
-    "0-1": "View subject",
-    "0-2": "Controls whether field users can see subjects of a particular subject type in the app.  \n  \nAll other privileges are dependent on this privilege. If disallowed, field users cannot see or access any functionality for the specific subject type.",
-    "1-0": "Subject",
-    "1-1": "Register subject",
-    "1-2": "Allows field users to register new subjects.",
-    "2-0": "Subject",
-    "2-1": "Edit subject",
-    "2-2": "Allows field users to edit previously registered subjects.",
-    "3-0": "Subject",
-    "3-1": "Void subject",
-    "3-2": "Allows field users to void previously registered subjects.",
-    "4-0": "Subject",
-    "4-1": "Add member\\*",
-    "4-2": "Allows field users to add a member to household subject.",
-    "5-0": "Subject",
-    "5-1": "Edit member\\*",
-    "5-2": "Allows field users to edit previously added household members.",
-    "6-0": "Subject",
-    "6-1": "Remove member\\*",
-    "6-2": "Allows field users to remove previously added household members.",
-    "7-0": "Enrolment",
-    "7-1": "Enrol subject",
-    "7-2": "Allows field users to enrol a subject into a program.",
-    "8-0": "Enrolment",
-    "8-1": "View enrolment details",
-    "8-2": "Allows field users to view the program enrolment details for a subject.",
-    "9-0": "Enrolment",
-    "9-1": "Edit enrolment details",
-    "9-2": "Allows field users to edit the program enrolment details for a subject.",
-    "10-0": "Enrolment",
-    "10-1": "Exit enrolment",
-    "10-2": "Allows field users to exit a subject from a program.",
-    "11-0": "Encounter",
-    "11-1": "View visit",
-    "11-2": "Allows field users to view encounters for a subject.",
-    "12-0": "Encounter",
-    "12-1": "Schedule visit",
-    "12-2": "Allows field users to schedule encounters for a subject.",
-    "13-0": "Encounter",
-    "13-1": "Perform visit",
-    "13-2": "Allows field users to perform encounters for a subject.",
-    "14-0": "Encounter",
-    "14-1": "Edit visit",
-    "14-2": "Allows field users to edit previously saved encounter details.",
-    "15-0": "Encounter",
-    "15-1": "Cancel visit",
-    "15-2": "Allows field users to cancel a previously scheduled encounter.",
-    "16-0": "Encounter",
-    "16-1": "Void visit\\*\\*",
-    "16-2": "Allows field users to void an encounter",
-    "17-0": "Checklist",
-    "17-1": "View checklist",
-    "17-2": "Allows field users to view checklist.",
-    "18-0": "Checklist",
-    "18-1": "Edit checklist",
-    "18-2": "Allows field users to edit checklist."
-  },
-  "cols": 3,
-  "rows": 19,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Entity Type
+      </th>
 
+      <th>
+        Privilege
+      </th>
+
+      <th>
+        Explanation
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        View subject
+      </td>
+
+      <td>
+        Controls whether field users can see subjects of a particular subject type in the app.  
+
+        All other privileges are dependent on this privilege. If disallowed, field users cannot see or access any functionality for the specific subject type.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        Register subject
+      </td>
+
+      <td>
+        Allows field users to register new subjects.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        Edit subject
+      </td>
+
+      <td>
+        Allows field users to edit previously registered subjects.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        Void subject
+      </td>
+
+      <td>
+        Allows field users to void previously registered subjects.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        Add member\*
+      </td>
+
+      <td>
+        Allows field users to add a member to household subject.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        Edit member\*
+      </td>
+
+      <td>
+        Allows field users to edit previously added household members.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Subject
+      </td>
+
+      <td>
+        Remove member\*
+      </td>
+
+      <td>
+        Allows field users to remove previously added household members.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Enrolment
+      </td>
+
+      <td>
+        Enrol subject
+      </td>
+
+      <td>
+        Allows field users to enrol a subject into a program.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Enrolment
+      </td>
+
+      <td>
+        View enrolment details
+      </td>
+
+      <td>
+        Allows field users to view the program enrolment details for a subject.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Enrolment
+      </td>
+
+      <td>
+        Edit enrolment details
+      </td>
+
+      <td>
+        Allows field users to edit the program enrolment details for a subject.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Enrolment
+      </td>
+
+      <td>
+        Exit enrolment
+      </td>
+
+      <td>
+        Allows field users to exit a subject from a program.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        View visit
+      </td>
+
+      <td>
+        Allows field users to view encounters for a subject.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        Schedule visit
+      </td>
+
+      <td>
+        Allows field users to schedule encounters for a subject.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        Perform visit
+      </td>
+
+      <td>
+        Allows field users to perform encounters for a subject.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        Edit visit
+      </td>
+
+      <td>
+        Allows field users to edit previously saved encounter details.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        Cancel visit
+      </td>
+
+      <td>
+        Allows field users to cancel a previously scheduled encounter.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        Void visit\*\*
+      </td>
+
+      <td>
+        Allows field users to void an encounter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Checklist
+      </td>
+
+      <td>
+        View checklist
+      </td>
+
+      <td>
+        Allows field users to view checklist.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Checklist
+      </td>
+
+      <td>
+        Edit checklist
+      </td>
+
+      <td>
+        Allows field users to edit checklist.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 `*` Only for 'Household' subject types
 
@@ -5036,14 +3973,8 @@ Access of super admin is restricted to non-operational data of the organisations
 
 # File: ./readme/Implementers/advanced-feature-guide/app-storage-management-and-sync-disable.md
 
----
-title: "App Storage Configuration and Disable Sync"
-slug: "app-storage-management-and-sync-disable"
-excerpt: ""
-hidden: false
-createdAt: "Mon Jun 30 2025 12:20:03 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Jul 09 2025 06:10:18 GMT+0000 (Coordinated Universal Time)"
----
+title: App Storage Configuration and Disable Sync
+excerpt: ''
 ### Need
 
 After an organisation has run Avni for a few years, the amount of data collected over time can be sizeable depending on the scale of the program, number of subjects registered, number of times they were visited etc. Depending on the program objectives and especially for organisations where catchment based division of data is not used or is not effective, all of this historical data may not be of use to a field user who has just joined the organisation and is starting to use Avni. This unnecessary data causes longer initial sync time, slower dashboard loads and increases the storage used by the Avni app on the user's device.
@@ -5076,27 +4007,21 @@ Remember that this job runs every night so it will keep disabling sync for recor
 
 # File: ./readme/Implementers/advanced-feature-guide/application-menu.md
 
----
-title: "Application Menu items"
-slug: "application-menu"
-excerpt: ""
-hidden: false
-createdAt: "Fri Sep 02 2022 10:06:47 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Application Menu items
+excerpt: ''
 The customizable "Application menu" feature helps you add a new menu item that will show up on the "More" option of the Android app. 
 
 This new menu item can either be an http link, or a whatsapp number. Popular apps that can be used with this linking scheme are available [here](https://gist.github.com/imbudhiraja/5b0a485fb7f36fb16c9d7d5f19b6ee40)
 
 eg: 
 
-- To open Whatsapp for a number, you would use a url like "whatsapp://send?text=hello&phone=xxxxxxxxxxxxx"
-- To open a link on youtube, you would use this - youtube://watch?v=dQw4w9WgXcQ
-- To open the Avniproject website on the browser, you would use <https://avniproject.org>
+* To open Whatsapp for a number, you would use a url like "whatsapp\://send?text=hello\&phone=xxxxxxxxxxxxx"
+* To open a link on youtube, you would use this - youtube://watch?v=dQw4w9WgXcQ
+* To open the Avniproject website on the browser, you would use [https://avniproject.org](https://avniproject.org)
 
 ### Configuration
 
-In order to set this up, add a row to the menu_item table. 
+In order to set this up, add a row to the menu\_item table. 
 
 ```sql Add new menu iterm
 INSERT INTO public.menu_item (organisation_id, uuid, is_voided, version, created_by_id, last_modified_by_id,
@@ -5107,140 +4032,56 @@ VALUES (156, uuid_generate_v4(), false, 0, 1, 1, '2022-08-25 11:05:57.791 +00:00
         '() => "whatsapp://send?phone=+919292929292"');
 ```
 
-The link_function is a function that can create a dynamic url. See [here](https://avni.readme.io/docs/writing-rules#12-hyperlink-menu-item-rule) for more information on how these functions can be written.
+The link\_function is a function that can create a dynamic url. See [here](https://avni.readme.io/docs/writing-rules#12-hyperlink-menu-item-rule) for more information on how these functions can be written.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/approval-workflow.md
 
----
-title: "Approvals"
-slug: "approval-workflow"
-excerpt: ""
-hidden: false
-createdAt: "Fri May 07 2021 09:54:16 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Dec 12 2023 10:15:31 GMT+0000 (Coordinated Universal Time)"
----
+title: Approvals
+excerpt: ''
 Avni gives you the ability to review data filled by the field users using approval workflow. Data of each form can be reviewed by the supervisor and comments can be provided to correct the data. Even field users can track what all data filled by them was approved or rejected.
 
 Approval can be configured separately for following Avni entities:
 
-- Individual
-- Encounter
-- Program Enrolment
-- Program Encounter
-- Checklists
+* Individual
+* Encounter
+* Program Enrolment
+* Program Encounter
+* Checklists
 
 ## Enabling approval workflow
 
 You can enable approval workflow for your organization using the "App Designer" app. Simply go to "Forms" tab and search for the relevant form corresponding to the Entity of interest. Ex: To enable workflow for Subject Type "Demand", we would be clicking on the Gear icon for "Subject Registration" row for Subject "Demand".
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1ab51a8-Screenshot_2023-05-31_at_3.09.59_PM.png",
-        null,
-        "Click on Gear Icon of the "
-      ],
-      "align": "center",
-      "caption": "Click on the \"Gear Icon\" of the \"Subject Registration\" Form"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Click on Gear Icon of the " align="center" src="https://files.readme.io/1ab51a8-Screenshot_2023-05-31_at_3.09.59_PM.png">
+  Click on the "Gear Icon" of the "Subject Registration" Form
+</Image>
 
 After that toggle the  "Enable Approval" button to enable / disable the Approval workflow specific to the Entity. Avni gives you the ability to enable this feature at each form level. So if you want you can enable it for some forms and disable it for others.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a5e98cf-Screenshot_2023-05-31_at_3.07.47_PM.png",
-        null,
-        "Toggle the \"Enable Approval\" button"
-      ],
-      "align": "center",
-      "caption": "Toggle the \"Enable Approval\" button"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Toggle the &#x22;Enable Approval&#x22; button" align="center" src="https://files.readme.io/a5e98cf-Screenshot_2023-05-31_at_3.07.47_PM.png">
+  Toggle the "Enable Approval" button
+</Image>
 
 Apart from enabling the feature we also need to create a custom dashboard so that we can track which all forms are pending, approved, and rejected. You can also mark this dashboard as the primary dashboard from the admin app -> "user groups" -> "dashboard".
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a72577b-da.png",
-        "da.png",
-        1845
-      ],
-      "align": "center",
-      "caption": "Approval dashboard to track the forms filled by the field users. All these are standard cards and no custom query is required."
-    }
-  ]
-}
-[/block]
-
+<Image title="da.png" alt={1845} align="center" src="https://files.readme.io/a72577b-da.png">
+  Approval dashboard to track the forms filled by the field users. All these are standard cards and no custom query is required.
+</Image>
 
 Once the approval dashboard is ready and approval workflow is active, every time user fills a form it'll be visible under pending items in the dashboard. The supervisor/reviewing person can review these pending forms and can either approve or reject them. If rejected, the field user will see the rejected form under rejected items and can correct the entries in the form based on the rejection comment provided by the supervisor. After correction, the form will again go for approval and once it is approved it'll start showing under approved items.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e85a870-ada.png",
-        "ada.png",
-        572
-      ],
-      "align": "center",
-      "caption": "Approval dashboard showing pending, approved, and rejected forms."
-    }
-  ]
-}
-[/block]
+<Image title="ada.png" alt={572} align="center" src="https://files.readme.io/e85a870-ada.png">
+  Approval dashboard showing pending, approved, and rejected forms.
+</Image>
 
+<Image title="ar.png" alt={567} align="center" src="https://files.readme.io/71d38c6-ar.png">
+  The supervisor can approve or reject a form after reviewing the details.
+</Image>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/71d38c6-ar.png",
-        "ar.png",
-        567
-      ],
-      "align": "center",
-      "caption": "The supervisor can approve or reject a form after reviewing the details."
-    }
-  ]
-}
-[/block]
-
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/730dc72-rc.png",
-        "rc.png",
-        576
-      ],
-      "align": "center",
-      "caption": "A rejection comment can be provided to the field user using which they can correct the information."
-    }
-  ]
-}
-[/block]
-
+<Image title="rc.png" alt={576} align="center" src="https://files.readme.io/730dc72-rc.png">
+  A rejection comment can be provided to the field user using which they can correct the information.
+</Image>
 
 Please note that you can tract the forms only when the approval workflow feature is turned on. If you turn off this feature in between then all the forms filled after that will not get tracked.
 
@@ -5248,48 +4089,42 @@ Please note that you can tract the forms only when the approval workflow feature
 
 Approval items will be grouped by Subjects and arranged in alphabetical order.
 
-<https://github.com/avniproject/avni-client/releases/download/untagged-ccaaf92c54fc9ece8238/Screen.Recording.2023-12-12.at.3.36.38.PM.mov>
+[https://github.com/avniproject/avni-client/releases/download/untagged-ccaaf92c54fc9ece8238/Screen.Recording.2023-12-12.at.3.36.38.PM.mov](https://github.com/avniproject/avni-client/releases/download/untagged-ccaaf92c54fc9ece8238/Screen.Recording.2023-12-12.at.3.36.38.PM.mov)
 
-![](<>)
+![]()
 
 
 # File: ./readme/Implementers/advanced-feature-guide/bulk-data-upload-v2.md
 
----
-title: "Bulk Data Upload v2"
-slug: "bulk-data-upload-v2"
-excerpt: "applicable release 13.0 onwards"
-hidden: false
-createdAt: "Fri May 09 2025 05:44:47 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed May 21 2025 09:11:47 GMT+0000 (Coordinated Universal Time)"
----
+title: Bulk Data Upload v2
+excerpt: applicable release 13.0 onwards
 ## Purpose
 
-- Prepare data in bulk, review, and upload.
-- Migrating away from an existing implementation, and need to seed with existing data.
-- Your organization has a separate component where data is collected outside Avni, but you still need this data to be present with field workers using Avni.
+* Prepare data in bulk, review, and upload.
+* Migrating away from an existing implementation, and need to seed with existing data.
+* Your organization has a separate component where data is collected outside Avni, but you still need this data to be present with field workers using Avni.
 
 ## Using the Admin app to upload data
 
 The Admin app of the web console has an upload option. Currently, this supports the following. Essentially for each form present in you organisation there is a corresponding upload option in the dropdown, with a sample file.
 
-- Upload subjects
-- Upload program enrolment (excluding exit information and observations)
-- Upload program encounters (excluding cancel information and observations)
-- Upload encounters (excluding cancel information and observations)
-- [Upload locations](location-and-catchment-in-avni)
-- Upload users and catchments
-- Upload metadata zip file downloaded from a different implementation
+* Upload subjects
+* Upload program enrolment (excluding exit information and observations)
+* Upload program encounters (excluding cancel information and observations)
+* Upload encounters (excluding cancel information and observations)
+* [Upload locations](location-and-catchment-in-avni)
+* Upload users and catchments
+* Upload metadata zip file downloaded from a different implementation
 
 ## Sample file
 
-Sample files are available in the interface. Download the file, fill in values and then upload. The file is in a [CSV](https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/) format.  
+Sample files are available in the interface. Download the file, fill in values and then upload. The file is in a [CSV](https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/) format.\
 Sample file acts as an up-to-date documentation on the following.
 
-- fields
-- whether they are mandatory for upload
-- possible values
-- format of the value
+* fields
+* whether they are mandatory for upload
+* possible values
+* format of the value
 
 > 📘 Since above has already been documented and maintain in the sample file these are not documented here again, please refer to it as a reference documentation.
 
@@ -5301,10 +4136,10 @@ The mandatory fields in the form element are not applicable when uploading the d
 
 No rules are run as part of CSV upload. This implies that:
 
-- field values created automatically via form element rules will not get created (such columns are present in the sample hence can be uploaded manually)
-- observations created by decision rules will not be created automatically (such columns are present in the sample hence can be uploaded manually)
-- Validation rule is not applied
-- Edit rule is not applied
+* field values created automatically via form element rules will not get created (such columns are present in the sample hence can be uploaded manually)
+* observations created by decision rules will not be created automatically (such columns are present in the sample hence can be uploaded manually)
+* Validation rule is not applied
+* Edit rule is not applied
 
 > 📘 Avni currently doesn't have a robust framework to run these rules on the server side. This may be added in future, if we observe that users need these.
 
@@ -5312,44 +4147,105 @@ No rules are run as part of CSV upload. This implies that:
 
 The primary purpose of these identifiers is for the users to be able to link different CSV file types upload data to each  other - in the same way as foreign key linkages between different records. These linkages can be created using identifiers of user's choosing. Lets try to understand this via an example. Lets assume there are three forms.
 
-- Woman Registration (Subject)
-- Pregnancy Program Enrolment (Program Enrolment)
-  - links to woman
-- Ante Natal Visit Form (Program Encounter)
-  - links to pregnancy program
+* Woman Registration (Subject)
+* Pregnancy Program Enrolment (Program Enrolment)
+  * links to woman
+* Ante Natal Visit Form (Program Encounter)
+  * links to pregnancy program
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Form",
-    "h-1": "Columns",
-    "h-2": "Description",
-    "0-0": "Woman Registration",
-    "0-1": "Id from previous system",
-    "0-2": "Any unique identifier that you may want to use. Note that you can make this up if you don't already have one. e.g. WOMAN-100001, WOMAN-100002",
-    "1-0": "Pregnancy Program Enrolment",
-    "1-1": "Id from previous system",
-    "1-2": "Any unique identifier that you may want to use. It should unique for all program enrolments. They can be same as woman registration id, but we recommend you use something like e.g. WOMAN-100001-01, WOMAN-100001-02 so that you can use multiple enrolments for the same woman.  \n  \nIt is possible that at the time of preparing this data, you are don't plan to upload woman registration via CSV and it is already present in Avni. In such a case you should use the Avni UUID value of the woman registration in this field.",
-    "2-0": "Pregnancy Program Enrolment",
-    "2-1": "Subject Id from previous system",
-    "2-2": "This should be used to match the pregnancy enrolment record woman registration record. Hence, for our example used so far, this field would have values like - WOMAN-100001, WOMAN-100002",
-    "3-0": "Ante Natal Visit Form",
-    "3-1": "Id from previous system",
-    "3-2": "You can leave this blank, if you intention is to create new records only and not edit them.",
-    "4-0": "Ante Natal Visit Form",
-    "4-1": "Program Enrolment Id",
-    "4-2": "This should be used to match the program ante natal visit form record with woman registration record. Hence, for our example used so far, this field would have values like - WOMAN-100001-01, WOMAN-100002-01  \n  \nIt is possible that at the time of preparing this data, you are don't plan to upload pregnancy enrolment data via CSV and it is already present in Avni. In such a case you should use the Avni UUID value of the woman registration in this field."
-  },
-  "cols": 3,
-  "rows": 5,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Form
+      </th>
 
+      <th>
+        Columns
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Woman Registration
+      </td>
+
+      <td>
+        Id from previous system
+      </td>
+
+      <td>
+        Any unique identifier that you may want to use. Note that you can make this up if you don't already have one. e.g. WOMAN-100001, WOMAN-100002
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Pregnancy Program Enrolment
+      </td>
+
+      <td>
+        Id from previous system
+      </td>
+
+      <td>
+        Any unique identifier that you may want to use. It should unique for all program enrolments. They can be same as woman registration id, but we recommend you use something like e.g. WOMAN-100001-01, WOMAN-100001-02 so that you can use multiple enrolments for the same woman.  
+
+        It is possible that at the time of preparing this data, you are don't plan to upload woman registration via CSV and it is already present in Avni. In such a case you should use the Avni UUID value of the woman registration in this field.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Pregnancy Program Enrolment
+      </td>
+
+      <td>
+        Subject Id from previous system
+      </td>
+
+      <td>
+        This should be used to match the pregnancy enrolment record woman registration record. Hence, for our example used so far, this field would have values like - WOMAN-100001, WOMAN-100002
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Ante Natal Visit Form
+      </td>
+
+      <td>
+        Id from previous system
+      </td>
+
+      <td>
+        You can leave this blank, if you intention is to create new records only and not edit them.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Ante Natal Visit Form
+      </td>
+
+      <td>
+        Program Enrolment Id
+      </td>
+
+      <td>
+        This should be used to match the program ante natal visit form record with woman registration record. Hence, for our example used so far, this field would have values like - WOMAN-100001-01, WOMAN-100002-01  
+
+        It is possible that at the time of preparing this data, you are don't plan to upload pregnancy enrolment data via CSV and it is already present in Avni. In such a case you should use the Avni UUID value of the woman registration in this field.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 > 📘 The identifiers used above, for Id from previous system, are saved in Avni but is not visible in Avni after uploading, it is used only for matching records during CSV upload.
 
@@ -5357,37 +4253,22 @@ The primary purpose of these identifiers is for the users to be able to link dif
 
 Please note that sample file for uploading visit details and scheduling a visit are different. These two options allow for  either creating a scheduled encounter/visit or completed encounter/visit. Note that scheduling a visit and then uploading the visit details for the same visit is not supported (as that is similar to edit).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/30f7062dbe6572554955d88df13530e6e45c5a4cd5986fd81499661a294f78a2-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/30f7062dbe6572554955d88df13530e6e45c5a4cd5986fd81499661a294f78a2-image.png" />
 
 ## Important Notes / Gotchas
 
-- **Limited Concept Support in CSV Upload**: Not all concepts are supported when uploading data via CSV. Specifically, the following are not supported:
-  - GroupAffiliation
-  - Id
-  - File
-- **Id Confusion**: The identifiers (used in Id from previous system) are different from Id elements in the form, if you have them.
-- **Form Data Editing**: Editing previously submitted form data is not currently supported through the CSV upload process.
+* **Limited Concept Support in CSV Upload**: Not all concepts are supported when uploading data via CSV. Specifically, the following are not supported:
+  * GroupAffiliation
+  * Id
+  * File
+* **Id Confusion**: The identifiers (used in Id from previous system) are different from Id elements in the form, if you have them.
+* **Form Data Editing**: Editing previously submitted form data is not currently supported through the CSV upload process.
 
 # Questions
 
 ### What if I have a comma in my observation value?
 
-- Wrap your value in quotes.
+* Wrap your value in quotes.
 
 ### Why are decision concepts not appearing the sample file
 
@@ -5395,65 +4276,53 @@ If you are using decision concepts in the rule but not linked those concepts the
 
 ### Is the order of values important?
 
-- No. Columns can be in any order.
+* No. Columns can be in any order.
 
 ### How do I upload images?
 
-- For images, use a url that the avni server can download. Ensure that
-  - The images are a direct download link (not a redirect to a page that uses javascript to download)
-  - The image urls end with the image type. eg: <https://somedomain.com/images/abc.png>
+* For images, use a url that the avni server can download. Ensure that
+  * The images are a direct download link (not a redirect to a page that uses javascript to download)
+  * The image urls end with the image type. eg: [https://somedomain.com/images/abc.png](https://somedomain.com/images/abc.png)
 
 
 # File: ./readme/Implementers/advanced-feature-guide/call-masking.md
 
----
-title: "Masked Calls"
-slug: "call-masking"
-excerpt: ""
-hidden: false
-createdAt: "Fri Sep 02 2022 09:52:17 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Masked Calls
+excerpt: ''
 When a contact number is configured in an implementation (through concept attributes), then the user gets a "Call" button on the subject's dashboard. It is used to open the dialler and make a call to the beneficiary.
 
 With the call masking feature, an implementation can choose to convert this call button into a masked call. There is a user settings toggle to turn this on or off. Under the wraps, Avni can use the Exotel Masked Call feature to make this happen. 
 
-To use this feature, a user needs to purchase an Exophone and configure this in Avni. Configuration is currently done by adding a row to the external_api table. 
+To use this feature, a user needs to purchase an Exophone and configure this in Avni. Configuration is currently done by adding a row to the external\_api table. 
 
 ### User flow
 
-- User goes to a subject's dashboard.
-- User clicks on the call button
-- If call masking is enabled for this user, then the call button makes a call to the server to connect their phone to the beneficiary's number. The user and the beneficiary will get a call from Exotel through which they can talk.
-- The user gets a message that the call request was made successfully, and to wait for a call back.
-- If call masking is not enabled for this user, then the call button makes a direct call through the dialler.
+* User goes to a subject's dashboard.
+* User clicks on the call button
+* If call masking is enabled for this user, then the call button makes a call to the server to connect their phone to the beneficiary's number. The user and the beneficiary will get a call from Exotel through which they can talk.
+* The user gets a message that the call request was made successfully, and to wait for a call back.
+* If call masking is not enabled for this user, then the call button makes a direct call through the dialler.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/child-growth-charts.md
 
----
-title: "Growth Charts in Avni"
-slug: "child-growth-charts"
-excerpt: ""
-hidden: false
-createdAt: "Tue Jun 25 2024 10:23:08 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu May 29 2025 13:13:08 GMT+0000 (Coordinated Universal Time)"
----
+title: Growth Charts in Avni
+excerpt: ''
 ## Introduction to Child Growth Indicators
 
 Growth charts are essential tools for monitoring the physical development of children. They help healthcare providers assess whether a child is growing properly according to established standards.
 
 Refer to WHO's [child-growth-standards](https://www.who.int/tools/child-growth-standards/standards) for in-depth coverage on all indicators used to assess the growth of a child. These indicators are intended for interpretation primarily by healthcare providers to:
 
-- Investigate causes of growth problems 
-- Counsel caregivers on recovery 
-- Intervene in urgent high-risk scenarios to avert permanent damage or mortality
+* Investigate causes of growth problems 
+* Counsel caregivers on recovery 
+* Intervene in urgent high-risk scenarios to avert permanent damage or mortality
 
 The child's age, sex, and measurements of weight and length or height are used to calculate the following growth indicators as per WHO standards for children aged 0 to 5 years:
 
-- **Weight-for-age (WFA)**: Helps identify underweight or overweight conditions
-- **Length/height-for-age (HFA)**: Helps identify stunting (low height for age)
-- **Weight-for-length/height (WFH)**: Helps identify wasting (low weight for height) or obesity
+* **Weight-for-age (WFA)**: Helps identify underweight or overweight conditions
+* **Length/height-for-age (HFA)**: Helps identify stunting (low height for age)
+* **Weight-for-length/height (WFH)**: Helps identify wasting (low weight for height) or obesity
 
 These measurements should be taken and recorded whenever an infant or child visits a healthcare provider, such as for immunization, well-baby visits, or care during illness.
 
@@ -5463,9 +4332,9 @@ These measurements should be taken and recorded whenever an infant or child visi
 
 The Avni client application provides growth charts for the following indicators by default:
 
-- Weight-for-age (WFA)
-- Length/height-for-age (HFA)
-- Weight-for-length/height (WFH)
+* Weight-for-age (WFA)
+* Length/height-for-age (HFA)
+* Weight-for-length/height (WFH)
 
 ### Automatic Enablement
 
@@ -5475,131 +4344,61 @@ In Avni, growth chart monitoring is automatically enabled when a program with th
 
 For any other Program, Growth Chart monitoring can be enabled by toggling the "Show Growth Chart" widget to the Program Dashboard.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8e5736a641553e404b24d0ef935974afe08256a0d1a549e3f4e16d22c743bbb8-Screenshot_2025-05-29_at_6.16.30_PM.png",
-        "",
-        "Manually Enable Growth Chart for any program"
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/8e5736a641553e404b24d0ef935974afe08256a0d1a549e3f4e16d22c743bbb8-Screenshot_2025-05-29_at_6.16.30_PM.png" />
 
 ### Required Configuration
 
 It is essential for at least a few forms of the types listed below to include concepts with the names **"Weight" and "Height"**. The values recorded for these concepts are then automatically used by the Avni application to plot the Growth Charts.
 
-- Individual   
-- Program  
-- Program-Encounter     
-- Encounter 
+* Individual   
+* Program  
+* Program-Encounter     
+* Encounter 
 
 ## Accessing Growth Charts
 
 Growth Charts are available only in the Avni Client application for:
 
-- Individuals between ages 0 to 5 years AND
-- Individuals enrolled in either a program named "Child" or "Phulwari" OR any other Program that has the "Show Growth Chart" widget enabled for it
+* Individuals between ages 0 to 5 years AND
+* Individuals enrolled in either a program named "Child" or "Phulwari" OR any other Program that has the "Show Growth Chart" widget enabled for it
 
 For eligible children, a "Growth Chart" button will appear on the Program Dashboard.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/16d426511ff8c27feacc0843fa7a88b1d4fd04e7af7b120fc3897146acc304c1-Screenshot_2025-05-29_at_6.29.01_PM.png",
-        "",
-        "Growth Chart Button on Dashboard"
-      ],
-      "align": "center",
-      "sizing": "320px",
-      "caption": "Screenshot showing the Growth Chart button on the Program Dashboard"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Growth Chart Button on Dashboard" align="center" width="320px" src="https://files.readme.io/16d426511ff8c27feacc0843fa7a88b1d4fd04e7af7b120fc3897146acc304c1-Screenshot_2025-05-29_at_6.29.01_PM.png">
+  Screenshot showing the Growth Chart button on the Program Dashboard
+</Image>
 
 Clicking the "Growth Chart" button displays the growth chart with selector buttons at the top, allowing users to choose which specific growth indicator to display for that child.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4c985dc341f4e6e2548e784d742da8fba12de51699cdd7487f64f48482bf18a6-Screenshot_2025-05-29_at_6.28.39_PM.png",
-        "",
-        "Weight-for-Age Chart"
-      ],
-      "align": "center",
-      "sizing": "320px",
-      "caption": "Screenshot of Weight-for-Age growth chart"
-    }
-  ]
-}
-[/block]
+<Image alt="Weight-for-Age Chart" align="center" width="320px" src="https://files.readme.io/4c985dc341f4e6e2548e784d742da8fba12de51699cdd7487f64f48482bf18a6-Screenshot_2025-05-29_at_6.28.39_PM.png">
+  Screenshot of Weight-for-Age growth chart
+</Image>
 
+<Image alt="Height-for-Age Chart" align="center" width="320px" src="https://files.readme.io/e0d418b61e5fbd95c51651467c2c3f23f086021fea95bb9ed3ee5eda5a7b3575-Screenshot_2025-05-29_at_6.28.47_PM.png">
+  Screenshot of Height-for-Age growth chart
+</Image>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e0d418b61e5fbd95c51651467c2c3f23f086021fea95bb9ed3ee5eda5a7b3575-Screenshot_2025-05-29_at_6.28.47_PM.png",
-        "",
-        "Height-for-Age Chart"
-      ],
-      "align": "center",
-      "sizing": "320px",
-      "caption": "Screenshot of Height-for-Age growth chart"
-    }
-  ]
-}
-[/block]
-
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/70cbcdfe31ed6d76c00445dadbfa747db32e6b75af17d9c1cd07c681abbcd262-Screenshot_2025-05-29_at_6.28.51_PM.png",
-        "",
-        "Weight-for-Height Chart"
-      ],
-      "align": "center",
-      "sizing": "320px",
-      "caption": "Screenshot of Weight-for-Height growth chart"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Weight-for-Height Chart" align="center" width="320px" src="https://files.readme.io/70cbcdfe31ed6d76c00445dadbfa747db32e6b75af17d9c1cd07c681abbcd262-Screenshot_2025-05-29_at_6.28.51_PM.png">
+  Screenshot of Weight-for-Height growth chart
+</Image>
 
 ## Understanding Growth Charts
 
 ### Chart Components
 
-- **Reference Lines**: Standard deviation lines (typically -3SD, -2SD, -1SD, Median, +1SD, +2SD, +3SD) showing expected growth ranges based on WHO standards
-- **Data Points**: Plotted points representing the individual's measurements at different ages
-- **Connecting Line**: Line connecting the individual's data points to show growth trajectory
-- **X-Axis**: Typically represents age in months/years
-- **Y-Axis**: Represents the measurement value (weight, height, etc.)
+* **Reference Lines**: Standard deviation lines (typically -3SD, -2SD, -1SD, Median, +1SD, +2SD, +3SD) showing expected growth ranges based on WHO standards
+* **Data Points**: Plotted points representing the individual's measurements at different ages
+* **Connecting Line**: Line connecting the individual's data points to show growth trajectory
+* **X-Axis**: Typically represents age in months/years
+* **Y-Axis**: Represents the measurement value (weight, height, etc.)
 
 ### Color Indicators
 
 Growth Charts use color coding to help quickly identify growth status:
 
-- **Red Zone**: Indicates measurements below -3SD (severe malnutrition or growth faltering)
-- **Yellow/Orange Zone**: Indicates measurements between -2SD and -3SD (moderate malnutrition)
-- **Green Zone**: Indicates measurements above -2SD (normal/healthy ranges)
+* **Red Zone**: Indicates measurements below -3SD (severe malnutrition or growth faltering)
+* **Yellow/Orange Zone**: Indicates measurements between -2SD and -3SD (moderate malnutrition)
+* **Green Zone**: Indicates measurements above -2SD (normal/healthy ranges)
 
 ## Interpreting Growth Charts
 
@@ -5607,50 +4406,50 @@ When viewing a growth chart in Avni:
 
 ### Weight-for-Age (WFA)
 
-- Measures overall growth and can identify underweight children
-- Below -2SD: Moderately underweight
-- Below -3SD: Severely underweight
-- Current Status: The position of the most recent data point relative to reference lines indicates current nutritional status
+* Measures overall growth and can identify underweight children
+* Below -2SD: Moderately underweight
+* Below -3SD: Severely underweight
+* Current Status: The position of the most recent data point relative to reference lines indicates current nutritional status
 
 ### Height-for-Age (HFA)
 
-- Measures linear growth and can identify stunting
-- Below -2SD: Moderately stunted
-- Below -3SD: Severely stunted
-- Growth Trajectory: The direction of the connecting line shows if height growth is improving, maintaining, or declining
+* Measures linear growth and can identify stunting
+* Below -2SD: Moderately stunted
+* Below -3SD: Severely stunted
+* Growth Trajectory: The direction of the connecting line shows if height growth is improving, maintaining, or declining
 
 ### Weight-for-Height (WFH)
 
-- Measures body weight relative to height and can identify wasting
-- Below -2SD: Moderate wasting
-- Below -3SD: Severe wasting
-- Above +2SD: Overweight
-- Above +3SD: Obese
-- Pattern Recognition: Multiple data points help identify patterns like wasting or weight gain relative to height
+* Measures body weight relative to height and can identify wasting
+* Below -2SD: Moderate wasting
+* Below -3SD: Severe wasting
+* Above +2SD: Overweight
+* Above +3SD: Obese
+* Pattern Recognition: Multiple data points help identify patterns like wasting or weight gain relative to height
 
 ## Using Growth Chart Data for Interventions
 
 Based on the growth chart visualization, field workers can:
 
 1. **Identify Growth Patterns**:
-   - Normal growth: Data points consistently follow a growth channel
-   - Growth faltering: Flattening or downward trajectory of the curve
-   - Catch-up growth: Upward trajectory after a period of growth faltering
+   * Normal growth: Data points consistently follow a growth channel
+   * Growth faltering: Flattening or downward trajectory of the curve
+   * Catch-up growth: Upward trajectory after a period of growth faltering
 
 2. **Take Appropriate Actions**:
-   - Normal Growth: Continue regular monitoring and standard care
-   - Moderate Concerns (between -2SD and -3SD): Implement nutritional counseling and follow-up monitoring
-   - Severe Concerns (below -3SD): Refer for specialized care, nutritional interventions, or further assessment
+   * Normal Growth: Continue regular monitoring and standard care
+   * Moderate Concerns (between -2SD and -3SD): Implement nutritional counseling and follow-up monitoring
+   * Severe Concerns (below -3SD): Refer for specialized care, nutritional interventions, or further assessment
 
 ## Technical Implementation Details
 
-- Growth charts are dynamically rendered based on recorded encounter data
-- Charts require accurate recording of birth date and measurement values
-- Reference data follows WHO Child Growth Standards
-- Charts are available offline once data is synced to the device
-- The implementation follows Avni's offline-first architecture, ensuring charts are available even without internet connectivity
-- Data points are automatically plotted based on encounter data containing Weight and Height measurements
-- Growth charts interface adapts to different screen sizes on mobile devices
+* Growth charts are dynamically rendered based on recorded encounter data
+* Charts require accurate recording of birth date and measurement values
+* Reference data follows WHO Child Growth Standards
+* Charts are available offline once data is synced to the device
+* The implementation follows Avni's offline-first architecture, ensuring charts are available even without internet connectivity
+* Data points are automatically plotted based on encounter data containing Weight and Height measurements
+* Growth charts interface adapts to different screen sizes on mobile devices
 
 ## Troubleshooting
 
@@ -5672,73 +4471,41 @@ By following the simple configuration requirements and understanding how to inte
 
 # File: ./readme/Implementers/advanced-feature-guide/comment-workflow.md
 
----
-title: "Comment workflow"
-slug: "comment-workflow"
-excerpt: ""
-hidden: false
-createdAt: "Mon May 10 2021 05:42:59 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Comment workflow
+excerpt: ''
 This is an issue resolution mechanism provided by Avni which helps to fix the mistakes in the record. Comment workflow helps to pinpoint the exact subject for which data correction is required. This saves a lot of time the user spends searching for that subject.
 
 ## Enabling comment workflow
 
 Comment workflow can be enabled from the admin app. Simply go to organisation details and switch on "enable comments" option.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/548038c-comment.png",
-        "comment.png",
-        1848
-      ],
-      "caption": "Enable comments option in the admin app"
-    }
-  ]
-}
-[/block]
-
+<Image title="comment.png" alt={1848} src="https://files.readme.io/548038c-comment.png">
+  Enable comments option in the admin app
+</Image>
 
 Once this feature is enabled users will start seeing the comment icon on the subject dashboard. They can click on the icon to open all the comment threads of the subject. They can perform the following operations on the comment screen.
 
-- Open a comment thread and read all the comments on that thread.
-- Reply to a comment thread.
-- Mark a comment thread as resolved, if the issue is resolved.
-- Open a new comment thread by pressing add icon.
+* Open a comment thread and read all the comments on that thread.
+* Reply to a comment thread.
+* Mark a comment thread as resolved, if the issue is resolved.
+* Open a new comment thread by pressing add icon.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f1a3a13-comment_screen.png",
-        "comment screen.png",
-        574
-      ],
-      "caption": "Comment screen showing one open thread. Users can see all the comments in a thread by clicking on that thread."
-    }
-  ]
-}
-[/block]
-
+<Image title="comment screen.png" alt={574} src="https://files.readme.io/f1a3a13-comment_screen.png">
+  Comment screen showing one open thread. Users can see all the comments in a thread by clicking on that thread.
+</Image>
 
 **Useful tips** 
 
-- When comment workflow is enabled, ensure that a standard report card of type "comments" is added to the dashboard. This will help users to see only the comments threads which are open and they need to work on.
+* When comment workflow is enabled, ensure that a standard report card of type "comments" is added to the dashboard. This will help users to see only the comments threads which are open and they need to work on.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/creating-identifiers.md
 
----
-title: "Autogenerated Ids"
-slug: "creating-identifiers"
-excerpt: ""
-hidden: false
-createdAt: "Fri Jan 03 2020 05:01:30 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Autogenerated Ids
+excerpt: ''
+    - type: basic
+      slug: upload-checklist
+      title: Upload checklist
 ---
 ### Identifiers
 
@@ -5750,11 +4517,11 @@ In usual systems, identifiers are generated from a central place because we need
 
 There is a special form element type called ID. If you configure a form element to be of ID type, then the Avni android app will automatically retrieve the next ID from this batch and assign it as the value. 
 
-_Advanced_ - It is also possible to create rules that modify the final ID that is stored for the beneficiary. For example, if there is the need of adding a date to the final ID being generated, you would write a ViewFilter rule that will use the generated ID and append a date to it. 
+*Advanced* - It is also possible to create rules that modify the final ID that is stored for the beneficiary. For example, if there is the need of adding a date to the final ID being generated, you would write a ViewFilter rule that will use the generated ID and append a date to it. 
 
 ### Identifier sources
 
-It is possible to have multiple IDs being generated at the same time. Each ID type is called an identifier source. An identifier source will have a certain type (discussed later), prefix (optional), minimum and maximum lengths and can be assigned to a  catchment.  
+It is possible to have multiple IDs being generated at the same time. Each ID type is called an identifier source. An identifier source will have a certain type (discussed later), prefix (optional), minimum and maximum lengths and can be assigned to a  catchment.\
 The type of an identifier source determines the strategy used to generate IDS of that source. There are currently two types available. The only difference between them is the place where the prefix is stored. 
 
 1. User pool based identifier generation - Here, a pool of users within a catchment share the same prefix. The prefix is stored within the identifier source within options. Every user asking for ids is provided with a set of ids prefixed with this value. 
@@ -5765,7 +4532,7 @@ The type of an identifier source determines the strategy used to generate IDS of
 1. User pool based identifier generation - overlaps in ID for the same identifier source not allowed.
 2. User based identifier generation - Two users in the same organisation cannot have same prefix. This check is case in-sensitive.
 
-Queries to analyse existing data is available here - <https://github.com/avniproject/avni-webapp/issues/1022#issuecomment-1693064436>
+Queries to analyse existing data is available here - [https://github.com/avniproject/avni-webapp/issues/1022#issuecomment-1693064436](https://github.com/avniproject/avni-webapp/issues/1022#issuecomment-1693064436)
 
 ### Tutorial
 
@@ -5793,14 +4560,8 @@ Queries to analyse existing data is available here - <https://github.com/avnipro
 
 # File: ./readme/Implementers/advanced-feature-guide/custom-fields-in-search-results.md
 
----
-title: "Custom fields in search results"
-slug: "custom-fields-in-search-results"
-excerpt: ""
-hidden: false
-createdAt: "Mon Feb 07 2022 08:45:01 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Custom fields in search results
+excerpt: ''
 Avni app has the capability to setup [custom search filters](https://avni.readme.io/docs/my-dashboard-and-search-filters), but the results do not show any of these fields. Using this feature one can add additional fields to the search result.
 
 ## Setting up custom fields in search results
@@ -5810,73 +4571,38 @@ Avni app has the capability to setup [custom search filters](https://avni.readme
 3. You can reorder the custom search fields by drag and drop and finally save the changes.
 4. Sync the mobile app and you should see the newly added concept in the search result field.
 
-![](https://files.readme.io/8c14b56-custom-search-result-fields2.gif "custom-search-result-fields(2).gif")
+![1031](https://files.readme.io/8c14b56-custom-search-result-fields2.gif "custom-search-result-fields(2).gif")
 
-**Note**: Only concepts in the registration form are supported.  
+**Note**: Only concepts in the registration form are supported.\
 **Supported data types**: Text, Id, coded, numeric, and date.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/documentation.md
 
----
-title: "Form Documentation"
-slug: "documentation"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jul 14 2022 09:18:54 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Custom documentation can be created in Avni. Documentation supports rich text and can be written in different  
+title: Form Documentation
+excerpt: ''
+Custom documentation can be created in Avni. Documentation supports rich text and can be written in different\
 languages supported by an organization. Right now you can also link particular documentation to a form element and it'll show up in the mobile app. This is useful where more context is required for any question.
 
 ## Steps to configure and link documentation
 
 The below GIF displays how documentation can be created and linked to a form element.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d2a237f-Documentation-linking.gif",
-        "Documentation-linking.gif",
-        1851
-      ],
-      "caption": "Configuring and linking documentation"
-    }
-  ]
-}
-[/block]
-
+<Image title="Documentation-linking.gif" alt={1851} src="https://files.readme.io/d2a237f-Documentation-linking.gif">
+  Configuring and linking documentation
+</Image>
 
 Once documentation is linked to the form element, it'll start appearing in the mobile app. Users can expand and close the documentation while filling out the form.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/542e811-form-element-documentation.png",
-        "form-element-documentation.png",
-        568
-      ],
-      "caption": "Documentation on the mobile app."
-    }
-  ]
-}
-[/block]
+<Image title="form-element-documentation.png" alt={568} src="https://files.readme.io/542e811-form-element-documentation.png">
+  Documentation on the mobile app.
+</Image>
 
 
 # File: ./readme/Implementers/advanced-feature-guide/draft-save.md
 
----
-title: "Draft save"
-slug: "draft-save"
-excerpt: ""
-hidden: false
-createdAt: "Fri May 07 2021 09:39:15 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Jun 10 2025 11:22:01 GMT+0000 (Coordinated Universal Time)"
----
+title: Draft save
+excerpt: ''
 Sometimes we have huge forms and all the information is not available when you start capturing the data of such forms. Avni gives you the facility to save the half-filled form as a draft. These draft forms are not synced to the server, and once you fill the form completely draft is automatically deleted.
 
 ## Enabling Draft save
@@ -5893,80 +4619,41 @@ It gets converted into a regular Subject or Encounter on pressing Save button du
 
 ## Key points
 
-- **Applicability:** Currently, this feature works only for the registration and encounter forms. So Program enrolment and program encounter forms won't get saved as a draft if left in middle.
-- **Display:** Registration drafts are displayed on the Register screen. Encounter drafts are displayed under the on the 'General' tab on the Subject Dashboard. Unscheduled encounter drafts are displayed under the 'Drafts' section and scheduled encounter drafts are accessible by tapping 'Do' on encounters under the 'Visits Planned' section.
-- **Save Checkpoint:** A draft save action is performed on clicking "Next" or "Previous" buttons while filling in a form, therefore, if User fills in a page but does not click on "Next" or "Previous" buttons, then the Draft saved would have content only till the previous page (On which "Next" button was clicked)
-- **Exiting a form:** To exit from a form in-between, user may click on the "Header" "Back" button or click on "Footer" "Home" buttons\*\*
-- **Stale Drafts clean-up:** Usually drafts get deleted once you perform a final save operation to convert it to an actual entity. Along with that we have a periodic drafts clean-up which gets executed once a day, to delete drafts that were last updated more than 30 days ago.
+* **Applicability:** Currently, this feature works only for the registration and encounter forms. So Program enrolment and program encounter forms won't get saved as a draft if left in middle.
+* **Display:** Registration drafts are displayed on the Register screen. Encounter drafts are displayed under the on the 'General' tab on the Subject Dashboard. Unscheduled encounter drafts are displayed under the 'Drafts' section and scheduled encounter drafts are accessible by tapping 'Do' on encounters under the 'Visits Planned' section.
+* **Save Checkpoint:** A draft save action is performed on clicking "Next" or "Previous" buttons while filling in a form, therefore, if User fills in a page but does not click on "Next" or "Previous" buttons, then the Draft saved would have content only till the previous page (On which "Next" button was clicked)
+* **Exiting a form:** To exit from a form in-between, user may click on the "Header" "Back" button or click on "Footer" "Home" buttons\*\*
+* **Stale Drafts clean-up:** Usually drafts get deleted once you perform a final save operation to convert it to an actual entity. Along with that we have a periodic drafts clean-up which gets executed once a day, to delete drafts that were last updated more than 30 days ago.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/encryption-of-data-on-the-android-app.md
 
----
-title: "Encryption of data on the Android app"
-slug: "encryption-of-data-on-the-android-app"
-excerpt: ""
-hidden: false
-createdAt: "Wed Aug 09 2023 11:42:35 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Encryption of data on the Android app
+excerpt: ''
 Some implementations require a higher level of security, which includes encryption of the database on Android. 
 
 ### How to enable encryption:
 
 To have all the users field app database encrypted, the option for encryption need to be enabled under `Organisation Details`  as shown in the image below. Users would be in need to sync the app, to reflect the encryption setting change.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e132e70-Screenshot_2023-08-14_at_4.24.22_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/e132e70-Screenshot_2023-08-14_at_4.24.22_PM.png" />
 
 ### Side-effects of using the feature:
 
-- As shown in the warning message in the image above, enabling this feature will not permit the user to use [fast sync](https://avni.readme.io/docs/fast-sync) and upload db feature from the Menu options on the field app.
-- After the option is enabled, it can be disabled anytime on change of mind. 
+* As shown in the warning message in the image above, enabling this feature will not permit the user to use [fast sync](https://avni.readme.io/docs/fast-sync) and upload db feature from the Menu options on the field app.
+* After the option is enabled, it can be disabled anytime on change of mind. 
 
 ### Developer debug notes:
 
-- To see the data of encrypted realm db, print out the commented out line that calculates `hexEncodedKey` in the `EncryptionService`. And use the printed value to open the realm db when it asks for the encryption key as shown in the image below.
+* To see the data of encrypted realm db, print out the commented out line that calculates `hexEncodedKey` in the `EncryptionService`. And use the printed value to open the realm db when it asks for the encryption key as shown in the image below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e79ad32-Screenshot_2023-08-09_at_4.41.56_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/e79ad32-Screenshot_2023-08-09_at_4.41.56_PM.png" />
 
 
 # File: ./readme/Implementers/advanced-feature-guide/etl-schema-and-reporting.md
 
----
-title: "ETL schema, reporting and management"
-slug: "etl-schema-and-reporting"
-excerpt: ""
-hidden: false
-createdAt: "Mon Jul 03 2023 04:37:18 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: ETL schema, reporting and management
+excerpt: ''
 The public datamodel is not suited for easy reporting because of a few reasons. 
 
 1. jsonb fields 
@@ -5980,58 +4667,52 @@ The public datamodel is not suited for easy reporting because of a few reasons.
 
 The Avni ETL service fixes the above problems by moving data to a denormalized database that is suited for reporting. It creates tables of the form
 
-- For all subject types, a table called \<subjectType\>
-- For all general encounters, a table called \<subjectType\>\_\<encounterType\> and \<subjectType\>\_\<encounterType>\_cancel
-- For all programs, a table called \<subjectType\>\_\<programName\> and \<subjectType\>\_\<programName\>\_exit
-- For all program encounters, a table called \<subjectType\>\_\<programName\>\_\<encounterType\> and \<subjectType\>\_\<programName\>\_\<encounterType\>\_cancel
-- An address table for all addresses
-- A media table for all media
-- For every Repeatable Question Group present for an entity(Subject, Encounter, ProgramEnrolment or ProgramEncounter), we'll have a separate secondary table called  \<parentTable\>\_\<question_group_concept_name\>
+* For all subject types, a table called \<subjectType\>
+* For all general encounters, a table called \<subjectType\>\_\<encounterType\> and \<subjectType\>\_\<encounterType>\_cancel
+* For all programs, a table called \<subjectType\>\_\<programName\> and \<subjectType\>\_\<programName\>\_exit
+* For all program encounters, a table called \<subjectType\>\_\<programName\>\_\<encounterType\> and \<subjectType\>\_\<programName\>\_\<encounterType\>\_cancel
+* An address table for all addresses
+* A media table for all media
+* For every Repeatable Question Group present for an entity(Subject, Encounter, ProgramEnrolment or ProgramEncounter), we'll have a separate secondary table called  \<parentTable\>\_\<question\_group\_concept\_name\>
 
 #### Other details of the service
 
-- Data is moved from the public schema to a schema defined by the schemaName of the organisation
-- Data is moved incrementally every hour
-- Analytics needs to be enabled for an organisation in order for it to work (from the Organisation edit screen of Admin)
+* Data is moved from the public schema to a schema defined by the schemaName of the organisation
+* Data is moved incrementally every hour
+* Analytics needs to be enabled for an organisation in order for it to work (from the Organisation edit screen of Admin)
 
 ### Management of ETL process for an organisation
 
 ETL management for an organisation is only available for support users and not to the users of the organisation itself including administrators. You require super admin login to perform these activities.
 
-- ETL can be enabled or disabled from the organisation edit screen.
-- In organisation listing the enable disable status is displayed. One can also open an organisation to check the status. Note: that in listing the status is sometimes shown as blank. This is a defect but we have not been able to fix it. In such a case please check organisation show screen.
-- If you want to run the ETL process immediately for an organisation (for which it is already enabled) - then you need to disable and enable. The rescheduling of the job will cause it to run after 10 seconds of enabling.
+* ETL can be enabled or disabled from the organisation edit screen.
+* In organisation listing the enable disable status is displayed. One can also open an organisation to check the status. Note: that in listing the status is sometimes shown as blank. This is a defect but we have not been able to fix it. In such a case please check organisation show screen.
+* If you want to run the ETL process immediately for an organisation (for which it is already enabled) - then you need to disable and enable. The rescheduling of the job will cause it to run after 10 seconds of enabling.
 
 ### Checking error of ETL job of an organisation
 
 GET `{{origin}}/etl/job/{{orgUUID}}` with `auth-token` in header for super admin user.
 
-e.g. <https://app.avniproject.org/etl/job/392bcc3e-0b04-495c-861a-64589d2692b4>
+e.g. [https://app.avniproject.org/etl/job/392bcc3e-0b04-495c-861a-64589d2692b4](https://app.avniproject.org/etl/job/392bcc3e-0b04-495c-861a-64589d2692b4)
 
 You can find replace \\n\\t with newline to get a clearer stack trace.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/extension-points.md
 
----
-title: "Extensions"
-slug: "extension-points"
-excerpt: ""
-hidden: false
-createdAt: "Thu Oct 24 2019 09:25:29 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Extensions
+excerpt: ''
 Extensions are points in Avni where custom html can be used to enhance functionality. There are a few such predefined points where custom html can be inserted. 
 
 In Data Entry App
 
-- Subject Dashboard
-- Subject Dashboard for a specific program
-- Search Results page
+* Subject Dashboard
+* Subject Dashboard for a specific program
+* Search Results page
 
 In the Field-App
 
-- Splash Screen
+* Splash Screen
 
 ## Creating Extensions
 
@@ -6041,15 +4722,15 @@ In order to create an extension, first you need to create a web app. For each ex
 
 Parameters
 
-- Subject Dashboard - subjectUUIDs (subject's uuid), token (auth token)
-- Search Results page - subjectUUIDs (Comma separated list of subjects that have been selected), token
-- Splash screen - nothing
+* Subject Dashboard - subjectUUIDs (subject's uuid), token (auth token)
+* Search Results page - subjectUUIDs (Comma separated list of subjects that have been selected), token
+* Splash screen - nothing
 
 The token field must be added as a header AUTH-TOKEN in case you need to use the public API to interact with the Avni server.
 
 ### Adding the extension on the App Designer
 
-Extensions can now be added to Avni through the app designer (<https://app.avniproject.org/#/appdesigner/extensions>).  
+Extensions can now be added to Avni through the app designer ([https://app.avniproject.org/#/appdesigner/extensions](https://app.avniproject.org/#/appdesigner/extensions)).\
 All your extensions must be zipped and uploaded on this screen. You can enter the name of the extension, the file name in the zip file that must be rendered (use relative paths if your HTML file is within a directory), and the type of extension (called Extension Scope). 
 
 ![](https://files.readme.io/e772f7d-Screenshot_2021-10-27_at_10.58.02_AM.png "Screenshot 2021-10-27 at 10.58.02 AM.png")
@@ -6057,44 +4738,25 @@ All your extensions must be zipped and uploaded on this screen. You can enter th
 
 # File: ./readme/Implementers/advanced-feature-guide/fast-sync.md
 
----
-title: "Fast sync"
-slug: "fast-sync"
-excerpt: ""
-hidden: false
-createdAt: "Mon May 10 2021 06:45:05 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Apr 10 2025 13:41:11 GMT+0000 (Coordinated Universal Time)"
----
+title: Fast sync
+excerpt: ''
 When setting up Avni freshly on an android device the first-time sync can take a lot of time, especially if you have a lot of transactional data for the catchment. To make this process faster Avni provides an option to set up fast sync for a catchment.
 
 The performance of syncing data from the server to the local mobile database is dependent on the volume of data - hence cannot be improved significantly. Hence fast sync depends on using the already synced mobile database file as the starting database for other users. This significantly improves the sync duration to less than 5 minutes in most cases.
 
 There are few things to note before we start setting up fast sync.
 
-- Fast sync is set up for a catchment, so if there is a new user in a catchment called "a" then any existing user of the catchment "a" should set up the fast sync from their device.
-- Fast sync does not update automatically, which means if the user has set up fast sync one month earlier, then all the data filled after that will get downloaded by the regular sync. So it is recommended to update the fast sync whenever any user is freshly setting up the Avni on their device.
-- Fast sync is triggered only when the user is syncing for the first time. So if the user has not logged in for a long time, then it is recommended to delete all the app data and log in again to use the fast sync.
+* Fast sync is set up for a catchment, so if there is a new user in a catchment called "a" then any existing user of the catchment "a" should set up the fast sync from their device.
+* Fast sync does not update automatically, which means if the user has set up fast sync one month earlier, then all the data filled after that will get downloaded by the regular sync. So it is recommended to update the fast sync whenever any user is freshly setting up the Avni on their device.
+* Fast sync is triggered only when the user is syncing for the first time. So if the user has not logged in for a long time, then it is recommended to delete all the app data and log in again to use the fast sync.
 
 ## Setting up fast sync
 
 .Setting up fast sync is very easy and it requires an active internet connection. Existing users can go to "More -> Setup fast sync" and then click "Yes". This will take a while depending on the data in the device. This uploads the database file from the user's device to Avni storage as fast sync file for this catchment.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/125e0b2-fast_sync.png",
-        "fast sync.png",
-        568
-      ],
-      "align": "center",
-      "caption": "Fast sync setup option."
-    }
-  ]
-}
-[/block]
-
+<Image title="fast sync.png" alt={568} align="center" src="https://files.readme.io/125e0b2-fast_sync.png">
+  Fast sync setup option.
+</Image>
 
 Once it is done, the new user from the same catchment will get an option to use the fast sync when he logs in for the first time.
 
@@ -6106,27 +4768,13 @@ Steps to follow:
 
 1. Figure out Catchment UUID corresponding to the User facing the issue
 2. Login into AWS and open up the S3 Console 
-3. Navigate to "s3/buckets/\<env\>-user-media/\<org_media_bucket_name\>"
+3. Navigate to "s3/buckets/\<env\>-user-media/\<org\_media\_bucket\_name\>"
 4. There the FastSync files will have prefix of "MobileDbBackup-" followed by Catchment UUID Ex: "MobileDbBackup-b9103c96-7ed7-4798-a866-89419103d361"
 5. Download the file and unzip if needed to check size / content
 
 <br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f6786a7c51e3bdc43bdb24a7960bc74cd7b38af163ec88dc8685f7fe46c395f2-Screenshot_2025-04-03_at_1.14.45_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/f6786a7c51e3bdc43bdb24a7960bc74cd7b38af163ec88dc8685f7fe46c395f2-Screenshot_2025-04-03_at_1.14.45_PM.png" />
 
 <br />
 
@@ -6134,46 +4782,27 @@ Steps to follow:
 
 "Fast sync" speed up the initial sync and improves new user onboarding experience. But the flip-side of setting up "Fast Sync" are as follows:
 
-- "Fast Sync", if setup using a newer version of app, prevent fresh logins from older version of the app
-- "Fast Sync", is setup per Catchment basis, so, if there are restrictions due to Sync-Concept-Values or UserGroup Privileges for one set of users and they have the FastSync Setup for them, then the other set of Users with conflicting Sync-Concept-Values or UserGroup Privileges might end up receiving invalid data / missing data during sync
-- "Fast Sync", when setup, assumes that the Catchment constituent Locations are fixed, any change to the catchment results in a "Reset Sync" being created for all users which are associated with that catchment. But new users who get assigned to that Catchment, will not have the "Reset Sync" configured appropriately in all cases, this could result in missed / extraneous data sync happening to the new users.
-- "Fast Sync" data cannot be modularly distributed to users of different catchment with overlapping location boundaries. You would have to spearately setup Fast sync for each catchment.
-- There is no easy way for Organisation users to remove a "Fast Sync" setup for a Catchment, he should either over-write it with a new "Fast Sync" file, or contact Support team for deletion of old one. To be able to overcome the Sync failure error, you would need to do:
-  - Either do "Fresh login" after that(Deletion / overwrite of FastSync file)
-  - Or continue and "Perform Slow Sync"
+* "Fast Sync", if setup using a newer version of app, prevent fresh logins from older version of the app
+* "Fast Sync", is setup per Catchment basis, so, if there are restrictions due to Sync-Concept-Values or UserGroup Privileges for one set of users and they have the FastSync Setup for them, then the other set of Users with conflicting Sync-Concept-Values or UserGroup Privileges might end up receiving invalid data / missing data during sync
+* "Fast Sync", when setup, assumes that the Catchment constituent Locations are fixed, any change to the catchment results in a "Reset Sync" being created for all users which are associated with that catchment. But new users who get assigned to that Catchment, will not have the "Reset Sync" configured appropriately in all cases, this could result in missed / extraneous data sync happening to the new users.
+* "Fast Sync" data cannot be modularly distributed to users of different catchment with overlapping location boundaries. You would have to spearately setup Fast sync for each catchment.
+* There is no easy way for Organisation users to remove a "Fast Sync" setup for a Catchment, he should either over-write it with a new "Fast Sync" file, or contact Support team for deletion of old one. To be able to overcome the Sync failure error, you would need to do:
+  * Either do "Fresh login" after that(Deletion / overwrite of FastSync file)
+  * Or continue and "Perform Slow Sync"
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a2bce3187fea665854c9d179dc43c9597a0dfff81f3eec23b77626bb5af2aacd-Screenshot_20250410_184143.jpg",
-        "",
-        "Fast Sync Failure due to Version mismatch"
-      ],
-      "align": "center",
-      "sizing": "450px",
-      "caption": "Fast Sync Failure due to Version mismatch"
-    }
-  ]
-}
-[/block]
+<Image alt="Fast Sync Failure due to Version mismatch" align="center" width="450px" src="https://files.readme.io/a2bce3187fea665854c9d179dc43c9597a0dfff81f3eec23b77626bb5af2aacd-Screenshot_20250410_184143.jpg">
+  Fast Sync Failure due to Version mismatch
+</Image>
 
 
 # File: ./readme/Implementers/advanced-feature-guide/flavouring-avni.md
 
----
-title: "Rollout your own Avni App from Play store"
-slug: "flavouring-avni"
-excerpt: "Branding options available in Avni, and how to proceed"
-hidden: false
-createdAt: "Fri Apr 07 2023 03:41:24 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Jan 24 2024 12:08:18 GMT+0000 (Coordinated Universal Time)"
----
+title: Rollout your own Avni App from Play store
+excerpt: Branding options available in Avni, and how to proceed
 There are can be several reasons for rolling out your own app from the play store.
 
-- You have a different deployment of Avni
-- You want your own branding (icons, logos, etc)
+* You have a different deployment of Avni
+* You want your own branding (icons, logos, etc)
 
 You can change the following
 
@@ -6198,48 +4827,48 @@ A new app is called a flavor of the app (terminology from [Android flavors](http
 
 ### Steps to create a new flavor in client:
 
-- Under `packages/openchs-android/android/app/src`, create a folder with the flavor name.
-  - Flavor naming conventions:
-    - Use camelCase for flavor name, since it is used in the android [docs](https://developer.android.com/build/build-variants).  This is also inline with the folder names generated during the build process.
-    - The flavor name, need not have org name, just app name will suffice. 
-    - Eg: for `Teach Nagaland` app from LFE, the flavor name can be `teachNagaland` and not `teach_nagaland` or `lfeTeachNagaland`.
-  - Under `assets` folder add `logo.png`. The file needs to be in `png` format for the animation in the screensaver to work and for the logo to appear in the Login page.
-    - To resize the logo to a reasonable size, `Preview` app can be used. Open the file and go to `Tools -> Adjust Size`.
-    - To convert the logo from say, jpg to png format, open the file, then go to `File -> Export -> Change the format to png -> Save`.
-  - Under `res` folder, create folders for each resolution. This images in this folder is used to display launcher icon in android app. This [website](https://icon.kitchen/) can be used to generate circle and square icons for each resolution.
-  - To integrate with firebase analytics, copy `google-services.json` from [firebase console](https://console.firebase.google.com/u/0/) by creating a project specific to the flavor or an app within an existing project as per need. To view data of an app within a project, you can : Add comparison > Dimension = "Stream name" > Match Type = "exactly matches" > Value: select your app via checkbox
-  - When some resources are common across flavors, add it under `packages/openchs-android/android/app/src/main` folder (instruction for Avni product team only)
-  - Add a flavor specific privacy policy under `docs` to be linked to from the play store app listing using the Avni privacy policy as a reference and make changes specific to the flavor such as app name.
-- Changes to be made in `build.gradle`
-  - Add the `signingConfig` for the new flavor. To create keystore, check [here](https://developer.android.com/studio/publish/app-signing#generate-key) or use the following command.
-    - `keytool -genkey -v -keystore <flavor>-release-key.keystore -storepass <keystorepassword> -alias <alias> -keypass <keypassword> -keyalg RSA -keysize 2048 -validity 10000`
-  - In `packages/openchs-android/android/app/build.gradle`, under `productFlavors` add the key value pairs for the new flavor. 
-    - For applicationId, use the format, `com.openchsclient.{client_name}.{region_name}`, where `region_name` need to be given if different flavors of the app exists for different regions.
-    - create new bugsnag app, and add its API key.
-  - Using `sourceSets` config in the `build.gradle`, modules specific to flavors can be configured.
-- In `flavor_config.json` add the config for the new flavor. The values here are used by make tasks.
-  - super admin password of the server url need to be mentioned as value for `prod_admin_password_env_var_name` .
+* Under `packages/openchs-android/android/app/src`, create a folder with the flavor name.
+  * Flavor naming conventions:
+    * Use camelCase for flavor name, since it is used in the android [docs](https://developer.android.com/build/build-variants).  This is also inline with the folder names generated during the build process.
+    * The flavor name, need not have org name, just app name will suffice. 
+    * Eg: for `Teach Nagaland` app from LFE, the flavor name can be `teachNagaland` and not `teach_nagaland` or `lfeTeachNagaland`.
+  * Under `assets` folder add `logo.png`. The file needs to be in `png` format for the animation in the screensaver to work and for the logo to appear in the Login page.
+    * To resize the logo to a reasonable size, `Preview` app can be used. Open the file and go to `Tools -> Adjust Size`.
+    * To convert the logo from say, jpg to png format, open the file, then go to `File -> Export -> Change the format to png -> Save`.
+  * Under `res` folder, create folders for each resolution. This images in this folder is used to display launcher icon in android app. This [website](https://icon.kitchen/) can be used to generate circle and square icons for each resolution.
+  * To integrate with firebase analytics, copy `google-services.json` from [firebase console](https://console.firebase.google.com/u/0/) by creating a project specific to the flavor or an app within an existing project as per need. To view data of an app within a project, you can : Add comparison > Dimension = "Stream name" > Match Type = "exactly matches" > Value: select your app via checkbox
+  * When some resources are common across flavors, add it under `packages/openchs-android/android/app/src/main` folder (instruction for Avni product team only)
+  * Add a flavor specific privacy policy under `docs` to be linked to from the play store app listing using the Avni privacy policy as a reference and make changes specific to the flavor such as app name.
+* Changes to be made in `build.gradle`
+  * Add the `signingConfig` for the new flavor. To create keystore, check [here](https://developer.android.com/studio/publish/app-signing#generate-key) or use the following command.
+    * `keytool -genkey -v -keystore <flavor>-release-key.keystore -storepass <keystorepassword> -alias <alias> -keypass <keypassword> -keyalg RSA -keysize 2048 -validity 10000`
+  * In `packages/openchs-android/android/app/build.gradle`, under `productFlavors` add the key value pairs for the new flavor. 
+    * For applicationId, use the format, `com.openchsclient.{client_name}.{region_name}`, where `region_name` need to be given if different flavors of the app exists for different regions.
+    * create new bugsnag app, and add its API key.
+  * Using `sourceSets` config in the `build.gradle`, modules specific to flavors can be configured.
+* In `flavor_config.json` add the config for the new flavor. The values here are used by make tasks.
+  * super admin password of the server url need to be mentioned as value for `prod_admin_password_env_var_name` .
 
 ### Steps to do to get build via circle-ci:
 
-- Update `.circleci/config.yml` to add flavor to enum of valid `flavors`.
-- Add environment variables.
-  - Go to `Project Settings -> Environment variables` in circleci.
-  - Add values for key password (`<flavor>_KEY_PASSWORD`), key store password (`<flavor>_KEYSTORE_PASSWORD`), key alias (`<flavor>_KEY_ALIAS`), bugsnag api key.
-- Refer this [link](https://avni.readme.io/docs/release-process-for-the-cloud#circleci-build) to know how to generate apks and aab from circle-ci for specific flavor.
+* Update `.circleci/config.yml` to add flavor to enum of valid `flavors`.
+* Add environment variables.
+  * Go to `Project Settings -> Environment variables` in circleci.
+  * Add values for key password (`<flavor>_KEY_PASSWORD`), key store password (`<flavor>_KEYSTORE_PASSWORD`), key alias (`<flavor>_KEY_ALIAS`), bugsnag api key.
+* Refer this [link](https://avni.readme.io/docs/release-process-for-the-cloud#circleci-build) to know how to generate apks and aab from circle-ci for specific flavor.
 
 ### Steps to do in google play store:
 
-- Create app on google play console.
-- Under `Grow -> Store Presence -> Main store listing` and enter the details. For phone and tablet screenshots, same screenshots can be uploaded.
-- Under `Grow -> Store settings`, enter the details similar to other app.
-- Go to `Publishing overview` and finish the steps mentioned to be able to publish for review.
-  - For privacy policy, make sure the privacy policy mentions the name of the app instead of `Avni`.
-  - To complete the steps take the help of already filled values of other apps. For that refer, `Policy and programmes -> App content -> Actioned` 
-- Create release. 
-  - As per this [link](https://stackoverflow.com/questions/73132752/i-dont-use-ads-in-my-flutter-app-then-why-this-message-is-showing-in-my-play-co), seems like Firebase Analytics plugin needs permission `com.google.android.gms.permission.AD_ID`. Hence click `Yes` for `AD_ID` permissions and check `Analytics` for usage.
-  - Upload the bundle downloaded from the playstore.
-- Send the changes made above for review.
+* Create app on google play console.
+* Under `Grow -> Store Presence -> Main store listing` and enter the details. For phone and tablet screenshots, same screenshots can be uploaded.
+* Under `Grow -> Store settings`, enter the details similar to other app.
+* Go to `Publishing overview` and finish the steps mentioned to be able to publish for review.
+  * For privacy policy, make sure the privacy policy mentions the name of the app instead of `Avni`.
+  * To complete the steps take the help of already filled values of other apps. For that refer, `Policy and programmes -> App content -> Actioned` 
+* Create release. 
+  * As per this [link](https://stackoverflow.com/questions/73132752/i-dont-use-ads-in-my-flutter-app-then-why-this-message-is-showing-in-my-play-co), seems like Firebase Analytics plugin needs permission `com.google.android.gms.permission.AD_ID`. Hence click `Yes` for `AD_ID` permissions and check `Analytics` for usage.
+  * Upload the bundle downloaded from the playstore.
+* Send the changes made above for review.
 
 ### How to use a specific flavor:
 
@@ -6251,48 +4880,36 @@ Eg: ` make run_app_staging flavor='apf'`
 
 There are other places where icons/colours can be configured. Below is a table that summarizes the changes that are possible. All changes can be performed through the App Designer.
 
-| Type   | Item              | Specifications                                                        |
-| :----- | :---------------- | :-------------------------------------------------------------------- |
-| Icon   | Subject Type Icon | jpg/png square images 75 \* 75 px                                     |
-| Icon   | Report card       | jpg/png square images 75 \* 75 px                                     |
-| Icon   | Menu Item         | Material Community Icon from <https://pictogrammers.com/library/mdi/> |
-| Colour | Program           | RGB                                                                   |
-| Colour | Report Card       | RGB                                                                   |
-| Colour | Form Header       | RGB                                                                   |
+| Type   | Item              | Specifications                                                                                                |
+| :----- | :---------------- | :------------------------------------------------------------------------------------------------------------ |
+| Icon   | Subject Type Icon | jpg/png square images 75 \* 75 px                                                                             |
+| Icon   | Report card       | jpg/png square images 75 \* 75 px                                                                             |
+| Icon   | Menu Item         | Material Community Icon from [https://pictogrammers.com/library/mdi/](https://pictogrammers.com/library/mdi/) |
+| Colour | Program           | RGB                                                                                                           |
+| Colour | Report Card       | RGB                                                                                                           |
+| Colour | Form Header       | RGB                                                                                                           |
 
 
 # File: ./readme/Implementers/advanced-feature-guide/importing-excel-data.md
 
----
-title: "Excel-based migration [Deprecated]"
-slug: "importing-excel-data"
-excerpt: ""
-hidden: true
-createdAt: "Tue Apr 17 2018 05:12:01 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Sep 10 2024 05:26:31 GMT+0000 (Coordinated Universal Time)"
----
+title: Excel-based migration [Deprecated]
+excerpt: ''
 > ❗️ Avni does not support Excel based import any longer, please refer to Admin App based approach to upload data [Bulk Data Upload page](https://avni.readme.io/docs/upload-data#is-the-order-of-values-important)
 
 > 🚧 Introduction
-> 
-> Read <https://avni.readme.io/v2.0/docs/structure-import-metadata-excel-excel>
+>
+> Read [https://avni.readme.io/v2.0/docs/structure-import-metadata-excel-excel](https://avni.readme.io/v2.0/docs/structure-import-metadata-excel-excel)
 
 **Note: dates get parsed incorrectly sometimes while converting from CSV to XLSX in Google Sheets (Eg. 12-01-2018 (dd-mm-yyyy) gets parsed as 01/12/2018) which may not be easy to spot. One solution is to download the CSV file and convert to XLSX in LibreOffice.**
 
-[An example of Metadata.xlsx file](https://docs.google.com/spreadsheets/d/1M0QvcgZ7TagcHvMnTSo3qt-sZHwUDHEiN0T2hlKTn9Y/edit?usp=sharing)  
+[An example of Metadata.xlsx file](https://docs.google.com/spreadsheets/d/1M0QvcgZ7TagcHvMnTSo3qt-sZHwUDHEiN0T2hlKTn9Y/edit?usp=sharing)\
 [An example of Data.xlsx file](https://docs.google.com/spreadsheets/d/19aCEIlODNvJMR68_mGl4Q-Kx6n3qI0Dk4hL0aQ8dwAo/edit?usp=sharing)
 
 
 # File: ./readme/Implementers/advanced-feature-guide/integration-service-operations.md
 
----
-title: "Integration Service Operations"
-slug: "integration-service-operations"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jul 26 2023 13:14:32 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Integration Service Operations
+excerpt: ''
 Please refer to the [Integration design and developer guide](doc:integration-developer-guide) for - how to develop integration code. This guide describes how to operate and support the integration service
 
 ### Managing Metadata Mapping
@@ -6301,8 +4918,8 @@ When new fields or sometimes entity types come up in the system or incorrect map
 
 ### Integration job monitoring
 
-- Background jobs can be monitored via <https://healthchecks.io/>. The failure here indicates that the background job didn't complete in time. It could be because the job didn't run, or it hung, or it failed with error. A ticket can be raised or product team support can be taken when this happens.
-  - If it failed for error then the error can be checked in Bugsnag. The stack trace and link to the error can be put in the ticket. Usually these should be urgent tickets.
+* Background jobs can be monitored via [https://healthchecks.io/](https://healthchecks.io/). The failure here indicates that the background job didn't complete in time. It could be because the job didn't run, or it hung, or it failed with error. A ticket can be raised or product team support can be taken when this happens.
+  * If it failed for error then the error can be checked in Bugsnag. The stack trace and link to the error can be put in the ticket. Usually these should be urgent tickets.
 
 ### Business Error monitoring
 
@@ -6321,62 +4938,165 @@ Each module has two scheduled jobs - for regular and error processing. The regul
 
 # File: ./readme/Implementers/advanced-feature-guide/my-dashboard-and-search-filters.md
 
+title: My Dashboard and Search Filters
+excerpt: ''
+    - type: basic
+      slug: translation-management
+      title: Translation Management
 ---
-title: "My Dashboard and Search Filters"
-slug: "my-dashboard-and-search-filters"
-excerpt: ""
-hidden: false
-createdAt: "Fri Jan 03 2020 05:01:30 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni allows the display of custom filter in **Search** and **My Dashboard filter** page. These settings are available within App designer. Filter settings are stored in organisation_config table.  You can define filters for different subject types. Please refer to the table below for various options.
+Avni allows the display of custom filter in **Search** and **My Dashboard filter** page. These settings are available within App designer. Filter settings are stored in organisation\_config table.  You can define filters for different subject types. Please refer to the table below for various options.
 
 # Filter Types
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Type",
-    "h-1": "Applies on Field",
-    "h-2": "Widget Types",
-    "0-0": "Name",
-    "0-1": "Name of the subject",
-    "0-2": "Default (Text)",
-    "1-0": "Age",
-    "1-1": "Age of the subject",
-    "1-2": "Default : Numeric field. Fetches result matching records with values +/- 4.",
-    "2-0": "Gender",
-    "2-1": "Gender of the subject",
-    "2-2": "Default : Multiselect with configured gender options.",
-    "3-0": "Address",
-    "3-1": "Address of the subject",
-    "3-2": "Default : Multiselect option to choose the address of the subject. Nested options appear if multiple levels of address are present. e.g. District -> Taluka -> Village.",
-    "4-0": "Registration Date",
-    "4-1": "Date of Registration of the subject",
-    "4-2": "Default : Fixed date  \nRange : Options to choose Start date and End date",
-    "5-0": "Enrolment Date",
-    "5-1": "Date of Enrolment in any program",
-    "5-2": "Default : Fixed date  \nRange : Options to choose Start date and End date",
-    "6-0": "Encounter Date",
-    "6-1": "Date of Encounter in any Encounter",
-    "6-2": "Default : Fixed date  \nRange : Options to choose Start date and End date",
-    "7-0": "Program Encounter Date",
-    "7-1": "Date of Program Encounter in any Program Encounter",
-    "7-2": "Default : Fixed date  \nRange : Options to choose Start date and End date",
-    "8-0": "Search All",
-    "8-1": "Text fields in all the core fields and observations in Registration and Program enrolment",
-    "8-2": "Default : Text Field"
-  },
-  "cols": 3,
-  "rows": 9,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Type
+      </th>
 
+      <th style={{ textAlign: "left" }}>
+        Applies on Field
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+        Widget Types
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Name
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Name of the subject
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default (Text)
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Age
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Age of the subject
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Numeric field. Fetches result matching records with values +/- 4.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Gender
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Gender of the subject
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Multiselect with configured gender options.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Address
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Address of the subject
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Multiselect option to choose the address of the subject. Nested options appear if multiple levels of address are present. e.g. District -> Taluka -> Village.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Registration Date
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Date of Registration of the subject
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Fixed date\
+        Range : Options to choose Start date and End date
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Enrolment Date
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Date of Enrolment in any program
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Fixed date\
+        Range : Options to choose Start date and End date
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Encounter Date
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Date of Encounter in any Encounter
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Fixed date\
+        Range : Options to choose Start date and End date
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Program Encounter Date
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Date of Program Encounter in any Program Encounter
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Fixed date\
+        Range : Options to choose Start date and End date
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Search All
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Text fields in all the core fields and observations in Registration and Program enrolment
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Default : Text Field
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 #### Limitation: Right now we cannot have multiple scopes for a filter, i.e. we cannot search a concept in program encounter and encounter with the same filter.
 
@@ -6385,34 +5105,28 @@ Avni allows the display of custom filter in **Search** and **My Dashboard filter
 
 # File: ./readme/Implementers/advanced-feature-guide/new-longitudinal-export.md
 
----
-title: "New Longitudinal export"
-slug: "new-longitudinal-export"
-excerpt: "Guide for New Longitudinal Export"
-hidden: false
-createdAt: "Tue May 30 2023 13:29:59 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Jan 30 2025 07:59:59 GMT+0000 (Coordinated Universal Time)"
----
+title: New Longitudinal export
+excerpt: Guide for New Longitudinal Export
 ## Introduction
 
 The “New Longitudinal export” feature allows for an Implementation Admin user to extract data in Longitudinal format for a specific Subject Type. All invoked requests are listed at the bottom of the “New Longitudinal export” screen, which also includes Status information. The export requests are processed asynchronously in the backend and upon completion they are uploaded to cloud and are available for download in the same screen in-line with the request status details.
 
 New longitudinal export fixes the following issues with old export.
 
-- Inability to fetch data across different forms for the same subject. eg: Fetch data from two different encounter types on the same program
-- Inability to fetch group/household information
-- Inability to fetch only selected fields from different forms
+* Inability to fetch data across different forms for the same subject. eg: Fetch data from two different encounter types on the same program
+* Inability to fetch group/household information
+* Inability to fetch only selected fields from different forms
 
 ### Limitations
 
-- There is a limit of maximum of 10,000 Individuals data that could be exported at once, as part of a single Longitudinal export request
+* There is a limit of maximum of 10,000 Individuals data that could be exported at once, as part of a single Longitudinal export request
 
 ## Presupposition
 
 In-order for an Implementation admin user to be able to successfully invoke a “New Longitudinal export” request, he / she would need to have the following:
 
-- Basic understanding of JSON syntax
-- Understanding of Avni Entity Types and their inter-relationships
+* Basic understanding of JSON syntax
+* Understanding of Avni Entity Types and their inter-relationships
 
 ## Preparation
 
@@ -6542,7 +5256,7 @@ order by
 
 ## Description of elements that can be used to compose a Export request
 
-```c \<ROOT> (The root JSON element)
+```c <ROOT> (The root JSON element)
 - "individual" : "<Specify Subject Type request details>"
 - "timezone" : "<Specify timezone to adhere while displaying date fields>"
 ```
@@ -6736,79 +5450,34 @@ order by
 
 # File: ./readme/Implementers/advanced-feature-guide/news-broadcast.md
 
----
-title: "News broadcast"
-slug: "news-broadcast"
-excerpt: ""
-hidden: false
-createdAt: "Mon May 10 2021 05:22:09 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Feb 14 2024 11:15:30 GMT+0000 (Coordinated Universal Time)"
----
+title: News broadcast
+excerpt: ''
 Sometimes it is important to share some important information with all the field users. Avni provides this facility using the News broadcast feature. This feature helps in easy communication with the field users.
 
 ## Creating a news broadcast
 
 Creating a news broadcast is very simple, follow the below steps.
 
-- Go to the home page of the Avni web app and open the News Broadcast app.
+* Go to the home page of the Avni web app and open the News Broadcast app.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2623e59-News_Broadcast.png",
-        "News Broadcast.png",
-        1839
-      ],
-      "align": "center",
-      "caption": "Click on the news broadcast to see all the news set up in the organisation"
-    }
-  ]
-}
-[/block]
+<Image title="News Broadcast.png" alt={1839} align="center" src="https://files.readme.io/2623e59-News_Broadcast.png">
+  Click on the news broadcast to see all the news set up in the organisation
+</Image>
 
+* Click on "Create a news broadcast".
 
-- Click on "Create a news broadcast".
+<Image title="Create News.png" alt={1846} align="center" src="https://files.readme.io/e42cb0c-Create_News.png">
+  The new broadcast can be created by clicking on Create a new broadcast
+</Image>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e42cb0c-Create_News.png",
-        "Create News.png",
-        1846
-      ],
-      "align": "center",
-      "caption": "The new broadcast can be created by clicking on Create a new broadcast"
-    }
-  ]
-}
-[/block]
+* Provide all the details like image, title, and content and click on "Save news".
 
+<Image title="new news.png" alt={1854} align="center" src="https://files.readme.io/e79d8b2-new_news.png">
+  New broadcast screen
+</Image>
 
-- Provide all the details like image, title, and content and click on "Save news".
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e79d8b2-new_news.png",
-        "new news.png",
-        1854
-      ],
-      "align": "center",
-      "caption": "New broadcast screen"
-    }
-  ]
-}
-[/block]
-
-
-- Once the news is saved, we need to publish it so that field users can see it on their device. For publishing the news click on "see details" and click on "Publish news".
-- Once the news is published field user can see it on their android app.
+* Once the news is saved, we need to publish it so that field users can see it on their device. For publishing the news click on "see details" and click on "Publish news".
+* Once the news is published field user can see it on their android app.
 
 ## News option on android app
 
@@ -6817,14 +5486,8 @@ After the news is published, the field user can go to "More -> News" to see all 
 
 # File: ./readme/Implementers/advanced-feature-guide/offline-reports.md
 
----
-title: "Offline Report Cards and Custom Dashboards"
-slug: "offline-reports"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jan 20 2021 06:51:40 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Sep 13 2024 08:45:39 GMT+0000 (Coordinated Universal Time)"
----
+title: Offline Report Cards and Custom Dashboards
+excerpt: ''
 Avni allows you to create different indicator reports that are available offline to the field users. These reports help field users to derive more insights on the captured data. 
 
 Creating an offline report is a two-step process. First, we need to create a report card that holds the actual query function. Second, we group multiple cards into to a dashboard.
@@ -6839,33 +5502,33 @@ Report cards can be of 2 types - 'Standard' and 'Custom'. The logic used to disp
 
 1. Standard Report Cards, the different types of which are as follows (Entity specified in brackets indicates the type of entity listed on clicking on the card):
 
-   - Pending approval (Entity Approval Statuses)
+   * Pending approval (Entity Approval Statuses)
 
-   - Approved (Entity Approval Statuses)
+   * Approved (Entity Approval Statuses)
 
-   - Rejected (Entity Approval Statuses)
+   * Rejected (Entity Approval Statuses)
 
-   - Scheduled visits (Subjects)
+   * Scheduled visits (Subjects)
 
-   - Overdue visits (Subjects)
+   * Overdue visits (Subjects)
 
-   - Recent registrations (Subjects)
+   * Recent registrations (Subjects)
 
-   - Recent enrolments (Subjects)
+   * Recent enrolments (Subjects)
 
-   - Recent visits (Subjects)
+   * Recent visits (Subjects)
 
-   - Total (Subjects)
+   * Total (Subjects)
 
-   - Comments (Subjects)
+   * Comments (Subjects)
 
-   - Call tasks (Tasks)
+   * Call tasks (Tasks)
 
-   - Open subject tasks (Tasks)
+   * Open subject tasks (Tasks)
 
-   - Due checklist (Individuals)
+   * Due checklist (Individuals)
 
-   [block:image]{"images":[{"image":["https://files.readme.io/5093034-Screenshot_2023-12-11_at_4.55.48_PM.png","",""],"align":"center"}]}[/block]
+   <Image align="center" src="https://files.readme.io/5093034-Screenshot_2023-12-11_at_4.55.48_PM.png" />
 2. Custom Report cards: Report card with configurable **Query**, which returns a list of Individuals as the response. Length of the list is shown on the card and on clicking the card, the list of Individuals returned is shown. Please note that the query function can return a list of Individuals or an object with these properties, ` { primaryValue: '20', secondaryValue: '(5%)',  lineListFunction  }`, here `lineListFunction` should always return the list of subjects.
 
 ![](https://files.readme.io/387d221-Report_card.png "Report card.png")
@@ -6891,9 +5554,9 @@ Filters can also be configured at the dashboard level (covered below). If a filt
 
 After all the cards are done it's time to group them together using the dashboard. Offline Dashboards have the following sub-components:
 
-- Sections : Visual Partitions used to club together cards of specific grouping type
-- Offline (Custom) Report Cards : Usually Clickable blocks with count information about grouping of Individuals or EntityApprovals of specific type
-- Filters : Configurable filters that get applied to all "Report Cards" count and listing
+* Sections : Visual Partitions used to club together cards of specific grouping type
+* Offline (Custom) Report Cards : Usually Clickable blocks with count information about grouping of Individuals or EntityApprovals of specific type
+* Filters : Configurable filters that get applied to all "Report Cards" count and listing
 
 Users with access to the "App Designer" can Create, Modifiy or Delete Custom Dashboards as seen below. 
 
@@ -6901,27 +5564,13 @@ Users with access to the "App Designer" can Create, Modifiy or Delete Custom Das
 
 ### Steps to configure a Custom Dashboard
 
-- Click on the dashboard tab on the app designer and click on the new dashboard.
-- This will take you to the new dashboard screen. Provide the name and description of the dashboard.
-- You can create sections on this screen and
-- Select all the cards you need to add to the section in the dashboard.
-- After adding all the cards, you can re-arrange the cards in the order you want them to see in the field app.
+* Click on the dashboard tab on the app designer and click on the new dashboard.
+* This will take you to the new dashboard screen. Provide the name and description of the dashboard.
+* You can create sections on this screen and
+* Select all the cards you need to add to the section in the dashboard.
+* After adding all the cards, you can re-arrange the cards in the order you want them to see in the field app.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b6a8b74-Screenshot_2023-12-11_at_4.45.34_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/b6a8b74-Screenshot_2023-12-11_at_4.45.34_PM.png" />
 
 ### Dashboard Filters
 
@@ -6963,84 +5612,27 @@ Sample Code for handling filters in report card:
 
 ### Assigning custom Dashboards to User Groups
 
-Custom Dashboards created need to be assigned specifically to a User Group, in-order for Users to see it on the Avni-client mobile app. You may do this, by navigating to the "Admin" app -> "User Groups" -> (User_GROUP) -> "Dashboards" tab, and assigning one or more Custom Dashboards to a User-Group.
+Custom Dashboards created need to be assigned specifically to a User Group, in-order for Users to see it on the Avni-client mobile app. You may do this, by navigating to the "Admin" app -> "User Groups" -> (User\_GROUP) -> "Dashboards" tab, and assigning one or more Custom Dashboards to a User-Group.
 
-In addition, You can also mark one of these Custom Dashboards as the Primary (Is Primary: True) dashboard from the "Admin" app -> "User Groups" -> (User_GROUP) -> "Dashboards".
+In addition, You can also mark one of these Custom Dashboards as the Primary (Is Primary: True) dashboard from the "Admin" app -> "User Groups" -> (User\_GROUP) -> "Dashboards".
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/54b6434-Screenshot_2024-06-26_at_12.14.37_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/54b6434-Screenshot_2024-06-26_at_12.14.37_PM.png" />
 
 ## Using the Dashboard in the Field App
 
 After saving the dashboard sync the field app, and from the bottom "More" tab click on the "Dashboards" option. It will take you to the dashboard screen and will show all the cards that are added to the dashboard.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8b37cf6-Screenshot_2024-06-26_at_12.15.37_PM.png",
-        "dashboard-field-app.png",
-        "Report cards only passing List of subjects."
-      ],
-      "align": "center",
-      "sizing": "400px",
-      "caption": "Report cards only passing List of subjects."
-    }
-  ]
-}
-[/block]
+<Image title="dashboard-field-app.png" alt="Report cards only passing List of subjects." align="center" width="400px" src="https://files.readme.io/8b37cf6-Screenshot_2024-06-26_at_12.15.37_PM.png">
+  Report cards only passing List of subjects.
+</Image>
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/548f99d-offline-dashboard.png",
-        "offline-dashboard.png",
-        566
-      ],
-      "align": "center",
-      "sizing": "400px",
-      "caption": "Report cards  returning `primaryValue` and `secondaryValue` object"
-    }
-  ]
-}
-[/block]
-
+<Image title="offline-dashboard.png" alt={566} align="center" width="400px" src="https://files.readme.io/548f99d-offline-dashboard.png">
+  Report cards  returning `primaryValue` and `secondaryValue` object
+</Image>
 
 Clicking any card will take the user to the subject listing page, which will display all the subject names returned by the card query.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/18fb944-Subject-list-field-app.png",
-        "Subject-list-field-app.png",
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="400px" src="https://files.readme.io/18fb944-Subject-list-field-app.png" />
 
 Users can click on any subject and navigate to their dashboard.
 
@@ -7050,62 +5642,17 @@ Users can click on any subject and navigate to their dashboard.
 
 As part of Avni release 8.0.0, a new feature of a secondary dashboard is added which can be configured at user group level to populate an additional option on the Avni mobile app bottom drawer to navigate to a secondary dashboard. This configuration has to be done in the user group in Avni web app. 
 
-- By navigating to the dashboard section in a particular user group where dashboards can be added to user groups, the secondary dashboard can be defined apart from the home dashboard. As shown in the screenshot below, any dashboard can be selected as the secondary dashboard.
+* By navigating to the dashboard section in a particular user group where dashboards can be added to user groups, the secondary dashboard can be defined apart from the home dashboard. As shown in the screenshot below, any dashboard can be selected as the secondary dashboard.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/68ac5d9-Screenshot_2024-06-26_at_12.14.37_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "1500px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="1500px" src="https://files.readme.io/68ac5d9-Screenshot_2024-06-26_at_12.14.37_PM.png" />
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a5640e1-Se.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "15px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="15px" src="https://files.readme.io/a5640e1-Se.png" />
 
 ### Secondary dashboard in mobile app
 
 The configuration mentioned above would display the particular dashboard in the mobile app as given below. This would allow users to access the home and secondary dashboard from the bottom drawer of the mobile app instead of navigating to the more page. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d95166d-Screenshot_2024-06-26_at_12.17.40_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="400px" src="https://files.readme.io/d95166d-Screenshot_2024-06-26_at_12.17.40_PM.png" />
 
 ### Clash in Dashboards configuration across different UserGroups
 
@@ -7165,7 +5712,7 @@ The report cards requires one to return a list individuals. This can be done by:
 
 Please refer to [this reference for Realm Query Language](https://www.mongodb.com/docs/atlas/device-sdks/realm-query-language/).
 
-To understand difference between filter and filtered that is referred below, please see, <https://avni.readme.io/docs/writing-rules#difference-between-filter-and-filtered>
+To understand difference between filter and filtered that is referred below, please see, [https://avni.readme.io/docs/writing-rules#difference-between-filter-and-filtered](https://avni.readme.io/docs/writing-rules#difference-between-filter-and-filtered)
 
 Please also get in touch with platform team if you identify a new pattern and a new type of requirement where none of the following fits.
 
@@ -7191,10 +5738,10 @@ Please also get in touch with platform team if you identify a new pattern and a 
 
 #### DEPRECATED: Avoid using generic functions:
 
-- The following is deprecated cause we should use `Filter based on chronological data` pattern from above.
-- To find observation of a concept avoid using the function `findLatestObservationInEntireEnrolment` unless absolutely necessary since it searches for the observation in all encounters and enrolment observations. Use specific functions.
-- Eg: To find observation in enrolment can use the function `enrolment.findObservation` or to find observations in specific encounter type can get the encounters using `enrolment.lastFulfilledEncounter(...encounterTypeNames)` and then find observation. Refer code examples for the below 3 usecases.
-- ```text Usecase 1
+* The following is deprecated cause we should use `Filter based on chronological data` pattern from above.
+* To find observation of a concept avoid using the function `findLatestObservationInEntireEnrolment` unless absolutely necessary since it searches for the observation in all encounters and enrolment observations. Use specific functions.
+* Eg: To find observation in enrolment can use the function `enrolment.findObservation` or to find observations in specific encounter type can get the encounters using `enrolment.lastFulfilledEncounter(...encounterTypeNames)` and then find observation. Refer code examples for the below 3 usecases.
+* ```text Usecase 1
   Find children with birth weight less than 2. Birth weight is captured in enrolment
   ```
   ```javascript Recommended way
@@ -7303,11 +5850,11 @@ Please also get in touch with platform team if you identify a new pattern and a 
 
 #### Based on the use case decide whether to write the logic using realm query or JS.
 
-- Not always achieving the purpose using realm queries might be efficient/possible. 
+* Not always achieving the purpose using realm queries might be efficient/possible. 
 
-  - **DEPRECATED** cause we should use `Filter based on chronological data` pattern from above. Eg: consider a use case where a mandatory concept is used in a program encounter. Now to check the latest value of the concept, its sufficient to check the last encounter and need not iterate all encounters. Since realm subquery doesn't support searching only in the last encounter, for such usecases, using realm queries not only becomes slow and also sometimes inappropriate depending on the usecase. So in such cases, using JS code for the logic, is more efficient. (refer the below code example)
+  * **DEPRECATED** cause we should use `Filter based on chronological data` pattern from above. Eg: consider a use case where a mandatory concept is used in a program encounter. Now to check the latest value of the concept, its sufficient to check the last encounter and need not iterate all encounters. Since realm subquery doesn't support searching only in the last encounter, for such usecases, using realm queries not only becomes slow and also sometimes inappropriate depending on the usecase. So in such cases, using JS code for the logic, is more efficient. (refer the below code example)
 
-    - ```Text Usecase
+    * ```Text Usecase
       Find dead children using concept value captured in encounter cancel or program exit form.
       ```
       ```javascript Recommended way
@@ -7351,8 +5898,8 @@ Please also get in touch with platform team if you identify a new pattern and a 
       In this cases since the intention is to find if child is dead, hence it can be assumed to be captured in the last encounter or in program exit form based on the domain knowledge
 
       ```
-  - Please also refer to `Filter based on a custom observation value expression` pattern above, before using this. Consider another use case, where observations of numeric concepts need to be compared. This is not possible to achieve via realm query since the solution would involve the need for JSON parsing of the stored observation. Hence JS logic is appropriate here. (refer below code example)
-    - ```Text Usecase
+  * Please also refer to `Filter based on a custom observation value expression` pattern above, before using this. Consider another use case, where observations of numeric concepts need to be compared. This is not possible to achieve via realm query since the solution would involve the need for JSON parsing of the stored observation. Hence JS logic is appropriate here. (refer below code example)
+    * ```Text Usecase
       Find children with birth weight less than 2. Birth weight is captured in enrolment
       ```
       ```javascript Recommended way
@@ -7382,9 +5929,9 @@ Please also get in touch with platform team if you identify a new pattern and a 
       ```Text How optimized
       Moving to realm query for checking birth weight was not possible. If it were a equals comparison it can be achieved using 'CONTAINS' in realm
       ```
-- But in cases where time complexity is the same for both cases, writing realm queries would be efficient to achieve the purpose. (refer below code example). Also refer to `Filter based on a custom observation value expression` pattern above.
+* But in cases where time complexity is the same for both cases, writing realm queries would be efficient to achieve the purpose. (refer below code example). Also refer to `Filter based on a custom observation value expression` pattern above.
 
-  - ```Text Usecase
+  * ```Text Usecase
     Find 13 months children who are completely immunised
     ```
     ```javascript Recommended way
@@ -7418,9 +5965,9 @@ Please also get in touch with platform team if you identify a new pattern and a 
     ```Text How optimized
     Moving to realm query since no of children with age < 13 months were less
     ```
-- In most cases, filtering as much as possible using realm queries (for cases like voided checks) and then doing JS filtering on top of it if needed, would be appropriate. (refer the below code example)
+* In most cases, filtering as much as possible using realm queries (for cases like voided checks) and then doing JS filtering on top of it if needed, would be appropriate. (refer the below code example)
 
-  - ```Text Usecase
+  * ```Text Usecase
     Find dead children using concept value captured in encounter cancel or program exit form.
     ```
     ```javascript Recommended way
@@ -7465,7 +6012,7 @@ Please also get in touch with platform team if you identify a new pattern and a 
 
     ```
 
-Also check - <https://avni.readme.io/docs/writing-rules#using-paramsdb-object-when-writing-rules>
+Also check - [https://avni.readme.io/docs/writing-rules#using-paramsdb-object-when-writing-rules](https://avni.readme.io/docs/writing-rules#using-paramsdb-object-when-writing-rules)
 
 #### DEPRECATED. Use Concept UUIDs instead of their names for comparison
 
@@ -7473,7 +6020,7 @@ Please check - `Filter based on a custom observation value expression` pattern a
 
 Though not much performance improvement, using concept uuids(for comparing with concept answers), instead of getting its readable values did provide minor improvement(in seconds) when need to iterate through thousands of rows. (refer below code example)
 
-- ```Text Usecase
+* ```Text Usecase
   Find children with congential abnormality based on values of certain concepts
   ```
   ```javascript Recommended way
@@ -7542,7 +6089,7 @@ Though not much performance improvement, using concept uuids(for comparing with 
 
 ## Nested Report Cards
 
-Frequently there are cases where across report cards very similar logic is used and only a value used for comparison, changes. Eg: in one of our partner organisations, we load 'Total SAM children' and 'Total MAM children'. For rendering each takes around 20-30s. And hence the dashboard nos doesn't load until both the report card results are calculated and it makes the user to wait for a minute. If the logic is combined, we can render the results in 30s since it would need only retrieval from db and iterating once.  
+Frequently there are cases where across report cards very similar logic is used and only a value used for comparison, changes. Eg: in one of our partner organisations, we load 'Total SAM children' and 'Total MAM children'. For rendering each takes around 20-30s. And hence the dashboard nos doesn't load until both the report card results are calculated and it makes the user to wait for a minute. If the logic is combined, we can render the results in 30s since it would need only retrieval from db and iterating once.\
 The above kind of scenarios also lead to code duplication across report cards and when some requirement changes, then the change needs to be done in both.
 
 In-order to handle such scenarios, we recommend using the Nested Report Card. This is a non-standard report card, which has the ability to show upto a maximum of **9** report cards, based on a single Query's response.
@@ -7644,61 +6191,17 @@ return {reportCards: [{
 
 ### Screenshot of Nested Custom Dashboard Report Card Edit screen on Avni Webapp
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ecdd996-Screenshot_2024-01-25_at_5.15.20_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/ecdd996-Screenshot_2024-01-25_at_5.15.20_PM.png" />
 
 ### Screenshot of Nested Report Cards in Custom Dashboard in Avni Client
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/dca68e5-Screenshot_2024-01-25_at_5.19.04_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "576px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="576px" src="https://files.readme.io/dca68e5-Screenshot_2024-01-25_at_5.19.04_PM.png" />
 
-
-![](<>)
+![]()
 
 Note: If there is a mismatch between the count of nested report cards configured and the length of reportCards property returned by the query response, then we show an appropriate error message on all Nested Report Cards corresponding to the Custom Report Card.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/82d8ca0-Screenshot_2024-01-25_at_5.23.56_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "576px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="576px" src="https://files.readme.io/82d8ca0-Screenshot_2024-01-25_at_5.23.56_PM.png" />
 
 <br />
 
@@ -7722,82 +6225,34 @@ This default dashboard will also be assigned as Primary dashboard on the 'Everyo
 
 ## Reference screen-shots of Avni-Client Custom Dashboard with Approvals ReportCards and Location filter
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e35888a-Screenshot_2023-12-12_at_12.46.46_PM.png",
-        "",
-        "Default state of Approvals Report Cards without any filter applied"
-      ],
-      "align": "center",
-      "border": true,
-      "caption": "Default state of Approvals Report Cards without any filter applied"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Default state of Approvals Report Cards without any filter applied" align="center" border={true} src="https://files.readme.io/e35888a-Screenshot_2023-12-12_at_12.46.46_PM.png">
+  Default state of Approvals Report Cards without any filter applied
+</Image>
 
 ***
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/576efec-Screenshot_2023-12-12_at_12.47.01_PM.png",
-        "",
-        "Custom Dashboards filter page"
-      ],
-      "align": "center",
-      "border": true,
-      "caption": "Custom Dashboards filter page"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Custom Dashboards filter page" align="center" border={true} src="https://files.readme.io/576efec-Screenshot_2023-12-12_at_12.47.01_PM.png">
+  Custom Dashboards filter page
+</Image>
 
 ***
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c5ac6f6-Screenshot_2023-12-12_at_12.47.25_PM.png",
-        "",
-        "State of Approvals Report Cards after the Location filter was applied"
-      ],
-      "align": "center",
-      "border": true,
-      "caption": "State of Approvals Report Cards after the Location filter was applied"
-    }
-  ]
-}
-[/block]
-
+<Image alt="State of Approvals Report Cards after the Location filter was applied" align="center" border={true} src="https://files.readme.io/c5ac6f6-Screenshot_2023-12-12_at_12.47.25_PM.png">
+  State of Approvals Report Cards after the Location filter was applied
+</Image>
 
 ***
 
 
 # File: ./readme/Implementers/advanced-feature-guide/organisation-group.md
 
----
-title: "How and when to use organisation group"
-slug: "organisation-group"
-excerpt: ""
-hidden: false
-createdAt: "Tue Feb 27 2024 04:39:39 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Feb 27 2024 08:43:33 GMT+0000 (Coordinated Universal Time)"
----
+title: How and when to use organisation group
+excerpt: ''
 If an organisation works with other sub-organisations performing same activity and if it wants each sub-organisation to be able to view/manage only their data - then one can check organisation group feature to solve for:
 
-- Same app definition shared across partner organisations
-- Each partner organisation get their own dashboard and reports without being able to see data from other partner organisations.
-- Super organisation to be able to have a dashboard where they can view all sub-organisation data.
+* Same app definition shared across partner organisations
+* Each partner organisation get their own dashboard and reports without being able to see data from other partner organisations.
+* Super organisation to be able to have a dashboard where they can view all sub-organisation data.
 
 > 🚧 Should not be used when the number of partner organisations can grow a large number over time.
 
@@ -7831,7 +6286,7 @@ Metabase is not right tool for such setup and SuperSet should be used.
 
 #### How to create separation between different partner organisations so that they do not see each other's data.
 
-1. All reports should connect using the organisation group db_user to the database. ETL should be enabled for only organisation group.
+1. All reports should connect using the organisation group db\_user to the database. ETL should be enabled for only organisation group.
 2. Setup row level security and roles for each organisation (feature of Superset).
 3. Assign correct role to the user when provisioning users from any partner organisation
 4. For users who can see the reports for all organisations no role level security role is required.
@@ -7861,103 +6316,46 @@ Metabase is not right tool for such setup and SuperSet should be used.
 
 # File: ./readme/Implementers/advanced-feature-guide/program.md
 
----
-title: "Enrol to same program multiple times"
-slug: "program"
-excerpt: ""
-hidden: false
-createdAt: "Mon Feb 13 2023 06:25:00 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Enrol to same program multiple times
+excerpt: ''
 Each subject type can have multiple programs within them. If these programs are defined, the user can enroll subjects of these subject types into these programs.
 
 Number of enrolments per subject
 
-- Typically and hence by default, a subject can have only one active enrolment for a program. This implies that for a subject to be enrolled again the previous enrolment must be exited. e.g. Pregnancy program. Sometimes for chronic diseases, a person may remain in a program forever like diabetes. In such cases, the subject is never exited.
-- Starting release 3.37, Avni also supports multiple active enrolments in a program. This can be done by switching on this per program. When this is switched on the above condition is relaxed by Avni.
+* Typically and hence by default, a subject can have only one active enrolment for a program. This implies that for a subject to be enrolled again the previous enrolment must be exited. e.g. Pregnancy program. Sometimes for chronic diseases, a person may remain in a program forever like diabetes. In such cases, the subject is never exited.
+* Starting release 3.37, Avni also supports multiple active enrolments in a program. This can be done by switching on this per program. When this is switched on the above condition is relaxed by Avni.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/62b1f10-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "300px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/62b1f10-image.png" />
 
 
 # File: ./readme/Implementers/advanced-feature-guide/quick-form-edit-and-jump-to-summary.md
 
----
-title: "Quick form edit and jump to summary"
-slug: "quick-form-edit-and-jump-to-summary"
-excerpt: ""
-hidden: false
-createdAt: "Mon Feb 07 2022 09:12:27 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-This feature allows users to jump directly to any page in the form and then quickly save the form skipping the middle questions. This will save a lot of time as now users don't have to go through all the pages.  
+title: Quick form edit and jump to summary
+excerpt: ''
+This feature allows users to jump directly to any page in the form and then quickly save the form skipping the middle questions. This will save a lot of time as now users don't have to go through all the pages.\
 There is no configuration required for the quick form edit feature however, one need to enable jump to summary feature
 
 ## Enabling jump to summary
 
 In the admin app go to "Organisation Details" and enable the "Show summary button" option. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/19f3021-Jump_to_summary.png",
-        "Jump to summary.png",
-        1832
-      ],
-      "caption": "Enabling Jump to summary feature"
-    }
-  ]
-}
-[/block]
-
+<Image title="Jump to summary.png" alt={1832} src="https://files.readme.io/19f3021-Jump_to_summary.png">
+  Enabling Jump to summary feature
+</Image>
 
 After enabling the "jump to summary feature", sync the field app. The user will see the Summary button at the top right corner in the form.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aea853d-quick-form-edit1.gif",
-        "quick-form-edit(1).gif",
-        176
-      ],
-      "caption": "Quick form edit in action"
-    }
-  ]
-}
-[/block]
-
+<Image title="quick-form-edit(1).gif" alt={176} src="https://files.readme.io/aea853d-quick-form-edit1.gif">
+  Quick form edit in action
+</Image>
 
 **Note**: This feature is only supported in the mobile application.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/repeatable-question-group.md
 
----
-title: "Repeatable question group"
-slug: "repeatable-question-group"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jul 14 2022 08:34:45 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Jun 10 2024 09:15:14 GMT+0000 (Coordinated Universal Time)"
----
+title: Repeatable question group
+excerpt: ''
 A repeatable question group is an extension of the question group form element. A Question group is like any other data type in Avni. The only difference is it allows implementers to group similar fields together and show those questions like a group. Now there are cases where you want to repeat the same set of questions(group) multiple times. This can be easily done by just marking the question group as repeatable.
 
 ## Steps to configure repeatable Question group
@@ -7966,86 +6364,42 @@ A repeatable question group is an extension of the question group form element. 
 2. This will allow you to add multiple questions inside the question group.
 3. Once all the questions are added, mark it repeatable and finally save the form.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ae26aab-Repeaable-question-group.png",
-        "Repeaable-question-group.png",
-        1495
-      ],
-      "align": "center",
-      "caption": "Notice how the question group is marked repeatable."
-    }
-  ]
-}
-[/block]
+<Image title="Repeaable-question-group.png" alt={1495} align="center" src="https://files.readme.io/ae26aab-Repeaable-question-group.png">
+  Notice how the question group is marked repeatable.
+</Image>
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/61bee14-repeatable-question.gif",
-        "repeatable-question.gif",
-        585
-      ],
-      "align": "center",
-      "caption": "Repeatable questions in mobile app"
-    }
-  ]
-}
-[/block]
-
+<Image title="repeatable-question.gif" alt={585} align="center" src="https://files.readme.io/61bee14-repeatable-question.gif">
+  Repeatable questions in mobile app
+</Image>
 
 ### Limitations
 
 At this time, the following elements that are part of the forms are not yet supported. 
 
-- Nested Groups
-- Encounter form element
-- Id form element
-- Subject form element with the "Show all members" option (Regular subject form elements are supported)
+* Nested Groups
+* Encounter form element
+* Id form element
+* Subject form element with the "Show all members" option (Regular subject form elements are supported)
 
-  - To get this working within a Question-Group/ Repeatable-Question-Group, for a Non "Group" Subject Type, please select the **"Search Option"** in the Subject FormElement while configuring the Form inside **App Designer**
+  * To get this working within a Question-Group/ Repeatable-Question-Group, for a Non "Group" Subject Type, please select the **"Search Option"** in the Subject FormElement while configuring the Form inside **App Designer**
 
-  [block:image]{"images":[{"image":["https://files.readme.io/c5c15ae-Screenshot_2024-06-10_at_2.35.04_PM.png","",""],"align":"center"}]}[/block]
+  <Image align="center" src="https://files.readme.io/c5c15ae-Screenshot_2024-06-10_at_2.35.04_PM.png" />
 
 
 # File: ./readme/Implementers/advanced-feature-guide/reporting-views.md
 
----
-title: "Reporting Views [Deprecated]"
-slug: "reporting-views"
-excerpt: ""
-hidden: false
-createdAt: "Tue Sep 01 2020 11:59:57 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Avni has a generic data model to support the dynamic creation of forms. For new implementers wanting to write custom reports, this can be overwhelming and complex.  
+title: Reporting Views [Deprecated]
+excerpt: ''
+Avni has a generic data model to support the dynamic creation of forms. For new implementers wanting to write custom reports, this can be overwhelming and complex.\
 To ease the creation of reports, Avni generates simplified database views with one view corresponding to each form.
 
 ## Creating / Refreshing Reporting Views
 
 You can create views for reporting by going to the `Reporting Views` option in the app designer and clicking on `create/refresh view`. For each form, one view is created with all the questions as the columns in the view. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f47db05-Screen_Shot_2020-09-04_at_9.28.47_AM.png",
-        "Screen Shot 2020-09-04 at 9.28.47 AM.png",
-        3356
-      ],
-      "caption": "App Designer Reporting Views Screen"
-    }
-  ]
-}
-[/block]
-
+<Image title="Screen Shot 2020-09-04 at 9.28.47 AM.png" alt={3356} src="https://files.readme.io/f47db05-Screen_Shot_2020-09-04_at_9.28.47_AM.png">
+  App Designer Reporting Views Screen
+</Image>
 
 You can see the view definition by clicking on the expand button, and delete the view by clicking on the delete button.
 
@@ -8055,32 +6409,109 @@ The views would be accessible in Metabase or any other reporting tool the implem
 
 As PostgreSQL doesn't allow identifiers of length more than 63 bytes, we follow these naming conventions as long as the view name is below 63 characters.
 
-| Form type                      | View name                                                                     |
-| :----------------------------- | :---------------------------------------------------------------------------- |
-| Registration                   | `{UsernameSuffix}_{SubjectTypeName}`                                          |
-| Encounter                      | `{UsernameSuffix}_{SubjectTypeName}_{encounterTypeName}`                      |
-| Encounter Cancellation         | `{UsernameSuffix}_{SubjectTypeName}_{encounterTypeName}_cancel`               |
-| Program Enrolment              | `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}`                            |
-| Program Exit                   | `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}_exit`                       |
-| Program Encounter              | `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}_{EncounterTypeName}`        |
-| Program Encounter Cancellation | `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}_{EncounterTypeName}_cancel` |
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Form type
+      </th>
+
+      <th>
+        View name
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Registration
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}_{encounterTypeName}`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Encounter Cancellation
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}_{encounterTypeName}_cancel`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Program Enrolment
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Program Exit
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}_exit`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Program Encounter
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}_{EncounterTypeName}`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Program Encounter Cancellation
+      </td>
+
+      <td>
+        `{UsernameSuffix}_{SubjectTypeName}_{ProgramName}_{EncounterTypeName}_cancel`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 If the view name exceeds 63 characters we trim some parts from different entity type names to keep it below 63 characters. For trimming, we follow the below rule.
 
-_{UsernameSuffix}_{First 6 characters of SubjectTypeName}_{First 6 characters of ProgramName}\_{First 20 characters of EncounterTypeName}_
+*\{UsernameSuffix}*\{First 6 characters of SubjectTypeName}*\{First 6 characters of ProgramName}\_\{First 20 characters of EncounterTypeName}*
 
 Some view names exceed the character limit even after the above optimisation. In such a case we take away the last few characters and replace them with the hashcode of the full name. Hashcode is used so that the name remains unique.
 
 
 # File: ./readme/Implementers/advanced-feature-guide/structure-import-metadata-excel-excel.md
 
----
-title: "Introduction to excel based import [Deprecated]"
-slug: "structure-import-metadata-excel-excel"
-excerpt: "Supported entities: Individual (aka Subject Registration) | Encounter (aka Subject Encounter) | ProgramEnrolment | ProgramEncounter | Checklist (aka Vaccinations) | Relationship (aka IndividualRelationship, SubjectRelationship)"
-hidden: true
-createdAt: "Wed Sep 05 2018 09:42:15 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Sep 10 2024 05:28:05 GMT+0000 (Coordinated Universal Time)"
+title: Introduction to excel based import [Deprecated]
+excerpt: >-
+next:
+  description: ''
+  pages:
+    - type: basic
+      slug: importing-excel-data
+      title: Importing Excel data
 ---
 > ❗️ Avni does not support Excel based import any longer, please refer to Admin App based approach to upload data [Bulk Data Upload page](https://avni.readme.io/docs/upload-data#is-the-order-of-values-important)
 
@@ -8101,33 +6532,41 @@ The following are the various spreadsheets within a metaData.xlsx file.
 
 Sheets represent a logical sheet of data. A physical sheet of data can be mapped to multiple logical sheets of data.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Column",
-    "h-1": "Description",
-    "0-0": "File Name",
-    "0-1": "The data migration service is used by supplying the metadata excel file, a data excel file, and a fileName (since the server reads the data excel file via a stream it doesn't know the name of the file originally uploaded hence it needs to be explicitly provided).  \n  \nOnly the sheets which have the file name matching the fileName via the API would be imported.",
-    "1-0": "User File Type",
-    "1-1": "This is the unique name given to the file of specific types. There can be more than one physical file of the same type, in which case the user file type will be the same but file names will be different.",
-    "2-0": "Sheet Name",
-    "2-1": "This is the name of the actual sheet in the data file uploaded where the data should be read.",
-    "3-0": "Entity Type, Program Name and Visit Type, Address",
-    "3-1": "Core but optional data to be provided depending on the type of data being imported",
-    "4-0": "Active",
-    "4-1": "During data migration, it is possible that there are a lot of files and mapping metadata definition for those files may not be complete. Active flag (Yes or No) can be used to disable sheets that need not be considered for migration when uploaded.",
-    "5-0": "Name of fields",
-    "5-1": "One can add multiple columns after this such that it matches the name of a System Field and provides the default value for the entire virtual sheet."
-  },
-  "cols": 2,
-  "rows": 6,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
-
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><p>File Name</p></td>
+  <td><p>The data migration service is used by supplying the metadata excel file, a data excel file, and a fileName (since the server reads the data excel file via a stream it doesn&#39;t know the name of the file originally uploaded hence it needs to be explicitly provided).  </p>
+<p>Only the sheets which have the file name matching the fileName via the API would be imported.</p></td>
+</tr>
+<tr>
+  <td><p>User File Type</p></td>
+  <td><p>This is the unique name given to the file of specific types. There can be more than one physical file of the same type, in which case the user file type will be the same but file names will be different.</p></td>
+</tr>
+<tr>
+  <td><p>Sheet Name</p></td>
+  <td><p>This is the name of the actual sheet in the data file uploaded where the data should be read.</p></td>
+</tr>
+<tr>
+  <td><p>Entity Type, Program Name and Visit Type, Address</p></td>
+  <td><p>Core but optional data to be provided depending on the type of data being imported</p></td>
+</tr>
+<tr>
+  <td><p>Active</p></td>
+  <td><p>During data migration, it is possible that there are a lot of files and mapping metadata definition for those files may not be complete. Active flag (Yes or No) can be used to disable sheets that need not be considered for migration when uploaded.</p></td>
+</tr>
+<tr>
+  <td><p>Name of fields</p></td>
+  <td><p>One can add multiple columns after this such that it matches the name of a System Field and provides the default value for the entire virtual sheet.</p></td>
+</tr>
+</tbody>
+</table>
 
 #### Sample
 
@@ -8140,29 +6579,32 @@ Sheets represent a logical sheet of data. A physical sheet of data can be mapped
 
 The mapping for non-calculated fields
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Column",
-    "h-1": "Description",
-    "0-0": "User File Type",
-    "0-1": "This is the same as in Sheets.",
-    "1-0": "Form Type",
-    "1-1": "[IndividualProfile, Encounter, ProgramEncounter, ProgramEnrolment, ProgramExit, ProgramEncounterCancellation, ChecklistItem, IndividualRelationship]",
-    "2-0": "System Field",
-    "2-1": "The concept name is specified in the form.  \nOr Default field (this can be seen in different importers, See below ).",
-    "3-0": "User Field",
-    "3-1": "Name of the column from data.xlsx file"
-  },
-  "cols": 2,
-  "rows": 4,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
-
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><p>User File Type</p></td>
+  <td><p>This is the same as in Sheets.</p></td>
+</tr>
+<tr>
+  <td><p>Form Type</p></td>
+  <td><p>[IndividualProfile, Encounter, ProgramEncounter, ProgramEnrolment, ProgramExit, ProgramEncounterCancellation, ChecklistItem, IndividualRelationship]</p></td>
+</tr>
+<tr>
+  <td><p>System Field</p></td>
+  <td><p>The concept name is specified in the form.<br/>Or Default field (this can be seen in different importers, See below ).</p></td>
+</tr>
+<tr>
+  <td><p>User Field</p></td>
+  <td><p>Name of the column from data.xlsx file</p></td>
+</tr>
+</tbody>
+</table>
 
 #### Default fields for each entity as of Dec 2019
 
@@ -8205,7 +6647,7 @@ Along with these, the implementation-specific observations are also to be mapped
 > 
 > Note that
 > 
-> - Individual UUID (aka Subject UUID, in this example called SiteUUID), EnrolmentUUID, or any <Transactional-data UUID> will have to be manually assigned by the developer before import.
+> - Individual UUID (aka Subject UUID, in this example called SiteUUID), EnrolmentUUID, or any `<Transactional-data UUID>` will have to be manually assigned by the developer before import.
 >   - Use tools like uuid: `npm i -g uuid`.
 >   - `for n in {1..100}; do uuidgen -r; done` `#to get 100 uuids from CLI`
 > - AddressUUID (or Village UUID) will not be available when the data file is provided by the Implmentation. And has to be determined from the `Full Address details` (see example Data.xlsx).
@@ -8217,22 +6659,22 @@ Along with these, the implementation-specific observations are also to be mapped
 For uploading files (images/documents) you can put the URL of the file. Please follow the following steps:
 
 - Ensure the drive file is shared without any restrictions
-- Copy the file link and use this website to get the link that can be put into the excel file to be uploaded - <https://sites.google.com/site/gdocs2direct/?pli=1>
+- Copy the file link and use this website to get the link that can be put into the excel file to be uploaded - [https://sites.google.com/site/gdocs2direct/?pli=1](https://sites.google.com/site/gdocs2direct/?pli=1)
 - Copy the link generated by the above website for your file and put it in the excel/CSV cell.
 
 **Technical link for Avni Team**
 
 _The above website uses the following http request behind the scenes_
 
-`curl '[https://www.google-analytics.com/g/collect?v=2&tid=G-KV5S9LK4WB>m=2oe1a1>\_p=437198370&gdid=dZWRiYj&cid=1650660276.1673947139&ul=en-gb&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B8.0.0.0%7CChromium%3B108.0.5359.124%7CGoogle%2520Chrome%3B108.0.5359.124&uamb=0&uam=&uap=macOS&uapv=10.14.6&uaw=0&\_s=1&sid=1673947138&sct=1&seg=1&dl=https%3A%2F%2Fsites.google.com%2Fsite%2Fgdocs2direct%2F%3Fpli%3D1&dr=https%3A%2F%2Fwww.google.com%2F&dt=Google%20Drive%20Direct%20Link%20Generator&en=page_view&\_ee=1](https://www.google-analytics.com/g/collect?v=2&tid=G-KV5S9LK4WB&gtm=2oe1a1&_p=437198370&gdid=dZWRiYj&cid=1650660276.1673947139&ul=en-gb&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B8.0.0.0%7CChromium%3B108.0.5359.124%7CGoogle%2520Chrome%3B108.0.5359.124&uamb=0&uam=&uap=macOS&uapv=10.14.6&uaw=0&_s=1&sid=1673947138&sct=1&seg=1&dl=https%3A%2F%2Fsites.google.com%2Fsite%2Fgdocs2direct%2F%3Fpli%3D1&dr=https%3A%2F%2Fwww.google.com%2F&dt=Google%20Drive%20Direct%20Link%20Generator&en=page_view&_ee=1)' 
+`curl 'https://www.google-analytics.com/g/collect?v=2&tid=G-KV5S9LK4WB&gtm=2oe1a1&_p=437198370&gdid=dZWRiYj&cid=1650660276.1673947139&ul=en-gb&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B8.0.0.0%7CChromium%3B108.0.5359.124%7CGoogle%2520Chrome%3B108.0.5359.124&uamb=0&uam=&uap=macOS&uapv=10.14.6&uaw=0&_s=1&sid=1673947138&sct=1&seg=1&dl=https%3A%2F%2Fsites.google.com%2Fsite%2Fgdocs2direct%2F%3Fpli%3D1&dr=https%3A%2F%2Fwww.google.com%2F&dt=Google%20Drive%20Direct%20Link%20Generator&en=page_view&_ee=1' 
   -X 'POST' 
   -H 'authority: www.google-analytics.com' 
   -H 'accept: _/_' 
   -H 'accept-language: en-GB,en;q=0.9,hi-IN;q=0.8,hi;q=0.7,en-US;q=0.6,de;q=0.5' 
   -H 'content-length: 0' 
   -H 'dnt: 1' 
-  -H 'origin: <https://sites.google.com>' 
-  -H 'referer: <https://sites.google.com/>' 
+  -H 'origin: https://sites.google.com' 
+  -H 'referer: https://sites.google.com/' 
   -H 'sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"' 
   -H 'sec-ch-ua-mobile: ?0' 
   -H 'sec-ch-ua-platform: "macOS"' 
@@ -8242,42 +6684,29 @@ _The above website uses the following http request behind the scenes_
   -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36' 
   --compressed`
 
-
 # File: ./readme/Implementers/advanced-feature-guide/styling-the-name-of-the-page.md
 
----
-title: "Colourful forms"
-slug: "styling-the-name-of-the-page"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jul 14 2022 09:48:50 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Colourful forms
+excerpt: ''
 Implementers can provide the custom background color and text color to the page header(form element group). Although the implementer can choose from any color present in the color palette, we suggest choosing the contrast colors for the background and text so that the page header is visible properly.
 
 Background and text color can be chosen from the option available at the bottom of each page. Once the colors are chosen and the form is saved, it'll be visible in the observation table in the subject dashboard and also while filling the form.
 
-![](https://files.readme.io/54b0c74-colourful-groups.gif "colourful-groups.gif")
+![585](https://files.readme.io/54b0c74-colourful-groups.gif "colourful-groups.gif")
 
 
 # File: ./readme/Implementers/advanced-feature-guide/sync-capabilities.md
 
----
-title: "Sync capabilities"
-slug: "sync-capabilities"
-excerpt: ""
-hidden: false
-createdAt: "Mon Apr 08 2024 12:39:39 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Apr 08 2024 12:47:40 GMT+0000 (Coordinated Universal Time)"
----
+title: Sync capabilities
+excerpt: ''
 ## Offline
 
 Avni works completely in offline mode except during login and sync. The first time sync runs just after login.
 
 ## About Sync
 
-- Download - Get data meant for the user from the server onto the device. It is incremental after first sync after login.
-- Upload - Uploads any new data created by the user.
+* Download - Get data meant for the user from the server onto the device. It is incremental after first sync after login.
+* Upload - Uploads any new data created by the user.
 
 | Sync Initiation | Function         | Frequency      |
 | :-------------- | :--------------- | :------------- |
@@ -8286,27 +6715,20 @@ Avni works completely in offline mode except during login and sync. The first ti
 | Auto Sync       | Upload           | Every hour     |
 | Auto Sync       | Download         | Every 12 hours |
 
-<br>
+<br/>
 
 ## More about Auto Sync
 
-Auto sync needs to in the background when the user is not using the app for data integrity and app availability to the user.
+Auto sync needs to run in the background when the user is not using the app for data integrity and app availability to the user.
 
-- Battery usage - Upload sync should have minimal device resource usage as it will do anything only if the user has captured any new data. Download sync will run twice in a day and the duration for which it runs depends on Internet quality and amount of incremental data it has to get from the server. Also, if the internet quality is poor the device is mostly be CPU idle during the sync.
-  - The users may report unusual battery usage using the Battery Usage in the settings for a period of time > 1 day.
-
+* Battery usage - Upload sync should have minimal device resource usage as it will do anything only if the user has captured any new data. Download sync will run twice in a day and the duration for which it runs depends on Internet quality and amount of incremental data it has to get from the server. Also, if the internet quality is poor the device is mostly be CPU idle during the sync.
+  * The users may report unusual battery usage using the Battery Usage in the settings for a period of time > 1 day.
 
 # File: ./readme/Implementers/advanced-feature-guide/tasks.md
 
----
-title: "Tasks"
-slug: "tasks"
-excerpt: ""
-hidden: false
-createdAt: "Fri Sep 02 2022 09:25:35 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Most activities in Avni are modeled as encounters with subjects, sometimes linked to a program. However, there are other kinds of data collection that happens in field work that is not related to any subject.  
+title: Tasks
+excerpt: ''
+Most activities in Avni are modeled as encounters with subjects, sometimes linked to a program. However, there are other kinds of data collection that happens in field work that is not related to any subject.\
 eg: A list of contacts that need to be contacted first before creating subjects etc.  
 
 To handle such flows, Avni now has a new mechanism called tasks. Tasks can currently be created only through the external API. They can be assigned to people, who can change the status of a task. 
@@ -8345,43 +6767,25 @@ The web application provides a new option - "Assignment" to assign users to a ta
 
 ### Caveats
 
-- Task type configuration does not have an interface on the App Designer. 
-- Tasks can only be created through the external API
-- Tasks can be assigned through the Assignment feature on the web application
-- Tasks are not currently supported on the Data Entry App
+* Task type configuration does not have an interface on the App Designer. 
+* Tasks can only be created through the external API
+* Tasks can be assigned through the Assignment feature on the web application
+* Tasks are not currently supported on the Data Entry App
 
 
 # File: ./readme/Implementers/advanced-feature-guide/timed-questions.md
 
----
-title: "Timed questions"
-slug: "timed-questions"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jul 14 2022 09:24:13 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Timed questions
+excerpt: ''
 Questions can be timed in Avni. If you want the user to fill some set of questions after a particular time then you can mark the page as a timed page and specify the time when the questions on the page should be visible. You also set the stay time which forces user to fill all those questions in the mentioned time frame.
 
 ## Steps to configure timed questions
 
 Any page can be marked as timed. It is important that you specify the start time and stay time for the timed pages. The start time indicates that the page should start at the provided time and the stay time will keep the question visible till the specified time. Once the stay time is over screen automatically moves to the next page.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cf86f77-timed_page.png",
-        "timed_page.png",
-        1809
-      ],
-      "caption": "Example of the timed page in the form"
-    }
-  ]
-}
-[/block]
-
+<Image title="timed_page.png" alt={1809} src="https://files.readme.io/cf86f77-timed_page.png">
+  Example of the timed page in the form
+</Image>
 
 There are some assumptions that must be followed to make timed questions work properly.
 
@@ -8393,13 +6797,11 @@ There are some assumptions that must be followed to make timed questions work pr
 
 # File: ./readme/Implementers/advanced-feature-guide/translation-management-old.md
 
----
-title: "Translations"
-slug: "translation-management-old"
-excerpt: ""
-hidden: true
-createdAt: "Fri Jan 03 2020 05:01:30 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Aug 30 2024 12:46:38 GMT+0000 (Coordinated Universal Time)"
+title: Translations
+excerpt: ''
+    - type: basic
+      slug: creating-identifiers
+      title: Creating identifiers
 ---
 Avni allows the management of translations using the Admin web interface. Below are the steps to manage translations.
 
@@ -8430,13 +6832,11 @@ The users need to sync their devices to get the new translations.
 
 # File: ./readme/Implementers/advanced-feature-guide/upload-checklist.md
 
----
-title: "Vaccination checklist"
-slug: "upload-checklist"
-excerpt: ""
-hidden: false
-createdAt: "Thu Apr 30 2020 07:23:08 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Aug 22 2024 13:36:58 GMT+0000 (Coordinated Universal Time)"
+title: Vaccination checklist
+excerpt: ''
+    - type: basic
+      slug: upload-data
+      title: Upload data
 ---
 Avni allows you to upload checklist items from web interface. Before uploading checklist make sure you have already created checklist Item form and checklist rule is already in place. As other forms in Avni, each checklist item need to be a concept and should be uploaded/created before uploading checklist json. A sample concept file for vaccination item looks like [this](https://github.com/avniproject/avni-health-modules/blob/master/src/health_modules/child/metadata/vaccinationConcepts.json). You can directly upload these concepts using metadata upload UI.
 
@@ -8446,19 +6846,19 @@ Click [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vS1Xq4cVi1pDn8B78g_
 
 ### Structure of Checklist json file
 
-```
+```json
 {
     "name": "Vaccination",
     "uuid": "uuid of this checklist. We support only single checklist in the system right now so don't change this uuid after you save the file for the first time",
     "items": [
-        <item-object>
+        `<item-object>`
     ]
 }
 ```
 
 ### Structure of item-object
 
-```
+```json
 {
     //uuid of checklist item
     "uuid": "uuid of checklist item",
@@ -8467,22 +6867,22 @@ Click [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vS1Xq4cVi1pDn8B78g_
     //uuid of a dependency. This item will get due only after the dependency is marked as completed
     "dependentOn": "uuid",
     //Set this when the dependency can expire and you want this item to be scheduled even then
-    "scheduleOnExpiryOfDependency": <boolean>,
+    "scheduleOnExpiryOfDependency": `<boolean>`,
     //Number of days from base date of checklist after which the item becomes due. Put this only if you are also making this item dependent on another item.
-    "minDaysFromStartDate": <integer>,
+    "minDaysFromStartDate": `<integer>`,
     //Number of days from completion date of dependency after which the item becomes due. Put this only if you are also making this item dependent on another item.
-    "minDaysFromDependent": <integer>,
+    "minDaysFromDependent": `<integer>`,
     //If an item can expire then you can use this to specify it. It's relative from the base date of the checklist.
-    "expiresAfter": <integer>,
-   //Array of status objects. We use this to specify different phases an item can be in. E.g. You may want to define that it's Due from day 2 to day 30, Critical from Day 30 to 60, and Overdue after day 60. 
-    "status": array of <status-object>,
-    "concept: <concept-object>
+    "expiresAfter": `<integer>`,
+    //Array of status objects. We use this to specify different phases an item can be in. E.g. You may want to define that it's Due from day 2 to day 30, Critical from Day 30 to 60, and Overdue after day 60. 
+    "status": "array of `<status-object>`",
+    "concept": `<concept-object>`
 }
 ```
 
 ### Structure of status-object
 
-```
+```json
 {
   //Looks like an unused field right now. Set it in increasing order for now inside status array
   "displayOrder": 1,
@@ -8499,7 +6899,7 @@ Click [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vS1Xq4cVi1pDn8B78g_
 
 ### Strucuture of concept-object
 
-```
+```json
 {
   "uuid": "uuid of the concept that should be used for this item",
   "comment": "Put the name of the concept here for readability"
@@ -8536,211 +6936,136 @@ A dependent item goes into it's first state after completion date of it's depede
 max(dependentCompletionDate + minDaysFromDependent + item.start, 
 dependentCompletionDate + minDaysFromStartDate + item.start), 
 and move the item to it's first state on that date.
-
 ```
 
 #### What will happen if my computed due date is after the expiry date.?
 
-An item's due date based on computations of dependent's completion_date, minDaysFromDependent and item.start, if exceeds the "expiresAfter" value, then we give priority to "expiresAfter" and mark it as expired.
+An item's due date based on computations of dependent's completion\_date, minDaysFromDependent and item.start, if exceeds the "expiresAfter" value, then we give priority to "expiresAfter" and mark it as expired.
 
 ### Flowchart for determining the Vaccination state:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/815c13987e5ad6616202a18db078663bae5ec8000d94680642a418ff4e2ca2f3-Flowcharts_2.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/815c13987e5ad6616202a18db078663bae5ec8000d94680642a418ff4e2ca2f3-Flowcharts_2.png" />
 
+### <span style={{ color: "blue" }}>TODOS:</span>
 
-### <span style="color:blue">TODOS:</span>
-
-- [ ] It is not clear if there is any default ordering in displaying status groups and is it possible to change it. E.g. we may want to show all due items in first row,  all critical in second, overdue in third, expired in fourth and completed in fifth.
-
+* [ ] It is not clear if there is any default ordering in displaying status groups and is it possible to change it. E.g. we may want to show all due items in first row, all critical in second, overdue in third, expired in fourth and completed in fifth.
 
 # File: ./readme/Implementers/advanced-feature-guide/upload-data.md
 
----
-title: "Bulk Data Upload"
-slug: "upload-data"
-excerpt: ""
-hidden: false
-createdAt: "Fri Apr 10 2020 00:25:17 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 09 2025 05:35:42 GMT+0000 (Coordinated Universal Time)"
+title: Bulk Data Upload
+excerpt: ''
+    - type: basic
+      slug: writing-rules
+      title: Writing rules
 ---
 ### Purpose
 
-- Prepare data in bulk, review, and upload.
-- Migrating away from an existing implementation, and need to seed with existing data.
-- Your organization has a separate component where data is collected outside Avni, but you still need this data to be present with field workers using Avni.
+* Prepare data in bulk, review, and upload.
+* Migrating away from an existing implementation, and need to seed with existing data.
+* Your organization has a separate component where data is collected outside Avni, but you still need this data to be present with field workers using Avni.
 
 ### Using the Admin app to upload data
 
 The Admin app of the web console has an upload option. Currently, this supports
 
-- Upload subjects
-- Upload program enrolment (excluding exit information and observations)
-- Upload program encounters (excluding cancel information and observations)
-- Upload encounters (excluding cancel information and observations)
-- [Upload locations](location-and-catchment-in-avni)
-- Upload users and catchments
-- Upload metadata zip file downloaded from a different implementation
+* Upload subjects
+* Upload program enrolment (excluding exit information and observations)
+* Upload program encounters (excluding cancel information and observations)
+* Upload encounters (excluding cancel information and observations)
+* [Upload locations](location-and-catchment-in-avni)
+* Upload users and catchments
+* Upload metadata zip file downloaded from a different implementation
 
 Sample files are available in the interface. Download the file, fill in values and then upload. The file is in a [CSV](https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/) format.
 
 ### Form validations and rules
 
-- All the entries in CSV are validated before saving to the database. Suppose a field is marked mandatory in the form and value is not provided in the CSV then upload fails giving the error that the mandatory field cannot be empty. 
-- All form element and form element group rules are run during CSV upload, so if there is a value for any form element which is hidden then that value is ignored. This behaves similarly to how data entry is done from the web or mobile app.
-- New visits get saved based on the visit schedule logic.
-- Decisions are saved along with the observations based on the decision rule logic.
+* All the entries in CSV are validated before saving to the database. Suppose a field is marked mandatory in the form and value is not provided in the CSV then upload fails giving the error that the mandatory field cannot be empty. 
+* All form element and form element group rules are run during CSV upload, so if there is a value for any form element which is hidden then that value is ignored. This behaves similarly to how data entry is done from the web or mobile app.
+* New visits get saved based on the visit schedule logic.
+* Decisions are saved along with the observations based on the decision rule logic.
 
 ### Questions and Answers
 
 #### What is the Id field in every file?
 
-- The Id is an identifier for the row you are uploading. This is important to ensure that if you upload the same file twice, we do not create duplicate records. For import, this usually should map to the id from your previous system. For updates, you can specify the value for the Id field as the id from your previous system or the uuid generated by Avni when creating the record. If you have two different individuals or encounters to be uploaded, please ensure they are uploaded using different ids. If not, they will be overwritten. The Id can be any string. 
+* The Id is an identifier for the row you are uploading. This is important to ensure that if you upload the same file twice, we do not create duplicate records. For import, this usually should map to the id from your previous system. For updates, you can specify the value for the Id field as the id from your previous system or the uuid generated by Avni when creating the record. If you have two different individuals or encounters to be uploaded, please ensure they are uploaded using different ids. If not, they will be overwritten. The Id can be any string. 
 
 #### What if I have a comma in my observation?
 
-- Wrap your observation in quotes. 
+* Wrap your observation in quotes. 
 
 ##### What if I need to upload an observation whose concept is not specified in the sample file?
 
-- It is possible you have a computed value that is not part of the form that needs to be uploaded. Just add the concept name in the header, and it will be added to the observations. 
+* It is possible you have a computed value that is not part of the form that needs to be uploaded. Just add the concept name in the header, and it will be added to the observations. 
 
 ##### Is the order of values important?
 
-- No. Columns can be in any order. 
+* No. Columns can be in any order. 
 
 ##### What if I have a concept called "Id"? This will mean there are two headers in the same file with the same name.
 
-- Unfortunately, the upload process does not support this scenario. You can potentially change the name of the concept for a little while until the upload is complete, and then change it back (if you are doing an initial import, this makes sense). If not, try changing the name of the concept (we do an exact case-sensitive string match, so you can change the concept name to something like "ID", and it should work fine).
+* Unfortunately, the upload process does not support this scenario. You can potentially change the name of the concept for a little while until the upload is complete, and then change it back (if you are doing an initial import, this makes sense). If not, try changing the name of the concept (we do an exact case-sensitive string match, so you can change the concept name to something like "ID", and it should work fine).
 
 #### How to upload data for the grouped form elements?
 
-- Columns for the grouped form elements are labeled as "Parent|Child". One can fill in the values for all the child form elements and it'll get saved as grouped observation.
+* Columns for the grouped form elements are labeled as "Parent|Child". One can fill in the values for all the child form elements and it'll get saved as grouped observation.
 
 #### How do I upload images?
 
-- For images, use a url that the avni server can download. Ensure that
-  - The images are a direct download link (not a redirect to a page that uses javascript to download)
-  - The image urls end with the image type. eg: <https://somedomain.com/images/abc.png>
+* For images, use a url that the avni server can download. Ensure that
+  * The images are a direct download link (not a redirect to a page that uses javascript to download)
+  * The image urls end with the image type. eg: [https://somedomain.com/images/abc.png](https://somedomain.com/images/abc.png)
 
 
 # File: ./readme/Implementers/advanced-feature-guide/user-subject-types.md
 
----
-title: "User Subject Types"
-slug: "user-subject-types"
-excerpt: ""
-hidden: false
-createdAt: "Fri May 17 2024 09:51:00 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 11:20:03 GMT+0000 (Coordinated Universal Time)"
----
+title: User Subject Types
+excerpt: ''
 A user subject type is a type that can be used to manage information about users of the system. Each user will have one subject created based on a User type SubjectType. This subject and any data collected against it's encounters and enrolments correspond only to that particular user.
 
 ## Special Characteristics
 
-- **Subject Type Create / Edit**: Once a User type SubjectType is created, Avni doesnot allow Administrators to modify the basic configurations of the SubjectType. Ensure that you configure the Subject as needed at the outset. Contact Avni Support if you need any modifications to be done for the User type SubjectType.
+* **Subject Type Create / Edit**: Once a User type SubjectType is created, Avni doesnot allow Administrators to modify the basic configurations of the SubjectType. Ensure that you configure the Subject as needed at the outset. Contact Avni Support if you need any modifications to be done for the User type SubjectType.
 
-  - Registration Date for the subject will be same as User Creation DateTime
-  - Toggle of 'Allow empty location' is disabled and is always set to true
-  - User's username is inserted as Subject's Firstname
-- **Subject Type Create / Edit**: You may only edit the below shown properties post SubjectType creation.
+  * Registration Date for the subject will be same as User Creation DateTime
+  * Toggle of 'Allow empty location' is disabled and is always set to true
+  * User's username is inserted as Subject's Firstname
+* **Subject Type Create / Edit**: You may only edit the below shown properties post SubjectType creation.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ba11a11-Screenshot_2024-05-17_at_3.40.56_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "600px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="600px" src="https://files.readme.io/ba11a11-Screenshot_2024-05-17_at_3.40.56_PM.png" />
 
-
-- **Sync**: By default, User type Subjects follow their own Sync strategy, which is currently, to sync a User type Subject only to its corresponding User
-- **Subject Creation**: On creation of a "User" type SubjectType, we **automatically** create User type subjects :
-  - for every new User created thereafter via the "Webapp" 
-  - for new Users created via "CSV Uploads", by triggering a Background Job
-  - for all existing Users, by triggering a Background Job
-- **Ability to Disable Registration of User type SubjectTypes on Client**: Currently, Avni allows an Organisation Administrator to disable User's ability to create any new User Subject Type Subjects on client, by following the below steps:
+* **Sync**: By default, User type Subjects follow their own Sync strategy, which is currently, to sync a User type Subject only to its corresponding User
+* **Subject Creation**: On creation of a "User" type SubjectType, we **automatically** create User type subjects :
+  * for every new User created thereafter via the "Webapp" 
+  * for new Users created via "CSV Uploads", by triggering a Background Job
+  * for all existing Users, by triggering a Background Job
+* **Ability to Disable Registration of User type SubjectTypes on Client**: Currently, Avni allows an Organisation Administrator to disable User's ability to create any new User Subject Type Subjects on client, by following the below steps:
 
   1. Navigate to "App Designer", Forms Section
 
-     [block:image]{"images":[{"image":["https://files.readme.io/af7a60f-Screenshot_2024-05-17_at_3.51.29_PM.png","",""],"align":"center"}]}[/block]
+     <Image align="center" src="https://files.readme.io/af7a60f-Screenshot_2024-05-17_at_3.51.29_PM.png" />
   2. Click on the "Gear Wheel" icon, to load the Form-Mapping Edit view
 
-     [block:image]{"images":[{"image":["https://files.readme.io/2c4cffc-Screenshot_2024-05-17_at_3.52.44_PM.png","",""],"align":"center"}]}[/block]
+     <Image align="center" src="https://files.readme.io/2c4cffc-Screenshot_2024-05-17_at_3.52.44_PM.png" />
   3. Click on the "Bin (Delete)" icon to Void the Form to Subject type association (Form Mapping)
-- **Access to User type Subject on the client**: Users cannot make use of "Subject Search" capability to access the User type Subject on the Client. They would always have to make use of "Filter" button on "My Dashboard" to select the User type Subject, as shown below.
+* **Access to User type Subject on the client**: Users cannot make use of "Subject Search" capability to access the User type Subject on the Client. They would always have to make use of "Filter" button on "My Dashboard" to select the User type Subject, as shown below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f265252-Screenshot_2024-05-17_at_4.23.24_PM.png",
-        "",
-        "Select User type in the Subject Filter"
-      ],
-      "align": "center",
-      "sizing": "500px",
-      "border": true,
-      "caption": "Select User type in the Subject Filter"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Select User type in the Subject Filter" align="center" width="500px" border={true} src="https://files.readme.io/f265252-Screenshot_2024-05-17_at_4.23.24_PM.png">
+  Select User type in the Subject Filter
+</Image>
 
 For organisations that use a Custom Dashboard as the Primary Dashboard, they can easily configure a Offline Report card to provide access to User type Subject.
 
-- **Actions allowed on the User type Subject**: Avni allows organisation to configure a User type Subject similar to the way they would configure a "Person" / "Individual" type Subject types. i.e. they are free to setup Program, Encounter, VisitScheduleRules and so on. They can also configure Privileges in-order to restrict these actions across different UserGroups. A sample screen recording of the client, which has full access to a User type Subject is attached below for reference.
+* **Actions allowed on the User type Subject**: Avni allows organisation to configure a User type Subject similar to the way they would configure a "Person" / "Individual" type Subject types. i.e. they are free to setup Program, Encounter, VisitScheduleRules and so on. They can also configure Privileges in-order to restrict these actions across different UserGroups. A sample screen recording of the client, which has full access to a User type Subject is attached below for reference.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d966e6d-output.gif",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" width="500px" border={true} src="https://files.readme.io/d966e6d-output.gif" />
 
 
 # File: ./readme/Implementers/advanced-feature-guide/whatsapp-integration.md
 
----
-title: "Whatsapp integration"
-slug: "whatsapp-integration"
-excerpt: "Talk to your beneficiaries through Whatsapp"
-hidden: false
-createdAt: "Tue Jan 24 2023 04:56:55 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Mar 05 2024 06:59:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Whatsapp integration
+excerpt: Talk to your beneficiaries through Whatsapp
 ## Purpose
 
 Being able to communicate to your beneficiaries through Whatsapp is very powerful in many scenarios of field work. It can be used to provide reminders for important events or your field-worker's visit. You can provide nudges for those who need to be follow a routine. 
@@ -8756,22 +7081,7 @@ Being able to communicate to your beneficiaries through Whatsapp is very powerfu
 
 ## How it works
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5faa756-Screenshot_2023-10-13_at_1.28.13_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "350px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="350px" src="https://files.readme.io/5faa756-Screenshot_2023-10-13_at_1.28.13_PM.png" />
 
 Avni uses [Glific](https://glific.org/) to send Whatsapp messages to beneficiaries and users. Glific is not just a way to connect to Whatsapp. It also provides rich communication between beneficiaries through chatbots. Glific also provides a neat way for two-way communication between beneficiaries. 
 
@@ -8798,29 +7108,14 @@ First, you need to enable messaging in the Organisation Settings on the Admin pa
 
 ![](https://files.readme.io/69637ed-image.png)
 
-Next, provide details to connect to Glific into the external_api table. This currently does not have a UI. Entries need to be made in the format. 
+Next, provide details to connect to Glific into the external\_api table. This currently does not have a UI. Entries need to be made in the format. 
 
 `insert into external_system_config(organisation_id, version, created_by_id, last_modified_by_id, created_date_time, last_modified_date_time, system_name, config)
 values (2, 1, 1, 1, now(), now(), 'Glific', '{"baseUrl": "API URI field value from password manager", "phone": "Login for API field value from password manager", "password": "Password field value from password manager", "avniSystemUser": "maha@test"}'::jsonb);`
 
-Ensure that atleast one of your form fields is marked as a phone number. This can be done by going to a **Text** or **PhoneNumber** concept, and marking its "contact_number" value to "yes". Use this concept in the form to register the subject. It is to the value of this field, that the whatsapp message will be sent.
+Ensure that atleast one of your form fields is marked as a phone number. This can be done by going to a **Text** or **PhoneNumber** concept, and marking its "contact\_number" value to "yes". Use this concept in the form to register the subject. It is to the value of this field, that the whatsapp message will be sent.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4f4f325-Screenshot_2022-11-14_at_7.07.26_PM.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/4f4f325-Screenshot_2022-11-14_at_7.07.26_PM.png" />
 
 Once this configuration is complete, go over to the App Designer and create rules to send messages. 
 
@@ -8854,43 +7149,37 @@ Currently, through the web-app, we are able to look at the Sent and Scheduled me
 
 ### Debugging
 
-- To understand the db design for debugging, checkout [this](https://avni.readme.io/docs/understanding-whatsapp-integration-tables#to-understand-the-status-of-automatic-messages) and [this](https://dbdiagram.io/d/63bb840e7d39e42284e9a83d) link.
-- To view the logs printed when executing message rule or schedule rule execute the following after ssh-ing into the server machine:
+* To understand the db design for debugging, checkout [this](https://avni.readme.io/docs/understanding-whatsapp-integration-tables#to-understand-the-status-of-automatic-messages) and [this](https://dbdiagram.io/d/63bb840e7d39e42284e9a83d) link.
+* To view the logs printed when executing message rule or schedule rule execute the following after ssh-ing into the server machine:
 
   ```
   sudo su - rules-server-user
   pm2 logs --lines 1000
   ```
-- If expected message not delivered, can check in the glific webapp (credentials in keeweb) to see if any error displayed beside the message in the chat. Sometimes say, when the phone no is invalid or the expected no of parameters not mentioned, an error message stating the reason for inability to deliver the message gets displayed in the chat.
-- The background job that runs for sending messages from message_request_queue table is currently configured to run once in 5 mins.
-- In order to handle scenarios where either system is unavailable, the background job retries messages that were not successfully sent. Messages older than a certain period are not retried. Default: 4 (days); Configuration: `AVNI_SEND_MESSAGES_SCHEDULED_SINCE_DAYS`
+* If expected message not delivered, can check in the glific webapp (credentials in keeweb) to see if any error displayed beside the message in the chat. Sometimes say, when the phone no is invalid or the expected no of parameters not mentioned, an error message stating the reason for inability to deliver the message gets displayed in the chat.
+* The background job that runs for sending messages from message\_request\_queue table is currently configured to run once in 5 mins.
+* In order to handle scenarios where either system is unavailable, the background job retries messages that were not successfully sent. Messages older than a certain period are not retried. Default: 4 (days); Configuration: `AVNI_SEND_MESSAGES_SCHEDULED_SINCE_DAYS`
 
 
 # File: ./readme/Implementers/advanced-feature-guide/when-to-use-translations.md
 
----
-title: "When to use Translations"
-slug: "when-to-use-translations"
-excerpt: ""
-hidden: false
-createdAt: "Mon Jul 28 2025 11:50:11 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Jul 28 2025 11:51:20 GMT+0000 (Coordinated Universal Time)"
----
-Since the issue of change in concept name has come up a few times - in terms of what impact it would have on rules. Also, we use uuid for concept as the name can change - but this reduces readbility of the rule.  
+title: When to use Translations
+excerpt: ''
+Since the issue of change in concept name has come up a few times - in terms of what impact it would have on rules. Also, we use uuid for concept as the name can change - but this reduces readbility of the rule.\
 Here is a mental model to think about this.
 
-Concept name, form element name should be considered programming keywords - representing an idea.  
-e.g. Mother's name  
+Concept name, form element name should be considered programming keywords - representing an idea.\
+e.g. Mother's name\
 When we name a concept/element in app designer we are defining a name for it in the programming realm not in the user realm.
 
-How this idea is presented to user is using an English translation or another language translation.  
-What does English translation represent?  
+How this idea is presented to user is using an English translation or another language translation.\
+What does English translation represent?\
 It represents a mapping from the idea to a view for the user.
 
-So two realms - programming and user.  
+So two realms - programming and user.\
 What is the benefit of this?
 
-As long the the core idea doesn't change, there is no need to change the name of the concept/element.  
+As long the the core idea doesn't change, there is no need to change the name of the concept/element.\
 e.g. if the customer says we want to call it - Name of mother - then it is a change only in the user's realm not programming realm.
 
 So we can simply change/add a translation for it based on the user/customer's preference. The translation feature offers a decoupling between programming and user realm.
@@ -8899,33 +7188,21 @@ Following from this, there is no need to use UUID of the concept in the rule. Wh
 
 Concept/element should be renamed only if there is a semantic change in the idea behind it - this happens very rarely.
 
-If there a typo in the name, then you can change it, but remember there is cost to it - which may or may not be worth paying - depending on how deep you have been in the cycle of the project.  
-Avni has been designed such that almost everything can be shown to the user in their own language.  
+If there a typo in the name, then you can change it, but remember there is cost to it - which may or may not be worth paying - depending on how deep you have been in the cycle of the project.\
+Avni has been designed such that almost everything can be shown to the user in their own language.\
 But what also follows from this is - everything is also defined separately in the programmer and user realms.
-
-
-# File: ./readme/Implementers/basic-feature-guide.md
-
----
-title: "Important Concepts"
-slug: "basic-feature-guide"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jun 29 2023 04:43:16 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon May 27 2024 09:15:57 GMT+0000 (Coordinated Universal Time)"
----
-Implementers read this first. This section is essential in understanding how to set up Avni for an organisation.
 
 
 # File: ./readme/Implementers/basic-feature-guide/avnis-domain-model-of-field-based-work.md
 
----
-title: "Avni's domain model of field based work"
-slug: "avnis-domain-model-of-field-based-work"
-excerpt: ""
-hidden: false
-createdAt: "Thu Nov 21 2019 07:46:27 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Avni's domain model of field based work
+excerpt: ''
+    resulting in a working application specific to your
+    organisation/implementation.
+  pages:
+    - type: basic
+      slug: key-system-and-data-flows
+      title: Key system and data flows concepts
 ---
 To understand how Avni works lets first understand the domain model of field-based work. Any field-based work can be broadly subdivided into three components.
 
@@ -8941,31 +7218,19 @@ Avni allows for modelling of the work geography of the organisation and mapping 
 
 Lets first identify the key domain concepts with their names. A service delivery organisation consists of the following:
 
-- An **organisation** (e.g. NGO, or government department, university), the entity that provides the service or collects some data.
-- In order to provide this service or collect data, this organisation employs, hires or engages service providers. They can be called field workers, frontline worker, health worker, etc - we will simply call them **provider or user**.
-- The service provided by the organisation via the providers is received by _beneficiaries, citizens, patients, students, children_ so on. In the case where the work is data collection, the provider may be additionally or only collecting data for non-living objects like _water body, school, health centre_, etc. Since Avni is a generic platform, let's call of them by a rather imaginative name **subject**.
-- In most Avni use cases, the subjects may be spread across a geographical area such that one provider cannot service (or collect data from) all subjects. Hence each provider is assigned a specific area that is called **catchment** in Avni. A catchment could be a block, a cluster of slums, etc.
-- Each catchment may have one or more geographical units which are called **location**s in Avni. A location could a village, slum, subcenter area so on.
+* An **organisation** (e.g. NGO, or government department, university), the entity that provides the service or collects some data.
+* In order to provide this service or collect data, this organisation employs, hires or engages service providers. They can be called field workers, frontline worker, health worker, etc - we will simply call them **provider or user**.
+* The service provided by the organisation via the providers is received by *beneficiaries, citizens, patients, students, children* so on. In the case where the work is data collection, the provider may be additionally or only collecting data for non-living objects like *water body, school, health centre*, etc. Since Avni is a generic platform, let's call of them by a rather imaginative name **subject**.
+* In most Avni use cases, the subjects may be spread across a geographical area such that one provider cannot service (or collect data from) all subjects. Hence each provider is assigned a specific area that is called **catchment** in Avni. A catchment could be a block, a cluster of slums, etc.
+* Each catchment may have one or more geographical units which are called **location**s in Avni. A location could a village, slum, subcenter area so on.
 
 Each user **must** to be associated with at least one catchment.
 
-![](https://files.readme.io/4343bff-Screenshot_2019-11-15_at_5.17.05_PM.png "Screenshot 2019-11-15 at 5.17.05 PM.png")
+![1918](https://files.readme.io/4343bff-Screenshot_2019-11-15_at_5.17.05_PM.png "Screenshot 2019-11-15 at 5.17.05 PM.png")
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/514028d-Screenshot_2020-11-16_at_11.50.38_AM.png",
-        "Screenshot 2020-11-16 at 11.50.38 AM.png",
-        2372
-      ],
-      "caption": "An example of service delivery organisation"
-    }
-  ]
-}
-[/block]
-
+<Image title="Screenshot 2020-11-16 at 11.50.38 AM.png" alt={2372} src="https://files.readme.io/514028d-Screenshot_2020-11-16_at_11.50.38_AM.png">
+  An example of service delivery organisation
+</Image>
 
 In Avni system, the organisation, provider, catchment and location are setup via web application by the implementer, IT or program administrator. When a subject is created/registered in the system, they are assigned a location. This is usually done by the field user using their mobile device
 
@@ -8973,171 +7238,219 @@ In Avni system, the organisation, provider, catchment and location are setup via
 
 Avni allows for modelling of the services provided (or data collected) via a three-level configurable data structure. Avni allows for setting up subjects, enrolment of subjects in programs, and defining encounters for enrolments/subjects. There can be multiple programs per subject type and multiple encounter types per program.
 
-- An organisation may have one or more **subject types** to which they provide service (or collect data for).
-- To each subject type, the organisation may be providing one or more service types (or have the purpose of data collection). In Avni, each service type is called a **program**.
-- Each service type may involve one or more types of interactions which are called **encounter type**s. Avni also allows one to avoid the service type completely and define encounter types directly for the subject types - allowing for modelling of interactions which are not required to be grouped under services.
+* An organisation may have one or more **subject types** to which they provide service (or collect data for).
+* To each subject type, the organisation may be providing one or more service types (or have the purpose of data collection). In Avni, each service type is called a **program**.
+* Each service type may involve one or more types of interactions which are called **encounter type**s. Avni also allows one to avoid the service type completely and define encounter types directly for the subject types - allowing for modelling of interactions which are not required to be grouped under services.
 
-![](https://files.readme.io/b63d3c9-Screenshot_2019-11-15_at_5.26.15_PM.png "Screenshot 2019-11-15 at 5.26.15 PM.png")
+![2084](https://files.readme.io/b63d3c9-Screenshot_2019-11-15_at_5.26.15_PM.png "Screenshot 2019-11-15 at 5.26.15 PM.png")
 
-![](https://files.readme.io/93a551a-Screenshot_2019-11-15_at_5.27.48_PM.png "Screenshot 2019-11-15 at 5.27.48 PM.png")
+![1942](https://files.readme.io/93a551a-Screenshot_2019-11-15_at_5.27.48_PM.png "Screenshot 2019-11-15 at 5.27.48 PM.png")
 
-![](https://files.readme.io/3ca82d4-Screenshot_2020-09-23_at_6.00.45_PM.png "Screenshot 2020-09-23 at 6.00.45 PM.png")
+![1906](https://files.readme.io/3ca82d4-Screenshot_2020-09-23_at_6.00.45_PM.png "Screenshot 2020-09-23 at 6.00.45 PM.png")
 
 # 3. Groups and relationships
 
 Avni allows for creating groups of subjects and more specifically a special type of group called household or family whereby another subject types (created to represent people) can be members of the household. These members can also be linked to each other via relationships. Do note though that in Avni we have modelled group and households via attributes on subject types. The subjects of such types can be linked as child elements of the parent subject. Please the diagrams below. Avni application behaves differently for groups and households.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a5fd36e-Screenshot_2020-04-28_at_11.20.04_AM.png",
-        "Screenshot 2020-04-28 at 11.20.04 AM.png",
-        2374
-      ],
-      "caption": "Group also can behave like subjects also, along with being a group of subjects."
-    }
-  ]
-}
-[/block]
+<Image title="Screenshot 2020-04-28 at 11.20.04 AM.png" alt={2374} src="https://files.readme.io/a5fd36e-Screenshot_2020-04-28_at_11.20.04_AM.png">
+  Group also can behave like subjects also, along with being a group of subjects.
+</Image>
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/740185f-Screenshot_2020-04-28_at_11.16.09_AM.png",
-        "Screenshot 2020-04-28 at 11.16.09 AM.png",
-        2750
-      ],
-      "caption": "Household is a special type of group, which has persons as members. The persons can be related to each other via human relationship types."
-    }
-  ]
-}
-[/block]
-
+<Image title="Screenshot 2020-04-28 at 11.16.09 AM.png" alt={2750} src="https://files.readme.io/740185f-Screenshot_2020-04-28_at_11.16.09_AM.png">
+  Household is a special type of group, which has persons as members. The persons can be related to each other via human relationship types.
+</Image>
 
 # 4.  Design of a service encounter
 
 Service encounter is an encapsulation of a type of interaction between the service provider and the beneficiary - as explained above. Each service encounter consists of the following:
 
-- observation made by the service provider (field workers)
-- answer is given by the beneficiary for a question asked by the provider
-- information/suggestion/recommendation made by provider
-- computed or preset information provided by the avni app to the provider
-- photos/videos taken by the provider
+* observation made by the service provider (field workers)
+* answer is given by the beneficiary for a question asked by the provider
+* information/suggestion/recommendation made by provider
+* computed or preset information provided by the avni app to the provider
+* photos/videos taken by the provider
 
 Avni allows you to arrange these sequentially and including based on conditions set by you. It also allows to schedule next service encounters based on a rule set by you. This is modelled using form, rules and content. Each service encounter can be defined in this way.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d7f0b31-Screenshot_2019-11-15_at_5.30.31_PM.png",
-        "Screenshot 2019-11-15 at 5.30.31 PM.png",
-        2040
-      ],
-      "caption": "Anatomy of an encounter type (or a subject registration form)"
-    }
-  ]
-}
-[/block]
+<Image title="Screenshot 2019-11-15 at 5.30.31 PM.png" alt={2040} src="https://files.readme.io/d7f0b31-Screenshot_2019-11-15_at_5.30.31_PM.png">
+  Anatomy of an encounter type (or a subject registration form)
+</Image>
 
+<Image title="Screenshot 2019-11-15 at 1.53.16 PM.png" alt={1814} border={true} src="https://files.readme.io/5fdb3eb-Screenshot_2019-11-15_at_1.53.16_PM.png">
+  Example of a few form element groups.
+</Image>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5fdb3eb-Screenshot_2019-11-15_at_1.53.16_PM.png",
-        "Screenshot 2019-11-15 at 1.53.16 PM.png",
-        1814
-      ],
-      "border": true,
-      "caption": "Example of a few form element groups."
-    }
-  ]
-}
-[/block]
-
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2c87d92-Screenshot_2019-11-15_at_1.55.34_PM.png",
-        "Screenshot 2019-11-15 at 1.55.34 PM.png",
-        2180
-      ],
-      "border": true,
-      "caption": "Example of form elements within a form element group."
-    }
-  ]
-}
-[/block]
+<Image title="Screenshot 2019-11-15 at 1.55.34 PM.png" alt={2180} border={true} src="https://files.readme.io/2c87d92-Screenshot_2019-11-15_at_1.55.34_PM.png">
+  Example of form elements within a form element group.
+</Image>
 
 
 # File: ./readme/Implementers/basic-feature-guide/concepts.md
 
----
-title: "Concepts"
-slug: "concepts"
-excerpt: "Learn about the different types of concepts and their nuances"
-hidden: false
-createdAt: "Wed May 06 2020 23:49:20 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Jul 28 2025 11:34:06 GMT+0000 (Coordinated Universal Time)"
+title: Concepts
+excerpt: Learn about the different types of concepts and their nuances
+    - type: basic
+      slug: rules-concept-guide
+      title: Rules concept guide
 ---
 **Concepts** define the different pieces of information that you collect as part of your service delivery.  
 
-For example, if you collect the blood pressure of a subject in a form, then "_Blood Pressure_" should be defined as a concept. You would notice that every question in a form requires a concept.  
+For example, if you collect the blood pressure of a subject in a form, then "*Blood Pressure*" should be defined as a concept. You would notice that every question in a form requires a concept.  
 
-The _datatype_ of a concept determines the kind of data can be stored against a concept, and therefor against the form question or form element. Using concepts with datatypes ensures incorrect answers are not captured in a form question, and is helpful for eventually data aggregation, validation and reporting.
+The *datatype* of a concept determines the kind of data can be stored against a concept, and therefor against the form question or form element. Using concepts with datatypes ensures incorrect answers are not captured in a form question, and is helpful for eventually data aggregation, validation and reporting.
 
 ## Supported DataTypes in Concepts
 
 The following datatypes are supported while defining concepts to be used in forms:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Concept DataType",
-    "h-1": "Description",
-    "0-0": "_Numeric_ **concepts** ",
-    "0-1": "Numeric concepts are used to capture numbers. When creating a numeric concept, you can define normal ranges and absolute ranges. In the field application, if an observation for a concept collected goes beyond the normal range, then it is highlighted in red. Values above the absolute range are not allowed.  For instance for concept: Blood Pressure (Systolic), you can choose a Numeric concept with ranges.",
-    "1-0": "**Coded concepts (and NA concepts)** ",
-    "1-1": "Coded concepts are those that have a fixed set of answers. For instance for Blood Group you would choose a coded concept with values: A+, B+, AB+, etc.  \n  \nThese answers are also defined as concepts of NA datatype.",
-    "2-0": "**ID datatype** ",
-    "2-1": "A concept of Id datatype is used to store autogenerated ids. See [Creating identifiers](doc:creating-identifiers) for more information on creating autogenerated ids.  For instance PatientIDs, TestIDs, etc.",
-    "3-0": "**Media concepts (Image, Video and Audio)**",
-    "3-1": "Images and videos can be captured using Image and Video concept datatypes. For audio recording, Audio datatype can be used.",
-    "4-0": "**Text (and Notes) concepts** ",
-    "4-1": "The _Text_ data type helps capture one-line text while the _Notes_ datatype is used to capture longer **form** text.",
-    "5-0": "**Date and time concepts**",
-    "5-1": "There are different datatypes that can be used to capture date and time.  \n**Date** - A simple date with no time  \n**Time** - Just the time of day, with no date  \n**DateTime** - To store both date and time in a single observation  \n**Duration** - To capture durations such as 4 weeks, 2 days etc.",
-    "6-0": "**Location concepts**",
-    "6-1": "_Location_ concepts can be used to capture locations based on the location types configured in your implementation.  \n  \nLocation concepts have 3 attributes:  \n  \n1. Within Catchment - Denotes whether the location to be captured would be within the catchment already assigned to your field workers. This attribute defaults to true and is mandatory.  \n  \n2. Lowest Level(s) - Denotes the lowest location type(s) you intend to capture via form elements using this concept. This attribute is mandatory.  \n  \n3. Highest Level - Denotes the highest location type that you would like to capture via form elements using this concept. This attribute is optional.",
-    "7-0": "**Subject concepts**",
-    "7-1": "_Subject_ concepts can be used to link to other subjects.  \n  \nEach Subject concept can map to a single subject type.  \n  \nAny form element using this concept can capture one or multiple subjects of the specified subject type.",
-    "8-0": "**Phone Number concepts**",
-    "8-1": "For capturing the phone number. It comes with a 10 digit validation. OTP verification can be enabled by turning on the \"Switch on Verification\" option. Avni uses msg91 for OTP messages, so msg91 `Auth key` and `Template` need to be step up using the admin app.",
-    "9-0": "**Group Affiliation concepts** ",
-    "9-1": "Whenever automatic addition of a subject to a group is required  Group Affiliation concept can be used. It provides the list of all the group subjects in the form and choosing any group will add that subject to that group when the form is saved.",
-    "10-0": "**Encounter** ",
-    "10-1": "_Encounter_ concepts can be used to link an encounter to any form.  \n  \nEach Encounter concept can map to a single encounter type.  It should also provide the scope to search that encounter. Also, name identifiers can be constructed by specifying the concepts used in the encounter form.  \n  \nAny form element using this concept can capture one or multiple encounters of the specified encounter type."
-  },
-  "cols": 2,
-  "rows": 11,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Concept DataType
+      </th>
 
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        * Numeric\_ **concepts** 
+      </td>
+
+      <td>
+        Numeric concepts are used to capture numbers. When creating a numeric concept, you can define normal ranges and absolute ranges. In the field application, if an observation for a concept collected goes beyond the normal range, then it is highlighted in red. Values above the absolute range are not allowed.  For instance for concept: Blood Pressure (Systolic), you can choose a Numeric concept with ranges.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Coded concepts (and NA concepts)** 
+      </td>
+
+      <td>
+        Coded concepts are those that have a fixed set of answers. For instance for Blood Group you would choose a coded concept with values: A+, B+, AB+, etc.  
+
+        These answers are also defined as concepts of NA datatype.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **ID datatype** 
+      </td>
+
+      <td>
+        A concept of Id datatype is used to store autogenerated ids. See [Creating identifiers](doc:creating-identifiers) for more information on creating autogenerated ids.  For instance PatientIDs, TestIDs, etc.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Media concepts (Image, Video and Audio)**
+      </td>
+
+      <td>
+        Images and videos can be captured using Image and Video concept datatypes. For audio recording, Audio datatype can be used.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Text (and Notes) concepts** 
+      </td>
+
+      <td>
+        The *Text* data type helps capture one-line text while the *Notes* datatype is used to capture longer **form** text.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Date and time concepts**
+      </td>
+
+      <td>
+        There are different datatypes that can be used to capture date and time.  
+
+        * \*Date\*\* - A simple date with no time  
+        * \*Time\*\* - Just the time of day, with no date  
+        * \*DateTime\*\* - To store both date and time in a single observation  
+        * \*Duration\*\* - To capture durations such as 4 weeks, 2 days etc.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Location concepts**
+      </td>
+
+      <td>
+        * Location\_ concepts can be used to capture locations based on the location types configured in your implementation.  
+
+        Location concepts have 3 attributes:  
+
+        1. Within Catchment - Denotes whether the location to be captured would be within the catchment already assigned to your field workers. This attribute defaults to true and is mandatory.
+
+        2. Lowest Level(s) - Denotes the lowest location type(s) you intend to capture via form elements using this concept. This attribute is mandatory.
+
+        3. Highest Level - Denotes the highest location type that you would like to capture via form elements using this concept. This attribute is optional.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Subject concepts**
+      </td>
+
+      <td>
+        * Subject\_ concepts can be used to link to other subjects.  
+
+        Each Subject concept can map to a single subject type.  
+
+        Any form element using this concept can capture one or multiple subjects of the specified subject type.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Phone Number concepts**
+      </td>
+
+      <td>
+        For capturing the phone number. It comes with a 10 digit validation. OTP verification can be enabled by turning on the "Switch on Verification" option. Avni uses msg91 for OTP messages, so msg91 `Auth key` and `Template` need to be step up using the admin app.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Group Affiliation concepts** 
+      </td>
+
+      <td>
+        Whenever automatic addition of a subject to a group is required  Group Affiliation concept can be used. It provides the list of all the group subjects in the form and choosing any group will add that subject to that group when the form is saved.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Encounter** 
+      </td>
+
+      <td>
+        * Encounter\_ concepts can be used to link an encounter to any form.  
+
+        Each Encounter concept can map to a single encounter type.  It should also provide the scope to search that encounter. Also, name identifiers can be constructed by specifying the concepts used in the encounter form.  
+
+        Any form element using this concept can capture one or multiple encounters of the specified encounter type.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 <br />
 
@@ -9145,143 +7458,192 @@ The following datatypes are supported while defining concepts to be used in form
 
 For showing counselling points in a form, always create a Form Element, using below coded Concept:
 
-- Concept UUID: b4e5a662-97bf-4846-b9b7-9baeab4d89c4
-- Concept Name: Placeholder for counselling form element
-- Answers: \<None, no answers, to avoid showing them any options>
+* Concept UUID: b4e5a662-97bf-4846-b9b7-9baeab4d89c4
+* Concept Name: Placeholder for counselling form element
+* Answers: \<None, no answers, to avoid showing them any options>
 
 Specify counselling point as the Form Element Name, add numbering if needed.
 
 Note: **You can reuse the same "Placeholder for counselling form element" multiple times in a single form**, without worrying about uniqueness constraint breach concerns.
 
 
-# File: ./readme/Implementers/basic-feature-guide/draft-simplification-of-reports.md
+# File: ./readme/Implementers/basic-feature-guide/draft-simplification-of-reports/avni-metabase-reporting-standards-best-practices.md
 
----
-title: "[Draft] Simplification of reports development and testing"
-slug: "draft-simplification-of-reports"
-excerpt: ""
-hidden: false
-createdAt: "Mon Mar 04 2024 12:05:54 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Mar 18 2024 07:28:44 GMT+0000 (Coordinated Universal Time)"
----
-> 🚧 This document is still in draft
+title: 'Avni Metabase Reporting : Standards & Best Practices'
+excerpt: >-
 
-Since we develop a number of reports for each organisation. As the number of organisations grow maintenance and first time & ongoing testing of these reports can get difficult. This document covers some the ideas that can be employed to simply these two activities.
+#### **Three-Tier Dashboard Layout:**
 
-For this document, will use this example to discuss the points below. Lets take a report which shows:
+```
+Row 1: Summary & Description
+├── Dashboard title and purpose description
+├── Explanation of Filters available
+└── Key metrics overview
 
-- The number of children who are under nourished
-- These numbers are shown by gender (Individual), age-group (Individual), and land-holding (Observation). Land holding could be `a) less than acre` `b) 1-2 acres` `c) 2-5 acres` `d) 5+ acres` In Avni this will be a coded concept with above four answers.
-- The report allows the user to choose from address/location filter and view the numbers
-- On clicking any number the user is take to the line list of children
+Row 2: Total Count Cards  
+├── Aggregate metrics from base query
+└── Apply Conditional filters only where appropriate
 
-## Report work management
+Row 3+: Filtered Linelists
+├── Detailed records for each count card
+└── Conditional filters applied
+```
 
-- Reports work ideally should start when there is some good data available to write reports against and verify. This will help avoid manual setup of data - which is time consuming.
-- During the period in which new implementation application is in use and there are no reports
-  - The data available from data entry app or using master catchment and viewing all data from mobile
-  - we will have canned reports in the platform which can support customers during this phase
-  - as a last resort - temporarily we can support it via hand written operational reports **if absolutely necessary**
-- When there are change requests to the application then there may be impact on reports. During analysis the reports that will be impacted should be identified and only those need to be regressed/tested.
+#### **Implementation Guidelines:**
 
-## Report design
+* **Base Query Foundation**: All dashboard elements derive from a single, well-defined base query
+* **Hierarchical Information Flow**: Summary → Aggregates → Details
+* **Consistent Filtering**: Apply same filter logic across all dashboard components
+* **User Journey**: Enable logical progression from high-level insights to detailed records
 
-- Avoid aggregating on multiple **display dimensions** in a single report. This makes the report queries very large and difficult to understand/maintain. What is a dimension - gender, age-group, land-holding - these are each different dimensions and one may want the counts/averages etc of data across these dimensions.
-  - All filters used in reports are typically also dimensions (Location from the example above)
-  - **Display dimensions** are the type of dimensions for which the data is displayed to the user
-- Put all the necessary fields in the line list on which the aggregates are calculated, so that some of the verification of aggregate numbers. If the under nutrition is decided based on weight, height, age, gender, upper-arm circumference then all these data points should also be available in the line list.
-- For each implementation we should prepare a set of dimensions that will be used in reports and give it a name. In stories for line list only the name of set can be given. This will also help in code review to ensure all the dimensions have been included in the line list. For example:
-  - Dimension Set 1 - Name = Child - for Child program related line list one has - Name, Age, Gender, Mother's name
-  - Dimension Set 2 - Name = Woman - for Woman program related line list one has - Name, Age, Blood Group
-  - Dimension Set 3 - Name = Pregnant Woman - Name, Age, Blood Group, LMP, EDD
-- It may be useful to identify modules in the application. For example - mother and pregnancy program can one module and child program can be module two in some implementations. These modules may be loosely coupled with each other and hence changing one is **likely to not have any impact** on other modules. Identifying these modules can help with testing of change requests, support defects etc. Instead of testing everything one may restrict the testing to specific modules where change has been made.
-  - The modules in a new implementation may or may not be obvious. As we gain more insight during development or change request - we can take advantage of this.
+### **2. Dashboard Purity Principle**
 
-## Developer Checklist
+#### **Primary Table Focus:**
 
-**[Why checklists (a very short read)](https://blog.falcony.io/en/the-checklist-manifesto-book-summary#:~:text=In%20the%20book%2C%20The%20Checklist,applied%20to%20almost%20every%20field.)**
+* **Single Source of Truth**: Each dashboard should have one primary table as its foundation
+* **Controlled Joins**: Join additional tables only for supplementary information, not core metrics
+* **Avoid Data Mixing**: Don't combine unrelated data sources in a single dashboard
 
-This is to ensure that the same type mistakes do not occur due to over sight. It is important to follow these checklist - since the cost of mistake is high on effort from developer and QA both.
+#### **When to Split Dashboards:**
 
-### Code
+```
+❌ Bad: Combined Dashboard
+- Subject registrations + Program enrollments + Encounter data
+- Multiple unrelated KPIs in one view
+- Mixed time periods and contexts
 
-- Ensure voided, exited, and cancelled are appropriately used for each table that is joined in the report. Ensure this is done for parents also (e.g. checking voided on encounter may not be sufficient as one may also want to check whether the parent i.e. individual or program_enrolment voiding has been checked).
-  - Include these fields (whichever is relevant for the report) in the line list in the end so that it is easy to test.
-- Have you used inner join and left joins correctly
-- If approvals are implemented then add the appropriate checks
-- While adding the date filters make sure its on correct date (encounter date, earliest date, registration date, enrolment date).
-- Is null or empty string important in any of the where/join clauses?
+✅ Good: Separate Dashboards  
+- Subject Registration Dashboard (primary: beneficiary table)
+- Program Performance Dashboard (primary: beneficiary_pregnancy table)
+- Service Delivery Dashboard (primary: beneficiary_pregnancy_anc tables)
+```
 
-### BI Tools
+#### **Benefits of Pure Dashboards:**
 
-- **SuperSet specific**
-  - If we are implementing  the row level security then ensure that “$P!{LoggedInUserAttribute_LocationFilter}” Is added in query for jasper only
-- **Metabase specific**
-  - Use summarize feature to create the aggregate report so it will give drill down.
-- **Jasper specific**
-  - Its better to use the Variable in the jasper report to pass the param for drill down report, avoid use of direct passing where clause. refer this report.
-  - <https://docs.google.com/document/d/1RXcoZwG0BoJtkR7IGd9weWJWytRAfmdPqJUgSuDwOrw/edit>
+* **Performance**: Faster query execution
+* **Maintainability**: Easier to debug and modify
+* **User Experience**: Clear, focused insights
+* **Data Integrity**: Reduced risk of incorrect joins
 
-### Documentation
+### **3. Complex Query Management via PostETLSync**
 
-- Story, doc links in the SQL
+#### **PostETLSync Overview**
 
-### Subjective review
+PostETLSync enables custom data transformations after standard ETL completion through configurable SQL transformations. This feature supports incremental processing, ordered execution, and organization-specific configurations while ensuring data integrity through transaction management.
 
-- Code review should look for False-Negatives (see diagram below).
+#### **When to Use PostETLSync:**
 
-## Reports Testing
+* **Views Persisted Across ETL Schema Recreates**: Maintain custom views and derived tables that survive ETL schema rebuilds
+* **Derived Tables**: Create complex aggregated views from multiple source tables
+* **Custom Business Logic**: Implement organization-specific calculations and transformations
+* **Performance Optimization**: Pre-compute complex queries for faster dashboard loading
+* **Incremental Updates**: Process only changed data since last sync using timestamp filtering
 
-- Feedback into the code review process, if the checklist items are getting missed on development complete. Testing team can verify the checklist items **once in a while** to ensure that the checklist and code review process is working well.
-- There are certain practices that should be avoided **as much as possible**.
-  - Testing reports by changing data as this is slow and time consuming.
-  - If above is avoided then it also eliminates the need to keep pointing the reports do database in different environment.
-- There are three broad type of tests that we need to carry out with reports - as in the following diagram.
+#### **Configuration Structure:**
 
-_source: <https://docs.google.com/presentation/d/1skfVtHmyAg2QEyTowcN2eZwIIoDo03s1K7WAWBE4BDc/edit#slide=id.p>_
+PostETLSync uses JSON configuration files (`post-etl-sync-processing-config.json`) with two main sections:
 
-![](https://files.readme.io/5c5156c-image.png)
+* **DDL Operations**: Create tables, indexes, and database objects (executed first)
+* **DML Operations**: Insert and update data with ordered execution and parameter substitution
 
-> **DEA** = Data Entry App
+#### **Key Features:**
 
-#### Note 1
+* **Automatic Parameter Substitution**: `:previousCutoffDateTime` and `:newCutoffDateTime` for incremental processing
+* **Schema-Qualified Operations**: All table references must include schema names for proper permissions
+* **Timestamp Filtering**: Built-in support for processing only modified records
+* **Transaction Safety**: Ensures data consistency during transformation processes
 
-The idea of verification using line list is that the logic behind the aggregate numbers can be verified by just looking at the line list. It is preferred because it is the fastest. Both False-Positive and True-Positive can be verified by just looking at the line list (again no reason to fiddle with data).
+#### **Best Practices:**
 
-In case line list is not present then one can use DEA and lastly Mobile App. DEA should be preferred over mobile app because of speed of verification (no sync, back buttons, hyperlinks, etc).
+* Always use both timestamp parameters in data modification queries
+* Include `is_voided = false` checks when applicable
+* Use descriptive prefixes for SQL script naming
+* Apply timestamp filters to all subqueries and CTEs
+* Begin DDL scripts with appropriate role setting for permissions
 
-> If any particular bug in DEA is hampering the testing then it could be raised to platform team as blocker, to be fixed.
+This approach transforms complex reporting requirements into maintainable, performant solutions that integrate seamlessly with Avni's ETL pipeline while providing the flexibility needed for organization-specific reporting needs.
 
-#### Note 2
+### **4. Implementation Best Practices**
 
-False-Negatives can be difficult to verify hence:
+#### **Base Query Design:**
 
-- Some of this should get covered by code review (mentioned in checklist). In fact if the developer and code reviewer both check this - it should cover most of such cases.
-- In testing one can try any hypothesis on False-Negatives by using different filter values by checking for existing such data.
-- Lastly, customers and usage of reports is the best way to identify them - as they will use the data most and will have _much better feel/intuition_ of the numbers.
+```sql
+-- Standard base query structure
+SELECT 
+    -- Primary identifiers
+    subject.uuid,
+    subject.first_name,
+    subject.last_name,
+    
+    -- Core metrics
+    program.name as program_name,
+    enrolment.enrolment_date_time,
+    
+    -- Derived fields for filtering
+    CASE WHEN enrolment.program_exit_date_time IS NULL 
+         THEN 'Active' ELSE 'Exited' END as enrollment_status,
+    
+    -- Location hierarchy for geographic filtering
+    village.title as village,
+    block.title as block,
+    district.title as district
 
-# To be explored (not recommended yet)
+FROM beneficiary subject
+JOIN beneficiary_pregnancy enrolment ON subject.id = enrolment.individual_id
+JOIN program ON enrolment.program_id = program.id
+-- Add location joins as needed
+WHERE subject.is_voided = false 
+  AND enrolment.is_voided = false
+```
 
-- Use of views to allow for re-usable code across reports
+#### **Dashboard Card Organization:**
 
-### Examples
+1. **Summary Card**: Dashboard description and key insights
+2. **Count Cards**: Total enrollments, active cases, completed visits
+3. **Linelist Cards**: Detailed records filtered by each count metric
 
-<https://reporting.avniproject.org/question/2995-prevalence-of-anemia-linelist>
+#### **Filter Strategy:**
 
-- Instead of school, boarding, and boarding as different drop down it is better to have Location Type and Location as drop downs. They become `and` query with two items instead of 6 items.
-- Use of full join instead of union, with `COALESCE`. 
-- For haemoglobin entries create `json_each` and `join`. Same for age-group.
+* **Consistent Parameters**: Same date ranges, locations, programs across all cards
+* **Cascading Filters**: Location hierarchy (State → District → Block → Village)
+* **User-Friendly Defaults**: Reasonable default values for common use cases
+
+### **5. Quality Assurance Guidelines**
+
+#### **Dashboard Review Checklist:**
+
+* [ ] Single primary table identified
+* [ ] All cards use same base query logic
+* [ ] Filters work consistently across all cards
+* [ ] Performance acceptable (\< 30 seconds load time)
+* [ ] Data accuracy verified against source systems
+* [ ] User permissions properly configured
+
+#### **Documentation Requirements:**
+
+* Dashboard purpose and target audience
+* Base query explanation and assumptions
+* Filter definitions and expected behaviors
+
+### **6. Reference Implementation**
+
+Following the <Anchor label="Avni reporting simplification guidelines" target="_blank" href="https://avni.readme.io/docs/draft-simplification-of-reports">Avni reporting simplification guidelines</Anchor>, these principles ensure:
+
+* **Scalable Architecture**: Reports that perform well as data grows
+* **Maintainable Codebase**: Clear separation of concerns
+* **User-Centric Design**: Intuitive navigation from summary to detail
+* **Data Governance**: Consistent metrics across the organization
+
+This structured approach transforms complex organisational data into actionable insights while maintaining system performance and user experience quality.
 
 
 # File: ./readme/Implementers/basic-feature-guide/encounter-type.md
 
----
-title: "Encounter types"
-slug: "encounter-type"
-excerpt: ""
-hidden: false
-createdAt: "Thu Sep 01 2022 12:47:27 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 08:41:17 GMT+0000 (Coordinated Universal Time)"
+title: Encounter types
+excerpt: ''
+    - type: basic
+      slug: concepts
+      title: Concepts
 ---
 Encounter Types (also called Visit Types) are used to determine the kinds of encounters/visits that can be performed. An encounter can be scheduled for a specific encounter type using rules. Here, we define that encounter type and the forms associated with the encounter type.
 
@@ -9294,14 +7656,8 @@ The encounter type can be made immutable by switching on the immutable flag on t
 
 # File: ./readme/Implementers/basic-feature-guide/internal-details-of-avni-sync.md
 
----
-title: "Sync internals"
-slug: "internal-details-of-avni-sync"
-excerpt: ""
-hidden: false
-createdAt: "Wed Dec 14 2022 08:11:50 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Jul 05 2024 11:47:15 GMT+0000 (Coordinated Universal Time)"
----
+title: Sync internals
+excerpt: ''
 Synchronization (sync) of data from the Avni server to the client is a complex procedure. This document tries to explain it in detail. 
 
 Note that this is an advanced topic that can be skipped for those who are not very familiar with Avni. 
@@ -9316,23 +7672,23 @@ This is done, so that, there are no concurrent conflicting changes applied for t
 
 During sync, the primary objective is to push all local changes to the server, and fetch all changes from the server to the device. However, there are a few other side-effects that take place during the sync. 
 
-- #### Handling of change of permissions
+* #### Handling of change of permissions
 
 When there is a change in the permissions of a user, new entities may need to be synced, or existing entities may need to be deleted from the device. This is handled on the fly during the sync. 
 
-- #### Migration of beneficiaries
+* #### Migration of beneficiaries
 
-Sometimes beneficiaries are migrated from one catchment to another. To handle this, we might either have to retrieve all records of a beneficiary that moved in, or remove all records of a beneficiary that moved out. This is handled through a subject_migration sync mechanism
+Sometimes beneficiaries are migrated from one catchment to another. To handle this, we might either have to retrieve all records of a beneficiary that moved in, or remove all records of a beneficiary that moved out. This is handled through a subject\_migration sync mechanism
 
 **It is highly recommended that any correction to an Individual or its related entities "SyncConcept observations" be made using Individual (POST/PUT/PATCH) External API calls**, so that we perform a holistic update of the Individual and all its related entities( Enrolments, Encounters, Program-encounters, Checklists, EntityApprovalStatus, IndividualRelationships, etc..). We would also be creating the SubjectMigration entities, which are essential in removing the beneficiary records from Users who should no longer have the entity.
 
-- #### Reset of sync
+* #### Reset of sync
 
 If the catchment of a beneficiary changes (either via change of a user's catchment, or a change in the catchment itself), the existing database becomes invalid and needs a complete resync to ensure the right beneficiaries are present. This is called a sync reset. 
 
 There are partial resets that happen due to change of sync attributes of a particular subject type. This is also handled through smaller sync resets. 
 
-- #### Fast sync
+* #### Fast sync
 
 When a user is syncing for the first time, some implementations create an existing Realm database for that catchment that has been synced upto a certain point. The app downloads this pre-created database and syncs everything since that point. This is useful when there are multiple users sharing a catchment, or when a user wants to login from another device. 
 
@@ -9340,12 +7696,12 @@ When a user is syncing for the first time, some implementations create an existi
 
 Each app maintains its status of sync through three tables - EntityQueue (for push), EntitySyncStatus (for pull) and SyncTelemetry (for telemetry). 
 
-- #### EntityQueue
+* #### EntityQueue
 
 There are actually 2 tables that are maintained in Avni for entities that have been either created or changed. These are 
 
-- EntityQueue
-- MediaQueue
+* EntityQueue
+* MediaQueue
 
 Before syncing media, observations are stored with the name of the media file. During sync, it is assumed that internet is present. 
 
@@ -9354,29 +7710,29 @@ During this time, the sync service does the following
 1. For each of the media queue items:
    1. It pushes the media to S3 and
    2. On Success, replaces the corresponding observation with the S3 url
-   3. Otherwise, for failures, it creates a "Media '${Entity}' Error" entry in the EntitySyncStatus, to highlight issues during upload of Media content. These entries get cleaned up only when those exact Media content get synced successfully to the server. If in-case the media gets deleted from the device or did not exist even before the first sync attempt, then those "Media '${Entity}' Error" entries remain as is till User does a fresh sync 
+   3. Otherwise, for failures, it creates a "Media '$\{Entity}' Error" entry in the EntitySyncStatus, to highlight issues during upload of Media content. These entries get cleaned up only when those exact Media content get synced successfully to the server. If in-case the media gets deleted from the device or did not exist even before the first sync attempt, then those "Media '$\{Entity}' Error" entries remain as is till User does a fresh sync 
 2. Only if all Media are uploaded successfully, do the modified Avni entities (with observations having the S3 url) get pushed to the server
 
 At the end of sync, a sync telemetry entries are pushed to the server. 
 
-- #### EntitySyncStatus
+* #### EntitySyncStatus
 
 The EntitySyncStatus table keeps a pointer of each kind of entity to be synced and the last time it was synced. This helps the sync process to start from where it left off last time. Rows will contain the entity type (Subject, Encounter etc), the specific entity type (Individual, Household, ANC etc. essentially the subject type, program or encounter type) and the last sync time. 
 
 The server api provides a paginated service to pull from the last sync time. The table is updated on each page synced. 
 
-- #### EntityMetadata
+* #### EntityMetadata
 
 This is maintained in code, and provides the following for each kind of entity
 
-- Name of the entity
-- url to fetch the entity from the server
-- Type of entity - entity can be divided into metadata and transactional data
-- Order of sync - The sync is dependent on a specific order. Subjects need to be synced before program encounters etc. 
+* Name of the entity
+* url to fetch the entity from the server
+* Type of entity - entity can be divided into metadata and transactional data
+* Order of sync - The sync is dependent on a specific order. Subjects need to be synced before program encounters etc. 
 
 Sync uses EntityMetadata in conjunction with EntitySyncStatus (for pull) or EntityQueue (for push) to identify the exact order in which entities need to be synced. 
 
-- #### Sync Telemetry
+* #### Sync Telemetry
 
 Sync Telemetry notes down the details of each sync - the kind of sync, start time, end time, number of entities synced, app details etc and pushes it to the server for analysis. 
 
@@ -9385,8 +7741,8 @@ Sync Telemetry notes down the details of each sync - the kind of sync, start tim
 The sync process can be broadly divided into two activities
 
 1. Data Server sync
-2. Media sync  
-   In the Data Server sync, all data except media is synced to the server. This is a 2-way sync  
+2. Media sync\
+   In the Data Server sync, all data except media is synced to the server. This is a 2-way sync\
    In the Media sync, media observations are taken from the MediaQueue and uploaded. Observations are modified to match the new S3 urls. 
 
 In our current sync process, if there is media, we do a media sync first and then a data server sync. If there is no media, then we do a single data server sync. 
@@ -9403,7 +7759,7 @@ Here are the steps for a data server sync
 4. Get all reference data
 5. Update database to account for new privileges if any (privileges are part of reference data)
 6. Get all transactional data
-7. Perform any migrations necessary (migration data is part of transactional data. New subjects are downloaded in one-shot with all transactions of a subject retrieved using the /subject/${subjectUUID}/allEntities endpoint)
+7. Perform any migrations necessary (migration data is part of transactional data. New subjects are downloaded in one-shot with all transactions of a subject retrieved using the /subject/$\{subjectUUID}/allEntities endpoint)
 8. Download images linked to news broadcasts
 9. Download extensions if any
 10. Download icon images of subject types
@@ -9441,13 +7797,11 @@ Only data that has been in the server for more than 10 seconds from the time of 
 
 # File: ./readme/Implementers/basic-feature-guide/key-system-and-data-flows.md
 
----
-title: "Key system and data flows concepts"
-slug: "key-system-and-data-flows"
-excerpt: ""
-hidden: false
-createdAt: "Thu Nov 14 2019 14:33:29 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 08:40:46 GMT+0000 (Coordinated Universal Time)"
+title: Key system and data flows concepts
+excerpt: ''
+    - type: basic
+      slug: subject-types
+      title: Subject types
 ---
 Now that we understand the [three key components of fieldwork](doc:avnis-domain-model-of-field-based-work) i.e. Organisation, Services and Service Encounter - let's try to understand how Avni works and achieves various functions.
 
@@ -9455,62 +7809,23 @@ Now that we understand the [three key components of fieldwork](doc:avnis-domain-
 
 Avni is a generic platform that allows any organisation doing field-based work to use it for their specific purpose. The diagram below explains the steps involved in creating an organisation-specific application from a generic platform.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8932d2e-Screenshot_2019-11-15_at_5.33.27_PM.png",
-        "Screenshot 2019-11-15 at 5.33.27 PM.png",
-        1440
-      ],
-      "align": "center",
-      "caption": "Data flow of organisation, services and service encounter definition."
-    }
-  ]
-}
-[/block]
-
+<Image title="Screenshot 2019-11-15 at 5.33.27 PM.png" alt={1440} align="center" src="https://files.readme.io/8932d2e-Screenshot_2019-11-15_at_5.33.27_PM.png">
+  Data flow of organisation, services and service encounter definition.
+</Image>
 
 # How does avni field user gets all the subject data on his/her device?
 
 As we saw earlier, given the organisation work physically consists of catchments and locations. The subjects are living or located at these locations.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0f59c92-Screenshot_2019-11-15_at_5.35.21_PM.png",
-        "Screenshot 2019-11-15 at 5.35.21 PM.png",
-        1726
-      ],
-      "align": "center",
-      "caption": "During organisation setup the implementer or customer IT person sets up catchments with locations and assigns them to the provider (field user)"
-    }
-  ]
-}
-[/block]
-
+<Image title="Screenshot 2019-11-15 at 5.35.21 PM.png" alt={1726} align="center" src="https://files.readme.io/0f59c92-Screenshot_2019-11-15_at_5.35.21_PM.png">
+  During organisation setup the implementer or customer IT person sets up catchments with locations and assigns them to the provider (field user)
+</Image>
 
 The diagram below shows how the subjects and the subjects's complete data, which is required by the field user (and only those subjects) are made available.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8e8be68-Screenshot_2019-11-15_at_6.07.48_PM.png",
-        "Screenshot 2019-11-15 at 6.07.48 PM.png",
-        1580
-      ],
-      "align": "center",
-      "caption": "Subjects belonging to the catchment of the user downloaded to their device"
-    }
-  ]
-}
-[/block]
-
+<Image title="Screenshot 2019-11-15 at 6.07.48 PM.png" alt={1580} align="center" src="https://files.readme.io/8e8be68-Screenshot_2019-11-15_at_6.07.48_PM.png">
+  Subjects belonging to the catchment of the user downloaded to their device
+</Image>
 
 # How Avni works in an offline mode
 
@@ -9520,111 +7835,187 @@ Avni maintains a database on the mobile device. All the data downloaded from the
 
 The diagram below explains how avni app customises itself based on the complete organisational setup (explained earlier).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8033619-Screenshot_2019-11-15_at_5.52.34_PM.png",
-        "Screenshot 2019-11-15 at 5.52.34 PM.png",
-        1792
-      ],
-      "align": "center",
-      "caption": "Avni app customises itself based on the organisation data setup present in the mobile database on the device"
-    }
-  ]
-}
-[/block]
+<Image title="Screenshot 2019-11-15 at 5.52.34 PM.png" alt={1792} align="center" src="https://files.readme.io/8033619-Screenshot_2019-11-15_at_5.52.34_PM.png">
+  Avni app customises itself based on the organisation data setup present in the mobile database on the device
+</Image>
 
 
 # File: ./readme/Implementers/basic-feature-guide/performance-expectations.md
 
----
-title: "Performance expectations"
-slug: "performance-expectations"
-excerpt: ""
-hidden: false
-createdAt: "Wed Sep 04 2024 08:35:24 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Sep 04 2024 09:54:19 GMT+0000 (Coordinated Universal Time)"
----
+title: Performance expectations
+excerpt: ''
 In the table below different performance items have been listed with the rough expectations of how long they should take. If during your testing you see response times not inline with the following table, please get it verified by the platform team or technical leads in your team, if indeed the response time is OK.
 
 ### Implementation
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Performance Item",
-    "h-1": "General Expectation",
-    "h-2": "Raise red flag",
-    "0-0": "**SuperSet/Metabase Dashboard**  \n(with or without filters)",
-    "0-1": "\\< 10 seconds",
-    "0-2": "> 20 seconds",
-    "1-0": "**SuperSet/Metabase Line list download**",
-    "1-1": "\\< 60 seconds",
-    "1-2": "> 3 minutes",
-    "2-0": "**Offline mobile dashboard**  \n(with or without filter values,  \nfor any catchment size; on any device)",
-    "2-1": "\\<= 2 seconds",
-    "2-2": "> 5 seconds",
-    "3-0": "**Summary and Recommendations  \nScreen** (mobile app; on any device)",
-    "3-1": "\\<= 2 seconds",
-    "3-2": "> 5 seconds"
-  },
-  "cols": 3,
-  "rows": 4,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Performance Item
+      </th>
 
+      <th style={{ textAlign: "left" }}>
+        General Expectation
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+        Raise red flag
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **SuperSet/Metabase Dashboard**
+        (with or without filters)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        \< 10 seconds
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        > 20 seconds
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **SuperSet/Metabase Line list download**
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        \< 60 seconds
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        > 3 minutes
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Offline mobile dashboard**\
+        (with or without filter values,\
+        for any catchment size; on any device)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        \<= 2 seconds
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        > 5 seconds
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        * \*Summary and Recommendations\
+          Screen\*\* (mobile app; on any device)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        \<= 2 seconds
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        > 5 seconds
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Platform
 
 These are platform issues, but may have been caused by some specific configuration of the organisation, hence may not be a known issue. So please feel free to report them.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Performance Item",
-    "h-1": "General Expectation",
-    "h-2": "Raise red flag",
-    "0-0": "**Incremental sync**  \n(on wifi network; on any device)",
-    "0-1": "\\< 20 seconds",
-    "0-2": "> 1 minute",
-    "1-0": "**Subject search** (mobile app; on any device)",
-    "1-1": "\\<= 3 seconds",
-    "1-2": "> 5 seconds",
-    "2-0": "**DEA subject search** (after release 10)  \nwith/without filters",
-    "2-1": "\\<= 5 seconds",
-    "2-2": "> 10 seconds",
-    "3-0": "**All admin / app designer screens**  \n(Except CSV, bundle uploads)",
-    "3-1": "\\<= 5 seconds",
-    "3-2": "> 10 seconds"
-  },
-  "cols": 3,
-  "rows": 4,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Performance Item
+      </th>
+
+      <th>
+        General Expectation
+      </th>
+
+      <th>
+        Raise red flag
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **Incremental sync**
+        (on wifi network; on any device)
+      </td>
+
+      <td>
+        \< 20 seconds
+      </td>
+
+      <td>
+        > 1 minute
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        * \*Subject search\*\* (mobile app; on any device)
+      </td>
+
+      <td>
+        \<= 3 seconds
+      </td>
+
+      <td>
+        > 5 seconds
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        * \*DEA subject search\*\* (after release 10)\
+          with/without filters
+      </td>
+
+      <td>
+        \<= 5 seconds
+      </td>
+
+      <td>
+        > 10 seconds
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **All admin / app designer screens**\
+        (Except CSV, bundle uploads)
+      </td>
+
+      <td>
+        \<= 5 seconds
+      </td>
+
+      <td>
+        > 10 seconds
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 
 # File: ./readme/Implementers/basic-feature-guide/rules-concept-guide.md
 
----
-title: "Rules concept guide"
-slug: "rules-concept-guide"
-excerpt: ""
-hidden: false
-createdAt: "Fri Nov 15 2019 15:48:23 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Mar 06 2024 09:07:14 GMT+0000 (Coordinated Universal Time)"
----
+title: Rules concept guide
+excerpt: ''
 Avni uses rules, or more accurately snippets of code (functions are written in JavaScript) in multiple places to provide flexibility to the implementers/developers to customise what Avni can do for the users. One can think of the rule system of Avni as a set of hooks that can be used by the rule authors to plug their own data/behaviour/logic to the app when it is used in the field and in the data entry application.
 
 The rules are simple JavaScript functions that receive all the data via function parameters and they should return to the platform what it wants to get done. There is no state that needs to be maintained by JavaScript functions across invocations.
@@ -9637,23 +8028,7 @@ Since Avni is a general-purpose platform it doesn't know certain details about y
 
 Complete programmatic reference is provided in the [Writing rules](doc:writing-rules), the following diagram explains how most of the rules are used. It displays navigation between the different screens and shows the rules that are triggered in the yellow boxes.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/37b4a00-Screenshot_2024-02-21_at_8.51.57_PM.png",
-        "Screenshot 2020-07-02 at 5.29.22 PM.png",
-        2070
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="80%" border={true} src="https://files.readme.io/37b4a00-Screenshot_2024-02-21_at_8.51.57_PM.png" />
 
 In most rules, the rule has access to all the data of the subject and any data that is logically linked to the subject. e.g. In an encounter form level rule, one can access its subject form data, subject's relatives data, subject's relatives encounter data and so on.
 
@@ -9689,21 +8064,19 @@ If this rule is present, a custom form is shown to the user when the user starts
 
 If defined it can disallow editing of any form based on the rule. This rule is applied after access control is checked. This is available for: Registration, Enrolment, Enrolment Exit, Program Encounter, Program Encounter Cancel, General Encounter, General Encounter Cancel, Group Subject Registration, Form Element Group Edit and Checklist Item. It is not available/applicable for:
 
-- Location
-- Task (as there is no edit screen for it)
-- SubjectEnrolmentEligibility, ManualProgramEnrolmentEligibility (these are unused features as of now)
-- Encounter Drafts, Scheduled Encounters - should always be editable/fillable unless controlled by access control.
+* Location
+* Task (as there is no edit screen for it)
+* SubjectEnrolmentEligibility, ManualProgramEnrolmentEligibility (these are unused features as of now)
+* Encounter Drafts, Scheduled Encounters - should always be editable/fillable unless controlled by access control.
 
 
 # File: ./readme/Implementers/basic-feature-guide/setting-up-your-data-model.md
 
----
-title: "Setting up your data model"
-slug: "setting-up-your-data-model"
-excerpt: ""
-hidden: false
-createdAt: "Tue Apr 28 2020 02:34:07 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Setting up your data model
+excerpt: ''
+    - type: basic
+      slug: my-dashboard-and-search-filters
+      title: My Dashboard and Search Filters
 ---
 As explained in [Implementer's concept guide - Introduction](doc:implementers-concept-guide-introduction) - subject, program and encounter are the three key building blocks you have - using which you can model almost all field-based work. Groups (households) that are a special type of subject will be treated as the fourth building block.
 
@@ -9730,45 +8103,37 @@ You can specify the skip logic for under the rule tab within the form element. T
 
 # File: ./readme/Implementers/basic-feature-guide/subject-types.md
 
----
-title: "Subject types"
-slug: "subject-types"
-excerpt: ""
-hidden: false
-createdAt: "Fri May 17 2024 07:33:07 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 11:18:38 GMT+0000 (Coordinated Universal Time)"
+title: Subject types
+excerpt: ''
+    - type: basic
+      slug: encounter-type
+      title: Encounter types
 ---
 Subject Types define the subjects that you collect information on. Eg: Individual, Tractor, Water source, Classroom session. Service Providers in an organisation could be 
 
-- taking action "Against" or "For" beneficiaries, citizens, patients, students, children, etc.
-- collecting data for non-living objects like Water-body, School, Health Centre, etc.
+* taking action "Against" or "For" beneficiaries, citizens, patients, students, children, etc.
+* collecting data for non-living objects like Water-body, School, Health Centre, etc.
 
 ## Different types of Subject in Avni
 
 Avni allows for creating multiple Subject Types, each of which can be of any one of the following kind: 
 
-- **Group** - Used for representing an entity which constitutes a group of another subject type. Ex: A group of Interns enrolled for a specific Program for the Year 2023
-- **Household** - Special kind of Group, which usually refers to a Household of beneficiaries living in a single postal address location. Ex: A household consisting of a family of Father, Mother and children. Additionally, has a feature to assign one of the members as Head of the Household.
-- **Individual** - Generic type of Subject to represent a Place, Person, Thing, Action. etc.. Ex: School, Student, Pocelain Machine, Distribution of Materials, etc.
-- **Person** - Special kind of Individual, to specifically indicate a Human Being. Additionally has in-built capability to save First and Last Names, Gender and Date of Birth.
-- **User** - A type of Subject used to provide self-refer to the Service Providers in Avni. Read more about [User Subject Types](doc:user-subject-types)
+* **Group** - Used for representing an entity which constitutes a group of another subject type. Ex: A group of Interns enrolled for a specific Program for the Year 2023
+* **Household** - Special kind of Group, which usually refers to a Household of beneficiaries living in a single postal address location. Ex: A household consisting of a family of Father, Mother and children. Additionally, has a feature to assign one of the members as Head of the Household.
+* **Individual** - Generic type of Subject to represent a Place, Person, Thing, Action. etc.. Ex: School, Student, Pocelain Machine, Distribution of Materials, etc.
+* **Person** - Special kind of Individual, to specifically indicate a Human Being. Additionally has in-built capability to save First and Last Names, Gender and Date of Birth.
+* **User** - A type of Subject used to provide self-refer to the Service Providers in Avni. Read more about [User Subject Types](doc:user-subject-types)
 
 
 # File: ./readme/Implementers/basic-feature-guide/sync-strategies.md
 
----
-title: "Sync strategies"
-slug: "sync-strategies"
-excerpt: ""
-hidden: false
-createdAt: "Wed May 04 2022 06:05:15 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Sep 26 2024 12:12:58 GMT+0000 (Coordinated Universal Time)"
----
-Sync strategies define the way a subject should sync to the user's device. Sync strategies can be defined for each subject type. Each subject type can have different/same sync strategies based on the use case.  
+title: Sync strategies
+excerpt: ''
+Sync strategies define the way a subject should sync to the user's device. Sync strategies can be defined for each subject type. Each subject type can have different/same sync strategies based on the use case.\
 Setting up a sync strategy is a two-step process.
 
-- Defining sync strategy for a subject type.
-- Assigning the value of the defined strategy to the user.
+* Defining sync strategy for a subject type.
+* Assigning the value of the defined strategy to the user.
 
 ## Defining sync strategy for a subject type
 
@@ -9798,7 +8163,7 @@ Once the sync strategy is defined for a subject type, values can be assigned to 
 
 **Note** 
 
-- In case of any catchment changes/direct assignment changes user needs to delete the old data and sync as per the newly assigned values.
+* In case of any catchment changes/direct assignment changes user needs to delete the old data and sync as per the newly assigned values.
 
 ## Handling on Data Entry App (DEA)
 
@@ -9815,13 +8180,9 @@ A user-level setting is available to ignore the user's sync registration concept
 
 # File: ./readme/Implementers/basic-feature-guide/sync.md
 
----
-title: "Sync Scheduling"
-slug: "sync"
-excerpt: "Sync can be automated or manual on the Android app. This article talks about the different triggers of sync"
-hidden: false
-createdAt: "Fri Aug 19 2022 07:48:00 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Sync Scheduling
+excerpt: >-
+  description: ''
 ---
 ## Sync data between Avni Client and Server
 
@@ -9829,31 +8190,27 @@ Sync between Avni Client and Server is initiated by the Client and could be of f
 
 ### Manual Sync(User triggered, upload and fetch data)
 
-> 📘 As part of manual sync, we'll first replace the "background-sync" job with a "dummy sync" job, perform manual-sync and then, replace the "dummy sync" job again with "background-sync" job.  
-> In react-native-background-worker, when we schedule a job with same jobKey(Name) as an existing job, it replaces the old one with new one. Therefore, above specified steps are supposed to fulfill our need to NOT run background-sync in parallel with manual-sync.  
-> This is done, as we do not have a way to cancel jobs by name directly in react-native-background-worker. We could only cancel by id, but we do not want to store job id in db.  
+> 📘
+>
+> As part of manual sync, we'll first replace the "background-sync" job with a "dummy sync" job, perform manual-sync and then, replace the "dummy sync" job again with "background-sync" job.\
+> In react-native-background-worker, when we schedule a job with same jobKey(Name) as an existing job, it replaces the old one with new one. Therefore, above specified steps are supposed to fulfill our need to NOT run background-sync in parallel with manual-sync.\
+> This is done, as we do not have a way to cancel jobs by name directly in react-native-background-worker. We could only cancel by id, but we do not want to store job id in db.\
 > ![](https://files.readme.io/2dcc00c-ManualAndDummySync.png)
 
 ### Automatic Sync
 
 1. Complete Sync (Both upload and fetch data)
-2. Partial Sync (Only upload of data)  
+2. Partial Sync (Only upload of data)\
    ![](https://files.readme.io/d567681-Screenshot_2023-10-30_at_12.08.26_PM.png)
 
 
 # File: ./readme/Implementers/basic-feature-guide/writing-rules.md
 
----
-title: "Writing rules"
-slug: "writing-rules"
-excerpt: ""
-hidden: false
-metadata: 
-  title: "How to write Avni Rules"
-  image: []
-  robots: "index"
-createdAt: "Thu Jan 02 2020 05:18:04 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Aug 25 2025 04:43:04 GMT+0000 (Coordinated Universal Time)"
+title: Writing rules
+excerpt: ''
+    - type: basic
+      slug: access-control
+      title: Access Control
 ---
 > 🚧 Important Update on Rules Execution
 > 
@@ -9902,9 +8259,9 @@ Note there are other elements in params object which are specific to the rule he
 }
 ```
 
-User: <https://github.com/avniproject/avni-models/blob/master/src/UserInfo.js>
+User: [https://github.com/avniproject/avni-models/blob/master/src/UserInfo.js](https://github.com/avniproject/avni-models/blob/master/src/UserInfo.js)
 
-Group: <https://github.com/avniproject/avni-models/blob/master/src/Groups.js>
+Group: [https://github.com/avniproject/avni-models/blob/master/src/Groups.js](https://github.com/avniproject/avni-models/blob/master/src/Groups.js)
 
 #### Entities passed to the rule
 
@@ -9932,46 +8289,10 @@ All rule receives an entity from the `params` object. Depending on the rule type
 18. [Global reusable code rule](https://avni.readme.io/docs/writing-rules#18-global-reusable-code-rule-alpha)
 
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2284f79-Screenshot_2020-07-03_at_9.33.55_AM.png",
-        "Screenshot 2020-07-03 at 9.33.55 AM.png",
-        2138
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Invocation of different rule types"
-    }
-  ]
-}
-[/block]
-
+![Invocation of different rule types](https://files.readme.io/2284f79-Screenshot_2020-07-03_at_9.33.55_AM.png)
 
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/baad794-Screenshot_2020-07-03_at_9.59.42_AM.png",
-        "Screenshot 2020-07-03 at 9.59.42 AM.png",
-        2196
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Invocation of rules affecting the form elements"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/baad794-Screenshot_2020-07-03_at_9.59.42_AM.png)
 
 <br/><hr/>
 
@@ -10020,46 +8341,10 @@ You need to return an array of summary objects from this function.
     return summaries;
 };
 ```
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4f29afe-Screenshot_2020-05-19_at_3.09.44_PM.png",
-        "Screenshot 2020-05-19 at 3.09.44 PM.png",
-        2332
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Enrolment summary rule in App Designer"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/4f29afe-Screenshot_2020-05-19_at_3.09.44_PM.png)
 
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6fdb1f3-4bf85d9-encounter-scheduling-2.png",
-        "4bf85d9-encounter-scheduling-2.png",
-        1024
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Summary section displays the data returned by the enrolment summary rule"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/6fdb1f3-4bf85d9-encounter-scheduling-2.png)
 
 <br/><hr/>
 
@@ -10165,42 +8450,9 @@ You can either use FormElementStatusBuilder or use normal JavaScript to build th
 const phulwariName = _.get(_.find(params.entityContext.affiliatedGroups, ({voided}) => !voided), ['groupSubject', 'firstName'], '');
 
 ```
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ece1355-Screenshot_2020-07-02_at_6.21.43_PM.png",
-        "Screenshot 2020-07-02 at 6.21.43 PM.png",
-        2074
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
-
-
+![](https://files.readme.io/ece1355-Screenshot_2020-07-02_at_6.21.43_PM.png)
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/abb6bcf-4692c21-SkipLogic.gif",
-        "4692c21-SkipLogic.gif",
-        320
-      ],
-      "align": "center",
-      "caption": "Skip logic in action for the field user"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/abb6bcf-4692c21-SkipLogic.gif)
 
 Please note that form element rules are not transitive and cannot depend on the result of another form element's form element rule. The rule logic for a particular element will need to cater to this. 
 
@@ -10326,46 +8578,10 @@ You need to return an array of visit schedules from this function.
 .
 .
 ```
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/42b7d6b-Screenshot_2020-05-19_at_7.04.19_PM.png",
-        "Screenshot 2020-05-19 at 7.04.19 PM.png",
-        1950
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Screenshot - App Designer"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/42b7d6b-Screenshot_2020-05-19_at_7.04.19_PM.png)
 
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cbaef6a-4fff50b-encounter-scheduling-1.png",
-        "4fff50b-encounter-scheduling-1.png",
-        1024
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Returned encounters/visits from function are shown to the user as - Visits Being Scheduled"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/cbaef6a-4fff50b-encounter-scheduling-1.png)
 
 ### Strategies that Avni uses.
 
@@ -10422,7 +8638,7 @@ Used to add decisions/recommendations to the form. The decisions are displayed o
 }
 ```
 
-You need to add <decision object> to decisions parameter's appropriate field and return it back.  
+You need to add `<decision object>` to decisions parameter's appropriate field and return it back.  
 Inside the function, you will build decisions using ComplicationsBuilder and push the decisions to the decisions parameter's appropriate field. The return value will be the modified decisions parameter. You can also choose to not use ComplicationsBuilder and directly construct the return value as per the contract shown below:
 
 ### Shape of the return value
@@ -10468,45 +8684,10 @@ The shape of <decision object>
     return decisions;
 };
 ```
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f0f898a-Screenshot_2020-05-19_at_7.09.58_PM.png",
-        "Screenshot 2020-05-19 at 7.09.58 PM.png",
-        1950
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/f0f898a-Screenshot_2020-05-19_at_7.09.58_PM.png)
 
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4b488cc-4fff50b-encounter-scheduling-1.png",
-        "4fff50b-encounter-scheduling-1.png",
-        1024
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "Decision rule output are displayed in system recommendations section."
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/4b488cc-4fff50b-encounter-scheduling-1.png)
 
 <br/><hr/>
 
@@ -10544,24 +8725,7 @@ The return value of this function is an array with validation errors.
   return validationResults;
 };
 ```
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fb8e5df-Screenshot_2020-05-19_at_7.14.05_PM.png",
-        "Screenshot 2020-05-19 at 7.14.05 PM.png",
-        2300
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/fb8e5df-Screenshot_2020-05-19_at_7.14.05_PM.png)
 
 <br/><hr/>
 
@@ -10598,45 +8762,10 @@ The return value of this function should be a boolean.
 ```
 
 **Notes**: The eligibility check is triggered only when someone tries to create a visit manually. Form stitching rules can override this default behaviour. 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bc76050-Screenshot_2020-05-20_at_3.57.52_PM.png",
-        "Screenshot 2020-05-20 at 3.57.52 PM.png",
-        2300
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/bc76050-Screenshot_2020-05-20_at_3.57.52_PM.png)
 
 <br />
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ba63cb1-cbe944e-Screenshot_2019-11-20_at_6.51.40_PM.png",
-        "cbe944e-Screenshot_2019-11-20_at_6.51.40_PM.png",
-        1020
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true,
-      "caption": "This list can be controlled by this rule."
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/ba63cb1-cbe944e-Screenshot_2019-11-20_at_6.51.40_PM.png)
 
 <br/><hr/>
 
@@ -10677,24 +8806,7 @@ The return value of this function should be a boolean.
 ```
 
 **Notes**: The eligibility check is triggered only when someone tries to create a visit manually. Form stitching rules can override this default behaviour. 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0d034b9-Screenshot_2020-05-20_at_4.02.24_PM.png",
-        "Screenshot 2020-05-20 at 4.02.24 PM.png",
-        2300
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/0d034b9-Screenshot_2020-05-20_at_4.02.24_PM.png)
 
 <br/><hr/>
 
@@ -10761,24 +8873,8 @@ You can add a new WorkItem anywhere after the currentWorkList.currentItem.
 
 ### Example
 
-<https://gist.github.com/hithacker/d0fe89107b974797fbb11ced1feda146>
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ef3535d-Screenshot_2020-05-21_at_3.25.33_PM.png",
-        "Screenshot 2020-05-21 at 3.25.33 PM.png",
-        2210
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
+[https://gist.github.com/hithacker/d0fe89107b974797fbb11ced1feda146](https://gist.github.com/hithacker/d0fe89107b974797fbb11ced1feda146)
+![](https://files.readme.io/ef3535d-Screenshot_2020-05-21_at_3.25.33_PM.png)
 
 
 <br/><hr/>
@@ -10847,7 +8943,7 @@ You need to return an array of summary objects from this function.
 }
 ```
 
-User: <https://github.com/avniproject/avni-models/blob/master/src/UserInfo.js>
+User: [https://github.com/avniproject/avni-models/blob/master/src/UserInfo.js](https://github.com/avniproject/avni-models/blob/master/src/UserInfo.js)
 
 You need to return a string that is the full URL that can be opened in a browser.
 
@@ -10880,25 +8976,8 @@ Message Rule can be configured only when 'Messaging' is enabled for the organisa
 
 ### Example configuration:
 
-Say, 'common_otp' Glific message template is 'Your OTP for {{1}} is {{2}}. This is valid for {{3}}.' If we want to send a OTP message that says 'Your OTP for receiving books is 1458. This is valid for 2 hours.' to a student after 1 day of their registration, then we need to configure for student subject type as shown in the below image (Note the shape of the return objects): 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2e3e442-Screenshot_2023-12-27_at_6.15.54_PM.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+Say, 'common_otp' Glific message template is 'Your OTP for `{{1}}` is `{{2}}`. This is valid for `{{3}}`.' If we want to send a OTP message that says 'Your OTP for receiving books is 1458. This is valid for 2 hours.' to a student after 1 day of their registration, then we need to configure for student subject type as shown in the below image (Note the shape of the return objects): 
+![](https://files.readme.io/2e3e442-Screenshot_2023-12-27_at_6.15.54_PM.png)
 
 ```Text Schedule
 'use strict';  
@@ -10975,9 +9054,9 @@ The shape of dashboard card rule
 
 <br />
 
-14.1) <https://github.com/avniproject/avni-models/blob/8613b53edbf88e9b19150eda9e13da573e2a59ba/src/CustomFilter.js#L2>
+14.1) [https://github.com/avniproject/avni-models/blob/8613b53edbf88e9b19150eda9e13da573e2a59ba/src/CustomFilter.js#L2](https://github.com/avniproject/avni-models/blob/8613b53edbf88e9b19150eda9e13da573e2a59ba/src/CustomFilter.js#L2)
 
-14.2) <https://github.com/avniproject/avni-models/blob/8613b53edbf88e9b19150eda9e13da573e2a59ba/src/CustomFilter.js#L30>
+14.2) [https://github.com/avniproject/avni-models/blob/8613b53edbf88e9b19150eda9e13da573e2a59ba/src/CustomFilter.js#L30](https://github.com/avniproject/avni-models/blob/8613b53edbf88e9b19150eda9e13da573e2a59ba/src/CustomFilter.js#L30)
 
 <br/><hr/>
 
@@ -11082,23 +9161,7 @@ While adding members to a "Self-help" group, we need to validate that the person
 ```
 
 **Reference Screenshot, when Member Addition Eligibility Check Rule fails:**
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aaa48f09aa4c5bcaebf2d9ae72f19c0777e719bd463b213b43e011796fd8db0a-Screenshot_2025-06-27_at_7.41.28_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "420px"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/aaa48f09aa4c5bcaebf2d9ae72f19c0777e719bd463b213b43e011796fd8db0a-Screenshot_2025-06-27_at_7.41.28_PM.png)
 
 #### Error Handling
 
@@ -11112,7 +9175,7 @@ When a Member Addition Eligibility Check rule fails (throws an exception), the e
 
 ### 17. Edit Form Rule
 
-This rule is used when the user tries to edit a form. If non-boolean value is returned in the value, or the rule fails, then it would be treated as true and edit will be allowed. To check the places where it is available, not available, & not applicable - <https://avni.readme.io/docs/rules-concept-guide#edit-form-rule>.Value of message has translation support.
+This rule is used when the user tries to edit a form. If non-boolean value is returned in the value, or the rule fails, then it would be treated as true and edit will be allowed. To check the places where it is available, not available, & not applicable - [https://avni.readme.io/docs/rules-concept-guide#edit-form-rule](https://avni.readme.io/docs/rules-concept-guide#edit-form-rule).Value of message has translation support.
 
 #### Sample Rule
 
@@ -11363,7 +9426,7 @@ In many of the rules params db object is available to query the offline database
 
 <br />
 
-**Realm Query Language Reference** - <https://www.mongodb.com/docs/realm/realm-query-language/>
+**Realm Query Language Reference** - [https://www.mongodb.com/docs/realm/realm-query-language](https://www.mongodb.com/docs/realm/realm-query-language)
 
 ### Difference between filter and filtered
 
@@ -11403,8 +9466,8 @@ Note that this function is not implemented for the data entry app and throws a "
 
 ### Service methods available are:
 
-- <https://github.com/avniproject/avni-client/blob/master/packages/openchs-android/src/service/facade/IndividualServiceFacade.js>
-- <https://github.com/avniproject/avni-client/blob/master/packages/openchs-android/src/service/facade/AddressLevelServiceFacade.js>
+- [https://github.com/avniproject/avni-client/blob/master/packages/openchs-android/src/service/facade/IndividualServiceFacade.js](https://github.com/avniproject/avni-client/blob/master/packages/openchs-android/src/service/facade/IndividualServiceFacade.js)
+- [https://github.com/avniproject/avni-client/blob/master/packages/openchs-android/src/service/facade/AddressLevelServiceFacade.js](https://github.com/avniproject/avni-client/blob/master/packages/openchs-android/src/service/facade/AddressLevelServiceFacade.js)
 
 ### Examples
 
@@ -11615,23 +9678,7 @@ For business reasons, we might need to verify that there are **No / Limited numb
 Use IndividualServiceFacade.findAllSubjectsWithMobileNumberForType(mobileNumber, subjectTypeUUID) method to get subjects with same phone number.
 
 **Requires the PhoneNumber concept to have, KeyValue (primary_contact : yes) or (contact_number : yes)**
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f48da098be8218e797e7dd841e023036199eb0b7aa696ece422a6974e0b3f56f-421821795-e7b7766d-3865-4a66-a66e-93f4ddc8b13d.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "410px"
-    }
-  ]
-}
-[/block]
-
+![](https://files.readme.io/f48da098be8218e797e7dd841e023036199eb0b7aa696ece422a6974e0b3f56f-421821795-e7b7766d-3865-4a66-a66e-93f4ddc8b13d.png)
 
 ```js
 
@@ -11671,63 +9718,33 @@ Use IndividualServiceFacade.findAllSubjectsWithMobileNumberForType(mobileNumber,
 |               |                            | Checklists rule                  |
 |               |                            | Dashboard Card rule              |
 
-
 # File: ./readme/Implementers/how-do-i/accessing-media-in-reports.md
 
----
-title: "Access media in reports"
-slug: "accessing-media-in-reports"
-excerpt: ""
-hidden: false
-createdAt: "Fri Feb 25 2022 05:14:03 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Access media in reports
+excerpt: ''
 Data in Avni is stored in two different data sources. The first is the postgres database, which are easily connected to the reporting servers that are being used by hosting. The second is an S3 database where media is stored. 
 
 In reporting tools, there is a mechanism to show data by connecting to a data source. However, S3 access is usually not provided. In case you need to expose media through reports, here is what you need to do. 
 
 1. Provide users access to Avni. 
-2. In reports, observations are usually of the form "<https://prod-user-media.s3.ap-south-1.amazonaws.com/org_name/file_name.png">. This will be stored in observations of the form. To provide a link that shows this, change it to the form " <https://app.avniproject.org/web/media?url=https://prod-user-media.s3.ap-south-1.amazonaws.com/org_name/file_name.png">. 
+2. In reports, observations are usually of the form "[https://prod-user-media.s3.ap-south-1.amazonaws.com/org\_name/file\_name.png"](https://prod-user-media.s3.ap-south-1.amazonaws.com/org_name/file_name.png"). This will be stored in observations of the form. To provide a link that shows this, change it to the form " [https://app.avniproject.org/web/media?url=https://prod-user-media.s3.ap-south-1.amazonaws.com/org\_name/file\_name.png"](https://app.avniproject.org/web/media?url=https://prod-user-media.s3.ap-south-1.amazonaws.com/org_name/file_name.png"). 
 
 Doing this will send the user to app.avniproject.org, which will redirect the user to the corresponding media once they have authenticated themselves on avniproject.
 
 
 # File: ./readme/Implementers/how-do-i/choose-colours-for-offline-report-cards.md
 
+title: Colours for Offline Report Cards
+excerpt: >-
+  description: ''
 ---
-title: "Colours for Offline Report Cards"
-slug: "choose-colours-for-offline-report-cards"
-excerpt: "Please choose from the below palette of recommeded colours, while setting up offline report cards."
-hidden: false
-createdAt: "Mon Jul 28 2025 11:25:58 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Jul 28 2025 11:37:01 GMT+0000 (Coordinated Universal Time)"
----
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/71e201dc45bef425cb65222621d02e8a698eeef4c2a95033664bd1a5c5d70808-Screenshot_2025-07-28_at_4.58.22_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/71e201dc45bef425cb65222621d02e8a698eeef4c2a95033664bd1a5c5d70808-Screenshot_2025-07-28_at_4.58.22_PM.png" />
 
 
 # File: ./readme/Implementers/how-do-i/choosing-android-device-for-avni.md
 
----
-title: "Choosing android device for Avni"
-slug: "choosing-android-device-for-avni"
-excerpt: ""
-hidden: false
-createdAt: "Tue Sep 12 2017 10:49:23 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Jun 27 2024 04:36:20 GMT+0000 (Coordinated Universal Time)"
----
+title: Choosing android device for Avni
+excerpt: ''
 We are listing down some criteria which could help you in deciding which device to choose. The price range kept in this analysis is between 7000 to 10000 Indian Rupees.
 
 **OS Version**: While Avni will work on version >= 5.0, but if you are purchasing a new device then it is better to go for a more recent version. Realistically though setting the bar too high will reduce your options. Hence we recommend version >= 11.
@@ -11751,14 +9768,8 @@ We are listing down some criteria which could help you in deciding which device 
 
 # File: ./readme/Implementers/how-do-i/complex-visit-schedule-testing.md
 
----
-title: "Complex Visit Schedule Testing"
-slug: "complex-visit-schedule-testing"
-excerpt: ""
-hidden: false
-createdAt: "Fri Jul 26 2024 04:47:08 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Aug 05 2024 06:57:14 GMT+0000 (Coordinated Universal Time)"
----
+title: Complex Visit Schedule Testing
+excerpt: ''
 If we break down the visit schedule complexity into three levels simple to complex, we would notice that the testing mechanism for level 2 & 3 visit schedules are quite wasteful due to long feedback loops. The feedback loop is long mainly because the testing of visit schedule logic requires filling forms to setup data and to see the result. In development mode performing sync the second main reason the feedback loop is long.
 
 It is important to remember that for most (may be not all) bugs the testing of all the scenarios need to be carried our all over again. After certain number iterations of such testing the testing fatigue is likely to kick-in, compromising quality as well.
@@ -11773,7 +9784,7 @@ These are tests that are written such that they read close normal english using 
 
 ### Example
 
-This is one test for scheduling visits on edit of an ANC Visit - <https://github.com/avniproject/apf-odisha-2/blob/main/test/ANCTest.js#L117>.
+This is one test for scheduling visits on edit of an ANC Visit - [https://github.com/avniproject/apf-odisha-2/blob/main/test/ANCTest.js#L117](https://github.com/avniproject/apf-odisha-2/blob/main/test/ANCTest.js#L117).
 
 **Given** that the for beneficiary ANC-1 visit is completed and ANC-2 visit is scheduled for the next month
 
@@ -11785,30 +9796,24 @@ This is one test for scheduling visits on edit of an ANC Visit - <https://github
 
 Visit schedules for which such unit tests have been written should be tested differently.
 
-- Review the test scenarios already automated via these tests.  If any scenario is missing, request the developer to add those scenarios to the test suite.
-- Pick a handful, not too many, of these to verify whether the mobile application is indeed working in the same way as well.
-- **Most importantly - do not manually run all the scenarios.**
+* Review the test scenarios already automated via these tests.  If any scenario is missing, request the developer to add those scenarios to the test suite.
+* Pick a handful, not too many, of these to verify whether the mobile application is indeed working in the same way as well.
+* **Most importantly - do not manually run all the scenarios.**
 
 ## For developers
 
-- Jest - <https://jestjs.io/docs/api>
-- It is important to learn about test lifecycle and setup, teardown, describe, test/it methods. <https://jestjs.io/docs/setup-teardown>
-- It is important the each test (test/it) runs independent of other tests, so that execution of one test doesn't have any impact on another test. To achieve this all variables should be instantiated in each test, i.e. in move all the code common instantiation code (not functions) to beforeEach. Do not instantiate anything outside beforeEach and it/test. Unit tests run super-fast so optimisation is not useful and is in fact counter-productive.
+* Jest - [https://jestjs.io/docs/api](https://jestjs.io/docs/api)
+* It is important to learn about test lifecycle and setup, teardown, describe, test/it methods. [https://jestjs.io/docs/setup-teardown](https://jestjs.io/docs/setup-teardown)
+* It is important the each test (test/it) runs independent of other tests, so that execution of one test doesn't have any impact on another test. To achieve this all variables should be instantiated in each test, i.e. in move all the code common instantiation code (not functions) to beforeEach. Do not instantiate anything outside beforeEach and it/test. Unit tests run super-fast so optimisation is not useful and is in fact counter-productive.
 
 
 # File: ./readme/Implementers/how-do-i/get-bulk-data-out-of-avni.md
 
----
-title: "Get bulk data out of Avni"
-slug: "get-bulk-data-out-of-avni"
-excerpt: ""
-hidden: false
-createdAt: "Thu May 23 2024 05:24:35 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu May 23 2024 06:41:21 GMT+0000 (Coordinated Universal Time)"
----
+title: Get bulk data out of Avni
+excerpt: ''
 ## Transaction data
 
-_i.e. Subjects, Encounters, Enrolments etc._
+*i.e. Subjects, Encounters, Enrolments etc.*
 
 There are a few options available suited for different purpose.
 
@@ -11835,77 +9840,27 @@ The point 2(c) applies to this as well.
 
 # File: ./readme/Implementers/how-do-i/how-to-guide-installing-avni-field-app-and-basic-set-up-on-your-mobile-phone.md
 
----
-title: "How To Guide: Installing Avni Field App and Basic Set-Up on your Mobile Phone"
-slug: "how-to-guide-installing-avni-field-app-and-basic-set-up-on-your-mobile-phone"
-excerpt: "Avni Field App (Mobile), is an Android app designed to be used in the field for data entry and collection. It can work in offline mode and can sync data whenever it has internet connectivity. One can install the field app easily from the Google Play Store."
-hidden: false
-createdAt: "Fri Apr 19 2024 05:48:52 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Apr 26 2024 07:23:36 GMT+0000 (Coordinated Universal Time)"
+title: 'How To Guide: Installing Avni Field App and Basic Set-Up on your Mobile Phone'
+excerpt: >-
+  robots: index
+next:
+  description: ''
 ---
 **Step 1: Install the Avni app from Google Play Store**
 
 1. Go to the Google Play Store on your mobile device
-2. Type **Avni **on the search bar
-3. Click on **Install **to download the app
+2. Type **Avni** on the search bar
+3. Click on **Install** to download the app
 
-<br>
+<br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b2ec7c3-Playstore.JPEG",
-        "",
-        ""
-      ],
-      "align": "left",
-      "sizing": "250px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="left" className="border" width="250px" border={true} src="https://files.readme.io/b2ec7c3-Playstore.JPEG" />
 
+<Image align="left" className="border" width="250px" border={true} src="https://files.readme.io/e07f14d-Avni.JPEG" />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e07f14d-Avni.JPEG",
-        "",
-        ""
-      ],
-      "align": "left",
-      "sizing": "250px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<br />
 
-
-<br>
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/daf3937-Install.JPEG",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "250px",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="250px" border={true} src="https://files.readme.io/daf3937-Install.JPEG" />
 
 **Step 2: LOGIN**
 
@@ -11914,27 +9869,11 @@ updatedAt: "Fri Apr 26 2024 07:23:36 GMT+0000 (Coordinated Universal Time)"
 
 Note: The User ID and Password is sent to the registered mobile number via SMS once the user is created in Avni Web Console
 
-<br>
+<br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/99d67fd-LOGIN.JPEG",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "300px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/99d67fd-LOGIN.JPEG" />
 
-
-<br>
+<br />
 
 **Step 3: Basic Set - Ups**
 
@@ -11942,123 +9881,39 @@ a) **Sync**
 
 It is important to sync the app whenever an internet connection is available for the new data to get stored and reflect in the app Dashboard. This can be done by clicking on the Sync button at the top right
 
-<br>
+<br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4f2e86b-Sync2.JPEG",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "300px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/4f2e86b-Sync2.JPEG" />
 
+<br />
 
-<br>
-
-b) **Language: **
+b) **Language:**
 
 By clicking on the Edit Settings button at the top, you can select the language in which you want to see the app content. The default language selected is English
 
-<br>
+<br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/75ffcfa-Edit_Lang.JPEG",
-        "",
-        ""
-      ],
-      "align": "left",
-      "sizing": "250px"
-    }
-  ]
-}
-[/block]
+<Image align="left" width="250px" src="https://files.readme.io/75ffcfa-Edit_Lang.JPEG" />
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f9de6e9-1712641958848.JPEG",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "250px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="250px" src="https://files.readme.io/f9de6e9-1712641958848.JPEG" />
 
 **c) Change Password**: 
 
-If you wish to change your password, you can do so, by clicking on the Change Password button and entering the new password details. 
+If you wish to change your password, you can do so, by clicking on the Change Password button and entering the new password details.
 
-<br>
+<br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5b1f088-Change_Pass.JPEG",
-        "",
-        ""
-      ],
-      "align": "left",
-      "sizing": "250px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="left" className="border" width="250px" border={true} src="https://files.readme.io/5b1f088-Change_Pass.JPEG" />
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/69adaa1-Password.JPEG",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "250px",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="250px" border={true} src="https://files.readme.io/69adaa1-Password.JPEG" />
 
 # File: ./readme/Implementers/how-do-i/migrate-location-of-subject.md
 
----
-title: "Migrate location of subject"
-slug: "migrate-location-of-subject"
-excerpt: ""
-hidden: false
-createdAt: "Mon Nov 06 2023 10:04:52 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Jan 22 2024 07:41:56 GMT+0000 (Coordinated Universal Time)"
----
+title: Migrate location of subject
+excerpt: ''
 # Please refer to API Doc
 
-<https://editor.swagger.io/?url=https://raw.githubusercontent.com/avniproject/avni-server/master/avni-server-api/src/main/resources/api/external-api.yaml>
+[https://editor.swagger.io/?url=https://raw.githubusercontent.com/avniproject/avni-server/master/avni-server-api/src/main/resources/api/external-api.yaml](https://editor.swagger.io/?url=https://raw.githubusercontent.com/avniproject/avni-server/master/avni-server-api/src/main/resources/api/external-api.yaml)
 
 # Documentation Deprecated
 
@@ -12068,7 +9923,7 @@ Since there are multiple entities that need to be changed, the migration should 
 
 `{{origin}}/subjectMigration/bulk`
 
-e.g. <https://app.avniproject.org/subjectMigration/bulk>
+e.g. [https://app.avniproject.org/subjectMigration/bulk](https://app.avniproject.org/subjectMigration/bulk)
 
 ### Headers
 
@@ -12076,8 +9931,8 @@ e.g. <https://app.avniproject.org/subjectMigration/bulk>
 
 ### Body
 
-- destinationAddresses is a map of source address level id and destination address level id.
-- subject type ids is an array of subject types that you want migrated
+* destinationAddresses is a map of source address level id and destination address level id.
+* subject type ids is an array of subject types that you want migrated
 
 ```Text JSON
 {
@@ -12095,20 +9950,14 @@ e.g. <https://app.avniproject.org/subjectMigration/bulk>
 
 ### Also know
 
-- if you have a lot of addresses then the request may timeout, but the server will continue to process
-- Each source to destination mapping for each subject type, will be done in its own transaction. So for above example there will be 6 transactions (3 address mapping multiplied by 2 subject types).
+* if you have a lot of addresses then the request may timeout, but the server will continue to process
+* Each source to destination mapping for each subject type, will be done in its own transaction. So for above example there will be 6 transactions (3 address mapping multiplied by 2 subject types).
 
 
 # File: ./readme/Implementers/how-do-i/move-org-to-custom-dashboard-from-mydashboard.md
 
----
-title: "Move Org to Custom Dashboard from MyDashboard"
-slug: "move-org-to-custom-dashboard-from-mydashboard"
-excerpt: ""
-hidden: false
-createdAt: "Mon Aug 12 2024 05:03:59 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Oct 03 2024 09:32:59 GMT+0000 (Coordinated Universal Time)"
----
+title: Move Org to Custom Dashboard from MyDashboard
+excerpt: ''
 1. As super admin, call `POST /api/defaultDashboard/create?orgId=[organisationId]` (`organisationId` being the id of the organisation for which you want to create the default dashboard - typically your UAT org)
 2. This API will only create the default dashboard for non Prod orgs.
 3. Assign the newly created dashboard to the required user groups.
@@ -12118,14 +9967,8 @@ updatedAt: "Thu Oct 03 2024 09:32:59 GMT+0000 (Coordinated Universal Time)"
 
 # File: ./readme/Implementers/how-do-i/review-implementation-bundle.md
 
----
-title: "Review Implementation Bundle"
-slug: "review-implementation-bundle"
-excerpt: ""
-hidden: true
-createdAt: "Wed May 14 2025 10:05:02 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon May 19 2025 11:05:50 GMT+0000 (Coordinated Universal Time)"
----
+title: Review Implementation Bundle
+excerpt: ''
 Avni offers the ability to export the configuration and metadata from an implementation into a bundle ([App Designer -> Bundle](https://app.avniproject.org/#/appdesigner/bundle)). This bundle can then be uploaded into another implementation if it is required to have the same metadata and configuration setup ([Admin -> Upload](https://app.avniproject.org/#/admin/upload) ).
 
 Since this a feature with widespread consequences if the wrong bundle is used on the wrong implementation, the implementer can review the changes that will be affected as a result of uploading a bundle before applying it. The option to review the changes is displayed after selecting the upload type as 'Metadata Zip' on the upload screen and uploading the bundle.
@@ -12145,14 +9988,8 @@ On selecting a file, the details of the changes in that file are shown. The impl
 
 # File: ./readme/Implementers/how-do-i/updating-rules-in-bulk.md
 
----
-title: "Update rules in bulk"
-slug: "updating-rules-in-bulk"
-excerpt: ""
-hidden: false
-createdAt: "Tue Apr 11 2023 06:06:29 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Apr 04 2024 04:05:47 GMT+0000 (Coordinated Universal Time)"
----
+title: Update rules in bulk
+excerpt: ''
 ```sql
 set role <organisation_db_user>;
 
@@ -12226,46 +10063,20 @@ One example is illustrated here, one can change the text and replace with someth
 
 # File: ./readme/Implementers/how-do-i/upload-local-database.md
 
----
-title: "Upload local database"
-slug: "upload-local-database"
-excerpt: ""
-hidden: false
-createdAt: "Tue Aug 22 2023 08:50:53 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Upload local database
+excerpt: ''
 Many times, the local database of the Android app provides clues to an issue happening on that device. Avni provides a mechanism to send a backup of the local database to Avni so that a developer can recreate this issue and perform fixes if required. 
 
 To upload your local database, go to the "More" section on the home page and press on the "Upload Database" menu item. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/be788e5-Upload_Database.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="500px" src="https://files.readme.io/be788e5-Upload_Database.png" />
 
 
 # File: ./readme/Implementers/how-do-i/validate-a-new-implementation-for-user-acceptance-test-purposes.md
 
----
-title: "Validate a new Implementation for User Acceptance Test Purposes"
-slug: "validate-a-new-implementation-for-user-acceptance-test-purposes"
-excerpt: ""
-hidden: true
-createdAt: "Thu Apr 25 2024 11:32:41 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Apr 25 2024 11:37:45 GMT+0000 (Coordinated Universal Time)"
----
-<br>
+title: Validate a new Implementation for User Acceptance Test Purposes
+excerpt: ''
+<br/>
 
 **UAT Test Scenarios** 
 
@@ -12275,240 +10086,208 @@ updatedAt: "Thu Apr 25 2024 11:37:45 GMT+0000 (Coordinated Universal Time)"
 
 **Step 2: Login :**
 
-- **Valid User Login:** Verify that a user can successfully log in with a valid username and password. (Ex. Username: xyza@ProjectName, Password: xyza7988)
+* **Valid User Login:** Verify that a user can successfully log in with a valid username and password. (Ex. Username: xyza\@ProjectName, Password: xyza7988)
 
-- **Invalid User Login:** Confirm that the system handles login attempts with invalid usernames and passwords.
+* **Invalid User Login:** Confirm that the system handles login attempts with invalid usernames and passwords.
 
-- Test Ex. 1:\*\* With an invalid username and valid password (Authentication error)
+* Test Ex. 1:** With an invalid username and valid password (Authentication error)
 
-Username: xy@ProjectName, Password: xyza7988
+  Username: xy\@ProjectName, Password: xyza7988
 
-- Test Ex. 2: With an invalid username with space applied anywhere in the user (Error should be displayed as incorrect username) 
+* Test Ex. 2: With an invalid username with space applied anywhere in the user (Error should be displayed as incorrect username)
 
-User name:   xyza@cini\_uat, Password: xyza7988
+  User name: xyza\@cini\_uat, Password: xyza7988
 
-- Test eg 3: When the user name is incorrect , it does not exist in the system. It will give an authentication error
+* Test eg 3: When the user name is incorrect, it does not exist in the system. It will give an authentication error
 
-- ` `Username: dinesh or dineshProjectName, Password: dine7988
+* ` `Username: dinesh or dineshProjectName, Password: dine7988
 
-- Test eg 4:\*\* With a valid username and invalid password (Authentication error)
+* Test eg 4:** With a valid username and invalid password (Authentication error)
 
-  Username: xyza@cini\_uat, Password: xyza798
+  Username: xyza\@cini\_uat, Password: xyza798
 
-- Test eg 5:\*\* With a valid username and invalid password special characters (Authentication error)
+* Test eg 5:** With a valid username and invalid password special characters (Authentication error)
 
-    Username: xyza@cini\_uat, Password: xyza@7988
+  Username: xyza\@cini\_uat, Password: xyza\@7988
 
-    ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.002.png)  
-  \*\*
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.002.png)
 
-- **Password Visibility**: Ensure the password field can be shown or hidden upon using the ‘show password’ toggle.
+* **Password Visibility**: Ensure the password field can be shown or hidden upon using the ‘show password’ toggle.
 
-  `	`![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.003.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.003.png)
 
-- **Forgot Password:** Forgot password option on the login page allows the user to generate a new password.
+* **Forgot Password:** Forgot password option on the login page allows the user to generate a new password.
 
-- By clicking on the forgot password, user can see the page where the registered user ID needs to be submitted. On providing the correct user ID, a pop-up will be displayed ‘We have sent an OTP on your registered Mobile Number’.
+* By clicking on the forgot password, user can see the page where the registered user ID needs to be submitted. On providing the correct user ID, a pop-up will be displayed ‘We have sent an OTP on your registered Mobile Number’.
 
   ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.004.png)![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.005.png)
 
-- With that, the next page will be displayed with 3 fields to enter the one-time password received on the mobile number, the old password, and the new password. 
+* With that, the next page will be displayed with 3 fields to enter the one-time password received on the mobile number, the old password, and the new password.
 
   ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.006.png)
 
-- By successfully submitting all the details, the user can change the password and log in with the user ID and new password.
+* By successfully submitting all the details, the user can change the password and log in with the user ID and new password.
 
-`   `**3. Home Page:**  
-\*\*
+**3. Home Page:**
 
-- **Home Dashboard:** The home page would have a dashboard to populate the aggregate (count) of different types of data, Ex. number of registrations, number of visits due, number of visits overdue, number of enrolments in the program, etc. By clicking on any of these cards, a list of individuals or other subjects will be displayed where the user can view profiles and details submitted in the registration form of any individual.
+* **Home Dashboard:** The home page would have a dashboard to populate the aggregate (count) of different types of data, Ex. number of registrations, number of visits due, number of visits overdue, number of enrolments in the program, etc. By clicking on any of these cards, a list of individuals or other subjects will be displayed where the user can view profiles and details submitted in the registration form of any individual.
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.007.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.007.png)
 
-- Home Dashboard can have filters to update the data as per date or any other parameter to display card’s data accordingly.
+* Home Dashboard can have filters to update the data as per date or any other parameter to display card’s data accordingly.
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.008.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.008.png)
 
-**Last 24 Hours Statistics :**
+**Last 24 Hours Statistics:**
 
-- **Last 24 hours registration:** The user should be able to see the count of Registered individuals and click on it to list the details               
-- **Last 24 hours visits:** The user should be able to see the count of Visits and click on it to list the details   
+* **Last 24 hours registration:** The user should be able to see the count of Registered individuals and click on it to list the details               
+* **Last 24 hours visits:** The user should be able to see the count of Visits and click on it to list the details   
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.009.png)\*\*      
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.009.png)
 
-**4. Sync:** 
+**4. Sync:**
 
-- Sync button available on top right corner of the home page, allows user to sync the registration, enrollments, visits and changes done to the existing data. 
+* Sync button available on top right corner of the home page, allows user to sync the registration, enrollments, visits and changes done to the existing data.
 
-- ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.010.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.010.png)
 
-- By clicking on the sync button, system syncs the changes done in particular in device’s app with server. Data synced in app can be seen in the reports.
+* By clicking on the sync button, system syncs the changes done in particular in device’s app with server. Data synced in app can be seen in the reports.
 
-- Number shown on the sync button suggests the changes are which ready to be synced.
+* Number shown on the sync button suggests the changes are which ready to be synced.
 
-- A successful sync would display a pop-up as shown below and If sync isn't done popularly or it displays some error like a Fatal error or Association error we have to contact the administrator ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.011.png)
+* A successful sync would display a pop-up as shown below and If sync isn't done popularly or it displays some error like a Fatal error or Association error we have to contact the administrator ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.011.png)
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.012.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.012.png)
 
-- If sync fails with the reason Network request then users have to check the internet connection and try to resync.
+* If sync fails with the reason Network request then users have to check the internet connection and try to resync.
 
-**5.  Registration :**
+**5. Registration:**
 
-- The register section should allow the user to register the subjects as per the project, Ex. Individuals, Anganwadi, Camps, Patients, etc.
+* The register section should allow the user to register the subjects as per the project, Ex. Individuals, Anganwadi, Camps, Patients, etc.
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.013.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.013.png)
 
-- The user should be able to save, register the registration form, and proceed to the next registration form.
-- After Registering the individual/any other subject in the mobile app, sync the data and validate that the data is reflected in the web app
-- Register the individual/any other subject in the mobile app. Do not sync and validate that the data is not reflected in the web app.
-- Register the individual in the mobile app using without turning on the network. Turn on the network, don't sync the data, and validate that the data is automatically synced after 10 minutes.
+* The user should be able to save, register the registration form, and proceed to the next registration form.
+* After Registering the individual/any other subject in the mobile app, sync the data and validate that the data is reflected in the web app
+* Register the individual/any other subject in the mobile app. Do not sync and validate that the data is not reflected in the web app.
+* Register the individual in the mobile app using without turning on the network. Turn on the network, don't sync the data, and validate that the data is automatically synced after 10 minutes.
 
-**6**. **Search Page :**
+**6. Search Page:**
 
-- Click on the Search button
-- Select the subject (i.e. individual, camp, student, etc.) under Choose type, select other filters and click on Submit. 
+* Click on the Search button
+* Select the subject (i.e. individual, camp, student, etc.) under Choose type, select other filters and click on Submit.
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.014.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.014.png)
 
-- On the search page, option called included voided if the user toggles it and clicks on the search it should display all the voided and unvoided data
-- The result should display the list of subjects as per the filter provided. Along with the list of subjects, ‘Total matching results will be displayed’ to populate the count of subjects as per the filter provided.
+* On the search page, option called included voided if the user toggles it and clicks on the search it should display all the voided and unvoided data
+* The result should display the list of subjects as per the filter provided. Along with the list of subjects, ‘Total matching results will be displayed’ to populate the count of subjects as per the filter provided.
 
-`	`![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.015.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.015.png)
 
-- Please note that user can use any combinations of filter simultaneously to populate the results as required.
+* Please note that user can use any combinations of filter simultaneously to populate the results as required.
 
 **6. More Page:**
 
-- **Edit Settings:** In the ‘More’ section, the user should be able to click on the user icon to open ‘edit settings’. The edit setting should have configuration fields of Language, Location, Dashboard, and Auto-sync as shown below.
+* **Edit Settings:** In the ‘More’ section, the user should be able to click on the user icon to open ‘edit settings’. The edit setting should have configuration fields of Language, Location, Dashboard, and Auto-sync as shown below.
 
   ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.016.png)
 
-- In the **Language,** select the language the app content should be displayed and the app content should be displayed in the selected language. The default language is English
+* In the **Language,** select the language the app content should be displayed and the app content should be displayed in the selected language. The default language is English
 
-- If the language is not updated as select in the ‘edit settings’, then it is a bug.
+* If the language is not updated as select in the ‘edit settings’, then it is a bug.
 
-- **Track location,** if it is enabled it will ask the user for permission if the user accepts the permission  then it will capture the longitude and latitude of the current location 
+* **Track location,** if it is enabled it will ask the user for permission if the user accepts the permission then it will capture the longitude and latitude of the current location
 
-- Track location if it is disabled or they refuse to give the permission then it should not capture the user's location
+* Track location if it is disabled or they refuse to give the permission then it should not capture the user's location
 
-- **Dashboard Auto-Refresh,** disabling this toggle would restrict the user from seeing updated version automatically
+* **Dashboard Auto-Refresh,** disabling this toggle would restrict the user from seeing updated version automatically
 
-- If the user disables the auto refresh then the dashboard should not update the data on the dashboard automatically.
+* If the user disables the auto refresh then the dashboard should not update the data on the dashboard automatically.
 
-- **Auto Sync,** if the user enables the auto sync then data should sync automatically for every 10 minutes
+* **Auto Sync,** if the user enables the auto sync then data should sync automatically for every 10 minutes
 
-- If the user disables the auto sync then data should not be synced automatically.
+* If the user disables the auto sync then data should not be synced automatically.
 
-`		`![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.017.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.017.png)
 
-- **Dashboard,** click on this it should display offline dashboards where aggregate cards of different visits due/overdue, registration, and enrolments are done. 
+* **Dashboard,** click on this it should display offline dashboards where aggregate cards of different visits due/overdue, registration, and enrolments are done.
 
   ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.018.png)
 
-- By opening the aggregate cards given on the dashboard, the user can see the list of individuals/subjects and their profiles which aggregates to a count in the dashboard. (Refer to point#7 Profile more details)![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.019.png)
+* By opening the aggregate cards given on the dashboard, the user can see the list of individuals/subjects and their profiles which aggregates to a count in the dashboard. (Refer to point#7 Profile more details)![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.019.png)
 
   ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.020.png)
 
-- **Entity Sync Status**
+* **Entity Sync Status**
 
-- **Setup Fast Sync**
+* **Setup Fast Sync**
 
-- **Change Password,** click on it directly to the password change page
+* **Change Password,** click on it directly to the password change page
 
-- Users can enter their current password 
+* Users can enter their current password
 
-- The user should be able to enter the new password
+* The user should be able to enter the new password
 
-- Password Visibility, ensure the password field can be shown or hidden upon user selection.
+* Password Visibility, ensure the password field can be shown or hidden upon user selection.
 
-- Password Visibility (Toggle): Verify that toggling the password visibility option works as intended.
+* Password Visibility (Toggle): Verify that toggling the password visibility option works as intended.
 
-- Password mismatch if the user gives the current password as invalid then it should display the incorrect password or user ID 
+* Password mismatch if the user gives the current password as invalid then it should display the incorrect password or user ID
 
-- Forgot password, If the user doesn't remember the current password while clicking on it. It will send you the OTP using that user enters the new OTP and also a new password
+* Forgot password, If the user doesn't remember the current password while clicking on it. It will send you the OTP using that user enters the new OTP and also a new password
 
-- Password mismatch if the user gives the mismatch value for Enter a new password and Confirm new password then it should display an error password mismatch
+* Password mismatch if the user gives the mismatch value for Enter a new password and Confirm new password then it should display an error password mismatch
 
-Eg: Enter a new password: din123, Confirm new password: din321
+  Eg: Enter a new password: din123, Confirm new password: din321
 
-- Password successfully: if the user gives the match value for Enter new password and Confirm new password then it should display password changed successfully.
+* Password successfully: if the user gives the match value for Enter new password and Confirm new password then it should display password changed successfully.
 
   ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.021.png)
 
-- **Logout** should help the user close the current session and return to the login screen. Upon clicking the logout button, the user should be able to see a pop-up to confirm to end the current session and logout.
+* **Logout** should help the user close the current session and return to the login screen. Upon clicking the logout button, the user should be able to see a pop-up to confirm to end the current session and logout.
 
-  `	`![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.022.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.022.png)
 
-**7. Profile:** 
+**7. Profile:**
 
-- **Subject Profile:** The profile should typically contain details submitted in various forms and will populate details of enrollment and forms that are scheduled and filled previously.
-- Subject profile would typically have name, gender, age, address on top.
-- Profile page would contain the list of program subject enrolled to along with the option to enroll in a new program if eligible but not enrolled yet.
-- Profile page would have the summary section to display important details which are filled in different forms.
-- Profile would also contain visit planned which would display the visit scheduled along with completed visits section.
+* **Subject Profile:** The profile should typically contain details submitted in various forms and will populate details of enrollment and forms that are scheduled and filled previously.
+* Subject profile would typically have name, gender, age, address on top.
+* Profile page would contain the list of program subject enrolled to along with the option to enroll in a new program if eligible but not enrolled yet.
+* Profile page would have the summary section to display important details which are filled in different forms.
+* Profile would also contain visit planned which would display the visit scheduled along with completed visits section.
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.023.png)![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.024.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.023.png)![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.024.png)
 
-![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.025.png)
+  ![](Aspose.Words.e7a1731f-5ee8-4023-8075-158ab95af182.025.png)
 
-**Important note :**  
-\*\*
+**Important note:**
 
 **The changes done in the application should be synced to save these changes on the server. Sync can be done manually from the button on the home page's top right corner.**
 
-
 # File: ./readme/Implementers/implementers-concept-guide-introduction.md
 
----
-title: "Introduction"
-slug: "implementers-concept-guide-introduction"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jan 01 2020 04:02:46 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Introduction
+excerpt: ''
+    - type: basic
+      slug: avnis-domain-model-of-field-based-work
+      title: Avni's domain model of field based work
 ---
 Implementer's concept guide is for anyone who would like to implement Avni for any field-based program. We recommend this guide to be the first one to be read by anyone wanting to understand Avni.
 
 While internally there are many parts of the system, if you are an implementer and using the hosted instance then these are the components you will be using. Some of the functions are intended for the end-users but you will use them for testing the application.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9fa4f1f-Avni_4.png",
-        "Avni (4).png",
-        1089
-      ],
-      "sizing": "80",
-      "caption": "User/Implementer components of Avni"
-    }
-  ]
-}
-[/block]
-
-
-# File: ./readme/Implementers/reporting-and-business-analytics.md
-
----
-title: "Reporting and business analytics"
-slug: "reporting-and-business-analytics"
-excerpt: ""
-hidden: false
-createdAt: "Thu Sep 12 2024 06:53:41 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Sep 12 2024 06:53:49 GMT+0000 (Coordinated Universal Time)"
----
+<Image title="Avni (4).png" alt={1089} width="80%" src="https://files.readme.io/9fa4f1f-Avni_4.png">
+  User/Implementer components of Avni
+</Image>
 
 
 # File: ./readme/Implementers/reporting-and-business-analytics/ai-in-reporting.md
 
----
-title: "Developing BI dashboards using AI services"
-slug: "ai-in-reporting"
-excerpt: "The AI in Reporting feature simplifies SQL query generation for reports using AI models. Report requirements developed in excel format can be input as CSV, and AI service can generate SQL queries and other reporting artifacts. This reduces manual coding and creates efficient, standardised reporting queries."
-hidden: false
-createdAt: "Wed Sep 11 2024 15:22:27 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Oct 02 2024 05:13:26 GMT+0000 (Coordinated Universal Time)"
+title: Developing BI dashboards using AI services
+excerpt: >-
+  robots: index
+next:
+  description: ''
 ---
 The tool used for this is Cursor which internally uses other AI services. You can download [Cursor](https://www.cursor.com/).
 
@@ -12530,32 +10309,26 @@ Excel or spreadsheet contain the requirements for the report all present in a si
 
 1. Open chat window in Cursor.
 2. Prompt to forget everything (line 1 of `aggregate-query-prompt.md` or `linelist-query-prompt.md`)
-3. Follow the steps in <https://github.com/avniproject/avni-ai-experiment/blob/main/bi-reporting-spike/aggregate/workspace/aggregate-query-prompt.md> or <https://github.com/avniproject/avni-ai-experiment/blob/master/bi-reporting-spike/linelist/workspace/line-list-prompt.md>
+3. Follow the steps in [https://github.com/avniproject/avni-ai-experiment/blob/main/bi-reporting-spike/aggregate/workspace/aggregate-query-prompt.md](https://github.com/avniproject/avni-ai-experiment/blob/main/bi-reporting-spike/aggregate/workspace/aggregate-query-prompt.md) or [https://github.com/avniproject/avni-ai-experiment/blob/master/bi-reporting-spike/linelist/workspace/line-list-prompt.md](https://github.com/avniproject/avni-ai-experiment/blob/master/bi-reporting-spike/linelist/workspace/line-list-prompt.md)
 
 
 # File: ./readme/Implementers/reporting-and-business-analytics/form-analytics-using-metabase-x-ray-feature.md
 
----
-title: "Form analytics using Metabase X-Ray feature"
-slug: "form-analytics-using-metabase-x-ray-feature"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jul 11 2024 10:02:54 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Oct 09 2024 04:21:25 GMT+0000 (Coordinated Universal Time)"
----
+title: Form analytics using Metabase X-Ray feature
+excerpt: ''
 Metabase xRay allows for generating basic analytics on click of a button from the database table. Please follow the steps below for setting up table analytics that can be used. The steps below having been provided at a logical level.
 
 > 📘 Note: The dashboard created using this approach cannot be easily migrated to another database hence the development should be done in production database, else it will involve rework.
 
 ### Features relevant to us
 
-- Auto generated breakup by coded fields
-- Can see line list for each breakup
-- Related tables can be mapped to logical names
-- Internal columns can be removed
-- Related table’s data can be seen from the line list (e.g. by clicking on Individual name)
-- In pie-chart form also see the percentage
-- Can be used with custom models feature
+* Auto generated breakup by coded fields
+* Can see line list for each breakup
+* Related tables can be mapped to logical names
+* Internal columns can be removed
+* Related table’s data can be seen from the line list (e.g. by clicking on Individual name)
+* In pie-chart form also see the percentage
+* Can be used with custom models feature
 
 ### Standard ETL table or Custom Model
 
@@ -12578,31 +10351,25 @@ Remove visibility of fields that do not concern the user. Some you can remove fr
 
 ### Dashboard changes
 
-- Remove any unnecessary generated filters and cards first. With fewer cards the performance of the dashboard during the design process will be better.
-- Any field directly on the table/form can be added as filter.
-- Only one address filter can be added per table/dashboard (note that table metadata should be changed to map too).
+* Remove any unnecessary generated filters and cards first. With fewer cards the performance of the dashboard during the design process will be better.
+* Any field directly on the table/form can be added as filter.
+* Only one address filter can be added per table/dashboard (note that table metadata should be changed to map too).
 
 ### Table configuration changes to make certain fields more useful
 
-Metabase allows to map a foreign key field such that one can see a logical text instead of seeing a number. For example - individual_id can be mapped to Individual.first_name; address_id can be mapped to Address.Title.
+Metabase allows to map a foreign key field such that one can see a logical text instead of seeing a number. For example - individual\_id can be mapped to Individual.first\_name; address\_id can be mapped to Address.Title.
 
 ### Known Limitations
 
-- Cannot do percentage only totals (why? - <https://avni.readme.io/docs/form-analytics-using-metabase-x-ray-feature>) in non-pie chart form.
-- Once xRay dashboard is generated subsequent addition of fields will have to be manual, otherwise the previous changes will be lost.
+* Cannot do percentage only totals (why? - [https://avni.readme.io/docs/form-analytics-using-metabase-x-ray-feature](https://avni.readme.io/docs/form-analytics-using-metabase-x-ray-feature)) in non-pie chart form.
+* Once xRay dashboard is generated subsequent addition of fields will have to be manual, otherwise the previous changes will be lost.
 
 
 # File: ./readme/Implementers/reporting-and-business-analytics/guide-to-export-and-import-reports-across-different-jasper-servers.md
 
----
-title: "Guide To Export and Import Reports across different Jasper Servers"
-slug: "guide-to-export-and-import-reports-across-different-jasper-servers"
-excerpt: ""
-hidden: false
-createdAt: "Fri Mar 15 2024 11:03:43 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Mar 15 2024 11:04:27 GMT+0000 (Coordinated Universal Time)"
----
-## Reference: <https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-security-guide/vv900/jasperreports-server-security-guide-_-keymanagement-_-import_and_export/#Key_Command_Line_Export>
+title: Guide To Export and Import Reports across different Jasper Servers
+excerpt: ''
+## Reference: [https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-security-guide/vv900/jasperreports-server-security-guide-\_-keymanagement-\_-import\_and\_export/#Key\_Command\_Line\_Export](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-security-guide/vv900/jasperreports-server-security-guide-_-keymanagement-_-import_and_export/#Key_Command_Line_Export)
 
 ## Login into Source server
 
@@ -12629,34 +10396,15 @@ scp jasper-reporting-openchs:gramin_rwb_2023.zip ./
 
 ## Login into Target Jasper server webapp
 
-Import the zip file in target jasper using the "Key Value" option by specifying the key value "\<specify_key_value>" used during export.
+Import the zip file in target jasper using the "Key Value" option by specifying the key value "\<specify\_key\_value>" used during export.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6ca70fd-Screenshot_2024-03-15_at_4.32.26_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/6ca70fd-Screenshot_2024-03-15_at_4.32.26_PM.png" />
 
 
 # File: ./readme/Implementers/reporting-and-business-analytics/jasper-notes.md
 
----
-title: "Jasper notes"
-slug: "jasper-notes"
-excerpt: ""
-hidden: false
-createdAt: "Wed Nov 27 2024 04:36:12 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Nov 27 2024 04:45:53 GMT+0000 (Coordinated Universal Time)"
----
+title: Jasper notes
+excerpt: ''
 ### Self referential hierarchical reports
 
 1. The contents of JRXML can be manipulated based on the url parameters. The url parameters can be coming from the same report at a higher level.
@@ -12668,420 +10416,6 @@ This is to avoid changing the production version as it is already in use.
 
 1. Copy can be created using export.
 2. All the files are text files so these can be changed in editor and then imported after zipping.
-
-
-# File: ./readme/Other documentation/faqs.md
-
-
-
-# File: ./readme/developers/api-guide/custom-query-api.md
-
-Avni allows you to save the implementation-related queries in the `custom_query` table. 
-
-### Points to note:
-
-- Right now, there is no UI, and the implementer needs to insert the query manually into the DB.
-- The query gets passed following additional parameters used to set Organisation context, which can be made use of, as per implementation team's requirement in the custom query. 
-  - ORG_ID =>"org_id"
-  - ORG_DB_USER => "org_db_user"
-  - ORG_SCHEMA_NAME => "org_schema_name"
-- Please note that the custom query is executed within the current organisation's db_user's role context.. therefore, data access would be limited to only that within its organisation.
-
-### Sample insert statement
-
-```sql Adding new custom query
-insert into custom_query (uuid, name, query, organisation_id, is_voided, version, created_by_id,
-                          last_modified_by_id, created_date_time, last_modified_date_time)
-
-values (uuid_generate_v4(),
-        'Individual based on gender',
-        'select concat(first_name, '' '', last_name) as "Full name",
-               g.name as "Gender"
-        from individual
-                 join gender g on individual.gender_id = g.id
-                 join organisation o on o.id = i.organisation_id
-        where g.name = :gender
-        and o.id = :org_id
-        and registration_date = cast(:date as date)
-        limit 100;',
-        21,
-        false,
-        0,
-        1,
-        1,
-        now(),
-        now());
-```
-
-Once the query is saved in the DB one can fire the post request to `/executeQuery` endpoint with the request body
-
-```json Sample request body
-{
-    "name": "Individual based on gender",
-   "queryParams": {
-       "gender": "Male",
-       "date": "2020-01-01"
-   }
-}
-```
-
-Below is the output response
-
-```json Response
-{
-    "headers": [
-        "Full name",
-        "Gender"
-    ],
-    "data": [
-        [
-            "Hetram  Kewat Kewat",
-            "Male"
-        ],
-        [
-            "Reesham Kumar Panika",
-            "Male"
-        ],
-        [
-            "Ambika Prasad Panika",
-            "Male"
-        ],
-        [
-            "Shiv Prasad Panika",
-            "Male"
-        ],
-        [
-            "Aman Kumar Panika",
-            "Male"
-        ],
-        [
-            "Chandan Prasad Panika",
-            "Male"
-        ],
-        [
-            "Suraj Kumar Panika",
-            "Male"
-        ],
-        [
-            "Birendra Kumar Panika",
-            "Male"
-        ],
-        [
-            "Naresh Prasad Panika",
-            "Male"
-        ]
-    ],
-    "total": 9
-}
-```
-
-### Notes
-
-1. Right now casts need to be handled in the query itself, for example in the above query casting of date param.
-
-
-# File: ./readme/developers/architecture-1/sync-1.md
-
-## Download and Upload
-
-Uploading data from mobile to server is quite straightforward. Mobile app maintains a realm database based queue as and when entities are changed. During upload process these are uploaded one by one. e.g. when a new individual is registered and then an encounter is performed on the individual - these will be two items in the queue with individual in front (because this is how user will save them).
-
-Downloading entities is far more complex. The type dependency (i.e. Individual should be downloaded after Subject Type is downloaded) is handled in [mobile app code](https://github.com/avniproject/avni-models/blob/0975db9c7fb62849acc1f8887bebf85511ab364f/src/EntityMetaData.js#L426). The main complexity of sync download is partitioning of data described below.
-
-## Strategies to create data partition
-
-An organisation can have a lot of data. All the data may not be required by the field worker. Avni has multiple ways to functionally partition this data and then deliver only the partition(s) that the user should get.
-
-1. Subject location (same applied to child entities)
-2. Form types (i.e. subject types, programs, and encounter types)
-3. Manual assignment of subjects (same applied to child entities)
-4. Based on observations on subjects (same applied to child entities)
-
-## Configuration of the partition
-
-Logically 1,3,& 4 partition types are expressed via Subject Type configuration. One or more of these can be configured and they are ANDed to create narrower (or composite) partition. Form types (2) has been implemented as access control but it has the partitioning effect as far as sync is concerned. It has been implemented technically differently as well.
-
-## Sync Process
-
-Mobile clients downloads in two steps.
-
-1. Get the list of entities types that needs to be synchronised given a timestamp. The timestamp is the last sync time for that entity.
-2. Download each of these entity types.
-
-#### Entity Type
-
-These are functional (or implementation) entity types rather than model classes. Functional entity types are same as in code entity types for most entities except those which have sub entity type created by the implementation. e.g. multiple encounter type for which in code there is only one entity type encounter. This can be followed from [here](https://github.com/avniproject/avni-server/blob/436631d6c8ccb935110d498b20102b39ae07eb1c/avni-server-api/src/main/java/org/avni/server/service/SyncDetailsService.java#L42).
-
-## Group Subject Synchronisation
-
-Since group subject is a link between two subject types - hence the sync strategy for both these subject types should be as described below.
-
-- The user should have view access to both the subject types. If group subject type access is present then the sync will expect that view access to member subject type is also present - without checking for it (for now).
-- If one the subject types have location based sync strategy then the other should also have this.
-- If one of the subject types has sync attributes based sync strategy then other should also have it. The implementation must also make sure that the possible observation values on both group and member subject matches.
-- When the group subject is assigned then it implicitly assumed that child subject is also assigned. The other location and/sync attributes based sync strategy of child subject type should completely match the group subject type - if present (so that all entities sync correctly with the client).
-
-
-# File: ./readme/developers/contribute-to-avni/reporting-issues.md
-
-All work in Avni happens through Github issues, so if you discover a problem in Avni, please add an issue in the relevant repository. 
-
-### Points to note when raising issues
-
-1. If you know the repository the bug needs to be raised, please raise in that repository. Here is a list of repositories and the link to the issues section
-
-| Application                               | Issue Link                                                                              |
-| :---------------------------------------- | :-------------------------------------------------------------------------------------- |
-| Avni Server                               | [github.com/avniproject/avni-server/issues](github.com/avniproject/avni-server/issues)  |
-| ETL                                       | [github.com/avniproject/avni-etl/issues](github.com/avniproject/avni-server/issues)     |
-| Media Viewer                              | [github.com/avniproject/avni-media/issues](github.com/avniproject/avni-server/issues)   |
-| Web Application (other than Media Viewer) | [github.com/avniproject/avni-webapp/issues](github.com/avniproject/avni-server/issues)  |
-| Android field app                         | [github.com/avniproject/avni-client/issues](github.com/avniproject/avni-server/issues)  |
-| Multiple/not sure                         | [github.com/avniproject/avni-product/issues](github.com/avniproject/avni-server/issues) |
-
-2. If the issue affects an end-user of the application, mark the label "user-reported". 
-3. If you believe the issue is a bug, then add the label "bug"
-4. When reporting a product issue, try to help the developer understand how the issue can be replicated with minimum effort. For example, create a new organisation where you can isolate the issue to its bare minimum. Alternatively, provide steps to reproduce the issue in a clear manner. This helps save a lot of developer time, and cuts down the number of communication hops to understand the issue. 
-
-Once issues are reported, they get triaged and assigned a release. The list of releases and their expected go-live dates are available on the [Roadmap](https://github.com/orgs/avniproject/projects/2/views/7). The [Avni Development Process]\(Avni Development Process)provides a peek into how issues get sorted and move through to be fixed in the product.
-
-
-# File: ./readme/support/configurations-from-backend.md
-
----
-title: "Configurations from backend"
-slug: "configurations-from-backend"
-excerpt: "Use full queries that can be configured only via backend."
-hidden: false
-createdAt: "Mon Jun 26 2023 12:25:26 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-# How to make the "Total" default report card always appear.
-
-Run the below script
-
-```pgsql
-set role <org_name>;
-
-update organisation_config
-set settings = settings || '{"hideTotalForProgram": false}' ::jsonb,
-    last_modified_date_time = now()
-where organisation_id = <org_id>;
-```
-
-
-# File: ./readme/support/recreate-etl-schema-for-an-implementation.md
-
----
-title: "Setup ETL schema for an implementation"
-slug: "recreate-etl-schema-for-an-implementation"
-excerpt: ""
-hidden: false
-createdAt: "Mon Feb 13 2023 09:50:02 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Feb 28 2025 12:18:47 GMT+0000 (Coordinated Universal Time)"
----
-## Enabling/Disabling
-
-### Enabling Analytics via Admin view in Webapp
-
-ETL enabling and disabling for an organisation has now been changed to function via APIs called from the webapp. The act of enabling analytics for an org via the webapp admin view also creates the required job and schedules it to run immediately and every hour from then on (on a best effort basis\*).
-
-![](https://files.readme.io/2b4d900-image.png)
-
-#### Ad hoc runs
-
-If there is a need to run ETL for an organisation in an ad hoc fashion (to check if fixes to broken ETL for an org are working for example), you can disable and then enable analytics for that org. This will remove the previously existing job for the org and create a new one that will run immediately (within a minute on a best effort basis\*). 
-
-Note: This does not recreate the ETL schema for the org. Follow the steps below to recreate the schema if required. 
-
-##### Best effort basis
-
- Subject to available resources on the server and currently running jobs if any.
-
-## Recreating ETL schema for an organisation
-
-Clearing ETL schema and rows corresponding to it in the database. The next run of the ETL process will recreate the schema and database.
-
-Steps: (please note if you are recreating for an organisation that uses reporting views then after recreation also generate the reporting views)
-
-- Disable ETL for the org using the screen in the previous section in the webapp.
-- ### For standalone organizations
-
-```Text SQL Function
-select delete_etl_metadata_for_schema('$impl_schema', '$impl_db_user', '$impl_db_owner');
-```
-```sql
-set role "$impl_schema";  
-drop schema if exists "$impl_schema" cascade;
-
-delete from entity_sync_status where db_user = '$impl_db_user';
-delete from entity_sync_status where schema_name = '$impl_schema';
-
-delete from index_metadata where table_metadata_id 
-	in (select id from table_metadata where schema_name = '$impl_schema');
-
-delete from column_metadata where table_id 
-	in (select id from table_metadata where schema_name = '$impl_schema');
-
-delete from table_metadata  
-		where schema_name = '$impl_schema';
-```
-
-- ### For organization groups
-
-```Text SQL Function
-select delete_etl_metadata_for_org('$impl_schema', '$impl_db_user');
-```
-```sql
-set role openchs;  
-drop schema if exists "$impl_schema" cascade;
-
-delete from entity_sync_status where db_user = '$impl_db_user';
-delete from entity_sync_status where schema_name = '$impl_schema';
-
-delete from index_metadata where table_metadata_id 
-	in (select id from table_metadata where schema_name = '$impl_schema');
-
-delete from column_metadata where table_id 
-	in (select id from table_metadata where schema_name = '$impl_schema');
-
-delete from table_metadata where schema_name = '$impl_schema';
-```
-
-- Enable ETl for the org using the screen in the previous section in the webapp.
-
-## Subject Type, Program and Encounter Type names
-
-ETL service tries to automatically create the table names based on the subject type, program and encounter type names. Since these are also namespaced the names for these tables are as long as possible in postgres to support uniqueness. But there could still be clash in the names due to which the ETL process may fail to create tables. To ensure that this doesn't happen please ensure that the first six characters for the following are not the same. Please note that it is scoped, i.e. e.g. you can have same starting six characters for two encounter types under different programs.
-
-- two encounter types within same program
-- two encounter types within same subject type
-- two programs inside the same subject type
-
-### Trimming configuration on ETL table names
-
-Refer to below link for current trimming configuration on ETL table name, when the original name exceeds length of 63 bytes(63 ASCII Code characters).
-
-<https://github.com/avniproject/avni-etl/blob/main/src/main/java/org/avniproject/etl/repository/rowMappers/TableNameGenerator.java#L15>
-
-
-# File: ./readme/support/recreate-etl-schema-for-an-implementation/monitoring-status-of-etl-runs-for-an-environment.md
-
----
-title: "Monitoring Status of ETL Runs for an environment"
-slug: "monitoring-status-of-etl-runs-for-an-environment"
-excerpt: ""
-hidden: false
-createdAt: "Fri Dec 13 2024 10:13:16 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Feb 27 2025 13:42:12 GMT+0000 (Coordinated Universal Time)"
----
-In-order to ease the monitoring of ETL runs across all organisations of an environment, we have created following Reports:
-
-## Production
-
-[block:html]
-{
-  "html": "<iframe\n    src=\"https://reporting.avniproject.org/public/question/9935b5fc-da79-4f79-a351-46a8c0222560\"\n    frameborder=\"0\"\n    width=\"800\"\n    height=\"600\"\n    allowtransparency\n></iframe>"
-}
-[/block]
-
-
-## Staging
-
-[block:html]
-{
-  "html": "<iframe\n    src=\"https://reporting.avniproject.org/public/question/b44773b9-fdc5-4527-b08f-d2ed06f4ba1c\"\n    frameborder=\"0\"\n    width=\"800\"\n    height=\"600\"\n    allowtransparency\n></iframe>"
-}
-[/block]
-
-
-## Pre-release
-
-[block:html]
-{
-  "html": "<iframe\n    src=\"https://reporting.avniproject.org/public/question/206aaaff-a782-490b-ae11-b3e5dfa57823\"\n    frameborder=\"0\"\n    width=\"800\"\n    height=\"600\"\n    allowtransparency\n></iframe>"
-}
-[/block]
-
-
-<br />
-
-## RWB Prod
-
-[block:html]
-{
-  "html": "<iframe\n    src=\"https://reporting.avniproject.org/public/question/577f98e4-22eb-461b-a94c-a3528ee68c18\"\n    frameborder=\"0\"\n    width=\"800\"\n    height=\"600\"\n    allowtransparency\n></iframe>"
-}
-[/block]
-
-
-To specifically look at the **Failed** ETL for Production Environment  Live/ UAT orgs, you should make use of following report:
-
-## Production ETL Failures only
-
-[block:html]
-{
-  "html": "<iframe\n    src=\"https://reporting.avniproject.org/public/question/ba0ba126-c94a-4a52-acea-b2f518172527\"\n    frameborder=\"0\"\n    width=\"800\"\n    height=\"600\"\n    allowtransparency\n></iframe>"
-}
-[/block]
-
-
-# File: ./readme/support/rule-failure-telemetry.md
-
----
-title: "Rule failure telemetry"
-slug: "rule-failure-telemetry"
-excerpt: ""
-hidden: false
-createdAt: "Thu May 02 2024 13:37:40 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon May 06 2024 10:59:58 GMT+0000 (Coordinated Universal Time)"
----
-## About rule failure
-
-Avni doesn't stop the users from using the app and filling the forms when the rules triggered fail. These errors get stored on the mobile device's database and then posted to the server as part of the sync process. Only if the Sync completes successfully, do the RuleFailureTelemetry entries on the mobile device get cleaned-up, otherwise, the keep getting created as duplicates as part of every sync there onwards. This behaviour is to ensure, we do not loose RuleFailures before they are successfully synced to the backend server and stored in primary Database.
-
-The app designer displays these errors from the Rule Failures tab. On clicking a RuleFailure entry, the errorMessage details are visible. These can be also closed from there, by selecting corresponding CheckBoxes and clicking on "CLOSE ERRORS" button.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/755b159-Screenshot_2024-05-06_at_4.22.58_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
-
-## App designer fields of rule failure entry
-
-### Which Rule
-
-- Rule UUID - UUID of the rule (other details can be picked from the database)
-- Source - Possible values are present [here](https://github.com/avniproject/avni-server/blob/master/avni-server-api/src/main/java/org/avni/server/domain/enums/ruleFailure/SourceType.java). This should not be null (currently there are some old entries for which it is null). This indicates what is the type of rule for which this error happened.
-
-### On which entity
-
-- Individual UUID - The UUID of the subject on whose data edit/create this error happened. This will be not be present for EntityType=ReportCard - as ReportCard rules span across subjects.
-- Entity - `UUID` + `Type of the Entity`. For report card rule errors this field will be null
-  - Type of the entity - Possible values are named [here](https://github.com/avniproject/avni-server/blob/master/avni-server-api/src/main/java/org/avni/server/domain/enums/ruleFailure/EntityType.java).
-  - UUID - When the type of entity = `Individual` then the UUID and `Individual UUID` field will be same.
-
-### Other details
-
-- Message (database field error_message + stack trace).
-- Error date - The date on which error happened on the user's device. The clock used is that of the device.
-- App - Android or Web. null value = Web. This indicates which type of channel on which this error happened.
-
-### Error management
-
-- Status (Open, Closed)
-- Closed date - Date on which on the error was closed.
 
 
 # File: ./sample-implementations/adolescent-care.md
@@ -13118,6 +10452,122 @@ The app designer displays these errors from the Rule Failures tab. On clicking a
 
 # File: ./sample-implementations/waste-collection.md
 
+
+
+# File: ./scripts/README.md
+
+# README File Processing Scripts
+
+This directory contains scripts to process markdown files in the `readme` directory by removing YAML front matter while preserving title and excerpt information.
+
+## Scripts Overview
+
+### 1. `process_readme_files.py` - Main Processing Script
+**Purpose**: Processes all markdown files in the readme directory by removing the first 12 lines but keeping lines 2 and 3.
+
+**What it does**:
+- Keeps line 2 (title)
+- Keeps line 3 (excerpt) 
+- Removes lines 1, 4-12 (YAML front matter)
+- Keeps all content from original line 13 onwards
+
+**Usage**:
+```bash
+cd scripts
+python3 process_readme_files.py
+```
+
+### 2. `backup_readme_files.py` - Backup Script
+**Purpose**: Creates timestamped backups of all markdown files before processing.
+
+**Usage**:
+```bash
+cd scripts
+python3 backup_readme_files.py
+```
+
+### 3. `test_single_file.py` - Test Script
+**Purpose**: Tests the transformation on a single file to verify the logic before running on all files.
+
+**Usage**:
+```bash
+cd scripts
+python3 test_single_file.py
+```
+
+## Recommended Workflow
+
+1. **Create Backup** (recommended):
+   ```bash
+   python3 backup_readme_files.py
+   ```
+
+2. **Test on Single File** (optional but recommended):
+   ```bash
+   python3 test_single_file.py
+   ```
+
+3. **Process All Files**:
+   ```bash
+   python3 process_readme_files.py
+   ```
+
+## Example Transformation
+
+**Before** (original file):
+```markdown
+---
+title: 'How to guide: Setting up Locations via CSV Upload'
+excerpt: For bulk location upload after Release 10.0
+deprecated: false
+hidden: false
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+## Definitions
+
+Below is a list of definitions...
+```
+
+**After** (processed file):
+```markdown
+title: 'How to guide: Setting up Locations via CSV Upload'
+excerpt: For bulk location upload after Release 10.0
+## Definitions
+
+Below is a list of definitions...
+```
+
+## Safety Features
+
+- **Backup Script**: Creates timestamped backups before processing
+- **Test Script**: Allows testing on a single file first
+- **Error Handling**: Scripts handle errors gracefully and report issues
+- **File Validation**: Checks if files have enough lines before processing
+- **Progress Reporting**: Shows detailed progress and results
+
+## File Structure
+
+```
+scripts/
+├── README.md                    # This file
+├── process_readme_files.py      # Main processing script
+├── backup_readme_files.py       # Backup creation script
+├── test_single_file.py          # Single file test script
+└── readme_backup_YYYYMMDD_HHMMSS/  # Backup directories (created when needed)
+```
+
+## Notes
+
+- All scripts are designed to work from the `scripts` directory
+- The scripts automatically find the `readme` directory relative to their location
+- Processing is recursive - it finds all `.md` files in subdirectories
+- Scripts preserve file encoding (UTF-8) and line endings
+- Error reporting shows which files failed to process (if any)
 
 
 # File: ./webapp-documentation/sideBarDocumentation/ApplicationMenu.md

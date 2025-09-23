@@ -1,32 +1,14 @@
----
-title: "Timed questions"
-slug: "timed-questions"
-excerpt: ""
-hidden: false
-createdAt: "Thu Jul 14 2022 09:24:13 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Timed questions
+excerpt: ''
 Questions can be timed in Avni. If you want the user to fill some set of questions after a particular time then you can mark the page as a timed page and specify the time when the questions on the page should be visible. You also set the stay time which forces user to fill all those questions in the mentioned time frame.
 
 ## Steps to configure timed questions
 
 Any page can be marked as timed. It is important that you specify the start time and stay time for the timed pages. The start time indicates that the page should start at the provided time and the stay time will keep the question visible till the specified time. Once the stay time is over screen automatically moves to the next page.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cf86f77-timed_page.png",
-        "timed_page.png",
-        1809
-      ],
-      "caption": "Example of the timed page in the form"
-    }
-  ]
-}
-[/block]
-
+<Image title="timed_page.png" alt={1809} src="https://files.readme.io/cf86f77-timed_page.png">
+  Example of the timed page in the form
+</Image>
 
 There are some assumptions that must be followed to make timed questions work properly.
 

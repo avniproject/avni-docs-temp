@@ -1,11 +1,5 @@
----
-title: "Update rules in bulk"
-slug: "updating-rules-in-bulk"
-excerpt: ""
-hidden: false
-createdAt: "Tue Apr 11 2023 06:06:29 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Apr 04 2024 04:05:47 GMT+0000 (Coordinated Universal Time)"
----
+title: Update rules in bulk
+excerpt: ''
 ```sql
 set role <organisation_db_user>;
 

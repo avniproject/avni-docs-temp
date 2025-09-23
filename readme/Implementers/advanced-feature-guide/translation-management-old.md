@@ -1,10 +1,8 @@
----
-title: "Translations"
-slug: "translation-management-old"
-excerpt: ""
-hidden: true
-createdAt: "Fri Jan 03 2020 05:01:30 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri Aug 30 2024 12:46:38 GMT+0000 (Coordinated Universal Time)"
+title: Translations
+excerpt: ''
+    - type: basic
+      slug: creating-identifiers
+      title: Creating identifiers
 ---
 Avni allows the management of translations using the Admin web interface. Below are the steps to manage translations.
 

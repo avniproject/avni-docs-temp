@@ -1,16 +1,10 @@
----
-title: "Sync strategies"
-slug: "sync-strategies"
-excerpt: ""
-hidden: false
-createdAt: "Wed May 04 2022 06:05:15 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Sep 26 2024 12:12:58 GMT+0000 (Coordinated Universal Time)"
----
-Sync strategies define the way a subject should sync to the user's device. Sync strategies can be defined for each subject type. Each subject type can have different/same sync strategies based on the use case.  
+title: Sync strategies
+excerpt: ''
+Sync strategies define the way a subject should sync to the user's device. Sync strategies can be defined for each subject type. Each subject type can have different/same sync strategies based on the use case.\
 Setting up a sync strategy is a two-step process.
 
-- Defining sync strategy for a subject type.
-- Assigning the value of the defined strategy to the user.
+* Defining sync strategy for a subject type.
+* Assigning the value of the defined strategy to the user.
 
 ## Defining sync strategy for a subject type
 
@@ -40,7 +34,7 @@ Once the sync strategy is defined for a subject type, values can be assigned to 
 
 **Note** 
 
-- In case of any catchment changes/direct assignment changes user needs to delete the old data and sync as per the newly assigned values.
+* In case of any catchment changes/direct assignment changes user needs to delete the old data and sync as per the newly assigned values.
 
 ## Handling on Data Entry App (DEA)
 

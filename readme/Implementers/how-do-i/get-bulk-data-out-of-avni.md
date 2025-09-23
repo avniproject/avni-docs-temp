@@ -1,14 +1,8 @@
----
-title: "Get bulk data out of Avni"
-slug: "get-bulk-data-out-of-avni"
-excerpt: ""
-hidden: false
-createdAt: "Thu May 23 2024 05:24:35 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu May 23 2024 06:41:21 GMT+0000 (Coordinated Universal Time)"
----
+title: Get bulk data out of Avni
+excerpt: ''
 ## Transaction data
 
-_i.e. Subjects, Encounters, Enrolments etc._
+*i.e. Subjects, Encounters, Enrolments etc.*
 
 There are a few options available suited for different purpose.
 

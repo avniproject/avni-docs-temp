@@ -1,10 +1,11 @@
----
-title: "Introduction to excel based import [Deprecated]"
-slug: "structure-import-metadata-excel-excel"
-excerpt: "Supported entities: Individual (aka Subject Registration) | Encounter (aka Subject Encounter) | ProgramEnrolment | ProgramEncounter | Checklist (aka Vaccinations) | Relationship (aka IndividualRelationship, SubjectRelationship)"
-hidden: true
-createdAt: "Wed Sep 05 2018 09:42:15 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Sep 10 2024 05:28:05 GMT+0000 (Coordinated Universal Time)"
+title: Introduction to excel based import [Deprecated]
+excerpt: >-
+next:
+  description: ''
+  pages:
+    - type: basic
+      slug: importing-excel-data
+      title: Importing Excel data
 ---
 > ❗️ Avni does not support Excel based import any longer, please refer to Admin App based approach to upload data [Bulk Data Upload page](https://avni.readme.io/docs/upload-data#is-the-order-of-values-important)
 
@@ -25,33 +26,41 @@ The following are the various spreadsheets within a metaData.xlsx file.
 
 Sheets represent a logical sheet of data. A physical sheet of data can be mapped to multiple logical sheets of data.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Column",
-    "h-1": "Description",
-    "0-0": "File Name",
-    "0-1": "The data migration service is used by supplying the metadata excel file, a data excel file, and a fileName (since the server reads the data excel file via a stream it doesn't know the name of the file originally uploaded hence it needs to be explicitly provided).  \n  \nOnly the sheets which have the file name matching the fileName via the API would be imported.",
-    "1-0": "User File Type",
-    "1-1": "This is the unique name given to the file of specific types. There can be more than one physical file of the same type, in which case the user file type will be the same but file names will be different.",
-    "2-0": "Sheet Name",
-    "2-1": "This is the name of the actual sheet in the data file uploaded where the data should be read.",
-    "3-0": "Entity Type, Program Name and Visit Type, Address",
-    "3-1": "Core but optional data to be provided depending on the type of data being imported",
-    "4-0": "Active",
-    "4-1": "During data migration, it is possible that there are a lot of files and mapping metadata definition for those files may not be complete. Active flag (Yes or No) can be used to disable sheets that need not be considered for migration when uploaded.",
-    "5-0": "Name of fields",
-    "5-1": "One can add multiple columns after this such that it matches the name of a System Field and provides the default value for the entire virtual sheet."
-  },
-  "cols": 2,
-  "rows": 6,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
-
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><p>File Name</p></td>
+  <td><p>The data migration service is used by supplying the metadata excel file, a data excel file, and a fileName (since the server reads the data excel file via a stream it doesn&#39;t know the name of the file originally uploaded hence it needs to be explicitly provided).  </p>
+<p>Only the sheets which have the file name matching the fileName via the API would be imported.</p></td>
+</tr>
+<tr>
+  <td><p>User File Type</p></td>
+  <td><p>This is the unique name given to the file of specific types. There can be more than one physical file of the same type, in which case the user file type will be the same but file names will be different.</p></td>
+</tr>
+<tr>
+  <td><p>Sheet Name</p></td>
+  <td><p>This is the name of the actual sheet in the data file uploaded where the data should be read.</p></td>
+</tr>
+<tr>
+  <td><p>Entity Type, Program Name and Visit Type, Address</p></td>
+  <td><p>Core but optional data to be provided depending on the type of data being imported</p></td>
+</tr>
+<tr>
+  <td><p>Active</p></td>
+  <td><p>During data migration, it is possible that there are a lot of files and mapping metadata definition for those files may not be complete. Active flag (Yes or No) can be used to disable sheets that need not be considered for migration when uploaded.</p></td>
+</tr>
+<tr>
+  <td><p>Name of fields</p></td>
+  <td><p>One can add multiple columns after this such that it matches the name of a System Field and provides the default value for the entire virtual sheet.</p></td>
+</tr>
+</tbody>
+</table>
 
 #### Sample
 
@@ -64,29 +73,32 @@ Sheets represent a logical sheet of data. A physical sheet of data can be mapped
 
 The mapping for non-calculated fields
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Column",
-    "h-1": "Description",
-    "0-0": "User File Type",
-    "0-1": "This is the same as in Sheets.",
-    "1-0": "Form Type",
-    "1-1": "[IndividualProfile, Encounter, ProgramEncounter, ProgramEnrolment, ProgramExit, ProgramEncounterCancellation, ChecklistItem, IndividualRelationship]",
-    "2-0": "System Field",
-    "2-1": "The concept name is specified in the form.  \nOr Default field (this can be seen in different importers, See below ).",
-    "3-0": "User Field",
-    "3-1": "Name of the column from data.xlsx file"
-  },
-  "cols": 2,
-  "rows": 4,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
-
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><p>User File Type</p></td>
+  <td><p>This is the same as in Sheets.</p></td>
+</tr>
+<tr>
+  <td><p>Form Type</p></td>
+  <td><p>[IndividualProfile, Encounter, ProgramEncounter, ProgramEnrolment, ProgramExit, ProgramEncounterCancellation, ChecklistItem, IndividualRelationship]</p></td>
+</tr>
+<tr>
+  <td><p>System Field</p></td>
+  <td><p>The concept name is specified in the form.<br/>Or Default field (this can be seen in different importers, See below ).</p></td>
+</tr>
+<tr>
+  <td><p>User Field</p></td>
+  <td><p>Name of the column from data.xlsx file</p></td>
+</tr>
+</tbody>
+</table>
 
 #### Default fields for each entity as of Dec 2019
 
@@ -129,7 +141,7 @@ Along with these, the implementation-specific observations are also to be mapped
 > 
 > Note that
 > 
-> - Individual UUID (aka Subject UUID, in this example called SiteUUID), EnrolmentUUID, or any <Transactional-data UUID> will have to be manually assigned by the developer before import.
+> - Individual UUID (aka Subject UUID, in this example called SiteUUID), EnrolmentUUID, or any `<Transactional-data UUID>` will have to be manually assigned by the developer before import.
 >   - Use tools like uuid: `npm i -g uuid`.
 >   - `for n in {1..100}; do uuidgen -r; done` `#to get 100 uuids from CLI`
 > - AddressUUID (or Village UUID) will not be available when the data file is provided by the Implmentation. And has to be determined from the `Full Address details` (see example Data.xlsx).
@@ -141,22 +153,22 @@ Along with these, the implementation-specific observations are also to be mapped
 For uploading files (images/documents) you can put the URL of the file. Please follow the following steps:
 
 - Ensure the drive file is shared without any restrictions
-- Copy the file link and use this website to get the link that can be put into the excel file to be uploaded - <https://sites.google.com/site/gdocs2direct/?pli=1>
+- Copy the file link and use this website to get the link that can be put into the excel file to be uploaded - [https://sites.google.com/site/gdocs2direct/?pli=1](https://sites.google.com/site/gdocs2direct/?pli=1)
 - Copy the link generated by the above website for your file and put it in the excel/CSV cell.
 
 **Technical link for Avni Team**
 
 _The above website uses the following http request behind the scenes_
 
-`curl '[https://www.google-analytics.com/g/collect?v=2&tid=G-KV5S9LK4WB>m=2oe1a1>\_p=437198370&gdid=dZWRiYj&cid=1650660276.1673947139&ul=en-gb&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B8.0.0.0%7CChromium%3B108.0.5359.124%7CGoogle%2520Chrome%3B108.0.5359.124&uamb=0&uam=&uap=macOS&uapv=10.14.6&uaw=0&\_s=1&sid=1673947138&sct=1&seg=1&dl=https%3A%2F%2Fsites.google.com%2Fsite%2Fgdocs2direct%2F%3Fpli%3D1&dr=https%3A%2F%2Fwww.google.com%2F&dt=Google%20Drive%20Direct%20Link%20Generator&en=page_view&\_ee=1](https://www.google-analytics.com/g/collect?v=2&tid=G-KV5S9LK4WB&gtm=2oe1a1&_p=437198370&gdid=dZWRiYj&cid=1650660276.1673947139&ul=en-gb&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B8.0.0.0%7CChromium%3B108.0.5359.124%7CGoogle%2520Chrome%3B108.0.5359.124&uamb=0&uam=&uap=macOS&uapv=10.14.6&uaw=0&_s=1&sid=1673947138&sct=1&seg=1&dl=https%3A%2F%2Fsites.google.com%2Fsite%2Fgdocs2direct%2F%3Fpli%3D1&dr=https%3A%2F%2Fwww.google.com%2F&dt=Google%20Drive%20Direct%20Link%20Generator&en=page_view&_ee=1)' 
+`curl 'https://www.google-analytics.com/g/collect?v=2&tid=G-KV5S9LK4WB&gtm=2oe1a1&_p=437198370&gdid=dZWRiYj&cid=1650660276.1673947139&ul=en-gb&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B8.0.0.0%7CChromium%3B108.0.5359.124%7CGoogle%2520Chrome%3B108.0.5359.124&uamb=0&uam=&uap=macOS&uapv=10.14.6&uaw=0&_s=1&sid=1673947138&sct=1&seg=1&dl=https%3A%2F%2Fsites.google.com%2Fsite%2Fgdocs2direct%2F%3Fpli%3D1&dr=https%3A%2F%2Fwww.google.com%2F&dt=Google%20Drive%20Direct%20Link%20Generator&en=page_view&_ee=1' 
   -X 'POST' 
   -H 'authority: www.google-analytics.com' 
   -H 'accept: _/_' 
   -H 'accept-language: en-GB,en;q=0.9,hi-IN;q=0.8,hi;q=0.7,en-US;q=0.6,de;q=0.5' 
   -H 'content-length: 0' 
   -H 'dnt: 1' 
-  -H 'origin: <https://sites.google.com>' 
-  -H 'referer: <https://sites.google.com/>' 
+  -H 'origin: https://sites.google.com' 
+  -H 'referer: https://sites.google.com/' 
   -H 'sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"' 
   -H 'sec-ch-ua-mobile: ?0' 
   -H 'sec-ch-ua-platform: "macOS"' 

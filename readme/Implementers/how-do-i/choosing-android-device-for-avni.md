@@ -1,11 +1,5 @@
----
-title: "Choosing android device for Avni"
-slug: "choosing-android-device-for-avni"
-excerpt: ""
-hidden: false
-createdAt: "Tue Sep 12 2017 10:49:23 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Jun 27 2024 04:36:20 GMT+0000 (Coordinated Universal Time)"
----
+title: Choosing android device for Avni
+excerpt: ''
 We are listing down some criteria which could help you in deciding which device to choose. The price range kept in this analysis is between 7000 to 10000 Indian Rupees.
 
 **OS Version**: While Avni will work on version >= 5.0, but if you are purchasing a new device then it is better to go for a more recent version. Realistically though setting the bar too high will reduce your options. Hence we recommend version >= 11.

@@ -1,76 +1,31 @@
----
-title: "News broadcast"
-slug: "news-broadcast"
-excerpt: ""
-hidden: false
-createdAt: "Mon May 10 2021 05:22:09 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Feb 14 2024 11:15:30 GMT+0000 (Coordinated Universal Time)"
----
+title: News broadcast
+excerpt: ''
 Sometimes it is important to share some important information with all the field users. Avni provides this facility using the News broadcast feature. This feature helps in easy communication with the field users.
 
 ## Creating a news broadcast
 
 Creating a news broadcast is very simple, follow the below steps.
 
-- Go to the home page of the Avni web app and open the News Broadcast app.
+* Go to the home page of the Avni web app and open the News Broadcast app.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2623e59-News_Broadcast.png",
-        "News Broadcast.png",
-        1839
-      ],
-      "align": "center",
-      "caption": "Click on the news broadcast to see all the news set up in the organisation"
-    }
-  ]
-}
-[/block]
+<Image title="News Broadcast.png" alt={1839} align="center" src="https://files.readme.io/2623e59-News_Broadcast.png">
+  Click on the news broadcast to see all the news set up in the organisation
+</Image>
 
+* Click on "Create a news broadcast".
 
-- Click on "Create a news broadcast".
+<Image title="Create News.png" alt={1846} align="center" src="https://files.readme.io/e42cb0c-Create_News.png">
+  The new broadcast can be created by clicking on Create a new broadcast
+</Image>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e42cb0c-Create_News.png",
-        "Create News.png",
-        1846
-      ],
-      "align": "center",
-      "caption": "The new broadcast can be created by clicking on Create a new broadcast"
-    }
-  ]
-}
-[/block]
+* Provide all the details like image, title, and content and click on "Save news".
 
+<Image title="new news.png" alt={1854} align="center" src="https://files.readme.io/e79d8b2-new_news.png">
+  New broadcast screen
+</Image>
 
-- Provide all the details like image, title, and content and click on "Save news".
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e79d8b2-new_news.png",
-        "new news.png",
-        1854
-      ],
-      "align": "center",
-      "caption": "New broadcast screen"
-    }
-  ]
-}
-[/block]
-
-
-- Once the news is saved, we need to publish it so that field users can see it on their device. For publishing the news click on "see details" and click on "Publish news".
-- Once the news is published field user can see it on their android app.
+* Once the news is saved, we need to publish it so that field users can see it on their device. For publishing the news click on "see details" and click on "Publish news".
+* Once the news is published field user can see it on their android app.
 
 ## News option on android app
 

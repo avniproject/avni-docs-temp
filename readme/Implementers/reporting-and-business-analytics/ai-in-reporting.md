@@ -1,10 +1,8 @@
----
-title: "Developing BI dashboards using AI services"
-slug: "ai-in-reporting"
-excerpt: "The AI in Reporting feature simplifies SQL query generation for reports using AI models. Report requirements developed in excel format can be input as CSV, and AI service can generate SQL queries and other reporting artifacts. This reduces manual coding and creates efficient, standardised reporting queries."
-hidden: false
-createdAt: "Wed Sep 11 2024 15:22:27 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Oct 02 2024 05:13:26 GMT+0000 (Coordinated Universal Time)"
+title: Developing BI dashboards using AI services
+excerpt: >-
+  robots: index
+next:
+  description: ''
 ---
 The tool used for this is Cursor which internally uses other AI services. You can download [Cursor](https://www.cursor.com/).
 
@@ -26,4 +24,4 @@ Excel or spreadsheet contain the requirements for the report all present in a si
 
 1. Open chat window in Cursor.
 2. Prompt to forget everything (line 1 of `aggregate-query-prompt.md` or `linelist-query-prompt.md`)
-3. Follow the steps in <https://github.com/avniproject/avni-ai-experiment/blob/main/bi-reporting-spike/aggregate/workspace/aggregate-query-prompt.md> or <https://github.com/avniproject/avni-ai-experiment/blob/master/bi-reporting-spike/linelist/workspace/line-list-prompt.md>
+3. Follow the steps in [https://github.com/avniproject/avni-ai-experiment/blob/main/bi-reporting-spike/aggregate/workspace/aggregate-query-prompt.md](https://github.com/avniproject/avni-ai-experiment/blob/main/bi-reporting-spike/aggregate/workspace/aggregate-query-prompt.md) or [https://github.com/avniproject/avni-ai-experiment/blob/master/bi-reporting-spike/linelist/workspace/line-list-prompt.md](https://github.com/avniproject/avni-ai-experiment/blob/master/bi-reporting-spike/linelist/workspace/line-list-prompt.md)

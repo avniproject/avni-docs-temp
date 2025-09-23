@@ -1,11 +1,5 @@
----
-title: "Review Implementation Bundle"
-slug: "review-implementation-bundle"
-excerpt: ""
-hidden: true
-createdAt: "Wed May 14 2025 10:05:02 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon May 19 2025 11:05:50 GMT+0000 (Coordinated Universal Time)"
----
+title: Review Implementation Bundle
+excerpt: ''
 Avni offers the ability to export the configuration and metadata from an implementation into a bundle ([App Designer -> Bundle](https://app.avniproject.org/#/appdesigner/bundle)). This bundle can then be uploaded into another implementation if it is required to have the same metadata and configuration setup ([Admin -> Upload](https://app.avniproject.org/#/admin/upload) ).
 
 Since this a feature with widespread consequences if the wrong bundle is used on the wrong implementation, the implementer can review the changes that will be affected as a result of uploading a bundle before applying it. The option to review the changes is displayed after selecting the upload type as 'Metadata Zip' on the upload screen and uploading the bundle.

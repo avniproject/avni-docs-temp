@@ -1,1 +1,0 @@
-I want to install Avni. What are the different options I have to do so?

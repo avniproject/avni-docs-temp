@@ -1,31 +1,25 @@
----
-title: "New Longitudinal export"
-slug: "new-longitudinal-export"
-excerpt: "Guide for New Longitudinal Export"
-hidden: false
-createdAt: "Tue May 30 2023 13:29:59 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Thu Jan 30 2025 07:59:59 GMT+0000 (Coordinated Universal Time)"
----
+title: New Longitudinal export
+excerpt: Guide for New Longitudinal Export
 ## Introduction
 
 The “New Longitudinal export” feature allows for an Implementation Admin user to extract data in Longitudinal format for a specific Subject Type. All invoked requests are listed at the bottom of the “New Longitudinal export” screen, which also includes Status information. The export requests are processed asynchronously in the backend and upon completion they are uploaded to cloud and are available for download in the same screen in-line with the request status details.
 
 New longitudinal export fixes the following issues with old export.
 
-- Inability to fetch data across different forms for the same subject. eg: Fetch data from two different encounter types on the same program
-- Inability to fetch group/household information
-- Inability to fetch only selected fields from different forms
+* Inability to fetch data across different forms for the same subject. eg: Fetch data from two different encounter types on the same program
+* Inability to fetch group/household information
+* Inability to fetch only selected fields from different forms
 
 ### Limitations
 
-- There is a limit of maximum of 10,000 Individuals data that could be exported at once, as part of a single Longitudinal export request
+* There is a limit of maximum of 10,000 Individuals data that could be exported at once, as part of a single Longitudinal export request
 
 ## Presupposition
 
 In-order for an Implementation admin user to be able to successfully invoke a “New Longitudinal export” request, he / she would need to have the following:
 
-- Basic understanding of JSON syntax
-- Understanding of Avni Entity Types and their inter-relationships
+* Basic understanding of JSON syntax
+* Understanding of Avni Entity Types and their inter-relationships
 
 ## Preparation
 
@@ -155,7 +149,7 @@ order by
 
 ## Description of elements that can be used to compose a Export request
 
-```c \<ROOT> (The root JSON element)
+```c <ROOT> (The root JSON element)
 - "individual" : "<Specify Subject Type request details>"
 - "timezone" : "<Specify timezone to adhere while displaying date fields>"
 ```

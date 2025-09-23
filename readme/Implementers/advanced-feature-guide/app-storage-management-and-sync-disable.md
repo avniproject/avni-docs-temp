@@ -1,11 +1,5 @@
----
-title: "App Storage Configuration and Disable Sync"
-slug: "app-storage-management-and-sync-disable"
-excerpt: ""
-hidden: false
-createdAt: "Mon Jun 30 2025 12:20:03 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Jul 09 2025 06:10:18 GMT+0000 (Coordinated Universal Time)"
----
+title: App Storage Configuration and Disable Sync
+excerpt: ''
 ### Need
 
 After an organisation has run Avni for a few years, the amount of data collected over time can be sizeable depending on the scale of the program, number of subjects registered, number of times they were visited etc. Depending on the program objectives and especially for organisations where catchment based division of data is not used or is not effective, all of this historical data may not be of use to a field user who has just joined the organisation and is starting to use Avni. This unnecessary data causes longer initial sync time, slower dashboard loads and increases the storage used by the Avni app on the user's device.

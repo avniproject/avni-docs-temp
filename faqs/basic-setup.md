@@ -1,1 +1,0 @@
-What are the bare minimum steps to get started with Avni?

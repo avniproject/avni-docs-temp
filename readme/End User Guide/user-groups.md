@@ -1,16 +1,10 @@
----
-title: "How to guide: Creating User Groups"
-slug: "user-groups"
-excerpt: ""
-hidden: false
-createdAt: "Wed Jun 19 2024 04:32:51 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Tue Oct 08 2024 08:46:11 GMT+0000 (Coordinated Universal Time)"
----
+title: 'How to guide: Creating User Groups'
+excerpt: ''
 ### Why are User Groups needed?
 
 Avni users can be grouped into different Users Groups based on their roles and responsibilities and different permissions can be given to them. It ensures that users have the right access levels to perform their tasks effectively while maintaining data integrity:
 
-1. **Role-based Access Control: **User groups ensure each user gets permissions suited to their role. For example, field workers, supervisors, and administrators may need different access levels.
+1. **Role-based Access Control:** User groups ensure each user gets permissions suited to their role. For example, field workers, supervisors, and administrators may need different access levels.
 2. **Permission Management:**  Instead of setting permissions individually, administrators can manage them for entire groups, reducing errors and saving time.
 3. **Enhanced Security:** User groups help to  define which group can access certain data or perform certain activities in the Avni app like registration, enrolments, edits, and canceling the visit. This 
 4. **Customization and Flexibility:** User groups allow for tailored permissions based on specific user roles. A user can have multiple user groups assigned based on their area of work. 
@@ -39,7 +33,7 @@ Before creating Users & Catchment, the first step is to create User Groups. Diff
 
 ![](https://files.readme.io/6575689-image6.png)
 
-4. **Click on Create Group**  
+4. **Click on Create Group**\
    Enter the Group name and click on the CREATE NEW GROUP button
 
 ![](https://files.readme.io/bb4854b-image5.png)

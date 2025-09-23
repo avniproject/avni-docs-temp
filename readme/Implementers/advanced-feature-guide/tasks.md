@@ -1,12 +1,6 @@
----
-title: "Tasks"
-slug: "tasks"
-excerpt: ""
-hidden: false
-createdAt: "Fri Sep 02 2022 09:25:35 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
-Most activities in Avni are modeled as encounters with subjects, sometimes linked to a program. However, there are other kinds of data collection that happens in field work that is not related to any subject.  
+title: Tasks
+excerpt: ''
+Most activities in Avni are modeled as encounters with subjects, sometimes linked to a program. However, there are other kinds of data collection that happens in field work that is not related to any subject.\
 eg: A list of contacts that need to be contacted first before creating subjects etc.  
 
 To handle such flows, Avni now has a new mechanism called tasks. Tasks can currently be created only through the external API. They can be assigned to people, who can change the status of a task. 
@@ -45,7 +39,7 @@ The web application provides a new option - "Assignment" to assign users to a ta
 
 ### Caveats
 
-- Task type configuration does not have an interface on the App Designer. 
-- Tasks can only be created through the external API
-- Tasks can be assigned through the Assignment feature on the web application
-- Tasks are not currently supported on the Data Entry App
+* Task type configuration does not have an interface on the App Designer. 
+* Tasks can only be created through the external API
+* Tasks can be assigned through the Assignment feature on the web application
+* Tasks are not currently supported on the Data Entry App

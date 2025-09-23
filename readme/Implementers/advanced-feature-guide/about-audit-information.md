@@ -1,11 +1,5 @@
----
-title: "About Audit Information"
-slug: "about-audit-information"
-excerpt: ""
-hidden: false
-createdAt: "Wed Mar 06 2024 06:04:05 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Wed Jun 12 2024 10:59:02 GMT+0000 (Coordinated Universal Time)"
----
+title: About Audit Information
+excerpt: ''
 In Avni mobile app the user can see certain audit information. The app displays:
 
 1. Created by user for subjects and program enrolments.

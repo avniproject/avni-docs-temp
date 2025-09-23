@@ -1,10 +1,8 @@
----
-title: "Setting up your data model"
-slug: "setting-up-your-data-model"
-excerpt: ""
-hidden: false
-createdAt: "Tue Apr 28 2020 02:34:07 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
+title: Setting up your data model
+excerpt: ''
+    - type: basic
+      slug: my-dashboard-and-search-filters
+      title: My Dashboard and Search Filters
 ---
 As explained in [Implementer's concept guide - Introduction](doc:implementers-concept-guide-introduction) - subject, program and encounter are the three key building blocks you have - using which you can model almost all field-based work. Groups (households) that are a special type of subject will be treated as the fourth building block.
 

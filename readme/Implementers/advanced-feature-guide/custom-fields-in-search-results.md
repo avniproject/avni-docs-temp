@@ -1,11 +1,5 @@
----
-title: "Custom fields in search results"
-slug: "custom-fields-in-search-results"
-excerpt: ""
-hidden: false
-createdAt: "Mon Feb 07 2022 08:45:01 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Mon Dec 11 2023 12:04:24 GMT+0000 (Coordinated Universal Time)"
----
+title: Custom fields in search results
+excerpt: ''
 Avni app has the capability to setup [custom search filters](https://avni.readme.io/docs/my-dashboard-and-search-filters), but the results do not show any of these fields. Using this feature one can add additional fields to the search result.
 
 ## Setting up custom fields in search results
@@ -15,7 +9,7 @@ Avni app has the capability to setup [custom search filters](https://avni.readme
 3. You can reorder the custom search fields by drag and drop and finally save the changes.
 4. Sync the mobile app and you should see the newly added concept in the search result field.
 
-![](https://files.readme.io/8c14b56-custom-search-result-fields2.gif "custom-search-result-fields(2).gif")
+![1031](https://files.readme.io/8c14b56-custom-search-result-fields2.gif "custom-search-result-fields(2).gif")
 
-**Note**: Only concepts in the registration form are supported.  
+**Note**: Only concepts in the registration form are supported.\
 **Supported data types**: Text, Id, coded, numeric, and date.

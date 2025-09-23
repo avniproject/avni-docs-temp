@@ -19,6 +19,7 @@ md_files.sort()
 
 with open("merged.md", "w", encoding="utf-8") as outfile:
     for fname in md_files:
+        print(f"Processing {fname}")
         outfile.write(f"\n\n# File: {fname}\n\n")
         with open(fname, "r", encoding="utf-8") as infile:
             outfile.write(infile.read())

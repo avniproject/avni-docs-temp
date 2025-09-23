@@ -1,10 +1,8 @@
----
-title: "Encounter types"
-slug: "encounter-type"
-excerpt: ""
-hidden: false
-createdAt: "Thu Sep 01 2022 12:47:27 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 08:41:17 GMT+0000 (Coordinated Universal Time)"
+title: Encounter types
+excerpt: ''
+    - type: basic
+      slug: concepts
+      title: Concepts
 ---
 Encounter Types (also called Visit Types) are used to determine the kinds of encounters/visits that can be performed. An encounter can be scheduled for a specific encounter type using rules. Here, we define that encounter type and the forms associated with the encounter type.
 
